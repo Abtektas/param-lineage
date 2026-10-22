@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.32"]
+build-backend = "hatchling.build"
+
+[project]
+name = "param-lineage"
+dynamic = ["version"]
+description = "Parameter history for PX4: how parameters change between releases"
+readme = "README.md"
+license = "BSD-3-Clause"
+# the package carries PX4 parameter data, so PX4's license travels with it
+license-files = ["LICENSE", "LICENSE-THIRD-PARTY"]
+requires-python = ">=3.11"
+authors = [{ name = "the param-lineage contributors" }]
+keywords = ["px4", "parameters", "uav", "drone", "upgrade"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Abtektas/param-lineage"
+Changelog = "https://github.com/Abtektas/param-lineage/blob/main/CHANGELOG.md"
+Issues = "https://github.com/Abtektas/param-lineage/issues"
+
+[project.scripts]
+param-lineage = "paramlineage.cli:main"
+
+[tool.hatch.version]
+path = "src/paramlineage/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/paramlineage"]

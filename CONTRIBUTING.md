@@ -1,0 +1,55 @@
+# Contributing
+
+Issues and pull requests are welcome. Everything in this repository is written
+in English.
+
+## Before you start
+
+- Read the "Safety and liability" section of the [README](README.md) and the
+  [design](docs/DESIGN.md). Wrong data that looks right is worse than no data.
+- For a new kind of data or a new command, open an issue first.
+
+## Facts need evidence
+
+- Generated files (snapshots, translations, built views) are never edited by
+  hand. Change the extractor and rebuild them.
+- A curated fact names its evidence: the PX4 commit (required), the pull
+  request when known, and its basis (`code-inspection`, `release-notes` or
+  `sitl-tested`). Only claim `sitl-tested` for what was run.
+- Do not mark a transition `complete` until every removed parameter in it has
+  an entry.
+
+## Running the tests
+
+```
+python3 -m unittest discover -s tests -t .
+node --test web/test/
+```
+
+This needs Python 3.11 or newer and Node.js 18 or newer, and nothing else.
+
+## What a change needs
+
+- Tests.
+- No copy of PX4's source code. The extractor runs PX4's own generators from
+  the release tag; where the project has to repeat PX4 logic, the code names
+  the PX4 file it follows.
+- An entry in [CHANGELOG.md](CHANGELOG.md).
+
+## Names and terms
+
+- "PX4" is a trademark of Dronecode Project, Inc. Nothing in this project is
+  named with it: not the repository, package, module, command, a file name,
+  a release asset, a heading, a page title, a domain or a logo. It appears only
+  in sentences that refer to PX4 itself, such as "parameter history for PX4",
+  with the trademark notice. The tests check file names, headings and titles.
+- The terms in the README, in `--version` and on the page are part of the
+  program. A change must not weaken or remove them.
+
+## Commits
+
+- Sign off your commits (`git commit -s`). The sign-off certifies the
+  [Developer Certificate of Origin](https://developercertificate.org/).
+- If an AI assistant helped with a change, say so with an `Assisted-by:`
+  trailer in the commit message. Do not add an AI as co-author. You are
+  responsible for everything you submit.

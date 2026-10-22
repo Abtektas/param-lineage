@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>param-lineage: parameter file upgrade check</title>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --text: #1c1d1f; --muted: #5d6168; --line: #dedfe2;
+  --accent: #1f5fbf; --fix: #1d7a46; --fix-bg: #e8f4ec; --warn: #9a5b00; --warn-bg: #fdf3e2;
+  --bad: #b3261e; --bad-bg: #fbeceb; --code-bg: #f0f1f3;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171a; --panel: #1d2024; --text: #e8e9eb; --muted: #a2a6ad; --line: #33373d;
+    --accent: #7fb0ff; --fix: #6fd39a; --fix-bg: #183324; --warn: #f0b85a; --warn-bg: #3a2c12;
+    --bad: #ff8f86; --bad-bg: #3d1d1b; --code-bg: #262a2f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15171a; --panel: #1d2024; --text: #e8e9eb; --muted: #a2a6ad; --line: #33373d;
+  --accent: #7fb0ff; --fix: #6fd39a; --fix-bg: #183324; --warn: #f0b85a; --warn-bg: #3a2c12;
+  --bad: #ff8f86; --bad-bg: #3d1d1b; --code-bg: #262a2f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.6rem; margin: 0 0 4px; }
+h2 { font-size: 1.15rem; margin: 0 0 6px; }
+p { margin: 6px 0; }
+a { color: var(--accent); }
+code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; }
+code { background: var(--code-bg); padding: 1px 4px; border-radius: 4px; }
+.lead { color: var(--muted); margin-bottom: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin: 14px 0; }
+#drop { border: 2px dashed var(--line); border-radius: 10px; padding: 28px 16px; text-align: center; background: var(--panel); cursor: pointer; }
+#drop.over { border-color: var(--accent); }
+#drop strong { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+button, .button { font: inherit; border: 1px solid var(--accent); background: var(--accent); color: var(--panel); padding: 8px 14px; border-radius: 8px; cursor: pointer; }
+button.secondary { background: transparent; color: var(--accent); }
+.privacy { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 12px 0; }
+.stat { border-radius: 8px; padding: 10px 12px; border: 1px solid var(--line); }
+.stat b { display: block; font-size: 1.5rem; }
+.stat.fix { background: var(--fix-bg); } .stat.fix b { color: var(--fix); }
+.stat.bad { background: var(--bad-bg); } .stat.bad b { color: var(--bad); }
+.stat.warn { background: var(--warn-bg); } .stat.warn b { color: var(--warn); }
+.banner { border-radius: 8px; padding: 10px 12px; margin: 10px 0; background: var(--warn-bg); color: var(--text); border: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 7px 8px; border-top: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; font-size: 0.85rem; border-top: none; }
+td.name { white-space: nowrap; }
+.desc { color: var(--muted); font-size: 0.85rem; }
+.tag { display: inline-block; font-size: 0.78rem; padding: 0 6px; border-radius: 4px; margin-left: 4px; }
+.tag.bad { background: var(--bad-bg); color: var(--bad); }
+.tag.fix { background: var(--fix-bg); color: var(--fix); }
+.set { margin-top: 4px; }
+.set code { white-space: nowrap; }
+details { margin: 8px 0; }
+summary { cursor: pointer; color: var(--accent); }
+.download { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+label.option { display: flex; gap: 8px; align-items: flex-start; margin: 8px 0; }
+footer { color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
+footer pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.8rem; }
+ol { padding-left: 20px; margin: 6px 0; }
+[hidden] { display: none !important; }
+@media (max-width: 640px) {
+  table, tbody, tr, td { display: block; width: 100%; }
+  thead { display: none; }
+  tr { border-top: 1px solid var(--line); padding: 6px 0; }
+  td { border-top: none; padding: 3px 0; }
+  td.name { white-space: normal; }
+  td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; color: var(--muted); font-size: 0.78rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>Parameter file upgrade check</h1>
+  <p class="lead" id="lead"></p>
+
+  <div id="drop" tabindex="0" role="button" aria-label="Choose a .params file">
+    <strong>Drop a .params file here</strong>
+    <span>or click to choose one</span>
+    <input type="file" id="file" accept=".params,.txt,text/plain" hidden>
+  </div>
+  <p class="privacy">The file is read in this page only. Nothing is uploaded and the page makes no network requests.</p>
+
+  <section class="panel" id="when">
+    <h2>When you need this</h2>
+    <p>When PX4 upgrades the parameters stored on a vehicle, it converts some renamed parameters itself. It does not do that when you load a saved file in QGroundControl: values under old names are dropped. Check a file before you load it onto a vehicle that runs the new release, for example after a parameter reset, on a new or replaced flight controller, or to set up several vehicles from one file.</p>
+    <ol>
+      <li>Drop the file saved on the old release here (QGroundControl: Parameters, Tools, Save to file).</li>
+      <li>Go through the lists below and download the corrected file.</li>
+      <li>On the upgraded vehicle, load it (Parameters, Tools, Load from file), review the changes QGroundControl shows, and reboot.</li>
+    </ol>
+  </section>
+
+  <div id="result" aria-live="polite"></div>
+
+  <footer id="footer"></footer>
+</main>
+
+<script>/*__ANALYZE__*/</script>
+<script>
+const DATA = /*__DATA__*/null;
+const LICENSES = /*__LICENSES__*/null;
+(function () {
+  'use strict';
+  const A = window.PX4ParamUpgrade;
+  const FROM = DATA.from.tag;
+  const TO = DATA.to.tag;
+  const REPO = 'https://github.com/PX4/PX4-Autopilot';
+
+  function el(tag, props, ...children) {
+    const node = document.createElement(tag);
+    for (const [key, value] of Object.entries(props || {})) {
+      if (value === undefined || value === null || value === false) continue;
+      if (key === 'class') node.className = value;
+      else if (key.startsWith('on')) node.addEventListener(key.slice(2), value);
+      else node.setAttribute(key, value === true ? '' : value);
+    }
+    for (const child of children.flat(Infinity)) {
+      if (child === undefined || child === null || child === false) continue;
+      node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+    }
+    return node;
+  }
+
+  const show = (v) => (Number.isInteger(v) ? String(v) : String(parseFloat(Math.fround(v).toPrecision(7))));
+  const units = (meta) => (meta && meta.u ? ' ' + meta.u : '');
+
+  function describe(meta, value) {
+    if (!meta) return '';
+    const option = (meta.v || []).find(([v]) => v === value);
+    return option ? ` (${option[1]})` : '';
+  }
+
+  function paramCell(name, meta) {
+    return el('td', { class: 'name' }, el('code', {}, name), meta && meta.s ? el('div', { class: 'desc' }, meta.s) : null);
+  }
+
+  function source(note) {
+    if (!note || !note.commit) return null;
+    return el('span', { class: 'desc' }, ' ',
+      el('a', { href: `${REPO}/commit/${note.commit}`, target: '_blank', rel: 'noopener' }, note.commit),
+      note.pr ? [' · ', el('a', { href: `${REPO}/pull/${note.pr}`, target: '_blank', rel: 'noopener' }, '#' + note.pr)] : null);
+  }
+
+  function setList(items) {
+    if (!items || !items.length) return null;
+    return el('div', { class: 'set' }, 'Set by hand: ',
+      items.map((s, i) => [i ? ', ' : '', el('code', {}, `${s.name} = ${show(s.value)}`)]));
+  }
+
+  function table(head, rows) {
+    // the column names label the cells when narrow screens stack them
+    for (const row of rows) [...row.children].forEach((cell, i) => { if (head[i]) cell.setAttribute('data-label', head[i]); });
+    return el('div', { class: 'table-wrap' }, el('table', {}, el('thead', {}, el('tr', {}, head.map((h) => el('th', {}, h)))), el('tbody', {}, rows)));
+  }
+
+  function section(title, intro, content) {
+    return el('section', { class: 'panel' }, el('h2', {}, title), intro ? el('p', {}, intro) : null, content);
+  }
+
+  function render(fileName, text) {
+    const result = document.getElementById('result');
+    result.replaceChildren();
+    const report = A.analyze(text, DATA);
+    const of = (category) => report.findings.filter((f) => f.category === category);
+    const meta = (name) => DATA.target[name];
+
+    const converted = of('migrated').filter((f) => f.writes.length);
+    const decisions = of('removed').concat(of('migrated').filter((f) => !f.writes.length));
+    const reversed = of('typeFix').filter((f) => f.newValue < 0);
+    const typeFixes = of('typeFix');
+    const reverts = of('revertsDefault');
+    const ranges = of('outOfRange');
+
+    // what the file is
+    const facts = [];
+    facts.push(`${report.counts.autopilot} autopilot parameters`);
+    if (report.version) facts.push(`saved on PX4 ${report.version.text}`);
+    if (report.header.Vehicle) facts.push(report.header.Vehicle);
+    if (report.airframe) facts.push(`airframe ${report.airframe.id}${report.airframe.name ? ' (' + report.airframe.name + ')' : ''}`);
+    const summary = el('section', { class: 'panel' },
+      el('h2', {}, fileName),
+      el('p', { class: 'desc' }, facts.join(' · ')),
+      !report.version ? el('div', { class: 'banner' }, `The file has no version line. The check assumes it was saved on PX4 ${FROM}.`) : null,
+      report.version && !report.versionMatches ? el('div', { class: 'banner' }, `This file was saved on PX4 ${report.version.text}. The check covers files saved on ${FROM}, so changes from older releases are missing.`) : null,
+      report.airframe && !report.airframe.name ? el('div', { class: 'banner' }, `Airframe ${report.airframe.id} is not a PX4 airframe, so only the parameter defaults are compared, not the airframe's own.`) : null,
+      report.airframe && report.airframe.removed ? el('div', { class: 'banner' }, `Airframe ${report.airframe.id} no longer exists in ${TO}.`) : null,
+      el('div', { class: 'stats' },
+        el('div', { class: 'stat fix' }, el('b', {}, converted.length + reversed.length), 'fixed in the corrected file'),
+        el('div', { class: 'stat bad' }, el('b', {}, decisions.length), 'need your decision'),
+        el('div', { class: 'stat warn' }, el('b', {}, reverts.length), 'would bring back an old default'),
+        el('div', { class: 'stat warn' }, el('b', {}, ranges.length), 'out of range')));
+    result.append(summary);
+
+    if (converted.length || reversed.length) {
+      const rows = converted.map((f) => el('tr', {},
+        paramCell(f.name, DATA.removedMeta[f.name]),
+        el('td', { class: 'mono' }, show(f.value)),
+        el('td', {}, f.writes.map((w, i) => [i ? el('br') : null, el('code', {}, `${w.name} = ${show(w.value)}`)]), el('div', { class: 'desc' }, f.note.note, source(f.note)))));
+      if (reversed.length) {
+        rows.push(el('tr', {},
+          el('td', { class: 'name' }, el('code', {}, 'RC*_REV'), el('div', { class: 'desc' }, `${typeFixes.length} channels`)),
+          el('td', { class: 'mono' }, `${reversed.length} reversed (-1)`),
+          el('td', {}, el('span', { class: 'tag bad' }, 'reversal would be lost'),
+            el('div', { class: 'desc' }, typeFixes[0].rule.note, ' Reversed channels: ' + reversed.map((f) => f.name).join(', ') + '.'))));
+      }
+      result.append(section('Lost if you load the file as it is', 'The corrected file writes these values the way PX4 converts them when it upgrades the parameters stored on a vehicle.',
+        table(['Parameter', 'Your value', `In ${TO}`], rows)));
+    }
+
+    if (decisions.length) {
+      result.append(section('Needs your decision', `These parameters no longer exist in ${TO} and PX4 does not convert them. Your value differs from the ${FROM} default, so something you set will not carry over.`,
+        table(['Parameter', 'Your value', 'What changed'], decisions.map((f) => el('tr', {},
+          paramCell(f.name, DATA.removedMeta[f.sibling || f.name]),
+          el('td', { class: 'mono' }, show(f.value) + describe(DATA.removedMeta[f.sibling || f.name], f.value), el('div', { class: 'desc' }, `default was ${show(f.oldDefault)}`)),
+          el('td', {}, f.note ? f.note.note : `Not a ${TO} parameter.`, source(f.note), setList(f.suggestions)))))));
+    }
+
+    let useNewDefaults = false;
+    if (reverts.length) {
+      const checkbox = el('input', { type: 'checkbox', id: 'newdefaults', onchange: (e) => { useNewDefaults = e.target.checked; } });
+      result.append(section('Would bring back an old default',
+        `These values are the ${FROM} default${report.airframe && report.airframe.name ? ' for this airframe' : ''}, and ${TO} has a different one. Loading the file sets the old value again. Keep it only if you chose it on purpose.`,
+        [table(['Parameter', 'Your value (old default)', 'New default'], reverts.map((f) => el('tr', {},
+          paramCell(f.name, f.meta),
+          el('td', { class: 'mono' }, show(f.value) + units(f.meta) + describe(f.meta, f.value)),
+          el('td', { class: 'mono' }, show(f.newDefault) + units(f.meta) + describe(f.meta, f.newDefault))))),
+         el('label', { class: 'option' }, checkbox, el('span', {}, `Use the new ${TO} defaults for these in the corrected file`))]));
+    }
+
+    if (ranges.length) {
+      result.append(section(`Outside the ${TO} range`, `The allowed range is narrower in ${TO}. QGroundControl loads a file without checking ranges, so check these values yourself.`,
+        table(['Parameter', 'Your value', 'Allowed'], ranges.map((f) => el('tr', {},
+          paramCell(f.name, f.meta),
+          el('td', { class: 'mono' }, show(f.value) + units(f.meta)),
+          el('td', { class: 'mono' }, `${f.meta.min !== undefined ? show(f.meta.min) : '…'} to ${f.meta.max !== undefined ? show(f.meta.max) : '…'}`))))));
+    }
+
+    const quiet = [
+      ['Removed, but you had the default, so nothing is lost', of('removedDefault').map((f) => [f.name, f.note.note])],
+      ['Changed from float to int32, none reversed', typeFixes.length && !reversed.length ? [[`RC*_REV (${typeFixes.length} channels)`, 'Nothing is lost. The corrected file writes them as integers.']] : []],
+      [`Instances the ${TO} metadata does not list (board-specific, not checked)`, of('boardSpecific').map((f) => [f.name, ''])],
+      [`Not a parameter of ${FROM} or ${TO}`, of('unknown').map((f) => [f.name, 'Kept in the corrected file. QGroundControl reports it if the vehicle does not have it.'])],
+      ['Not a number', of('unreadable').map((f) => [f.name, f.valueText])],
+      ['Internal', of('internal').map((f) => [f.name, 'Kept as it is.'])],
+      ['Lines that could not be read', report.skipped.map((s) => [`line ${s.line}`, s.text])],
+    ].filter(([, items]) => items.length);
+    if (report.otherComponents.length) quiet.push([`Other components (${report.otherComponents.join(', ')}), not checked`, [[`${report.counts.other} parameters`, 'Kept as they are.']]]);
+    if (quiet.length) {
+      result.append(section('Nothing to do', null, quiet.map(([title, items]) => el('details', {},
+        el('summary', {}, `${title} (${items.length})`),
+        table(['Name', ''], items.map(([n, d]) => el('tr', {}, el('td', { class: 'name' }, el('code', {}, n)), el('td', { class: 'desc' }, d))))))));
+    }
+
+    const download = el('button', { type: 'button', onclick: () => {
+      const blob = new Blob([A.correctedFile(report, DATA, { useNewDefaults })], { type: 'text/plain' });
+      const a = el('a', { href: URL.createObjectURL(blob), download: fileName.replace(/(\.params|\.txt)?$/i, `-${TO}.params`) });
+      document.body.append(a);
+      a.click();
+      setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+    } }, 'Download the corrected file');
+    result.append(section('Corrected file', null, [
+      el('p', {}, `A copy of your file for ${TO}: parameters that no longer exist are removed, the converted values are added under their new names, and RC*_REV is written as -1 or 1. Everything else is unchanged. Values in "Needs your decision" are not written; set them by hand.`),
+      el('div', { class: 'download' }, download)]));
+  }
+
+  function read(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => render(file.name, String(reader.result));
+    reader.onerror = () => document.getElementById('result').replaceChildren(el('div', { class: 'banner' }, 'The file could not be read.'));
+    reader.readAsText(file);
+  }
+
+  document.getElementById('lead').textContent = `Check a QGroundControl parameter file saved on PX4 ${FROM} before you load it on ${TO}, and get a corrected copy.`;
+  const drop = document.getElementById('drop');
+  const input = document.getElementById('file');
+  drop.addEventListener('click', () => input.click());
+  drop.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
+  input.addEventListener('change', () => read(input.files[0]));
+  drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('over'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+  drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); read(e.dataTransfer.files[0]); });
+
+  document.getElementById('footer').append(
+    el('p', {}, 'Data: the complete parameter metadata of PX4 ',
+      el('a', { href: `${REPO}/tree/${DATA.from.commit}`, target: '_blank', rel: 'noopener' }, `${FROM} (${DATA.from.commit})`), ' and ',
+      el('a', { href: `${REPO}/tree/${DATA.to.commit}`, target: '_blank', rel: 'noopener' }, `${TO} (${DATA.to.commit})`),
+      `, generated with PX4's own tools; the defaults set by each airframe's startup scripts; and the conversions in param_translation.cpp of ${TO}. Each removed parameter was checked against the commit that removed it.`),
+    el('p', {}, 'Not covered: defaults set by board files (rc.board_defaults) or inside conditions in startup scripts, and parameters that kept their name but changed meaning.'),
+    el('p', {}, 'Provided "as is", without warranty of any kind. The authors and contributors accept no liability and no responsibility for any use of this page or of its results, including the corrected file. It is a review aid, not an airworthiness approval: a check that lists nothing does not mean the configuration is right. Whether and how you use it is your own decision, at your own risk. Review every value before loading it, and test with the propellers removed before flying.'),
+    el('p', {}, 'Not affiliated with or endorsed by the PX4 project or the Dronecode Foundation. PX4 is a trademark of Dronecode Project, Inc. It is used here only to name the software this tool works with. The parameter data comes from the PX4 Autopilot project, copyright PX4 Development Team, licensed under the BSD 3-Clause license.'),
+    el('details', {}, el('summary', {}, 'License texts'),
+      el('p', {}, 'param-lineage:'), el('pre', {}, LICENSES.project),
+      el('p', {}, 'PX4 Autopilot (the parameter data):'), el('pre', {}, LICENSES.px4)));
+})();
+</script>
+</body>
+</html>
