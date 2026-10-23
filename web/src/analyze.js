@@ -269,5 +269,5 @@
 
   const api = { parseParamsFile, analyze, correctedFile, applyRule, describeValue, formatValue };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
-  else root.PX4ParamUpgrade = api;
+  else root.ParamLineageUpgrade = api;
 })(this);

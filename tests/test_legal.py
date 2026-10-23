@@ -79,6 +79,9 @@ class Names(unittest.TestCase):
         with open(os.path.join(ROOT, "pyproject.toml"), "rb") as f:
             project = tomllib.load(f)["project"]
         names = [project["name"], *project["scripts"], "paramlineage"]
+        # the name the upgrade check page gives its checker in the browser
+        names += re.findall(r"\broot\.(\w+) = api;", read("web/src/analyze.js"))
+        self.assertGreater(len(names), 3)
         for name in names:
             self.assertNotIn("px4", name.lower(), name)
 
