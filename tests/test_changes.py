@@ -74,7 +74,8 @@ class KnownHistory(unittest.TestCase):
         self.assertEqual(data["curated"], "complete")
         self.assertEqual(data["removed"]["COM_RC_OVERRIDE"], {"kind": "migrated", "successors": ["MAN_OVERRIDE_SPD"]})
         self.assertIn("MAN_OVERRIDE_SPD", data["added"])
-        self.assertEqual(load("v1.16.2", "v1.17.0")["curated"], "none")
+        self.assertEqual(load("v1.16.2", "v1.17.0")["removed"]["MPC_HOLD_DZ"], {"kind": "renamed", "successors": ["MAN_DEADZONE"]})
+        self.assertEqual(load("v1.16.1", "v1.16.2")["curated"], "none")
 
     def test_patch_releases_change_little(self):
         data = load("v1.12.0", "v1.12.1")

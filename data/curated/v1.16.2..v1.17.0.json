@@ -1,0 +1,465 @@
+{
+ "format": 1,
+ "from": "v1.16.2",
+ "removed": {
+  "ASPD_FALLBACK_GW": {
+   "basis": "code-inspection",
+   "commit": "5842c991ecc1564f3ca96ab40560684a6352b8f8",
+   "kind": "migrated",
+   "note": "Replaced by ASPD_FALLBACK, which adds a third option (2: thrust based airspeed estimation). 0 and 1 keep their meaning.",
+   "pr": 24522,
+   "successors": [
+    "ASPD_FALLBACK"
+   ]
+  },
+  "COM_POSCTL_NAVL": {
+   "basis": "code-inspection",
+   "commit": "e0cdcdb43619ea545e982375b5e2d9c6aca21b10",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; when navigation accuracy is lost in Position mode, the vehicle always falls back to Altitude mode (the old value 0). \"Land mode (descend)\" (1) is no longer available.",
+   "pr": 25112
+  },
+  "EKF2_RNG_A_IGATE": {
+   "basis": "code-inspection",
+   "commit": "6a8eea1df9aab8e65964b0a048a2a57530fa986b",
+   "kind": "removed",
+   "note": "Had no effect: the EKF never read it. Removed.",
+   "pr": 25137
+  },
+  "FW_AT_SYSID_AMP": {
+   "basis": "code-inspection",
+   "commit": "614e15d5f40af1d835096fcf7643570b6ec5bee5",
+   "kind": "removed",
+   "note": "Removed; fixed-wing autotune now finds the amplitude of the identification signal itself, by raising it until a target rate is reached.",
+   "pr": 25508
+  },
+  "GND_L1_DAMPING": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_L1_DIST": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_L1_PERIOD": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_MAN_Y_MAX": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_MAX_ANG": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_D": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_I": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_IMAX": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_MAX": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_P": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_THR_SC": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SPEED_TRIM": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_SP_CTRL_MODE": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_THR_CRUISE": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_THR_MAX": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_THR_MIN": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "GND_WHEEL_BASE": {
+   "basis": "code-inspection",
+   "commit": "e266d1f22fcc4048e9cdc696d79ddbb7b72e295f",
+   "kind": "removed",
+   "note": "The deprecated rover position control module was removed with its parameters. Rovers use the rover_ackermann, rover_differential or rover_mecanum module, each with its own parameters.",
+   "pr": 25054
+  },
+  "MPC_HOLD_DZ": {
+   "basis": "code-inspection",
+   "commit": "2bf9fce57724068abf7275ddc36d0428285258a5",
+   "kind": "renamed",
+   "note": "Renamed to MAN_DEADZONE (same meaning, same default 0.1). Not converted; set MAN_DEADZONE to the old value.",
+   "pr": 25435,
+   "successors": [
+    "MAN_DEADZONE"
+   ]
+  },
+  "MPC_XY_MAN_EXPO": {
+   "basis": "code-inspection",
+   "commit": "5c5bf0b83db96e8c556a44e48746fab99f6c3513",
+   "fixed_value": 0.6,
+   "kind": "fixed",
+   "note": "Removed; the stick exponential curve is now fixed in the code at the old default (0.6).",
+   "pr": 25435
+  },
+  "MPC_YAW_EXPO": {
+   "basis": "code-inspection",
+   "commit": "5c5bf0b83db96e8c556a44e48746fab99f6c3513",
+   "fixed_value": 0.6,
+   "kind": "fixed",
+   "note": "Removed; the stick exponential curve is now fixed in the code at the old default (0.6).",
+   "pr": 25435
+  },
+  "MPC_Z_MAN_EXPO": {
+   "basis": "code-inspection",
+   "commit": "5c5bf0b83db96e8c556a44e48746fab99f6c3513",
+   "fixed_value": 0.6,
+   "kind": "fixed",
+   "note": "Removed; the stick exponential curve is now fixed in the code at the old default (0.6).",
+   "pr": 25435
+  },
+  "NPFG_EN_MIN_GSP": {
+   "basis": "code-inspection",
+   "commit": "779a55c6dc272cd11ad3df3f8bd20425ecef30f8",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed in the fixed-wing position control rework; the airspeed is now always raised to keep the minimum ground speed FW_GND_SPD_MIN while following a course (the old value 1).",
+   "pr": 24056
+  },
+  "NPFG_GSP_MAX_TK": {
+   "basis": "code-inspection",
+   "commit": "779a55c6dc272cd11ad3df3f8bd20425ecef30f8",
+   "kind": "removed",
+   "note": "The track keeping logic for excess wind (raising the minimum ground speed with the track error) was removed in the fixed-wing position control rework.",
+   "pr": 24056
+  },
+  "NPFG_TRACK_KEEP": {
+   "basis": "code-inspection",
+   "commit": "779a55c6dc272cd11ad3df3f8bd20425ecef30f8",
+   "kind": "removed",
+   "note": "The track keeping logic for excess wind (raising the minimum ground speed with the track error) was removed in the fixed-wing position control rework.",
+   "pr": 24056
+  },
+  "NPFG_WIND_REG": {
+   "basis": "code-inspection",
+   "commit": "779a55c6dc272cd11ad3df3f8bd20425ecef30f8",
+   "kind": "fixed",
+   "note": "Removed in the fixed-wing position control rework; there is no switch for raising the airspeed in excess wind any more. Keeping the minimum ground speed FW_GND_SPD_MIN is always on; track keeping is gone (see NPFG_TRACK_KEEP).",
+   "pr": 24056
+  },
+  "RC10_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC11_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC12_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC13_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC14_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC15_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC16_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC17_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC18_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RC1_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC2_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC3_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC4_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC5_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC6_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC7_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC8_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 10 us.",
+   "pr": 25502
+  },
+  "RC9_DZ": {
+   "basis": "code-inspection",
+   "commit": "4842c542b80e7dcc433424984aed98907e054052",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; RC calibration no longer applies a dead zone around the trim value, as with the old value 0. The default for this channel was 0.",
+   "pr": 25502
+  },
+  "RD_MAX_THR_YAW_R": {
+   "basis": "code-inspection",
+   "commit": "f35b92a4877836dcf1dda79c48de4fe782df3c9d",
+   "kind": "replaced",
+   "note": "Replaced by RO_YAW_RATE_CORR, a correction factor for the yaw rate feedforward instead of a yaw rate in m/s. Do not copy the value.",
+   "pr": 25051,
+   "successors": [
+    "RO_YAW_RATE_CORR"
+   ]
+  },
+  "RD_MISS_SPD_GAIN": {
+   "basis": "code-inspection",
+   "commit": "eed966a1c6b28021bb242dee257d4c6f27d0f94c",
+   "kind": "replaced",
+   "note": "Replaced by RO_SPEED_RED, which reduces the speed by the course error instead of the waypoint transition angle. Both default to -1 (off).",
+   "pr": 25051,
+   "successors": [
+    "RO_SPEED_RED"
+   ]
+  },
+  "RM_MAX_THR_YAW_R": {
+   "basis": "code-inspection",
+   "commit": "f35b92a4877836dcf1dda79c48de4fe782df3c9d",
+   "kind": "replaced",
+   "note": "Replaced by RO_YAW_RATE_CORR, a correction factor for the yaw rate feedforward instead of a yaw rate in m/s. Do not copy the value.",
+   "pr": 25051,
+   "successors": [
+    "RO_YAW_RATE_CORR"
+   ]
+  },
+  "RM_MISS_SPD_GAIN": {
+   "basis": "code-inspection",
+   "commit": "eed966a1c6b28021bb242dee257d4c6f27d0f94c",
+   "kind": "replaced",
+   "note": "Replaced by RO_SPEED_RED, which reduces the speed by the course error instead of the waypoint transition angle. Both default to -1 (off).",
+   "pr": 25051,
+   "successors": [
+    "RO_SPEED_RED"
+   ]
+  },
+  "RWTO_HDG": {
+   "basis": "code-inspection",
+   "commit": "3e3f10f5bc773afde11e3d0150a608928fbf7134",
+   "kind": "fixed",
+   "note": "Removed; the takeoff ground roll always follows a line from the start position: in a mission towards the takeoff waypoint (like the old value 1), otherwise along the heading at the start. Holding the initial heading (0) is no longer available.",
+   "pr": 24056
+  },
+  "RWTO_NPFG_PERIOD": {
+   "basis": "code-inspection",
+   "commit": "3e3f10f5bc773afde11e3d0150a608928fbf7134",
+   "kind": "replaced",
+   "note": "The separate guidance period for steering on the runway is gone; the ground roll is guided with the general guidance settings (NPFG_PERIOD).",
+   "pr": 24056,
+   "successors": [
+    "NPFG_PERIOD"
+   ]
+  },
+  "UUV_DIRCT_PITCH": {
+   "basis": "code-inspection",
+   "commit": "e14eea5615e2455ba2af2072bf9f242631330d3c",
+   "kind": "removed",
+   "note": "Removed when the UUV attitude control was reworked: the fixed test inputs (UUV_INPUT_MODE \"Direct Feedthrough\" with UUV_DIRCT_*) and the option to skip the controller are gone. Manual control has its own modes, scaled by UUV_MGM_* (manual), UUV_SGM_* (attitude) and UUV_RGM_* (rate).",
+   "pr": 25052
+  },
+  "UUV_DIRCT_ROLL": {
+   "basis": "code-inspection",
+   "commit": "e14eea5615e2455ba2af2072bf9f242631330d3c",
+   "kind": "removed",
+   "note": "Removed when the UUV attitude control was reworked: the fixed test inputs (UUV_INPUT_MODE \"Direct Feedthrough\" with UUV_DIRCT_*) and the option to skip the controller are gone. Manual control has its own modes, scaled by UUV_MGM_* (manual), UUV_SGM_* (attitude) and UUV_RGM_* (rate).",
+   "pr": 25052
+  },
+  "UUV_DIRCT_THRUST": {
+   "basis": "code-inspection",
+   "commit": "e14eea5615e2455ba2af2072bf9f242631330d3c",
+   "kind": "removed",
+   "note": "Removed when the UUV attitude control was reworked: the fixed test inputs (UUV_INPUT_MODE \"Direct Feedthrough\" with UUV_DIRCT_*) and the option to skip the controller are gone. Manual control has its own modes, scaled by UUV_MGM_* (manual), UUV_SGM_* (attitude) and UUV_RGM_* (rate).",
+   "pr": 25052
+  },
+  "UUV_DIRCT_YAW": {
+   "basis": "code-inspection",
+   "commit": "e14eea5615e2455ba2af2072bf9f242631330d3c",
+   "kind": "removed",
+   "note": "Removed when the UUV attitude control was reworked: the fixed test inputs (UUV_INPUT_MODE \"Direct Feedthrough\" with UUV_DIRCT_*) and the option to skip the controller are gone. Manual control has its own modes, scaled by UUV_MGM_* (manual), UUV_SGM_* (attitude) and UUV_RGM_* (rate).",
+   "pr": 25052
+  },
+  "UUV_INPUT_MODE": {
+   "basis": "code-inspection",
+   "commit": "e14eea5615e2455ba2af2072bf9f242631330d3c",
+   "kind": "removed",
+   "note": "Removed when the UUV attitude control was reworked: the fixed test inputs (UUV_INPUT_MODE \"Direct Feedthrough\" with UUV_DIRCT_*) and the option to skip the controller are gone. Manual control has its own modes, scaled by UUV_MGM_* (manual), UUV_SGM_* (attitude) and UUV_RGM_* (rate).",
+   "pr": 25052
+  },
+  "UUV_SKIP_CTRL": {
+   "basis": "code-inspection",
+   "commit": "e14eea5615e2455ba2af2072bf9f242631330d3c",
+   "kind": "removed",
+   "note": "Removed when the UUV attitude control was reworked: the fixed test inputs (UUV_INPUT_MODE \"Direct Feedthrough\" with UUV_DIRCT_*) and the option to skip the controller are gone. Manual control has its own modes, scaled by UUV_MGM_* (manual), UUV_SGM_* (attitude) and UUV_RGM_* (rate).",
+   "pr": 25052
+  }
+ },
+ "status": "complete",
+ "to": "v1.17.0"
+}

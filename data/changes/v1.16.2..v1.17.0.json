@@ -672,72 +672,211 @@
    }
   }
  },
- "curated": "none",
+ "curated": "complete",
  "format": 1,
  "from": {
   "commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
   "tag": "v1.16.2"
  },
  "removed": {
-  "ASPD_FALLBACK_GW": {},
-  "COM_POSCTL_NAVL": {},
-  "EKF2_RNG_A_IGATE": {},
-  "FW_AT_SYSID_AMP": {},
-  "GND_L1_DAMPING": {},
-  "GND_L1_DIST": {},
-  "GND_L1_PERIOD": {},
-  "GND_MAN_Y_MAX": {},
-  "GND_MAX_ANG": {},
-  "GND_SPEED_D": {},
-  "GND_SPEED_I": {},
-  "GND_SPEED_IMAX": {},
-  "GND_SPEED_MAX": {},
-  "GND_SPEED_P": {},
-  "GND_SPEED_THR_SC": {},
-  "GND_SPEED_TRIM": {},
-  "GND_SP_CTRL_MODE": {},
-  "GND_THR_CRUISE": {},
-  "GND_THR_MAX": {},
-  "GND_THR_MIN": {},
-  "GND_WHEEL_BASE": {},
-  "MPC_HOLD_DZ": {},
-  "MPC_XY_MAN_EXPO": {},
-  "MPC_YAW_EXPO": {},
-  "MPC_Z_MAN_EXPO": {},
-  "NPFG_EN_MIN_GSP": {},
-  "NPFG_GSP_MAX_TK": {},
-  "NPFG_TRACK_KEEP": {},
-  "NPFG_WIND_REG": {},
-  "RC10_DZ": {},
-  "RC11_DZ": {},
-  "RC12_DZ": {},
-  "RC13_DZ": {},
-  "RC14_DZ": {},
-  "RC15_DZ": {},
-  "RC16_DZ": {},
-  "RC17_DZ": {},
-  "RC18_DZ": {},
-  "RC1_DZ": {},
-  "RC2_DZ": {},
-  "RC3_DZ": {},
-  "RC4_DZ": {},
-  "RC5_DZ": {},
-  "RC6_DZ": {},
-  "RC7_DZ": {},
-  "RC8_DZ": {},
-  "RC9_DZ": {},
-  "RD_MAX_THR_YAW_R": {},
-  "RD_MISS_SPD_GAIN": {},
-  "RM_MAX_THR_YAW_R": {},
-  "RM_MISS_SPD_GAIN": {},
-  "RWTO_HDG": {},
-  "RWTO_NPFG_PERIOD": {},
-  "UUV_DIRCT_PITCH": {},
-  "UUV_DIRCT_ROLL": {},
-  "UUV_DIRCT_THRUST": {},
-  "UUV_DIRCT_YAW": {},
-  "UUV_INPUT_MODE": {},
-  "UUV_SKIP_CTRL": {}
+  "ASPD_FALLBACK_GW": {
+   "kind": "migrated",
+   "successors": [
+    "ASPD_FALLBACK"
+   ]
+  },
+  "COM_POSCTL_NAVL": {
+   "kind": "fixed"
+  },
+  "EKF2_RNG_A_IGATE": {
+   "kind": "removed"
+  },
+  "FW_AT_SYSID_AMP": {
+   "kind": "removed"
+  },
+  "GND_L1_DAMPING": {
+   "kind": "removed"
+  },
+  "GND_L1_DIST": {
+   "kind": "removed"
+  },
+  "GND_L1_PERIOD": {
+   "kind": "removed"
+  },
+  "GND_MAN_Y_MAX": {
+   "kind": "removed"
+  },
+  "GND_MAX_ANG": {
+   "kind": "removed"
+  },
+  "GND_SPEED_D": {
+   "kind": "removed"
+  },
+  "GND_SPEED_I": {
+   "kind": "removed"
+  },
+  "GND_SPEED_IMAX": {
+   "kind": "removed"
+  },
+  "GND_SPEED_MAX": {
+   "kind": "removed"
+  },
+  "GND_SPEED_P": {
+   "kind": "removed"
+  },
+  "GND_SPEED_THR_SC": {
+   "kind": "removed"
+  },
+  "GND_SPEED_TRIM": {
+   "kind": "removed"
+  },
+  "GND_SP_CTRL_MODE": {
+   "kind": "removed"
+  },
+  "GND_THR_CRUISE": {
+   "kind": "removed"
+  },
+  "GND_THR_MAX": {
+   "kind": "removed"
+  },
+  "GND_THR_MIN": {
+   "kind": "removed"
+  },
+  "GND_WHEEL_BASE": {
+   "kind": "removed"
+  },
+  "MPC_HOLD_DZ": {
+   "kind": "renamed",
+   "successors": [
+    "MAN_DEADZONE"
+   ]
+  },
+  "MPC_XY_MAN_EXPO": {
+   "kind": "fixed"
+  },
+  "MPC_YAW_EXPO": {
+   "kind": "fixed"
+  },
+  "MPC_Z_MAN_EXPO": {
+   "kind": "fixed"
+  },
+  "NPFG_EN_MIN_GSP": {
+   "kind": "fixed"
+  },
+  "NPFG_GSP_MAX_TK": {
+   "kind": "removed"
+  },
+  "NPFG_TRACK_KEEP": {
+   "kind": "removed"
+  },
+  "NPFG_WIND_REG": {
+   "kind": "fixed"
+  },
+  "RC10_DZ": {
+   "kind": "fixed"
+  },
+  "RC11_DZ": {
+   "kind": "fixed"
+  },
+  "RC12_DZ": {
+   "kind": "fixed"
+  },
+  "RC13_DZ": {
+   "kind": "fixed"
+  },
+  "RC14_DZ": {
+   "kind": "fixed"
+  },
+  "RC15_DZ": {
+   "kind": "fixed"
+  },
+  "RC16_DZ": {
+   "kind": "fixed"
+  },
+  "RC17_DZ": {
+   "kind": "fixed"
+  },
+  "RC18_DZ": {
+   "kind": "fixed"
+  },
+  "RC1_DZ": {
+   "kind": "fixed"
+  },
+  "RC2_DZ": {
+   "kind": "fixed"
+  },
+  "RC3_DZ": {
+   "kind": "fixed"
+  },
+  "RC4_DZ": {
+   "kind": "fixed"
+  },
+  "RC5_DZ": {
+   "kind": "fixed"
+  },
+  "RC6_DZ": {
+   "kind": "fixed"
+  },
+  "RC7_DZ": {
+   "kind": "fixed"
+  },
+  "RC8_DZ": {
+   "kind": "fixed"
+  },
+  "RC9_DZ": {
+   "kind": "fixed"
+  },
+  "RD_MAX_THR_YAW_R": {
+   "kind": "replaced",
+   "successors": [
+    "RO_YAW_RATE_CORR"
+   ]
+  },
+  "RD_MISS_SPD_GAIN": {
+   "kind": "replaced",
+   "successors": [
+    "RO_SPEED_RED"
+   ]
+  },
+  "RM_MAX_THR_YAW_R": {
+   "kind": "replaced",
+   "successors": [
+    "RO_YAW_RATE_CORR"
+   ]
+  },
+  "RM_MISS_SPD_GAIN": {
+   "kind": "replaced",
+   "successors": [
+    "RO_SPEED_RED"
+   ]
+  },
+  "RWTO_HDG": {
+   "kind": "fixed"
+  },
+  "RWTO_NPFG_PERIOD": {
+   "kind": "replaced",
+   "successors": [
+    "NPFG_PERIOD"
+   ]
+  },
+  "UUV_DIRCT_PITCH": {
+   "kind": "removed"
+  },
+  "UUV_DIRCT_ROLL": {
+   "kind": "removed"
+  },
+  "UUV_DIRCT_THRUST": {
+   "kind": "removed"
+  },
+  "UUV_DIRCT_YAW": {
+   "kind": "removed"
+  },
+  "UUV_INPUT_MODE": {
+   "kind": "removed"
+  },
+  "UUV_SKIP_CTRL": {
+   "kind": "removed"
+  }
  },
  "to": {
   "commit": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
