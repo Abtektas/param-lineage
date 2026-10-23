@@ -1,0 +1,540 @@
+{
+ "format": 1,
+ "from": "v1.17.0",
+ "removed": {
+  "ASPD_BETA_GATE": {
+   "basis": "code-inspection",
+   "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (1)."
+  },
+  "ASPD_BETA_NOISE": {
+   "basis": "code-inspection",
+   "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
+   "fixed_value": 0.15,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (0.15)."
+  },
+  "ASPD_SCALE_NSD": {
+   "basis": "code-inspection",
+   "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
+   "fixed_value": 0.0001,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (0.0001)."
+  },
+  "ASPD_TAS_GATE": {
+   "basis": "code-inspection",
+   "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
+   "fixed_value": 4,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (4)."
+  },
+  "BAT1_I_CHANNEL": {
+   "basis": "code-inspection",
+   "commit": "9c2e8aff0fae779b4bd28530899bc53af1f85b3c",
+   "kind": "fixed",
+   "note": "Removed; the battery current ADC channel always comes from the board configuration and can no longer be overridden.",
+   "pr": 26590
+  },
+  "BAT2_I_CHANNEL": {
+   "basis": "code-inspection",
+   "commit": "9c2e8aff0fae779b4bd28530899bc53af1f85b3c",
+   "kind": "fixed",
+   "note": "Removed; the battery current ADC channel always comes from the board configuration and can no longer be overridden.",
+   "pr": 26590
+  },
+  "BAT_ADC_CHANNEL": {
+   "basis": "code-inspection",
+   "commit": "1550c8d245b2e784d334305ee54611a7fd6dc374",
+   "kind": "removed",
+   "note": "Was already unused (deprecated) in v1.17; removed."
+  },
+  "COM_ARM_SDCARD": {
+   "basis": "code-inspection",
+   "commit": "a061b8665b03a43b68376d919cc008b75600f91c",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; a missing SD card now always gives a warning (the old value 1). \"Disabled\" (0) and \"Enforce SD card presence\" (2) are no longer available.",
+   "pr": 27259
+  },
+  "COM_DISARM_MAN": {
+   "basis": "code-inspection",
+   "commit": "0c0be0004693e122ced2a170c0c75ae2c53e1dd6",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; disarming in flight with a stick, switch or button in manual thrust modes on multicopters is now always allowed (the old value 1)."
+  },
+  "COM_FLT_PROFILE": {
+   "basis": "code-inspection",
+   "commit": "576e33684940d633d6d3ac5d3c8495812e71f151",
+   "kind": "removed",
+   "note": "Had no effect; removed.",
+   "pr": 26735
+  },
+  "COM_HLDL_REG_T": {
+   "basis": "code-inspection",
+   "commit": "4e2f3e76004d70bcdeb49ac1050583bee7254c0b",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; a regained high-latency link is used immediately (the old value 0).",
+   "pr": 26809
+  },
+  "COM_IMB_PROP_ACT": {
+   "basis": "code-inspection",
+   "commit": "ffef31fb0611e63917c239a36fa1ea083c12d93f",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; an imbalanced propeller now always gives a warning (the old value 0). To turn the check off (old -1), set FD_IMB_PROP_THR to 0. \"Return\" (1) and \"Land\" (2) are no longer available.",
+   "pr": 27260
+  },
+  "COM_KILL_DISARM": {
+   "basis": "code-inspection",
+   "commit": "6b5147110b4b6e63aff2743c581f0aa11475f243",
+   "fixed_value": 5.0,
+   "kind": "fixed",
+   "note": "Removed; the vehicle disarms 5 s after the kill switch is engaged.",
+   "pr": 26736
+  },
+  "COM_LKDOWN_TKO": {
+   "basis": "code-inspection",
+   "commit": "5638ac53c7da1be7fd8edde8533ed28bfafbe59d",
+   "fixed_value": 3.0,
+   "kind": "fixed",
+   "note": "Removed; the time window for detecting a failure after takeoff is fixed at 3 s.",
+   "pr": 27262
+  },
+  "COM_MOT_TEST_EN": {
+   "basis": "code-inspection",
+   "commit": "09cb22f7996362a58aef3426b57dda8b67151cd9",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; actuator testing can no longer be disabled."
+  },
+  "COM_OBC_LOSS_T": {
+   "basis": "code-inspection",
+   "commit": "5e86be131c5d3231b8cc157e673f77d9c9a6173d",
+   "fixed_value": 5.0,
+   "kind": "fixed",
+   "note": "Removed; onboard computer link loss is declared after 5 s.",
+   "pr": 27261
+  },
+  "COM_RC_ARM_HYST": {
+   "basis": "code-inspection",
+   "commit": "c8286d4bba7e908199224f8a474fef66f5d0431d",
+   "fixed_value": 1000,
+   "kind": "fixed",
+   "note": "Removed; arming and disarming with sticks or a button take 1 s (1000 ms)."
+  },
+  "COM_RC_OVERRIDE": {
+   "basis": "code-inspection",
+   "commit": "b8c5f66af053f609c9269f1e3cda2a4955bb0df0",
+   "kind": "migrated",
+   "note": "Replaced by MAN_OVERRIDE_SPD: stick speed in 1/s, a negative value disables it. Only \"disabled\" (0) is converted, to MAN_OVERRIDE_SPD = -1. Otherwise override now works by stick speed and applies in both auto and offboard modes, on multicopters and VTOLs in multicopter mode.",
+   "pr": 27041,
+   "successors": [
+    "MAN_OVERRIDE_SPD"
+   ]
+  },
+  "COM_RC_STICK_OV": {
+   "basis": "code-inspection",
+   "commit": "b8c5f66af053f609c9269f1e3cda2a4955bb0df0",
+   "kind": "replaced",
+   "note": "Replaced by MAN_OVERRIDE_SPD, which uses stick speed (1/s) instead of stick deflection (%). There is no conversion; check MAN_OVERRIDE_SPD (default 1.0).",
+   "pr": 27041,
+   "successors": [
+    "MAN_OVERRIDE_SPD"
+   ]
+  },
+  "COM_TAKEOFF_ACT": {
+   "basis": "code-inspection",
+   "commit": "eb06c7b7a9e28799b63def14b08d3057835c0bcc",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; after takeoff the vehicle always switches to Hold (the old value 0). \"Mission (if valid)\" (1) is no longer available.",
+   "pr": 26808
+  },
+  "DSHOT_BIDIR_EN": {
+   "basis": "code-inspection",
+   "commit": "f00e46f61856640dcef3d419dd39fc8c62758d0b",
+   "kind": "replaced",
+   "note": "Bidirectional DShot is now chosen per timer group in the output protocol parameters (PWM_MAIN_TIMn / PWM_AUX_TIMn, Actuators setup): BDShot150 (-8), BDShot300 (-7) or BDShot600 (-6). Not converted.",
+   "successors": [
+    "PWM_AUX_TIM0",
+    "PWM_AUX_TIM1",
+    "PWM_AUX_TIM2",
+    "PWM_AUX_TIM3",
+    "PWM_MAIN_TIM0",
+    "PWM_MAIN_TIM1",
+    "PWM_MAIN_TIM2"
+   ]
+  },
+  "EKF2_AGP_CTRL": {
+   "basis": "code-inspection",
+   "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
+   "kind": "renamed",
+   "note": "Replaced by the per-source EKF2_AGPn_CTRL. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_CTRL; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "pr": 26306,
+   "successors": [
+    "EKF2_AGP0_CTRL"
+   ]
+  },
+  "EKF2_AGP_DELAY": {
+   "basis": "code-inspection",
+   "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
+   "kind": "renamed",
+   "note": "Replaced by the per-source EKF2_AGPn_DELAY. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_DELAY; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "pr": 26306,
+   "successors": [
+    "EKF2_AGP0_DELAY"
+   ]
+  },
+  "EKF2_AGP_GATE": {
+   "basis": "code-inspection",
+   "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
+   "kind": "renamed",
+   "note": "Replaced by the per-source EKF2_AGPn_GATE. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_GATE; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "pr": 26306,
+   "successors": [
+    "EKF2_AGP0_GATE"
+   ]
+  },
+  "EKF2_AGP_MODE": {
+   "basis": "code-inspection",
+   "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
+   "kind": "renamed",
+   "note": "Replaced by the per-source EKF2_AGPn_MODE. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_MODE; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "pr": 26306,
+   "successors": [
+    "EKF2_AGP0_MODE"
+   ]
+  },
+  "EKF2_AGP_NOISE": {
+   "basis": "code-inspection",
+   "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
+   "kind": "renamed",
+   "note": "Replaced by the per-source EKF2_AGPn_NOISE. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_NOISE; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "pr": 26306,
+   "successors": [
+    "EKF2_AGP0_NOISE"
+   ]
+  },
+  "EKF2_GPS_DELAY": {
+   "basis": "code-inspection",
+   "commit": "4b2e0a6f59a7b2b18ef59aae767bc105c3adc935",
+   "kind": "migrated",
+   "note": "Replaced by the per-receiver SENS_GPS0_DELAY and SENS_GPS1_DELAY (integer ms).",
+   "pr": 26660,
+   "successors": [
+    "SENS_GPS0_DELAY",
+    "SENS_GPS1_DELAY"
+   ]
+  },
+  "EKF2_GPS_POS_X": {
+   "basis": "code-inspection",
+   "commit": "89855926ef9195434ff495c970ae204a4a707e71",
+   "kind": "migrated",
+   "note": "Replaced by the per-receiver SENS_GPS0_OFFX.",
+   "pr": 26634,
+   "successors": [
+    "SENS_GPS0_OFFX"
+   ]
+  },
+  "EKF2_GPS_POS_Y": {
+   "basis": "code-inspection",
+   "commit": "89855926ef9195434ff495c970ae204a4a707e71",
+   "kind": "migrated",
+   "note": "Replaced by the per-receiver SENS_GPS0_OFFY.",
+   "pr": 26634,
+   "successors": [
+    "SENS_GPS0_OFFY"
+   ]
+  },
+  "EKF2_GPS_POS_Z": {
+   "basis": "code-inspection",
+   "commit": "89855926ef9195434ff495c970ae204a4a707e71",
+   "kind": "migrated",
+   "note": "Replaced by the per-receiver SENS_GPS0_OFFZ.",
+   "pr": 26634,
+   "successors": [
+    "SENS_GPS0_OFFZ"
+   ]
+  },
+  "FD_ACT_MOT_C2T": {
+   "basis": "code-inspection",
+   "commit": "6d0de7379b56adaa16717fb71f1cdd35c3f0e36e",
+   "kind": "replaced",
+   "note": "Motor failure detection was reworked. The closest new parameter, MOTFAIL_C2T, is a scale used with the offset MOTFAIL_OFF and has a different default (35 instead of 2.0); do not copy the value.",
+   "pr": 26990,
+   "successors": [
+    "MOTFAIL_C2T",
+    "MOTFAIL_OFF"
+   ]
+  },
+  "FD_ACT_MOT_THR": {
+   "basis": "code-inspection",
+   "commit": "c5652b2084639abc341b31cfbfc52ba77f488650",
+   "kind": "removed",
+   "note": "Removed with the motor failure detection rework; there is no replacement."
+  },
+  "FD_ACT_MOT_TOUT": {
+   "basis": "code-inspection",
+   "commit": "c5652b2084639abc341b31cfbfc52ba77f488650",
+   "kind": "replaced",
+   "note": "Replaced by MOTFAIL_TIME, in seconds instead of milliseconds, in the reworked motor failure detection (default 1 s instead of 100 ms). Not converted.",
+   "successors": [
+    "MOTFAIL_TIME"
+   ]
+  },
+  "FD_ESCS_EN": {
+   "basis": "code-inspection",
+   "commit": "c5652b2084639abc341b31cfbfc52ba77f488650",
+   "kind": "replaced",
+   "note": "The check of the ESCs' arming state now runs together with the motor failure check, both enabled by FD_ACT_EN, whose default changed from 1 to 0.",
+   "successors": [
+    "FD_ACT_EN"
+   ]
+  },
+  "FW_AT_START": {
+   "basis": "code-inspection",
+   "commit": "ca83b8330d683ff4da9239ebd981a50e3c20c212",
+   "kind": "removed",
+   "note": "Was a trigger, not a setting. Autotune is now started with the autotune command from the ground station or with the AUX switch (FW_AT_MAN_AUX)."
+  },
+  "FW_T_SPD_DEV_STD": {
+   "basis": "code-inspection",
+   "commit": "c4c68df4e485064956dab5dd50e7b2e034d5329d",
+   "fixed_value": 0.2,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (0.2)."
+  },
+  "FW_T_SPD_PRC_STD": {
+   "basis": "code-inspection",
+   "commit": "c4c68df4e485064956dab5dd50e7b2e034d5329d",
+   "fixed_value": 0.2,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (0.2)."
+  },
+  "FW_T_SPD_STD": {
+   "basis": "code-inspection",
+   "commit": "c4c68df4e485064956dab5dd50e7b2e034d5329d",
+   "fixed_value": 0.07,
+   "kind": "fixed",
+   "note": "Removed; the value is now fixed in the code at the old default (0.07)."
+  },
+  "GF_PREDICT": {
+   "basis": "code-inspection",
+   "commit": "ece74e8d24051776408a39960b99ecba3c81ebe1",
+   "kind": "removed",
+   "note": "The experimental pre-emptive geofence feature was removed.",
+   "pr": 27465
+  },
+  "INA226_CONFIG": {
+   "basis": "code-inspection",
+   "commit": "ad26499a36c539a4b1b78deb7a3fc848d29c4e27",
+   "kind": "removed",
+   "note": "Removed; the rewritten INA226 driver always uses its built-in configuration.",
+   "pr": 27364
+  },
+  "LNDMC_TRIG_TIME": {
+   "basis": "code-inspection",
+   "commit": "62f5f5267ed60e6a069291065f1fc9a2516f6389",
+   "fixed_value": 1.0,
+   "kind": "fixed",
+   "note": "Removed; the multicopter land detection time is fixed (1 s, the old default).",
+   "pr": 25251
+  },
+  "MC_AT_START": {
+   "basis": "code-inspection",
+   "commit": "ca83b8330d683ff4da9239ebd981a50e3c20c212",
+   "kind": "removed",
+   "note": "Was a trigger, not a setting. Autotune is now started with the autotune command from the ground station."
+  },
+  "MNT_OFF_PITCH": {
+   "basis": "code-inspection",
+   "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
+   "kind": "removed",
+   "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
+  },
+  "MNT_OFF_ROLL": {
+   "basis": "code-inspection",
+   "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
+   "kind": "removed",
+   "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
+  },
+  "MNT_OFF_YAW": {
+   "basis": "code-inspection",
+   "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
+   "kind": "removed",
+   "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
+  },
+  "MNT_RANGE_PITCH": {
+   "basis": "code-inspection",
+   "commit": "0fa5a8340954290c518189a038cae9bb6b11c209",
+   "kind": "migrated",
+   "note": "Replaced by MNT_MAX_PITCH and MNT_MIN_PITCH (half the range each way).",
+   "successors": [
+    "MNT_MAX_PITCH",
+    "MNT_MIN_PITCH"
+   ]
+  },
+  "MOT_POLE_COUNT": {
+   "basis": "code-inspection",
+   "commit": "f00e46f61856640dcef3d419dd39fc8c62758d0b",
+   "kind": "migrated",
+   "note": "Replaced by the per-motor DSHOT_MOT_POL1 to DSHOT_MOT_POL12.",
+   "successors": [
+    "DSHOT_MOT_POL1",
+    "DSHOT_MOT_POL2",
+    "DSHOT_MOT_POL3",
+    "DSHOT_MOT_POL4",
+    "DSHOT_MOT_POL5",
+    "DSHOT_MOT_POL6",
+    "DSHOT_MOT_POL7",
+    "DSHOT_MOT_POL8",
+    "DSHOT_MOT_POL9",
+    "DSHOT_MOT_POL10",
+    "DSHOT_MOT_POL11",
+    "DSHOT_MOT_POL12"
+   ]
+  },
+  "MPC_LAND_RC_HELP": {
+   "basis": "code-inspection",
+   "commit": "7ed3c5bad42f05d5c8264c4ee347943de37edf17",
+   "kind": "migrated",
+   "note": "Replaced by bit 1 (landing nudging) of MPC_AUTO_NUDGING.",
+   "pr": 27691,
+   "successors": [
+    "MPC_AUTO_NUDGING"
+   ]
+  },
+  "MPC_USE_HTE": {
+   "basis": "code-inspection",
+   "commit": "0d66981dccea5cf5ef285855a8c3eb2b5af3bebc",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; the hover thrust estimate is always used for altitude control (the old value 1).",
+   "pr": 24751
+  },
+  "SENS_IMU_TEMP": {
+   "basis": "code-inspection",
+   "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
+   "kind": "renamed",
+   "note": "Replaced by HEATER1_TEMP of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "pr": 26325,
+   "successors": [
+    "HEATER1_TEMP"
+   ]
+  },
+  "SENS_IMU_TEMP_FF": {
+   "basis": "code-inspection",
+   "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
+   "kind": "renamed",
+   "note": "Replaced by HEATER1_TEMP_FF of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "pr": 26325,
+   "successors": [
+    "HEATER1_TEMP_FF"
+   ]
+  },
+  "SENS_IMU_TEMP_I": {
+   "basis": "code-inspection",
+   "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
+   "kind": "renamed",
+   "note": "Replaced by HEATER1_TEMP_I of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "pr": 26325,
+   "successors": [
+    "HEATER1_TEMP_I"
+   ]
+  },
+  "SENS_IMU_TEMP_P": {
+   "basis": "code-inspection",
+   "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
+   "kind": "renamed",
+   "note": "Replaced by HEATER1_TEMP_P of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "pr": 26325,
+   "successors": [
+    "HEATER1_TEMP_P"
+   ]
+  },
+  "SENS_TEMP_ID": {
+   "basis": "code-inspection",
+   "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
+   "kind": "renamed",
+   "note": "Replaced by HEATER1_SENS_ID of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "pr": 26325,
+   "successors": [
+    "HEATER1_SENS_ID"
+   ]
+  },
+  "SIM_ARSPD_FAIL": {
+   "basis": "code-inspection",
+   "commit": "4b34cb88349549a792adf373f919cf62d6462d30",
+   "kind": "removed",
+   "note": "Simulation only; removed."
+  },
+  "SIM_BAT_ENABLE": {
+   "basis": "code-inspection",
+   "commit": "c970a822a0a43f3756c6bda0e3ad2e083aeebe00",
+   "kind": "replaced",
+   "note": "Simulation only. To disable the simulated battery, set SIM_BAT_DRAIN to 0.",
+   "pr": 26823,
+   "successors": [
+    "SIM_BAT_DRAIN"
+   ]
+  },
+  "UAVCAN_LGT_ANTCL": {
+   "basis": "code-inspection",
+   "commit": "e52ce5c43b85748c5f229a54c5b0275ed13a114f",
+   "kind": "replaced",
+   "note": "The UAVCAN light configuration was redesigned: UAVCAN_LGT_MODE, UAVCAN_LGT_NUM, UAVCAN_LGT_IDn and UAVCAN_LGT_FNn. Not converted.",
+   "pr": 26253,
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  },
+  "UAVCAN_LGT_LAND": {
+   "basis": "code-inspection",
+   "commit": "e52ce5c43b85748c5f229a54c5b0275ed13a114f",
+   "kind": "replaced",
+   "note": "The UAVCAN light configuration was redesigned: UAVCAN_LGT_MODE, UAVCAN_LGT_NUM, UAVCAN_LGT_IDn and UAVCAN_LGT_FNn. Not converted.",
+   "pr": 26253,
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  },
+  "UAVCAN_LGT_NAV": {
+   "basis": "code-inspection",
+   "commit": "e52ce5c43b85748c5f229a54c5b0275ed13a114f",
+   "kind": "replaced",
+   "note": "The UAVCAN light configuration was redesigned: UAVCAN_LGT_MODE, UAVCAN_LGT_NUM, UAVCAN_LGT_IDn and UAVCAN_LGT_FNn. Not converted.",
+   "pr": 26253,
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  },
+  "UAVCAN_LGT_STROB": {
+   "basis": "code-inspection",
+   "commit": "e52ce5c43b85748c5f229a54c5b0275ed13a114f",
+   "kind": "replaced",
+   "note": "The UAVCAN light configuration was redesigned: UAVCAN_LGT_MODE, UAVCAN_LGT_NUM, UAVCAN_LGT_IDn and UAVCAN_LGT_FNn. Not converted.",
+   "pr": 26253,
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  }
+ },
+ "status": "complete",
+ "to": "v1.18.0-rc1"
+}

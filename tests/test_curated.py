@@ -2,11 +2,24 @@
 """Tests of the curated facts (data/curated) and their schema."""
 
 import copy
+import glob
 import json
 import os
 import unittest
 
+from paramlineage import curated, extract
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CURATED = os.path.join(ROOT, "data", "curated")
+
+
+def files() -> list[str]:
+    return sorted(glob.glob(os.path.join(CURATED, "*..*.json")))
+
+
+def snapshot(tag: str) -> dict:
+    with open(os.path.join(ROOT, "data", "snapshots", f"{tag}.json"), encoding="utf-8") as f:
+        return json.load(f)
 
 EXAMPLE = {
     "format": 1,
@@ -41,6 +54,12 @@ class Schema(unittest.TestCase):
     def test_example_matches_the_schema(self):
         self.assertEqual(list(self.validator.iter_errors(EXAMPLE)), [])
 
+    def test_files_match_the_schema(self):
+        for name in files():
+            with open(name, encoding="utf-8") as f:
+                errors = [f"{'/'.join(map(str, e.absolute_path))}: {e.message}" for e in self.validator.iter_errors(json.load(f))]
+            self.assertEqual(errors, [], name)
+
     def test_schema_rejects_broken_entries(self):
         def broken(change):
             data = copy.deepcopy(EXAMPLE)
@@ -58,6 +77,59 @@ class Schema(unittest.TestCase):
         self.assertTrue(broken(lambda r: r.update({"lower_case": r["GF_PREDICT"]})))
         self.assertFalse(broken(lambda r: r["COM_KILL_DISARM"].pop("fixed_value")))
         self.assertFalse(broken(lambda r: None))
+
+
+class Files(unittest.TestCase):
+    def test_there_is_a_file(self):
+        self.assertIn(os.path.join(CURATED, "v1.17.0..v1.18.0-rc1.json"), files())
+
+    def test_files_are_written_the_one_way(self):
+        for name in files():
+            with open(name, encoding="utf-8") as f:
+                text = f.read()
+            self.assertEqual(text, extract.dumps(json.loads(text)), name)
+
+    def test_files_agree_with_the_snapshots(self):
+        for name in files():
+            with open(name, encoding="utf-8") as f:
+                data = json.load(f)
+            self.assertEqual(os.path.basename(name), f"{data['from']}..{data['to']}.json")
+            self.assertEqual(curated.problems(data, snapshot(data["from"]), snapshot(data["to"])), [], name)
+
+    def test_problems_are_found(self):
+        data = curated.load(CURATED, "v1.17.0", "v1.18.0-rc1")
+        old, new = snapshot("v1.17.0"), snapshot("v1.18.0-rc1")
+
+        def found(change):
+            d = copy.deepcopy(data)
+            change(d)
+            return curated.problems(d, old, new)
+
+        self.assertEqual(found(lambda d: d["removed"].pop("GF_PREDICT")), ["GF_PREDICT: removed in v1.18.0-rc1 but not listed"])
+        self.assertEqual(found(lambda d: d["removed"]["MOT_POLE_COUNT"].update({"successors": ["DSHOT_MOT_POL13"]})),
+                         ["MOT_POLE_COUNT: successor DSHOT_MOT_POL13 is not a parameter of v1.18.0-rc1"])
+        self.assertEqual(found(lambda d: d["removed"].update({"MC_ROLL_P": d["removed"]["GF_PREDICT"]})),
+                         ["MC_ROLL_P: still a parameter of v1.18.0-rc1"])
+        self.assertEqual(found(lambda d: d["removed"].update({"NO_SUCH_PARAM": d["removed"]["GF_PREDICT"]})),
+                         ["NO_SUCH_PARAM: not a parameter of v1.17.0"])
+        self.assertEqual(found(lambda d: (d.update({"status": "partial"}), d["removed"].pop("GF_PREDICT"))), [])
+
+
+@unittest.skipUnless(os.environ.get("PARAMLINEAGE_REPO"), "set PARAMLINEAGE_REPO to a git repository of PX4")
+class RealCommits(unittest.TestCase):
+    def test_commits_are_between_the_releases(self):
+        repo = os.environ["PARAMLINEAGE_REPO"]
+        for name in files():
+            with open(name, encoding="utf-8") as f:
+                self.assertEqual(curated.commit_problems(repo, json.load(f)), [], name)
+
+    def test_a_commit_outside_the_range_is_found(self):
+        repo = os.environ["PARAMLINEAGE_REPO"]
+        data = curated.load(CURATED, "v1.17.0", "v1.18.0-rc1")
+        outside = extract.git(repo, "rev-parse", "v1.17.0^{commit}").decode().strip()
+        data["removed"]["GF_PREDICT"]["commit"] = outside
+        self.assertEqual(curated.commit_problems(repo, data), [f"{outside}: not between v1.17.0 and v1.18.0-rc1"])
+
 
 
 if __name__ == "__main__":
