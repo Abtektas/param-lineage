@@ -7,6 +7,7 @@ import argparse
 import json
 import sys
 
+from . import check as check_module
 from . import legal, query
 
 
@@ -41,6 +42,10 @@ def build_parser() -> argparse.ArgumentParser:
     diff = commands.add_parser("diff", parents=[data], help="what changed between two tracked releases")
     diff.add_argument("old", help="the older release, such as v1.16.2")
     diff.add_argument("new", help="the newer release, such as v1.18.0-rc1")
+    check = commands.add_parser("check", parents=[data], help="check a parameter file saved on one release against a newer one")
+    check.add_argument("file", help="a .params file saved by QGroundControl")
+    check.add_argument("--from", dest="old", help="the release the file was saved on (default: from the file's Version line)")
+    check.add_argument("--to", dest="new", required=True, help="the release it will be loaded on")
     return parser
 
 
@@ -99,21 +104,77 @@ def diff_text(d: dict) -> list[str]:
     return lines
 
 
+MIGRATED = "PX4 converts it when it upgrades the stored parameters in place; loading this file does not."
+CHECK_KINDS = [
+    ("removed", "Not a parameter of {to}"),
+    ("type-changed", "Type changed"),
+    ("out-of-range", "Outside the range of {to}"),
+    ("reverts-default", "Keeps the default of {from}, which {to} changed"),
+    ("unreadable", "Value is not a number"),
+    ("instance", "More instances than the metadata of {to} lists"),
+    ("internal", "Written by the firmware"),
+    ("unknown", "In neither release"),
+]
+
+
+def check_text(r: dict) -> list[str]:
+    c = r["counts"]
+    lines = [f"Checked {c['autopilot']} autopilot parameters saved on {r['from']} against {r['to']} "
+             f"({c['rows'] - c['autopilot']} of other components, {c['skipped']} lines not read)."]
+    if r["file_release"] and r["file_release"] != r["from"]:
+        lines.append(f"The file says it was saved on {r['file_release']}, not {r['from']}.")
+    for kind, title in CHECK_KINDS:
+        found = [f for f in r["findings"] if f["kind"] == kind]
+        if not found:
+            continue
+        lines.append(f"{title.format(**{'from': r['from'], 'to': r['to']})} ({len(found)}):")
+        for f in found:
+            detail = ""
+            if kind == "removed":
+                detail = removal_text(f["removal"]) + (", at the old default" if f.get("at_old_default") else "")
+            elif kind == "type-changed":
+                detail = f"{f['from']} -> {f['to']}"
+            elif kind == "out-of-range":
+                detail = f"min {value(f['min'])}, max {value(f['max'])}"
+            elif kind == "reverts-default":
+                detail = f"{value(f['old_default'])} -> {value(f['new_default'])}"
+            lines.append(f"  {f['name']} = {f['value']}" + (f" ({detail})" if detail else ""))
+            if kind == "removed" and f["removal"].get("kind") == "migrated":
+                lines.append(f"      {MIGRATED}")
+            if f.get("note"):
+                lines.append(f"      {f['note']}")
+    if not r["findings"]:
+        lines.append("Nothing found.")
+    lines += [""] + r["limits"]
+    return lines
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     if args.command == "license":
         print(legal.license_text())
         return 0
-    if args.command in ("history", "diff"):
+    if args.command in ("history", "diff", "check"):
         try:
             directory = query.data_dir(args.data)
             if args.command == "history":
                 result = query.history(directory, args.name)
                 lines = history_text(result)
-            else:
+            elif args.command == "diff":
                 result = query.diff(query.histories(directory), query.tag(args.old), query.tag(args.new))
                 lines = diff_text(result)
+            else:
+                try:
+                    with open(args.file, encoding="utf-8", errors="replace") as f:
+                        text = f.read()
+                except OSError as e:
+                    raise query.DataError(f"cannot read {args.file}: {e.strerror}") from None
+                old = args.old or check_module.release_of(check_module.parse(text)["header"])
+                if not old:
+                    raise query.DataError("the file does not name a tracked release; give --from")
+                result = check_module.check(text, directory, query.tag(old), query.tag(args.new))
+                lines = check_text(result)
         except query.DataError as e:
             print(f"param-lineage: {e}", file=sys.stderr)
             return 2
