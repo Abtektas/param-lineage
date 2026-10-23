@@ -1,6 +1,7 @@
 # param-lineage: design
 
-Status: draft 3, 2026-10-23. M0 (skeleton) is in place; the data is not built yet.
+Status: draft 4, 2026-10-23. M0 (skeleton) and M1 (snapshots of all tracked
+releases) are done; translations, curation and the built views are not built yet.
 Name: **param-lineage**, "parameter history for PX4". The name must not
 contain "PX4" (see [Trademarks](#trademarks)).
 
@@ -63,8 +64,9 @@ Integration happens at the consumers, each as a separate step:
    from a git tag with PX4's own generators and are never edited by hand.
    Curated facts are what metadata cannot express (that B replaces A, that a
    value is now fixed in code). Each curated fact names its evidence.
-2. **Every fact is traceable.** Tag, commit SHA and source file for generated
-   facts. Commit, PR and basis for curated facts.
+2. **Every fact is traceable.** Tag and commit SHA for generated facts. Commit,
+   PR and basis for curated facts. (PX4's generators do not report which file
+   defines a parameter; `git grep` at the recorded commit finds it.)
 3. **Deterministic output.** Sorted keys, stable formatting. Rebuilding from
    the same inputs gives byte-identical files, and CI checks that.
 4. **The data is the product.** The JSON files and their schemas are the
@@ -91,25 +93,77 @@ PX4 git tags
 
 ### 1. Snapshots (generated)
 
-`data/snapshots/<tag>.json`: the normalized parameter metadata of one tag.
+`data/snapshots/<tag>.json`: the normalized parameter metadata of one tag. The
+format is described by `schema/snapshot.schema.json`; `parameters` maps each
+name to the fields of PX4's own `parameters.json`.
 
-- Produced by PX4's own generators from that tag's source:
-  `Tools/serial/generate_config.py`, `Tools/module_config/generate_params.py`
-  and `src/lib/parameters/px_process_params.py`. Every module config under
-  `src/` is read, including the ones the `metadata_parameters` target skips
-  (`src/modules/spacecraft`, `src/systemcmds`).
-- The source comes from `git archive <tag>`: no build, no submodules.
-  Checked on 2026-10-23: for v1.17.0 the archive gives exactly the same
-  2784 parameters, field by field, as a full worktree.
-- The generators' command lines differ between releases (v1.12 has no
-  `Tools/module_config`; v1.13 to v1.16 each failed differently with the
-  v1.17 command line). The extractor keeps one small recipe per generator
-  interface. The recipe is chosen by the interface, not by the version
-  number, so a new release that keeps the interface needs no change.
-- PX4's generator scripts are run from the archived tag. They are not copied
-  into this repository.
-- Provenance is stored in the file: tag, commit SHA, extractor version,
-  recipe, and the Python, PyYAML and Jinja2 versions used.
+- **Generators.** PX4's own scripts make the data, run from the tag's source
+  the way PX4's `metadata_parameters` build target runs them
+  (`cmake/metadata.cmake`): `Tools/serial/generate_config.py`,
+  `Tools/module_config/generate_params.py` (from v1.13) and
+  `src/lib/parameters/px_process_params.py`. They are not copied into this
+  repository. The steps that ran are recorded in each file.
+- **Source.** `git archive <tag>` of `LICENSE`, `src`, `Tools` and the two
+  board directories the generators read. No build, no submodules. Checked on
+  2026-10-23: for v1.17.0, a full checkout with every submodule under `src`
+  gives a byte-identical snapshot (the opt-in `FullTree` test).
+- **What is read.** Every module config under `src/` and every source
+  directory PX4's target scans (`find src -maxdepth 4 -type d`). PX4's own
+  target takes module configs only from `src/modules`, `src/drivers` and
+  `src/lib`, and leaves out the directories `pwm_out_sim`, `linux_pwm_out` and,
+  from v1.16, `src/modules/spacecraft`. That has two effects this project
+  avoids:
+  - from v1.13, PX4's list lacks `HIL_ACT_FUNC1` to `16` and `HIL_ACT_REV`,
+    which only `pwm_out_sim/module_hil.yaml` defines;
+  - in v1.18, 64 parameters of the spacecraft build and of
+    `src/systemcmds/tests` (`SC_`, `SPC_`, `TEST_`) moved from `.c` files to
+    YAML files that target does not read, so they drop out of PX4's v1.18 list
+    although they are in its v1.17 list. Reading everything keeps them
+    continuous.
+- **What is left out**, each for a stated reason:
+  - Three module configs that define the same parameters as another module
+    (the simulator's and Linux boards' output drivers, and v1.16's spacecraft
+    copy of the control allocation config). PX4's target leaves them out too.
+    Each is still generated on its own, and the names only it has are listed
+    in the snapshot (`excluded_configs[].not_in_snapshot`): `PWM_MAIN_FUNC9` to
+    `16` of the simulator, and the 85 `CA_THRUSTER` parameters of v1.16's
+    spacecraft build. Nothing is dropped silently.
+  - Up to v1.16, `src/lib/parameters/parameters_injected.xml` adds 21
+    parameters of UAVCAN nodes, ESCs and GNSS receivers (`ctl_bw`,
+    `esc_index`, `gnss.dyn_model`, ...). They are set on the node and PX4 does
+    not store them; PX4 removed the file for that reason in 7b68c5dbfc
+    (PX4 #25549). The generator gets an empty list instead.
+- **Checked against PX4's own target.** On 2026-10-23, PX4's
+  `metadata_parameters` steps were run for every tracked tag by a separate
+  script, with the tag's own filters and inject file. Every parameter both
+  lists have was identical in every field, and the names only one list had
+  were exactly the ones described above: the 21 injected names, the 17
+  `HIL_ACT` names, and the 64 v1.18 names.
+- **Board-dependent parameters** follow PX4's target: fmu-v5 timers with an IO
+  board, Ethernet, all serial ports. A board with more outputs has more
+  instances (for example `PWM_MAIN_FUNC9`), and the default port of a serial
+  port parameter (`RC_PORT_CONFIG`) can differ. Per-board data is a later
+  layer.
+- **Checked against PX4's builds.** For one release of each minor version,
+  the parameter lists of the official fmu-v5 and fmu-v6x firmware were
+  compared with the snapshot (`tests/fixtures/firmware`, `test_snapshots.py`):
+  every parameter of the build is in the snapshot with the same type and
+  default, except the UAVCAN node names above and the serial port defaults.
+  The lists come from the `.px4` files of PX4's GitHub releases, which record
+  the commit they were built from; v1.12.3 stands for v1.12 because the
+  v1.12.0 release's files are v1.11.2 builds; v1.14.0 has no release files and
+  its lists come from PX4's firmware bucket, without a recorded commit.
+- **Data as PX4 generates it.** Nothing is corrected by hand. Known quirk:
+  from v1.16, `VTQ_IO_REV` has a bitmask bit at index -1, because the generator
+  assumes channels start at 1.
+- **Provenance** in every file: tag, commit, extractor version, steps, board
+  options, left-out configs, and the Python, PyYAML and Jinja2 versions. Each
+  file also records the copyright line of the tag's `LICENSE` and the license
+  check below.
+- **Reproducible.** `python -m paramlineage.extract --check --all` extracts
+  every tracked tag again and compares it byte by byte. Only different tool
+  versions are tolerated, and reported. CI does this when the extractor or the
+  data change, and weekly, so a moved tag is noticed.
 
 ### 2. Translations (generated)
 
@@ -223,18 +277,24 @@ Decision:
 - Python ≥ 3.11 (the same floor as actuator-lint). The library uses only the
   standard library, so consumers install nothing else.
 - Tests use `unittest` from the standard library; the page's tests use
-  Node's built-in `node:test`. How the JSON Schemas are checked in CI
-  (a pinned `jsonschema`, or a small checker of our own) is decided in M1.
-- Extraction runs PX4's generators. They need PyYAML and Jinja2; the versions
-  used are recorded in each snapshot's provenance.
+  Node's built-in `node:test`.
+- JSON Schemas are checked in CI with `jsonschema`, pinned with hashes in
+  `requirements/schema.txt`. The standard tool is easier to trust than a
+  checker of our own; the tests also repeat the main rules with the standard
+  library, so a plain `unittest` run checks them too.
+- Extraction runs PX4's generators. They need PyYAML, Jinja2 and MarkupSafe,
+  pinned with hashes in `requirements/extract.txt`; the versions used are
+  recorded in each snapshot.
+- Pinned versions were published at least two weeks before they were pinned.
 
 ```
 param-lineage/
-  data/              snapshots/ translations/ curated/ params/ changes/
+  data/              snapshots/; later translations/ curated/ params/ changes/
   schema/            one JSON Schema per data kind
-  src/paramlineage/  legal, cli; later extract, translations, curate, build, check
+  requirements/      pinned packages for extraction and the schema tests
+  src/paramlineage/  legal, cli, extract; later translations, curate, build, check
   web/               the upgrade check page
-  tests/             unit tests + known-history fixtures
+  tests/             unit tests, known history, firmware parameter lists
   docs/              DESIGN.md; later how to add a release
 ```
 
@@ -244,16 +304,24 @@ param-lineage/
   uses, so either side can reuse the other's work.
 - **Generated data:** it contains PX4's parameter descriptions, defaults and
   enum names. PX4 is BSD-3-Clause ("Copyright (c) 2012 - 2025, PX4
-  Development Team"; the license text is the same in every tag from v1.14.0
+  Development Team"; the license text is the same in every tag from v1.12.0
   to v1.18.0-rc1). BSD-3 requires keeping that notice with redistributed
   source, so `LICENSE-THIRD-PARTY` carries it and the data files point to it.
-- Checked on 2026-10-23: no parameter-defining source file in v1.14.0 or
-  v1.18.0-rc1 carries a different license. Seven files in v1.14.0 have no
-  header at all and fall under the repository's BSD-3 license. Submodules
-  (which do carry other licenses) are not part of the extraction.
-- **Dependencies:** none at runtime. PyYAML (MIT) and Jinja2 (BSD-3) run
-  PX4's generators during extraction; the page's optional jsdom check uses
-  jsdom (MIT). None is copied into the repository.
+- Checked for every tracked tag, by the extractor: the tag's `LICENSE` is the
+  BSD-3-Clause text in `LICENSE-THIRD-PARTY` (only the copyright years differ,
+  2021 to 2025, and each snapshot records its line), and every file the data
+  can come from (configs with parameter sections, source files with
+  parameter definitions, the generator scripts and templates) carries a
+  BSD-3-Clause notice or none. A file with any other notice stops the
+  extraction. Files without a notice fall under the repository's license.
+  Submodules, which do carry other licenses, are not part of the extraction.
+- **Dependencies:** none at runtime. PyYAML (MIT), Jinja2 and MarkupSafe
+  (BSD-3) run PX4's generators during extraction; jsonschema and its
+  dependencies (MIT, and PSF for typing-extensions) check the schemas in CI;
+  the page's optional jsdom check uses jsdom (MIT). None is copied into the
+  repository.
+- The firmware parameter lists in `tests/fixtures/firmware` are PX4 data
+  (names, types, defaults) and say so in their header.
 - **Flight Review data:** only aggregate counts are used, as in the table
   above. No log, vehicle ID or description is stored or published.
 
@@ -269,11 +337,11 @@ param-lineage/
   `LICENSE-THIRD-PARTY` for the same reason. "PX4" appears only in sentences
   that refer to PX4 itself ("parameter history for PX4"). Tests check file
   names, headings and titles.
-- README, CLI output, page footer and package metadata carry the notice
-  actuator-lint uses: "This project is not affiliated with or endorsed by the
-  PX4 project or the Dronecode Foundation. PX4 is a trademark of Dronecode
-  Project, Inc. It is used here only to name the software this tool works
-  with."
+- README, CLI output and page footer carry the notice, worded as in
+  actuator-lint: "This project is not affiliated with or endorsed by the PX4
+  project or the Dronecode Foundation. PX4 is a trademark of Dronecode
+  Project, Inc. It is used here only to name the software this project
+  describes." (The page ends with "this tool works with".)
 - The same applies to "ArduPilot" if it is ever added.
 
 ## Terms of use
@@ -313,4 +381,6 @@ param-lineage/
 ## Open questions
 
 1. Per-board availability: from each board's Kconfig, or from the
-   `parameters.json.xz` that release builds embed?
+   `parameters.json.xz` that release builds embed? This also covers instance
+   counts that depend on the board (`PWM_MAIN_FUNC9` and up) and the default
+   ports of serial port parameters.

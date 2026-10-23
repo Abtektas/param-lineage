@@ -1,0 +1,4 @@
+# The packages PX4's parameter generators need, at the versions the snapshots were made with.
+PyYAML==6.0.3
+Jinja2==3.1.6
+MarkupSafe==3.0.3

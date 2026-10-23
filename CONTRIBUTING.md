@@ -27,6 +27,33 @@ node --test web/test/
 ```
 
 This needs Python 3.11 or newer and Node.js 18 or newer, and nothing else.
+The schema tests run when `jsonschema` is installed
+(`pip install --require-hashes -r requirements/schema.txt`); CI requires them.
+
+To extract every tracked release again and compare it with `data/snapshots`,
+you need a git repository of PX4 with the tags and a Python with
+`requirements/extract.txt`:
+
+```
+python -m paramlineage.extract --repo <PX4 repository> --python <that python> --check --all
+```
+
+Run it from the repository root, with `PYTHONPATH=src` or after `pip install .`.
+Only extract from PX4's official repository: the extractor runs scripts from
+the tag.
+
+## Adding a release
+
+1. Add the tag to `TRACKED` in `src/paramlineage/extract.py` (a release
+   candidate replaces the previous one; a final release replaces its
+   candidates) and write its snapshot with
+   `python -m paramlineage.extract --repo <PX4 repository> --python <python> <tag>`.
+2. If PX4 changed how its generators are called, adapt `Generators` so that
+   the snapshots of older tags stay the same (`--check --all`). If they cannot
+   stay the same, raise `EXTRACTOR` and extract them all again.
+3. Add the firmware parameter lists of the release's fmu-v5 and fmu-v6x builds
+   with `tests/fixtures/firmware/make_list.py`, and update the known counts in
+   `tests/test_snapshots.py`.
 
 ## What a change needs
 

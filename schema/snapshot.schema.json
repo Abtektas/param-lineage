@@ -1,0 +1,143 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/Abtektas/param-lineage/schema/snapshot.schema.json",
+ "title": "param-lineage snapshot",
+ "description": "All parameter metadata of one PX4 release, made by PX4's own generators from the release tag (data/snapshots/<tag>.json).",
+ "type": "object",
+ "required": ["format", "source", "license", "extraction", "parameters"],
+ "additionalProperties": false,
+ "properties": {
+  "format": {"const": 1, "description": "Layout of this file. Changes when a field is added, renamed or removed."},
+  "source": {
+   "type": "object",
+   "required": ["repository", "tag", "commit"],
+   "additionalProperties": false,
+   "properties": {
+    "repository": {"const": "https://github.com/PX4/PX4-Autopilot"},
+    "tag": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(-(alpha|beta|rc)[0-9]+)?$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$", "description": "The commit the tag points to."}
+   }
+  },
+  "license": {
+   "type": "object",
+   "description": "The parameter data is PX4's, under PX4's license.",
+   "required": ["copyright", "license", "text", "checked"],
+   "additionalProperties": false,
+   "properties": {
+    "copyright": {"type": "string", "pattern": "^Copyright ", "description": "The copyright line of the release's LICENSE file."},
+    "license": {"const": "BSD-3-Clause"},
+    "text": {"const": "LICENSE-THIRD-PARTY", "description": "The file of this project that holds the license text."},
+    "checked": {
+     "type": "object",
+     "description": "The files the data can come from, by license notice. Files without a notice fall under the release's LICENSE.",
+     "required": ["files", "bsd_3_clause_notice", "no_notice"],
+     "additionalProperties": false,
+     "properties": {
+      "files": {"type": "integer", "minimum": 1},
+      "bsd_3_clause_notice": {"type": "integer", "minimum": 0},
+      "no_notice": {"type": "integer", "minimum": 0}
+     }
+    }
+   }
+  },
+  "extraction": {
+   "type": "object",
+   "required": ["extractor", "steps", "board", "excluded_configs", "tools"],
+   "additionalProperties": false,
+   "properties": {
+    "extractor": {"type": "integer", "minimum": 1, "description": "Changes when the same release would give a different snapshot."},
+    "steps": {"type": "array", "minItems": 2, "items": {"type": "string"}, "description": "The PX4 scripts that ran, with their options."},
+    "board": {
+     "type": "object",
+     "description": "Parameters whose number or default depends on the board follow this board, as in PX4's metadata_parameters target.",
+     "required": ["timer_config", "io_board", "ethernet", "serial_ports"],
+     "additionalProperties": false,
+     "properties": {
+      "timer_config": {"type": "string"},
+      "io_board": {"type": "boolean"},
+      "ethernet": {"type": "boolean"},
+      "serial_ports": {"const": "all"}
+     }
+    },
+    "excluded_configs": {
+     "type": "array",
+     "description": "Module configs left out because they define the same parameters as another module.",
+     "items": {
+      "type": "object",
+      "required": ["config", "reason", "parameters", "not_in_snapshot"],
+      "additionalProperties": false,
+      "properties": {
+       "config": {"type": "string"},
+       "reason": {"type": "string", "minLength": 1},
+       "parameters": {"type": "integer", "minimum": 0, "description": "How many parameters the config defines on its own."},
+       "not_in_snapshot": {"type": "array", "items": {"$ref": "#/$defs/name"}, "description": "Its parameters that this snapshot does not have."}
+      }
+     }
+    },
+    "tools": {
+     "type": "object",
+     "required": ["python", "pyyaml", "jinja2"],
+     "additionalProperties": false,
+     "properties": {
+      "python": {"type": "string"},
+      "pyyaml": {"type": "string"},
+      "jinja2": {"type": "string"}
+     }
+    }
+   }
+  },
+  "parameters": {
+   "type": "object",
+   "minProperties": 1,
+   "propertyNames": {"$ref": "#/$defs/name"},
+   "additionalProperties": {"$ref": "#/$defs/parameter"}
+  }
+ },
+ "$defs": {
+  "name": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$", "maxLength": 16},
+  "parameter": {
+   "type": "object",
+   "description": "The fields of PX4's parameters.json, without the name.",
+   "required": ["type", "default", "shortDesc", "group", "category"],
+   "additionalProperties": false,
+   "properties": {
+    "type": {"enum": ["Int32", "Float"]},
+    "default": {"type": "number"},
+    "min": {"type": "number"},
+    "max": {"type": "number"},
+    "increment": {"type": "number"},
+    "decimalPlaces": {"type": "integer", "minimum": 0},
+    "units": {"type": "string"},
+    "shortDesc": {"type": "string"},
+    "longDesc": {"type": "string"},
+    "group": {"type": "string"},
+    "category": {"enum": ["Standard", "System", "Developer"]},
+    "rebootRequired": {"type": "boolean"},
+    "volatile": {"type": "boolean"},
+    "values": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": ["value", "description"],
+      "additionalProperties": false,
+      "properties": {"value": {"type": "number"}, "description": {"type": "string"}}
+     }
+    },
+    "bitmask": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": ["index", "description"],
+      "additionalProperties": false,
+      "properties": {
+       "index": {"type": "integer", "description": "As PX4 generates it. PX4 v1.16 to v1.18 give VTQ_IO_REV a bit at index -1."},
+       "description": {"type": "string"}
+      }
+     }
+    }
+   },
+   "if": {"properties": {"type": {"const": "Int32"}}},
+   "then": {"properties": {"default": {"type": "integer"}}}
+  }
+ }
+}

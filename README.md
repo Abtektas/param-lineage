@@ -3,8 +3,9 @@
 Parameter history for PX4: a machine-readable record of how PX4 parameters
 change between releases.
 
-**Status: early development. There is no release yet, and the data described
-below is still being built.** The plan is in [docs/DESIGN.md](docs/DESIGN.md).
+**Status: early development. There is no release yet. The snapshots are
+built; the rest of the data described below is not yet.** The plan is in
+[docs/DESIGN.md](docs/DESIGN.md).
 
 ## Why
 
@@ -23,6 +24,22 @@ pages. param-lineage turns it into data that tools can use:
 - for every parameter a release removed, what happened to it, with the commit
   as evidence;
 - a history per parameter, and a list of changes between any two releases.
+
+## Data
+
+| What | Where | Status |
+|---|---|---|
+| All parameter metadata of a release | `data/snapshots/<tag>.json` ([schema](schema/snapshot.schema.json)) | v1.12.0 to v1.17.0 with their patch releases, and v1.18.0-rc1 |
+| Conversions PX4 performs on upgrade | `data/translations/` | not built yet |
+| What happened to each removed parameter | `data/curated/` | not built yet |
+| History per parameter, changes between releases | `data/params/`, `data/changes/` | not built yet |
+
+The snapshots are made from the release tags by PX4's own generators. Each one
+records the commit it came from and how it was made, and the tests compare
+them with the parameter lists of official PX4 firmware builds. What a snapshot
+includes and leaves out, and why, is in
+[docs/DESIGN.md](docs/DESIGN.md#1-snapshots-generated). The parameter data is
+PX4's, under its BSD-3-Clause license ([LICENSE-THIRD-PARTY](LICENSE-THIRD-PARTY)).
 
 ## The upgrade check page
 

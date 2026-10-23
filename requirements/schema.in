@@ -1,0 +1,2 @@
+# Checks the data files against schema/ in the tests. Not needed at run time.
+jsonschema

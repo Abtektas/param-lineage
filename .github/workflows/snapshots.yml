@@ -1,0 +1,54 @@
+name: snapshots
+
+# Extracts every tracked release again from PX4's repository and compares it with data/snapshots.
+# Weekly as well, so a moved tag is noticed.
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - src/paramlineage/extract.py
+      - requirements/extract.*
+      - data/snapshots/**
+      - LICENSE-THIRD-PARTY
+      - .github/workflows/snapshots.yml
+  pull_request:
+    paths:
+      - src/paramlineage/extract.py
+      - requirements/extract.*
+      - data/snapshots/**
+      - LICENSE-THIRD-PARTY
+      - .github/workflows/snapshots.yml
+  schedule:
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reproduce:
+    name: Reproduce the snapshots
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: Install the generators' packages
+        run: python -m pip install --require-hashes -r requirements/extract.txt
+      - name: Fetch the tracked tags (only the paths the generators read)
+        run: |
+          tags=$(PYTHONPATH=src python -c "from paramlineage.extract import TRACKED; print(' '.join(TRACKED))")
+          git init -q "$RUNNER_TEMP/source"
+          cd "$RUNNER_TEMP/source"
+          git remote add origin https://github.com/PX4/PX4-Autopilot.git
+          git fetch -q --depth 1 --filter=blob:none origin $(for t in $tags; do printf 'refs/tags/%s:refs/tags/%s ' "$t" "$t"; done)
+          git sparse-checkout set --no-cone /LICENSE /src/ /Tools/ /boards/px4/fmu-v5/ /boards/px4/io-v2/
+          for t in $tags; do git -c advice.detachedHead=false checkout -q --detach "$t"; done
+      - name: Extract and compare
+        run: PYTHONPATH=src python -m paramlineage.extract --repo "$RUNNER_TEMP/source" --python "$(command -v python)" --check --all
