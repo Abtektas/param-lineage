@@ -1,8 +1,9 @@
 # param-lineage: design
 
-Status: draft 6, 2026-10-23. M0 (skeleton), M1 (snapshots of all tracked
-releases) and M2 (translations) are done; curation and the built views are
-not built yet.
+Status: draft 7, 2026-10-24. M0 (skeleton), M1 (snapshots of all tracked
+releases), M2 (translations) and M3 (changes and curation of the last two
+upgrades) are done; the histories per parameter and the commands are not
+built yet.
 Name: **param-lineage**, "parameter history for PX4". The name must not
 contain "PX4" (see [Trademarks](#trademarks)).
 
@@ -329,17 +330,19 @@ reported as a change.
 
 1. **Schema:** every data file validates against its JSON Schema.
 2. **Reproducible:** re-extracting a tag gives a byte-identical snapshot and
-   translations file.
+   translations file, and the changes files match a fresh build.
 3. **Complete:** in a `complete` transition, every removed parameter has
    exactly one curated entry.
 4. **Consistent:**
-   - a `migrated` entry must match a translation rule in the newer tag;
-   - every translation target must exist in that tag's snapshot;
-   - a `renamed` entry with no translation rule is reported, because that is
-     where users lose values.
-
-   Check 4 would have caught the heater (#29354) and EKF2_AGP (#29351) gaps
-   before release.
+   - an entry is `migrated` exactly when the translations of the newer tag
+     pass the value on, and then only to its successors;
+   - a translation whose target the tag does not have shows in the
+     translations as `ignored-unknown-name` (v1.13's `VT_PITCH_MIN`);
+   - a `renamed` entry is where users lose values: a successor exists but
+     PX4 does not convert it. The changes carry the kind, so tools can warn.
+     The heater and `EKF2_AGP` parameters of v1.18.0-rc1 are such entries.
+5. **History:** every commit a curated entry cites lies between its two tags
+   (`.github/workflows/curated.yml`, with PX4's commits only).
 
 ## Behaviour verification (later milestone)
 
@@ -407,10 +410,10 @@ Decision:
 
 ```
 param-lineage/
-  data/              snapshots/ translations/; later curated/ params/ changes/
+  data/              snapshots/ translations/ curated/ changes/; later params/
   schema/            one JSON Schema per data kind
   requirements/      pinned packages for extraction and the schema tests
-  src/paramlineage/  legal, cli, extract, translations, harness/; later curate, build, check
+  src/paramlineage/  legal, cli, extract, translations, harness/, curated, changes; later build, check
   web/               the upgrade check page
   tests/             unit tests, known history, firmware parameter lists
   docs/              DESIGN.md; later how to add a release

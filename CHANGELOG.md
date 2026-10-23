@@ -16,6 +16,14 @@
   coverage, and their JSON Schema. CI runs them again and compares. Tests
   run the extractor on a fake release, and values the probes do not reach
   (v1.12 device IDs, v1.18 heater IDs) on the releases' own code.
+- Curated facts for the parameters removed from v1.16.2 to v1.17.0 (59) and
+  from v1.17.0 to v1.18.0-rc1 (60) in `data/curated/`, and their JSON Schema.
+  The v1.18.0-rc1 entries come from the upgrade check page's notes. Tests
+  check every entry against the snapshots and the translations, and CI
+  checks the commits against PX4's history.
+- Changes between every pair of consecutive tracked releases in
+  `data/changes/`, built with `python -m paramlineage.changes`, and their
+  JSON Schema.
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts

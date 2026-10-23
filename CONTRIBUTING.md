@@ -52,6 +52,13 @@ python -m paramlineage.translations --repo <PX4 repository> --check --all
 
 This compiles and runs code from the tag, so the same rule applies.
 
+The changes are built from the snapshots and the curated facts; the tests
+fail when they are out of date. To build them again:
+
+```
+python -m paramlineage.changes --all
+```
+
 ## Adding a release
 
 1. Add the tag to `TRACKED` in `src/paramlineage/extract.py` (a release
@@ -72,13 +79,22 @@ This compiles and runs code from the tag, so the same rule applies.
    `src/paramlineage/translations.py` with the model it follows. If the
    release's translation code no longer builds with the harness, adapt the
    harness so that the files of older tags stay the same (`--check --all`).
+5. Build the changes (`python -m paramlineage.changes --all`).
+6. Curate the parameters it removed in `data/curated/<previous>..<tag>.json`:
+   for each one, find the commit that deletes its definition
+   (`git log -S <NAME> <previous>..<tag>`), read it and the new release's
+   source, and choose the kind. Every entry needs the full commit hash and a
+   note that a user of the previous release can act on. Set the status to
+   `complete` only when every removed parameter is listed.
 
 ## What a change needs
 
 - Tests.
-- No copy of PX4's source code. The extractor runs PX4's own generators from
-  the release tag; where the project has to repeat PX4 logic, the code names
-  the PX4 file it follows.
+- No copy of PX4's source code, apart from the three lines of
+  `src/paramlineage/harness/platform.h` that the compiled code needs by name
+  (marked there). The extractor runs PX4's own generators from the release
+  tag; where the project has to repeat PX4 logic, the code names the PX4 file
+  it follows.
 - An entry in [CHANGELOG.md](CHANGELOG.md).
 
 ## Names and terms
