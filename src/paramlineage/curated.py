@@ -42,6 +42,33 @@ def problems(data: dict, old: dict, new: dict) -> list[str]:
     return out
 
 
+def converted_to(cases: list[dict], name: str) -> set[str]:
+    """The parameters a translation passes a stored value of ``name`` on to, for any probe."""
+    out = set()
+    for case in cases:
+        outcome = case["outcome"]
+        if outcome["result"] == "stored" and outcome["name"] != name:
+            out.add(outcome["name"])
+        out |= set(outcome.get("also_set", {}))
+    return out
+
+
+def translation_problems(data: dict, translations: dict) -> list[str]:
+    """Entries that disagree with the translations of 'to': an entry is migrated exactly when the
+    translation code passes the value on, and then only to its successors."""
+    out = []
+    for name, entry in sorted(data["removed"].items()):
+        to = converted_to(translations["parameters"].get(name, []), name)
+        successors = set(entry.get("successors", []))
+        if entry["kind"] == "migrated" and not to:
+            out.append(f"{name}: migrated, but {data['to']} does not convert it")
+        elif entry["kind"] != "migrated" and to:
+            out.append(f"{name}: {entry['kind']}, but {data['to']} converts it to {', '.join(sorted(to))}")
+        elif to - successors:
+            out.append(f"{name}: converted to {', '.join(sorted(to - successors))}, which are not its successors")
+    return out
+
+
 def commit_problems(repo: str, data: dict) -> list[str]:
     """Entries whose commit is not in the history between the two releases of a PX4 repository."""
     def ancestor(commit: str, tag: str) -> bool:

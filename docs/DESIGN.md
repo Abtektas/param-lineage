@@ -288,6 +288,10 @@ every tag.
   `successors` (required for `migrated`, `renamed`, `replaced`),
   `fixed_value` (for `fixed`, when it equals an old setting), `note` and
   `basis`: `code-inspection`, `release-notes` or `sitl-tested`.
+- Checked by the tests: every entry is a parameter of `<from>` that `<to>`
+  does not have, its successors are parameters of `<to>`, its commit lies
+  between the two tags (with a PX4 repository), and it is `migrated` exactly
+  when the translations of `<to>` pass the value on, to its successors only.
 - Curated files hold facts only. How a tool helps a user act on them (for
   example suggesting a value for a `renamed` successor) belongs to the tool;
   what PX4 converts comes from the translations.
