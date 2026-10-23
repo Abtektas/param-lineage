@@ -1,0 +1,59 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/Abtektas/param-lineage/schema/curated.schema.json",
+ "title": "param-lineage curated facts",
+ "description": "What happened to each parameter that one PX4 release has and the next tracked release does not (data/curated/<from>..<to>.json). Written by hand, each entry checked against the commit that removed the parameter; see docs/DESIGN.md.",
+ "type": "object",
+ "required": ["format", "from", "to", "status", "removed"],
+ "additionalProperties": false,
+ "properties": {
+  "format": {"const": 1, "description": "Layout of this file. Changes when a field is added, renamed or removed."},
+  "from": {"$ref": "#/$defs/tag"},
+  "to": {"$ref": "#/$defs/tag"},
+  "status": {
+   "enum": ["complete", "partial", "not-started"],
+   "description": "complete: every parameter of 'from' that 'to' does not have is listed, and CI enforces it. partial: some are listed. not-started: none yet."
+  },
+  "removed": {
+   "type": "object",
+   "description": "One entry per removed parameter, by its name in 'from'.",
+   "propertyNames": {"$ref": "#/$defs/name"},
+   "additionalProperties": {"$ref": "#/$defs/entry"}
+  }
+ },
+ "$defs": {
+  "tag": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(-(alpha|beta|rc)[0-9]+)?$"},
+  "name": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$", "maxLength": 16},
+  "entry": {
+   "type": "object",
+   "required": ["kind", "commit", "note", "basis"],
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "enum": ["migrated", "renamed", "replaced", "fixed", "removed"],
+     "description": "migrated: 'to' converts the stored value on in-place upgrade (must match its translations). renamed: a successor with the same meaning exists, but the value is not converted. replaced: newer parameters do the job in a different way, with no one-to-one mapping. fixed: the behaviour is now fixed in code. removed: the feature or setting is gone."
+    },
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$", "description": "The PX4 commit that removed the parameter."},
+    "pr": {"type": "integer", "minimum": 1, "description": "The PX4 pull request of that commit, when known."},
+    "successors": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {"$ref": "#/$defs/name"},
+     "description": "Parameters of 'to' that take over its job."
+    },
+    "fixed_value": {"type": "number", "description": "fixed: the value the behaviour is fixed at, when it equals an old setting."},
+    "note": {"type": "string", "minLength": 1, "description": "What a user of 'from' needs to know, in plain English."},
+    "basis": {
+     "enum": ["code-inspection", "release-notes", "sitl-tested"],
+     "description": "How the entry was established."
+    }
+   },
+   "allOf": [
+    {"if": {"properties": {"kind": {"enum": ["migrated", "renamed", "replaced"]}}}, "then": {"required": ["successors"]}},
+    {"if": {"properties": {"kind": {"enum": ["fixed", "removed"]}}}, "then": {"not": {"required": ["successors"]}}},
+    {"if": {"not": {"properties": {"kind": {"const": "fixed"}}}}, "then": {"not": {"required": ["fixed_value"]}}}
+   ]
+  }
+ }
+}

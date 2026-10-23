@@ -273,7 +273,8 @@ every tag.
 ### 3. Curated facts (human)
 
 `data/curated/<from>..<to>.json`: one entry for every parameter that exists in
-`<from>` and not in `<to>`.
+`<from>` and not in `<to>`. The format is described by
+`schema/curated.schema.json`.
 
 | kind | meaning |
 |---|---|
@@ -283,9 +284,13 @@ every tag.
 | `fixed` | The behaviour is now fixed in code; `fixed_value` when it matches an old setting. |
 | `removed` | The feature or setting is gone. |
 
-- Each entry has `commit` (required), `pr` (when known), `successors` (for
-  `migrated`, `renamed`, `replaced`), `note` and `basis`: `code-inspection`,
-  `release-notes` or `sitl-tested`.
+- Each entry has `commit` (required, the full hash), `pr` (when known),
+  `successors` (required for `migrated`, `renamed`, `replaced`),
+  `fixed_value` (for `fixed`, when it equals an old setting), `note` and
+  `basis`: `code-inspection`, `release-notes` or `sitl-tested`.
+- Curated files hold facts only. How a tool helps a user act on them (for
+  example suggesting a value for a `renamed` successor) belongs to the tool;
+  what PX4 converts comes from the translations.
 - A family that changed together, such as the mixer-to-control-allocation
   move in v1.14, can be curated as one group rule with a name pattern. The
   build expands it, and the built files list every matched name.
