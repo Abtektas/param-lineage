@@ -1,0 +1,208 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/Abtektas/param-lineage/schema/translations.schema.json",
+ "title": "param-lineage translations",
+ "description": "What the firmware of one PX4 release does to each stored parameter value when it imports the stored parameters of a vehicle (data/translations/<tag>.json). Found by compiling the release's param_translation.cpp unchanged and running it on probe values; see docs/DESIGN.md.",
+ "type": "object",
+ "required": ["format", "source", "license", "extraction", "notes", "parameters", "coverage"],
+ "additionalProperties": false,
+ "properties": {
+  "format": {"const": 1, "description": "Layout of this file. Changes when a field is added, renamed or removed."},
+  "source": {
+   "type": "object",
+   "required": ["repository", "tag", "commit", "file"],
+   "additionalProperties": false,
+   "properties": {
+    "repository": {"const": "https://github.com/PX4/PX4-Autopilot"},
+    "tag": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(-(alpha|beta|rc)[0-9]+)?$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$", "description": "The commit the tag points to."},
+    "file": {"const": "src/lib/parameters/param_translation.cpp", "description": "The file that was run. Line numbers refer to it at this commit."}
+   }
+  },
+  "license": {
+   "type": "object",
+   "description": "The data describes what PX4's code does, under PX4's license.",
+   "required": ["copyright", "license", "text", "checked"],
+   "additionalProperties": false,
+   "properties": {
+    "copyright": {"type": "string", "pattern": "^Copyright ", "description": "The copyright line of the release's LICENSE file."},
+    "license": {"const": "BSD-3-Clause"},
+    "text": {"const": "LICENSE-THIRD-PARTY", "description": "The file of this project that holds the license text."},
+    "checked": {
+     "type": "object",
+     "description": "The files of the release that were compiled, by license notice. Files without a notice fall under the release's LICENSE.",
+     "required": ["files", "bsd_3_clause_notice", "no_notice"],
+     "additionalProperties": false,
+     "properties": {
+      "files": {"type": "integer", "minimum": 1},
+      "bsd_3_clause_notice": {"type": "integer", "minimum": 0},
+      "no_notice": {"type": "integer", "minimum": 0}
+     }
+    }
+   }
+  },
+  "extraction": {
+   "type": "object",
+   "required": ["extractor", "compiler", "flags", "platforms", "import", "snapshots", "probes"],
+   "additionalProperties": false,
+   "properties": {
+    "extractor": {"type": "integer", "minimum": 1, "description": "Changes when the same release would give a different file."},
+    "compiler": {"type": "string", "description": "The first line of the compiler's --version. The only field that may differ when the file is made again."},
+    "flags": {"type": "array", "items": {"type": "string"}},
+    "platforms": {
+     "type": "array",
+     "items": {"enum": ["nuttx", "posix"]},
+     "description": "Each probe ran with __PX4_NUTTX defined for the translation code (nuttx) and without it (posix)."
+    },
+    "import": {
+     "enum": ["return ignored", "PARAM_SKIP_IMPORT skips"],
+     "description": "How the release's import code uses the return value: ignored (up to v1.14), or PARAM_SKIP_IMPORT stops the import of the value (from v1.15). Either way, a name the release does not have, or a value of the other type, is then ignored."
+    },
+    "snapshots": {
+     "type": "array",
+     "minItems": 1,
+     "items": {"type": "string"},
+     "description": "The snapshots the probes come from, oldest first; the last is this release's, whose parameters param_find knows."
+    },
+    "probes": {
+     "type": "object",
+     "required": ["names", "values", "listed", "untouched_not_listed"],
+     "additionalProperties": false,
+     "properties": {
+      "names": {"type": "integer", "minimum": 1, "description": "Names probed: every parameter of the snapshots, and every name the code compares with."},
+      "values": {"type": "integer", "minimum": 1, "description": "Probes run: names with types and values."},
+      "listed": {"type": "integer", "minimum": 0, "description": "Probes of the parameters listed here."},
+      "untouched_not_listed": {"type": "integer", "minimum": 0, "description": "Probes of other parameters. The code left them alone, so they are imported as stored if the release has that name and type."}
+     }
+    }
+   }
+  },
+  "notes": {"type": "array", "minItems": 1, "items": {"type": "string"}, "description": "What the data covers and what it does not."},
+  "parameters": {
+   "type": "object",
+   "description": "Every stored name the code touched (compared it in full, changed the node, called the parameter API or returned a value other than 'not modified'), with every probe of that name, grouped by result.",
+   "propertyNames": {"$ref": "#/$defs/name"},
+   "additionalProperties": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/case"}}
+  },
+  "coverage": {
+   "type": "object",
+   "required": ["calls", "names"],
+   "additionalProperties": false,
+   "properties": {
+    "calls": {
+     "type": "array",
+     "description": "Every call in the file the harness records. A comparison (strcmp, strncmp, strstr) is reached when it matched for some probe; any other call when it ran.",
+     "items": {
+      "type": "object",
+      "required": ["line", "call", "reached"],
+      "additionalProperties": false,
+      "properties": {
+       "line": {"type": "integer", "minimum": 1},
+       "call": {"enum": ["strcmp", "strncmp", "strstr", "strcpy", "strncpy", "strcat", "snprintf", "param_find", "param_set", "param_set_no_notification", "param_get", "log"]},
+       "reached": {"type": "array", "items": {"enum": ["nuttx", "posix"]}, "description": "The platforms on which a probe reached it; empty when none did."}
+      }
+     }
+    },
+    "names": {
+     "type": "array",
+     "description": "Every string literal in the file that is a parameter name.",
+     "items": {
+      "type": "object",
+      "required": ["name", "lines", "tracked", "reached"],
+      "additionalProperties": false,
+      "properties": {
+       "name": {"$ref": "#/$defs/name"},
+       "lines": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 1}},
+       "tracked": {"type": "boolean", "description": "Whether a snapshot up to this release has a parameter of this name."},
+       "prefix": {"const": true, "description": "The code compares only the start of a name with it (strncmp)."},
+       "reached": {"type": "boolean", "description": "Whether a probe used it: a stored name that matched, a name the node was given, or a name looked up. For a prefix: whether a probe the code touched matched it."}
+      }
+     }
+    }
+   }
+  }
+ },
+ "$defs": {
+  "name": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$", "maxLength": 16},
+  "value": {
+   "description": "A value. \"stored\" means the stored value itself; it is used where that holds for two or more stored values. Floats are given as the shortest decimal of the same float32.",
+   "oneOf": [{"type": "number"}, {"enum": ["stored", "inf", "-inf", "nan"]}]
+  },
+  "case": {
+   "type": "object",
+   "description": "Stored values of one type that gave the same result.",
+   "required": ["stored", "touched", "return", "node", "matched", "calls", "outcome"],
+   "additionalProperties": false,
+   "properties": {
+    "stored": {
+     "type": "object",
+     "required": ["type", "values"],
+     "additionalProperties": false,
+     "properties": {
+      "type": {"enum": ["Int32", "Float"], "description": "Int32: a BSON int32 node; Float: a BSON double."},
+      "values": {"type": "array", "minItems": 1, "items": {"type": "number"}}
+     }
+    },
+    "platform": {"enum": ["nuttx", "posix"], "description": "Present when the result differs between the platforms."},
+    "touched": {"type": "boolean"},
+    "return": {
+     "description": "What param_modify_on_import() returned: a bool up to v1.14, an enum from v1.15.",
+     "oneOf": [{"type": "boolean"}, {"enum": ["PARAM_SKIP_IMPORT", "PARAM_NOT_MODIFIED", "PARAM_MODIFIED"]}]
+    },
+    "node": {
+     "type": "object",
+     "description": "The stored value after the translation.",
+     "required": ["name", "type"],
+     "additionalProperties": false,
+     "properties": {
+      "name": {"type": "string"},
+      "type": {"oneOf": [{"enum": ["Int32", "Float"]}, {"type": "integer", "description": "Another BSON type."}]},
+      "value": {"$ref": "#/$defs/value"}
+     }
+    },
+    "matched": {"type": "array", "items": {"type": "integer", "minimum": 1}, "description": "The lines of the comparisons that matched."},
+    "calls": {
+     "type": "array",
+     "description": "The calls of the parameter API, in order. line is the first line of the call.",
+     "items": {
+      "type": "object",
+      "required": ["line", "call"],
+      "additionalProperties": false,
+      "properties": {
+       "line": {"type": "integer", "minimum": 1},
+       "call": {"enum": ["param_find", "param_set", "param_set_no_notification", "param_get"]},
+       "name": {"type": "string", "description": "param_find: the name looked up."},
+       "found": {"type": "boolean", "description": "param_find: whether the release has it."},
+       "param": {"oneOf": [{"$ref": "#/$defs/name"}, {"type": "null"}], "description": "The parameter set or read; null for PARAM_INVALID."},
+       "value": {"$ref": "#/$defs/value"},
+       "result": {"type": "integer"}
+      }
+     }
+    },
+    "depends_on": {
+     "type": "array",
+     "minItems": 1,
+     "items": {"enum": ["parameter handles", "node bytes"]},
+     "description": "The result changed when the parameters were numbered differently (a firmware build numbers them in its own way), or when the bytes of the node the BSON decoder does not write held something else (it leaves them from the value before). The values shown are those of one run and are not what a firmware gives."
+    },
+    "outcome": {
+     "type": "object",
+     "description": "What the import does next: stores the value, skips it (PARAM_SKIP_IMPORT, from v1.15), or ignores it because the release has no parameter of that name or it has the other type. also_set: the parameters the translation set, with their last value.",
+     "required": ["result"],
+     "additionalProperties": false,
+     "properties": {
+      "result": {"enum": ["stored", "skipped", "ignored-unknown-name", "ignored-type"]},
+      "name": {"type": "string"},
+      "value": {"$ref": "#/$defs/value"},
+      "also_set": {"type": "object", "minProperties": 1, "propertyNames": {"$ref": "#/$defs/name"}, "additionalProperties": {"$ref": "#/$defs/value"}}
+     },
+     "allOf": [
+      {"if": {"properties": {"result": {"const": "stored"}}}, "then": {"required": ["name", "value"]}},
+      {"if": {"properties": {"result": {"enum": ["ignored-unknown-name", "ignored-type"]}}}, "then": {"required": ["name"], "not": {"required": ["value"]}}},
+      {"if": {"properties": {"result": {"const": "skipped"}}}, "then": {"not": {"anyOf": [{"required": ["name"]}, {"required": ["value"]}]}}}
+     ]
+    }
+   }
+  }
+ }
+}

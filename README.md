@@ -3,9 +3,9 @@
 Parameter history for PX4: a machine-readable record of how PX4 parameters
 change between releases.
 
-**Status: early development. There is no release yet. The snapshots are
-built; the rest of the data described below is not yet.** The plan is in
-[docs/DESIGN.md](docs/DESIGN.md).
+**Status: early development. There is no release yet. The snapshots and the
+translations are built; the rest of the data described below is not yet.**
+The plan is in [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Why
 
@@ -20,7 +20,8 @@ pages. param-lineage turns it into data that tools can use:
 
 - every parameter of every tracked release, extracted with PX4's own
   generators from the release tag;
-- the conversions PX4 performs on upgrade, parsed from each release;
+- the conversions PX4 performs on upgrade, found by running each release's
+  own conversion code;
 - for every parameter a release removed, what happened to it, with the commit
   as evidence;
 - a history per parameter, and a list of changes between any two releases.
@@ -30,7 +31,7 @@ pages. param-lineage turns it into data that tools can use:
 | What | Where | Status |
 |---|---|---|
 | All parameter metadata of a release | `data/snapshots/<tag>.json` ([schema](schema/snapshot.schema.json)) | v1.12.0 to v1.17.0 with their patch releases, and v1.18.0-rc1 |
-| Conversions PX4 performs on upgrade | `data/translations/` | not built yet |
+| Conversions PX4 performs on upgrade | `data/translations/<tag>.json` ([schema](schema/translations.schema.json)) | the same releases |
 | What happened to each removed parameter | `data/curated/` | not built yet |
 | History per parameter, changes between releases | `data/params/`, `data/changes/` | not built yet |
 
@@ -40,6 +41,14 @@ them with the parameter lists of official PX4 firmware builds. What a snapshot
 includes and leaves out, and why, is in
 [docs/DESIGN.md](docs/DESIGN.md#1-snapshots-generated). The parameter data is
 PX4's, under its BSD-3-Clause license ([LICENSE-THIRD-PARTY](LICENSE-THIRD-PARTY)).
+
+The translations come from compiling each release's `param_translation.cpp`
+unchanged and running it on probe values: every parameter of the tracked
+releases, with its defaults, ranges, enum values and the numbers in the code.
+Each file says what the code did with each value, what the import does next,
+which parts of the code no probe reached, and what the data does not cover
+([docs/DESIGN.md](docs/DESIGN.md#2-translations-generated)). PX4 runs this code
+only when it upgrades the stored parameters of a vehicle in place.
 
 ## The upgrade check page
 
@@ -86,7 +95,8 @@ These terms are part of the program: the command prints them with
   conversions) comes from the PX4 Autopilot project
   (https://github.com/PX4/PX4-Autopilot), copyright PX4 Development Team,
   licensed under the BSD 3-Clause license in
-  [LICENSE-THIRD-PARTY](LICENSE-THIRD-PARTY).
+  [LICENSE-THIRD-PARTY](LICENSE-THIRD-PARTY). So do three lines of
+  `src/paramlineage/harness/platform.h`, marked there.
 
 ## Contributing
 

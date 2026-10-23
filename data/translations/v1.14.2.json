@@ -1,0 +1,2543 @@
+{
+ "coverage": {
+  "calls": [
+   {
+    "call": "strcmp",
+    "line": 47,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 48,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 49,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 56,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 57,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 58,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 66,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 67,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 70,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 74,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 75,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 76,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 83,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 84,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 85,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 89,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 90,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 91,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 98,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 99,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 100,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 104,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 105,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 106,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 113,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 115,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 116,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 123,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 124,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 125,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 129,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 130,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 131,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 138,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 139,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 140,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 147,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 148,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 149,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 153,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 154,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 159,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set_no_notification",
+    "line": 159,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 162,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 169,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 170,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 171,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 178,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 179,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 180,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 182,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 188,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 189,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 190,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 194,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 195,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 196,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 200,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 201,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 202,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 206,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 207,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 208,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 215,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 216,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 217,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 221,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 222,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 223,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 227,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 228,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 229,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   }
+  ],
+  "names": [
+   {
+    "lines": [
+     124,
+     125
+    ],
+    "name": "ASPD_SCALE_NSD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     123,
+     125
+    ],
+    "name": "ASPD_SC_P_NOISE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     130,
+     131
+    ],
+    "name": "ASPD_WIND_NSD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     129,
+     131
+    ],
+    "name": "ASPD_W_P_NOISE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     153
+    ],
+    "name": "EKF2_HGT_MODE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     154
+    ],
+    "name": "EKF2_HGT_REF",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     147
+    ],
+    "name": "EKF2_RNG_AID",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     148,
+     159
+    ],
+    "name": "EKF2_RNG_CTRL",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     113
+    ],
+    "name": "EKF2_WIND_NOISE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     115
+    ],
+    "name": "EKF2_WIND_NSD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     67,
+     70
+    ],
+    "name": "FW_GPSF_LT",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     75,
+     76
+    ],
+    "name": "FW_GPSF_R",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     227,
+     229
+    ],
+    "name": "FW_L1_PERIOD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     221,
+     223
+    ],
+    "name": "FW_L1_R_SLEW_MAX",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     201,
+     202
+    ],
+    "name": "FW_LAUN_AC_T",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     195,
+     196
+    ],
+    "name": "FW_LAUN_AC_THLD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     189,
+     190
+    ],
+    "name": "FW_LAUN_DETCN_ON",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     207,
+     208
+    ],
+    "name": "FW_LAUN_MOT_DEL",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     222,
+     223
+    ],
+    "name": "FW_PN_R_SLEW_MAX",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     138,
+     140
+    ],
+    "name": "FW_THR_CRUISE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     139,
+     140
+    ],
+    "name": "FW_THR_TRIM",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     90,
+     91
+    ],
+    "name": "IMU_GYRO_NF0_BW",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     84,
+     85
+    ],
+    "name": "IMU_GYRO_NF0_FRQ",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     89,
+     91
+    ],
+    "name": "IMU_GYRO_NF_BW",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     83,
+     85
+    ],
+    "name": "IMU_GYRO_NF_FREQ",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     188,
+     190
+    ],
+    "name": "LAUN_ALL_ON",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     194,
+     196
+    ],
+    "name": "LAUN_CAT_A",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     206,
+     208
+    ],
+    "name": "LAUN_CAT_MDEL",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     200,
+     202
+    ],
+    "name": "LAUN_CAT_T",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     66,
+     70
+    ],
+    "name": "NAV_GPSF_LT",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     74,
+     76
+    ],
+    "name": "NAV_GPSF_R",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     228,
+     229
+    ],
+    "name": "NPFG_PERIOD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     215,
+     217
+    ],
+    "name": "RWTO_L1_PERIOD",
+    "reached": true,
+    "tracked": false
+   },
+   {
+    "lines": [
+     216,
+     217
+    ],
+    "name": "RWTO_NPFG_PERIOD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     98,
+     100
+    ],
+    "name": "SENS_EN_MS4525",
+    "reached": true,
+    "tracked": false
+   },
+   {
+    "lines": [
+     99,
+     100
+    ],
+    "name": "SENS_EN_MS4525DO",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     104,
+     106
+    ],
+    "name": "SENS_EN_MS5525",
+    "reached": true,
+    "tracked": false
+   },
+   {
+    "lines": [
+     105,
+     106
+    ],
+    "name": "SENS_EN_MS5525DS",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     169,
+     171
+    ],
+    "name": "VT_FW_DIFTHR_SC",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     170,
+     171
+    ],
+    "name": "VT_FW_DIFTHR_S_Y",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     180
+    ],
+    "name": "VT_F_TRANS_THR",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     57,
+     58
+    ],
+    "name": "VT_LND_PITCH_MIN",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     56,
+     58
+    ],
+    "name": "VT_LND_PTCH_MIN",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     48,
+     49
+    ],
+    "name": "VT_PITCH_MIN",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     178,
+     182
+    ],
+    "name": "VT_PSHER_RMP_DT",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     179,
+     182
+    ],
+    "name": "VT_PSHER_SLEW",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     47,
+     49
+    ],
+    "name": "VT_PTCH_MIN",
+    "reached": true,
+    "tracked": true
+   }
+  ]
+ },
+ "extraction": {
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "extractor": 1,
+  "flags": [
+   "-std=c++17",
+   "-O0",
+   "-w",
+   "-ffp-contract=off"
+  ],
+  "import": "return ignored",
+  "platforms": [
+   "nuttx",
+   "posix"
+  ],
+  "probes": {
+   "listed": 209,
+   "names": 2689,
+   "untouched_not_listed": 28714,
+   "values": 28923
+  },
+  "snapshots": [
+   "v1.12.0",
+   "v1.12.1",
+   "v1.12.2",
+   "v1.12.3",
+   "v1.13.0",
+   "v1.13.1",
+   "v1.13.2",
+   "v1.13.3",
+   "v1.14.0",
+   "v1.14.1",
+   "v1.14.2"
+  ]
+ },
+ "format": 1,
+ "license": {
+  "checked": {
+   "bsd_3_clause_notice": 14,
+   "files": 31,
+   "no_notice": 17
+  },
+  "copyright": "Copyright (c) 2012 - 2023, PX4 Development Team",
+  "license": "BSD-3-Clause",
+  "text": "LICENSE-THIRD-PARTY"
+ },
+ "notes": [
+  "PX4 runs this code only when it imports the stored parameters of a vehicle, as after a firmware upgrade in place. Loading a parameter file by name does not run it.",
+  "Each probe is one stored value imported on its own. param_find knows the parameters of this release's snapshot, and param_get returns their defaults; during a real import, param_get returns values imported earlier from the same storage, and a value set here can be overwritten by a stored value imported later.",
+  "A firmware built without some modules has fewer parameters, so code that checks whether a parameter exists can behave differently there.",
+  "What the firmware does with the values after the import (for example replacing -1 with a default) is not part of this data."
+ ],
+ "parameters": {
+  "ASPD_SC_P_NOISE": [
+   {
+    "calls": [],
+    "matched": [
+     123
+    ],
+    "node": {
+     "name": "ASPD_SCALE_NSD",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "ASPD_SCALE_NSD",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      0.0001,
+      0.1,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "ASPD_W_P_NOISE": [
+   {
+    "calls": [],
+    "matched": [
+     129
+    ],
+    "node": {
+     "name": "ASPD_WIND_NSD",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "ASPD_WIND_NSD",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      0.1,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_HGT_MODE": [
+   {
+    "calls": [],
+    "matched": [
+     153
+    ],
+    "node": {
+     "name": "EKF2_HGT_REF",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_HGT_REF",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -10,
+      -2,
+      -1,
+      0,
+      1,
+      3,
+      10
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 159,
+      "name": "EKF2_RNG_CTRL"
+     },
+     {
+      "call": "param_set_no_notification",
+      "line": 159,
+      "param": "EKF2_RNG_CTRL",
+      "result": 0,
+      "value": 2
+     }
+    ],
+    "matched": [
+     153
+    ],
+    "node": {
+     "name": "EKF2_HGT_REF",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "also_set": {
+      "EKF2_RNG_CTRL": 2
+     },
+     "name": "EKF2_HGT_REF",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      2
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_RNG_AID": [
+   {
+    "calls": [],
+    "matched": [
+     147
+    ],
+    "node": {
+     "name": "EKF2_RNG_CTRL",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_RNG_CTRL",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -10,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_WIND_NOISE": [
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": -1
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": -1
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": -0.2
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": -0.2
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -2.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": -0.1
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": -0.1
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -1.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": 0
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": 0
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      0.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": 0.01
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": 0.01
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      0.1
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": 0.1
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": 0.1
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      1.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": 0.2
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": 0.2
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      2.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     113
+    ],
+    "node": {
+     "name": "EKF2_WIND_NSD",
+     "type": "Float",
+     "value": 1
+    },
+    "outcome": {
+     "name": "EKF2_WIND_NSD",
+     "result": "stored",
+     "value": 1
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "FW_L1_PERIOD": [
+   {
+    "calls": [],
+    "matched": [
+     227
+    ],
+    "node": {
+     "name": "NPFG_PERIOD",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "NPFG_PERIOD",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      7.0,
+      10.0,
+      12.0,
+      20.0,
+      50.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "FW_L1_R_SLEW_MAX": [
+   {
+    "calls": [],
+    "matched": [
+     221
+    ],
+    "node": {
+     "name": "FW_PN_R_SLEW_MAX",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_PN_R_SLEW_MAX",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      90.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "FW_THR_CRUISE": [
+   {
+    "calls": [],
+    "matched": [
+     138
+    ],
+    "node": {
+     "name": "FW_THR_TRIM",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_THR_TRIM",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      0.6,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "IMU_GYRO_NF_BW": [
+   {
+    "calls": [],
+    "matched": [
+     89
+    ],
+    "node": {
+     "name": "IMU_GYRO_NF0_BW",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "IMU_GYRO_NF0_BW",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      20.0,
+      100.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "IMU_GYRO_NF_FREQ": [
+   {
+    "calls": [],
+    "matched": [
+     83
+    ],
+    "node": {
+     "name": "IMU_GYRO_NF0_FRQ",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "IMU_GYRO_NF0_FRQ",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      1000.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "LAUN_ALL_ON": [
+   {
+    "calls": [],
+    "matched": [
+     188
+    ],
+    "node": {
+     "name": "FW_LAUN_DETCN_ON",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_LAUN_DETCN_ON",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -10,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "LAUN_CAT_A": [
+   {
+    "calls": [],
+    "matched": [
+     194
+    ],
+    "node": {
+     "name": "FW_LAUN_AC_THLD",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_LAUN_AC_THLD",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      30.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "LAUN_CAT_MDEL": [
+   {
+    "calls": [],
+    "matched": [
+     206
+    ],
+    "node": {
+     "name": "FW_LAUN_MOT_DEL",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_LAUN_MOT_DEL",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "LAUN_CAT_T": [
+   {
+    "calls": [],
+    "matched": [
+     200
+    ],
+    "node": {
+     "name": "FW_LAUN_AC_T",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_LAUN_AC_T",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      0.05,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "NAV_GPSF_LT": [
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": -10
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": -10
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": -2
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": -2
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -2.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": -1
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": -1
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -1.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": 0
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": 0
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      0.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": 1
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": 1
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      1.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": 2
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": 2
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      2.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": 10
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": 10
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      10.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     66
+    ],
+    "node": {
+     "name": "FW_GPSF_LT",
+     "type": "Int32",
+     "value": 3600
+    },
+    "outcome": {
+     "name": "FW_GPSF_LT",
+     "result": "stored",
+     "value": 3600
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      3600.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "NAV_GPSF_R": [
+   {
+    "calls": [],
+    "matched": [
+     74
+    ],
+    "node": {
+     "name": "FW_GPSF_R",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "FW_GPSF_R",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      15.0,
+      30.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "RWTO_L1_PERIOD": [
+   {
+    "calls": [],
+    "matched": [
+     215
+    ],
+    "node": {
+     "name": "RWTO_NPFG_PERIOD",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "RWTO_NPFG_PERIOD",
+     "result": "ignored-type"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -10,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     215
+    ],
+    "node": {
+     "name": "RWTO_NPFG_PERIOD",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "RWTO_NPFG_PERIOD",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SENS_EN_MS4525": [
+   {
+    "calls": [],
+    "matched": [
+     98
+    ],
+    "node": {
+     "name": "SENS_EN_MS4525DO",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "SENS_EN_MS4525DO",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -10,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     98
+    ],
+    "node": {
+     "name": "SENS_EN_MS4525DO",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "SENS_EN_MS4525DO",
+     "result": "ignored-type"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SENS_EN_MS5525": [
+   {
+    "calls": [],
+    "matched": [
+     104
+    ],
+    "node": {
+     "name": "SENS_EN_MS5525DS",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "SENS_EN_MS5525DS",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -10,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      10
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     104
+    ],
+    "node": {
+     "name": "SENS_EN_MS5525DS",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "SENS_EN_MS5525DS",
+     "result": "ignored-type"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "VT_FW_DIFTHR_SC": [
+   {
+    "calls": [],
+    "matched": [
+     169
+    ],
+    "node": {
+     "name": "VT_FW_DIFTHR_S_Y",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "VT_FW_DIFTHR_S_Y",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -2.0,
+      -1.0,
+      0.0,
+      0.1,
+      1.0,
+      2.0,
+      10.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "VT_LND_PTCH_MIN": [
+   {
+    "calls": [],
+    "matched": [
+     56
+    ],
+    "node": {
+     "name": "VT_LND_PITCH_MIN",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "VT_LND_PITCH_MIN",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -5.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      45.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "VT_PSHER_RMP_DT": [
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": -225.7
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": -225.7
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": -1128.5
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": -1128.5
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -2.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": -2257
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": -2257
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -1.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": "inf"
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": "inf"
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      0.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": 2257
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": 2257
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      1.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": 1128.5
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": 1128.5
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      2.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": 752.3333
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": 752.3333
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      3.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": 225.7
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": 225.7
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      10.0
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 180,
+      "name": "VT_F_TRANS_THR"
+     }
+    ],
+    "depends_on": [
+     "parameter handles"
+    ],
+    "matched": [
+     178
+    ],
+    "node": {
+     "name": "VT_PSHER_SLEW",
+     "type": "Float",
+     "value": 112.85
+    },
+    "outcome": {
+     "name": "VT_PSHER_SLEW",
+     "result": "stored",
+     "value": 112.85
+    },
+    "return": false,
+    "stored": {
+     "type": "Float",
+     "values": [
+      20.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "VT_PTCH_MIN": [
+   {
+    "calls": [],
+    "matched": [
+     47
+    ],
+    "node": {
+     "name": "VT_PITCH_MIN",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "VT_PITCH_MIN",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": true,
+    "stored": {
+     "type": "Float",
+     "values": [
+      -10.0,
+      -5.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      10.0,
+      45.0
+     ]
+    },
+    "touched": true
+   }
+  ]
+ },
+ "source": {
+  "commit": "968732477803be8a73edd13a29c8ab71458eb354",
+  "file": "src/lib/parameters/param_translation.cpp",
+  "repository": "https://github.com/PX4/PX4-Autopilot",
+  "tag": "v1.14.2"
+ }
+}

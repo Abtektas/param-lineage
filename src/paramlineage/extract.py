@@ -3,7 +3,7 @@
 
 The source of a release comes from ``git archive <tag>`` of a PX4 repository. PX4's generator
 scripts run from that source, the way PX4's ``metadata_parameters`` build target runs them
-(cmake/metadata.cmake). Nothing of PX4 is copied into this project.
+(cmake/metadata.cmake). The generators are not copied into this project.
 
     python -m paramlineage.extract --repo <PX4 git repository> --python <python> --all
 
@@ -100,9 +100,9 @@ def git(repo: str, *args: str) -> bytes:
     return result.stdout
 
 
-def unpack(repo: str, commit: str, dest: str) -> None:
-    """Write the paths the generators need, as committed at ``commit``, to ``dest``."""
-    paths = [p for p in ARCHIVE_PATHS if git(repo, "ls-tree", "--name-only", commit, "--", p).strip()]
+def unpack(repo: str, commit: str, dest: str, paths: list[str] = ARCHIVE_PATHS) -> None:
+    """Write ``paths`` (by default those the generators need), as committed at ``commit``, to ``dest``."""
+    paths = [p for p in paths if git(repo, "ls-tree", "--name-only", commit, "--", p).strip()]
     data = git(repo, "archive", "--format=tar", commit, "--", *paths)
     with tarfile.open(fileobj=io.BytesIO(data)) as tar:
         tar.extractall(dest, filter="data")

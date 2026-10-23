@@ -42,6 +42,16 @@ Run it from the repository root, with `PYTHONPATH=src` or after `pip install .`.
 Only extract from PX4's official repository: the extractor runs scripts from
 the tag.
 
+The translations need a C++17 compiler (`$CXX`, or `c++`); their tests are
+skipped without one. To run every tracked release's translation code again
+and compare it with `data/translations`:
+
+```
+python -m paramlineage.translations --repo <PX4 repository> --check --all
+```
+
+This compiles and runs code from the tag, so the same rule applies.
+
 ## Adding a release
 
 1. Add the tag to `TRACKED` in `src/paramlineage/extract.py` (a release
@@ -54,6 +64,14 @@ the tag.
 3. Add the firmware parameter lists of the release's fmu-v5 and fmu-v6x builds
    with `tests/fixtures/firmware/make_list.py`, and update the known counts in
    `tests/test_snapshots.py`.
+4. Write its translations with
+   `python -m paramlineage.translations --repo <PX4 repository> <tag>`. If the
+   extractor stops because the import code is new, read
+   `param_import_callback()` in the release's `parameters.cpp` and
+   `flashparams.cpp`, and add it to `IMPORT_CODE` in
+   `src/paramlineage/translations.py` with the model it follows. If the
+   release's translation code no longer builds with the harness, adapt the
+   harness so that the files of older tags stay the same (`--check --all`).
 
 ## What a change needs
 

@@ -1,0 +1,66 @@
+name: translations
+
+# Runs the translation code of every tracked release again and compares the result with
+# data/translations. Weekly as well, so a moved tag is noticed.
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - src/paramlineage/translations.py
+      - src/paramlineage/extract.py
+      - src/paramlineage/harness/**
+      - data/translations/**
+      - data/snapshots/**
+      - tests/test_translations.py
+      - LICENSE-THIRD-PARTY
+      - .github/workflows/translations.yml
+  pull_request:
+    paths:
+      - src/paramlineage/translations.py
+      - src/paramlineage/extract.py
+      - src/paramlineage/harness/**
+      - data/translations/**
+      - data/snapshots/**
+      - tests/test_translations.py
+      - LICENSE-THIRD-PARTY
+      - .github/workflows/translations.yml
+  schedule:
+    - cron: "37 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reproduce:
+    name: Run the translations again
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      # the C++ compiler that comes with the runner image
+      - run: c++ --version
+      - name: Fetch the tracked tags (only the paths the extraction reads)
+        run: |
+          tags=$(PYTHONPATH=src python -c "from paramlineage.extract import TRACKED; print(' '.join(TRACKED))")
+          git init -q "$RUNNER_TEMP/source"
+          cd "$RUNNER_TEMP/source"
+          git remote add origin https://github.com/PX4/PX4-Autopilot.git
+          git fetch -q --depth 1 --filter=blob:none origin $(for t in $tags; do printf 'refs/tags/%s:refs/tags/%s ' "$t" "$t"; done)
+          git sparse-checkout set --no-cone /LICENSE /src/lib/ /src/drivers/drv_sensor.h
+          for t in $tags; do git -c advice.detachedHead=false checkout -q --detach "$t"; done
+      - name: Extract and compare
+        run: PYTHONPATH=src python -m paramlineage.translations --repo "$RUNNER_TEMP/source" --cxx c++ --check --all
+      - name: Values the probes do not reach, on the releases' own code
+        run: python -m unittest -k test_v1_12_device_ids -k test_v1_18_heater_sensor_ids tests.test_translations
+        env:
+          PARAMLINEAGE_REPO: ${{ runner.temp }}/source
+          PARAMLINEAGE_REQUIRE_CXX: "1"
+          PYTHONPATH: src

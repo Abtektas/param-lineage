@@ -1,0 +1,719 @@
+{
+ "coverage": {
+  "calls": [
+   {
+    "call": "strcmp",
+    "line": 47,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 55,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 56,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 63,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 67,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 68,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 77,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 85,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 85,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 89,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 89,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 94,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 94,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 98,
+    "reached": []
+   },
+   {
+    "call": "param_set",
+    "line": 98,
+    "reached": []
+   },
+   {
+    "call": "param_find",
+    "line": 108,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 108,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 112,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 112,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 116,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 116,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 125,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 125,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 129,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 129,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 134,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 134,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 138,
+    "reached": []
+   },
+   {
+    "call": "param_set",
+    "line": 138,
+    "reached": []
+   }
+  ],
+  "names": [
+   {
+    "lines": [
+     89,
+     112,
+     129
+    ],
+    "name": "ATT_EN",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     63,
+     68
+    ],
+    "name": "CBRK_AIRSPD_CHK",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     94,
+     98,
+     116,
+     134,
+     138
+    ],
+    "name": "EKF2_EN",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     47,
+     56
+    ],
+    "name": "FW_ARSP_MODE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     55,
+     56
+    ],
+    "name": "FW_USE_AIRSPD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     85,
+     108,
+     125
+    ],
+    "name": "LPE_EN",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     67,
+     68
+    ],
+    "name": "SYS_HAS_NUM_ASPD",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     77
+    ],
+    "name": "SYS_MC_EST_GROUP",
+    "reached": true,
+    "tracked": true
+   }
+  ]
+ },
+ "extraction": {
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "extractor": 1,
+  "flags": [
+   "-std=c++17",
+   "-O0",
+   "-w",
+   "-ffp-contract=off"
+  ],
+  "import": "PARAM_SKIP_IMPORT skips",
+  "platforms": [
+   "nuttx",
+   "posix"
+  ],
+  "probes": {
+   "listed": 27,
+   "names": 3175,
+   "untouched_not_listed": 41500,
+   "values": 41527
+  },
+  "snapshots": [
+   "v1.12.0",
+   "v1.12.1",
+   "v1.12.2",
+   "v1.12.3",
+   "v1.13.0",
+   "v1.13.1",
+   "v1.13.2",
+   "v1.13.3",
+   "v1.14.0",
+   "v1.14.1",
+   "v1.14.2",
+   "v1.14.3",
+   "v1.14.4",
+   "v1.15.0",
+   "v1.15.1",
+   "v1.15.2",
+   "v1.15.3",
+   "v1.15.4",
+   "v1.16.0",
+   "v1.16.1"
+  ]
+ },
+ "format": 1,
+ "license": {
+  "checked": {
+   "bsd_3_clause_notice": 14,
+   "files": 31,
+   "no_notice": 17
+  },
+  "copyright": "Copyright (c) 2012 - 2023, PX4 Development Team",
+  "license": "BSD-3-Clause",
+  "text": "LICENSE-THIRD-PARTY"
+ },
+ "notes": [
+  "PX4 runs this code only when it imports the stored parameters of a vehicle, as after a firmware upgrade in place. Loading a parameter file by name does not run it.",
+  "Each probe is one stored value imported on its own. param_find knows the parameters of this release's snapshot, and param_get returns their defaults; during a real import, param_get returns values imported earlier from the same storage, and a value set here can be overwritten by a stored value imported later.",
+  "A firmware built without some modules has fewer parameters, so code that checks whether a parameter exists can behave differently there.",
+  "What the firmware does with the values after the import (for example replacing -1 with a default) is not part of this data."
+ ],
+ "parameters": {
+  "CBRK_AIRSPD_CHK": [
+   {
+    "calls": [],
+    "matched": [
+     63
+    ],
+    "node": {
+     "name": "CBRK_AIRSPD_CHK",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "CBRK_AIRSPD_CHK",
+     "result": "ignored-unknown-name"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -162128,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     63
+    ],
+    "node": {
+     "name": "SYS_HAS_NUM_ASPD",
+     "type": "Int32",
+     "value": 0
+    },
+    "outcome": {
+     "name": "SYS_HAS_NUM_ASPD",
+     "result": "stored",
+     "value": 0
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      162128
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "FW_ARSP_MODE": [
+   {
+    "calls": [],
+    "matched": [
+     47
+    ],
+    "node": {
+     "name": "FW_USE_AIRSPD",
+     "type": "Int32",
+     "value": 0
+    },
+    "outcome": {
+     "name": "FW_USE_AIRSPD",
+     "result": "stored",
+     "value": 0
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -162128,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      162128
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     47
+    ],
+    "node": {
+     "name": "FW_USE_AIRSPD",
+     "type": "Int32",
+     "value": 1
+    },
+    "outcome": {
+     "name": "FW_USE_AIRSPD",
+     "result": "stored",
+     "value": 1
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SYS_MC_EST_GROUP": [
+   {
+    "calls": [],
+    "matched": [
+     77
+    ],
+    "node": {
+     "name": "SYS_MC_EST_GROUP",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "SYS_MC_EST_GROUP",
+     "result": "ignored-unknown-name"
+    },
+    "return": "PARAM_NOT_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -162128,
+      -3,
+      -2,
+      -1,
+      0,
+      162128
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 85,
+      "name": "LPE_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 85,
+      "param": "LPE_EN",
+      "result": 0,
+      "value": 1
+     },
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 89,
+      "name": "ATT_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 89,
+      "param": "ATT_EN",
+      "result": 0,
+      "value": 1
+     },
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 94,
+      "name": "EKF2_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 94,
+      "param": "EKF2_EN",
+      "result": 0,
+      "value": 0
+     }
+    ],
+    "matched": [
+     77
+    ],
+    "node": {
+     "name": "SYS_MC_EST_GROUP",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "also_set": {
+      "ATT_EN": 1,
+      "EKF2_EN": 0,
+      "LPE_EN": 1
+     },
+     "name": "SYS_MC_EST_GROUP",
+     "result": "ignored-unknown-name"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      1
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 108,
+      "name": "LPE_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 108,
+      "param": "LPE_EN",
+      "result": 0,
+      "value": 0
+     },
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 112,
+      "name": "ATT_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 112,
+      "param": "ATT_EN",
+      "result": 0,
+      "value": 0
+     },
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 116,
+      "name": "EKF2_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 116,
+      "param": "EKF2_EN",
+      "result": 0,
+      "value": 1
+     }
+    ],
+    "matched": [
+     77
+    ],
+    "node": {
+     "name": "SYS_MC_EST_GROUP",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "also_set": {
+      "ATT_EN": 0,
+      "EKF2_EN": 1,
+      "LPE_EN": 0
+     },
+     "name": "SYS_MC_EST_GROUP",
+     "result": "ignored-unknown-name"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      2
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 125,
+      "name": "LPE_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 125,
+      "param": "LPE_EN",
+      "result": 0,
+      "value": 0
+     },
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 129,
+      "name": "ATT_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 129,
+      "param": "ATT_EN",
+      "result": 0,
+      "value": 1
+     },
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 134,
+      "name": "EKF2_EN"
+     },
+     {
+      "call": "param_set",
+      "line": 134,
+      "param": "EKF2_EN",
+      "result": 0,
+      "value": 0
+     }
+    ],
+    "matched": [
+     77
+    ],
+    "node": {
+     "name": "SYS_MC_EST_GROUP",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "also_set": {
+      "ATT_EN": 1,
+      "EKF2_EN": 0,
+      "LPE_EN": 0
+     },
+     "name": "SYS_MC_EST_GROUP",
+     "result": "ignored-unknown-name"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      3
+     ]
+    },
+    "touched": true
+   }
+  ]
+ },
+ "source": {
+  "commit": "94cb2012792b2ae89f0b147cfee53ee31ae550be",
+  "file": "src/lib/parameters/param_translation.cpp",
+  "repository": "https://github.com/PX4/PX4-Autopilot",
+  "tag": "v1.16.1"
+ }
+}

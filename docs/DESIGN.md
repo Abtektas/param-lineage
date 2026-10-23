@@ -1,7 +1,8 @@
 # param-lineage: design
 
-Status: draft 4, 2026-10-23. M0 (skeleton) and M1 (snapshots of all tracked
-releases) are done; translations, curation and the built views are not built yet.
+Status: draft 6, 2026-10-23. M0 (skeleton), M1 (snapshots of all tracked
+releases) and M2 (translations) are done; curation and the built views are
+not built yet.
 Name: **param-lineage**, "parameter history for PX4". The name must not
 contain "PX4" (see [Trademarks](#trademarks)).
 
@@ -83,7 +84,7 @@ PX4 git tags
    │  extract (PX4's own generators, per tag)
    ▼
 1. snapshots/      generated   all parameter metadata at one tag
-2. translations/   generated   rules parsed from that tag's param_translation.cpp
+2. translations/   generated   what that tag's param_translation.cpp does, found by running it
 3. curated/        human       what happened to each removed parameter, with evidence
    │  build (deterministic)
    ▼
@@ -167,17 +168,107 @@ name to the fields of PX4's own `parameters.json`.
 
 ### 2. Translations (generated)
 
-`data/translations/<tag>.json`: the rules in that tag's
-`src/lib/parameters/param_translation.cpp`, parsed into data.
+`data/translations/<tag>.json`: what the firmware of that tag does to each
+stored parameter value when it imports the stored parameters of a vehicle,
+as decided by `param_modify_on_import()` in
+`src/lib/parameters/param_translation.cpp` and the import code that calls it.
+The format is described by `schema/translations.schema.json`.
 
-- Kinds: `rename` (A becomes B, value copied) and `conversion` (A becomes B
-  with a value rule, such as `COM_RC_OVERRIDE=0` → `MAN_OVERRIDE_SPD=-1`).
-- Each rule keeps its source line, so a reviewer can check it against the code.
-- A rule the parser cannot classify is recorded as `unparsed` with its source
-  text. It is never dropped.
-- PX4 applies these rules only when the stored parameters of a vehicle are
-  upgraded in place. Loading a `.params` file by name does not run them
-  (verified in SITL on 2026-10-20). The data says this explicitly.
+PX4 applies this only when the stored parameters of a vehicle are upgraded in
+place. Loading a `.params` file by name does not run it (verified in SITL on
+2026-10-20). The data says this explicitly.
+
+**Run, not parse.** `param_translation.cpp` is free-form C++, not a list of
+rules. Across the tracked tags it uses loops over arrays of names, helper
+functions, `strcat`, name families matched by prefix (`RC*_REV`, `HEATER*`),
+conditions on the value, `param_set` on other parameters, `#ifdef
+__PX4_NUTTX`, and two return types (a `bool` up to v1.14, an enum from
+v1.15). A parser would miss rules without noticing. So the extractor
+(`python -m paramlineage.translations`) compiles the tag's file and runs it:
+
+- **Harness.** `src/paramlineage/harness/harness.cpp` includes the tag's
+  `param_translation.cpp` unchanged, after the headers that file includes
+  (`param.h`, `tinybson.h`, `drv_sensor.h`, `Device.hpp`, `mathlib`), all
+  from `git archive <tag>`. PX4's platform headers (logging, `PX4_OK`) are
+  replaced by `harness/platform.h`. Macros in front of `strcmp`, `strncmp`,
+  `strstr`, `strcpy`, `strncpy`, `strcat`, `snprintf`, the logging macros and
+  the parameter API (`param_find`, `param_set`, `param_set_no_notification`,
+  `param_get`) record the source line of every call. The parameter API
+  behaves as PX4's `parameters.cpp`. C++17, `-O0`, `-ffp-contract=off`.
+- **The firmware's parameters.** `param_find` knows exactly the parameters in
+  the tag's snapshot, numbered by name as PX4 numbers them, so code such as
+  "enable `LPE_EN` only if it exists" behaves as in a build with every
+  module. `param_get` returns the snapshot default. Every probe starts from
+  the defaults.
+- **Probes.** Names: every parameter in a tracked snapshot up to and
+  including the tag, plus every name the file compares against (some date
+  from before v1.12). Types: from the snapshots; names found only in the file
+  are probed as both. Values: 0, 1, -1, the numbers in the file and their
+  negatives (such as 162128), and from each snapshot the default, min, max,
+  enum values and bitmask bits. Floats are rounded to float32, as PX4 stores
+  them.
+- **Platforms.** Built with and without `__PX4_NUTTX` (defined for the
+  translation code only); cases that differ are recorded for both (the SPI
+  device ID rule in v1.12).
+- **What a result depends on.** Each probe also runs with the parameters
+  numbered in reverse, and with the bytes of the node that the BSON decoder
+  does not write filled in. A result that changes is marked `depends_on`, and
+  its values are not what a firmware gives: v1.14 computes `VT_PSHER_SLEW`
+  from the handle `param_find()` returns instead of a value, and from v1.13
+  the decoder writes only the low four bytes of an int32 node, so code that
+  reads it as a double reads what the value before left there.
+- **Import.** The result is then passed through the tag's import rules
+  (`param_import_callback()` in `parameters.cpp` and `flashparams.cpp`, read
+  for every tracked tag):
+  - up to v1.14 the return value is ignored; from v1.15
+    `PARAM_SKIP_IMPORT` stops the import of that value;
+  - the name after translation is looked up in the tag's snapshot: an
+    unknown name or a different type is ignored, otherwise the value is
+    stored.
+
+  The extractor recognises these import functions by a hash of their text
+  and stops on a tag whose import code differs, so a change is read before
+  it counts.
+
+  Each case ends in one outcome: `stored` (name and value), `skipped`,
+  `ignored-unknown-name` or `ignored-type`, plus the other parameters it set
+  (`also_set`).
+
+Each file lists only the stored names the code touched (compared in full,
+changed the node, called the parameter API, or returned something other than
+"not modified"), with every probe of those names. Probes with the same result
+are grouped. Where a value is the stored value itself for two or more stored
+values, it is written `"stored"`; a constant that equals a single stored value
+keeps its number. Probes of other names are counted, not listed.
+
+**Coverage is reported, not assumed.** Every recorded call in the file is
+listed with the platforms on which a probe reached it (a comparison counts
+when it matched), and every name literal with whether a probe used it and
+whether a tracked parameter has it. Some rules need specific values (the
+device IDs of v1.12) or names that no tracked release has (`HEATER*_IMU_ID`,
+which existed only on main, after v1.17 had branched off and before v1.18);
+the coverage shows them
+as not reached, and tests run them with constructed values.
+
+**Limits, stated in the data:**
+
+- A board built without a module behaves differently where the code checks
+  whether a parameter exists.
+- `param_get` during import returns values imported earlier from the same
+  storage, and a value set by a translation can be overwritten by a stored
+  value imported later; each probe here is imported on its own. Not yet
+  checked against the real import order.
+- What happens after import (for example `CAL_ACC0_PRIO=-1` being replaced by
+  a default later) is outside this layer.
+
+All three are candidates for the SITL checks of M6.
+
+**Reproducible.** The 23 tracked tags have 7 different versions of the file.
+Each tag is still extracted on its own, and `--check` compares the output
+byte by byte like the snapshots; only a different compiler is tolerated, and
+reported. Checked on 2026-10-23: Apple clang 21 on macOS (arm64), and GCC 13.3
+on Linux arm64 and on Linux x86_64 (QEMU emulation), give the same data for
+every tag.
 
 ### 3. Curated facts (human)
 
@@ -219,7 +310,8 @@ reported as a change.
 ## Integrity checks (CI)
 
 1. **Schema:** every data file validates against its JSON Schema.
-2. **Reproducible:** re-extracting a tag gives a byte-identical snapshot.
+2. **Reproducible:** re-extracting a tag gives a byte-identical snapshot and
+   translations file.
 3. **Complete:** in a `complete` transition, every removed parameter has
    exactly one curated entry.
 4. **Consistent:**
@@ -285,14 +377,22 @@ Decision:
 - Extraction runs PX4's generators. They need PyYAML, Jinja2 and MarkupSafe,
   pinned with hashes in `requirements/extract.txt`; the versions used are
   recorded in each snapshot.
+- Translations compile PX4's translation code with the host C++17 compiler
+  (Apple clang locally, GCC on the CI runner). The harness and the stand-in
+  header are ours (apart from three lines, see Licenses), under
+  `src/paramlineage/harness/`; they are installed with
+  the package but only used for extraction. PX4's platform header names that
+  the code includes are written at build time, each including the stand-in.
+  The compiler's first `--version` line is recorded in each translations
+  file.
 - Pinned versions were published at least two weeks before they were pinned.
 
 ```
 param-lineage/
-  data/              snapshots/; later translations/ curated/ params/ changes/
+  data/              snapshots/ translations/; later curated/ params/ changes/
   schema/            one JSON Schema per data kind
   requirements/      pinned packages for extraction and the schema tests
-  src/paramlineage/  legal, cli, extract; later translations, curate, build, check
+  src/paramlineage/  legal, cli, extract, translations, harness/; later curate, build, check
   web/               the upgrade check page
   tests/             unit tests, known history, firmware parameter lists
   docs/              DESIGN.md; later how to add a release
@@ -315,6 +415,14 @@ param-lineage/
   BSD-3-Clause notice or none. A file with any other notice stops the
   extraction. Files without a notice fall under the repository's license.
   Submodules, which do carry other licenses, are not part of the extraction.
+- **Translations:** the harness compiles PX4 source files on the machine
+  that extracts and keeps no compiled code. The data holds what the code did
+  (names, values, line numbers), not the code. The files compiled
+  (`param_translation.cpp` and the headers it includes) go through the same
+  per-tag license check. The stand-in header repeats three lines of PX4's
+  `defines.h` (`PX4_ISFINITE` for float and double, `M_PI_PRECISE`), because
+  the compiled code uses them by these names; they are marked as PX4's in the
+  file and fall under `LICENSE-THIRD-PARTY`.
 - **Dependencies:** none at runtime. PyYAML (MIT), Jinja2 and MarkupSafe
   (BSD-3) run PX4's generators during extraction; jsonschema and its
   dependencies (MIT, and PSF for typing-extensions) check the schemas in CI;
@@ -371,7 +479,7 @@ param-lineage/
 |---|---|---|
 | M0 | Design and skeleton | This document is agreed; repo skeleton, licenses, notices, CI config exist. |
 | M1 | Snapshots | All tracked tags extract; v1.17.0 archive equals worktree; reproducibility test passes. |
-| M2 | Translations | Parser covers every rule in all tracked tags; known cases tested (GNSS, heater, COM_RC_OVERRIDE). |
+| M2 | Translations | The harness runs the translation code of every tracked tag; every call site and name literal is reported as reached or not; known cases tested (GNSS, heater, `COM_RC_OVERRIDE`, `CBRK_AIRSPD_CHK`, `MOT_POLE_COUNT`, v1.12 device IDs). |
 | M3 | Changes + curation | Diff engine; completeness check; curated v1.17 → v1.18 and v1.16 → v1.17. |
 | M4 | Histories + CLI | `params/` built; `history`, `diff`, `check <file.params>` commands. |
 | M5 | Upgrade checker | The page in `web/` reads this data. |
