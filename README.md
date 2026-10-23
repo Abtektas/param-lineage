@@ -3,10 +3,9 @@
 Parameter history for PX4: a machine-readable record of how PX4 parameters
 change between releases.
 
-**Status: early development. There is no release yet. The snapshots, the
-translations and the changes between releases are built, and the removed
-parameters of the last two upgrades are curated; the histories per parameter
-are not built yet.**
+**Status: early development. There is no release yet. The data described
+below is built, the removed parameters of the last two upgrades are curated,
+and the commands work; the upgrade check page does not read this data yet.**
 The plan is in [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Why
@@ -36,7 +35,7 @@ pages. param-lineage turns it into data that tools can use:
 | Conversions PX4 performs on upgrade | `data/translations/<tag>.json` ([schema](schema/translations.schema.json)) | the same releases |
 | What happened to each removed parameter | `data/curated/<from>..<to>.json` ([schema](schema/curated.schema.json)) | v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
 | Changes between consecutive releases | `data/changes/<from>..<to>.json` ([schema](schema/changes.schema.json)) | every pair of consecutive tracked releases |
-| History per parameter | `data/params/` | not built yet |
+| History of every parameter | `data/params.json` ([schema](schema/params.schema.json)) | every parameter of the tracked releases |
 
 The snapshots are made from the release tags by PX4's own generators. Each one
 records the commit it came from and how it was made, and the tests compare
@@ -70,9 +69,19 @@ writes a corrected copy. It will move to the data above as it is built.
 ```
 pip install .
 param-lineage --version
+param-lineage history MPC_HOLD_DZ
+param-lineage diff v1.16.2 v1.18.0-rc1
+param-lineage check saved.params --from v1.17.0 --to v1.18.0-rc1
 ```
 
-The commands that read the data (`history`, `diff`, `check`) come with it.
+`history` shows how one parameter changed across the tracked releases, and
+`diff` what changed between two of them, following renames through the
+releases in between. `check` reads a parameter file that QGroundControl saved
+on one release and lists what to look at before loading it on a newer one:
+removed parameters with what happened to them, type changes, ranges the newer
+release narrowed, and values that keep a default the newer release changed. It does not write a corrected file
+(the page does). Each command takes `--json`, and the package carries the
+data, so nothing else is needed.
 
 ## Safety and liability
 

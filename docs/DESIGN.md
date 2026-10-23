@@ -1,9 +1,9 @@
 # param-lineage: design
 
 Status: draft 7, 2026-10-24. M0 (skeleton), M1 (snapshots of all tracked
-releases), M2 (translations) and M3 (changes and curation of the last two
-upgrades) are done; the histories per parameter and the commands are not
-built yet.
+releases), M2 (translations), M3 (changes and curation of the last two
+upgrades) and M4 (histories and the `history`, `diff` and `check` commands)
+are done; the upgrade check page does not read this data yet (M5).
 Name: **param-lineage**, "parameter history for PX4". The name must not
 contain "PX4" (see [Trademarks](#trademarks)).
 
@@ -420,7 +420,7 @@ param-lineage/
   data/              snapshots/ translations/ curated/ changes/ params.json
   schema/            one JSON Schema per data kind
   requirements/      pinned packages for extraction and the schema tests
-  src/paramlineage/  legal, cli, extract, translations, harness/, curated, changes; later build, check
+  src/paramlineage/  legal, cli, extract, translations, harness/, curated, changes, history, query, check
   web/               the upgrade check page
   tests/             unit tests, known history, firmware parameter lists
   docs/              DESIGN.md; later how to add a release

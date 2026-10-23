@@ -24,6 +24,10 @@
 - Changes between every pair of consecutive tracked releases in
   `data/changes/`, built with `python -m paramlineage.changes`, and their
   JSON Schema.
+- The history of every parameter in `data/params.json`, built with
+  `python -m paramlineage.history`, and its JSON Schema.
+- The commands `param-lineage history`, `diff` and `check`. The package
+  carries the data they read.
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts
