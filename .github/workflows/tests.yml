@@ -44,6 +44,6 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       # the Node.js that comes with the runner image; the tests need 18 or newer
       - run: node --version
-      - run: node --test web/test/
+      - run: node --test web/test/*.test.js
       - name: Build the page
         run: python3 web/tools/build_page.py web/data/v1.17.0_to_v1.18.0-rc1.json dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0-rc1.html

@@ -29,7 +29,7 @@ tools/gen_params_json.sh <PX4 v1.17.0 tree> data/full-v1.17.0.json <python with 
 tools/gen_params_json.sh <PX4 v1.18.0-rc1 tree> data/full-v1.18.0-rc1.json <python>
 python3 tools/build_data.py <PX4 git repo> data/full-v1.17.0.json v1.17.0 data/full-v1.18.0-rc1.json v1.18.0-rc1 data/v1.17.0_to_v1.18.0-rc1.json
 python3 tools/build_page.py data/v1.17.0_to_v1.18.0-rc1.json dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0-rc1.html
-node --test test/
+node --test test/*.test.js
 ```
 
 The python passed to `gen_params_json.sh` must be an absolute path. `gen_params_json.sh` runs
@@ -53,7 +53,7 @@ data the page is built from is.
 - QGroundControl v5.1.5 (release DMG) and master (95680219f), each connected to a fresh
   v1.18.0-rc1 SITL: loading a v1.17 file with `RC1_REV` and `RC3_REV` at `-1.000000` set all
   `RC*_REV` on the vehicle to 0. The corrected file set them to -1, 1, -1.
-- `node --test test/`: the analysis and the corrected file, including the conversions of
+- `node --test test/*.test.js`: the analysis and the corrected file, including the conversions of
   `param_translation.cpp`, and the terms.
 - `test/page_check.js`: the built page with jsdom (rendering, download, no markup injection from a
   file). It needs jsdom; see the comment at its top.

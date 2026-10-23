@@ -23,7 +23,7 @@ in English.
 
 ```
 python3 -m unittest discover -s tests -t .
-node --test web/test/
+node --test web/test/*.test.js
 ```
 
 This needs Python 3.11 or newer and Node.js 18 or newer, and nothing else.
