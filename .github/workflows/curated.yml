@@ -1,0 +1,46 @@
+name: curated
+
+# Checks that every commit the curated facts cite lies between the two releases of its file.
+# The other checks of data/curated run in the tests workflow; this one needs PX4's history.
+# Weekly as well, so a moved tag is noticed.
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - data/curated/**
+      - src/paramlineage/curated.py
+      - tests/test_curated.py
+      - .github/workflows/curated.yml
+  pull_request:
+    paths:
+      - data/curated/**
+      - src/paramlineage/curated.py
+      - tests/test_curated.py
+      - .github/workflows/curated.yml
+  schedule:
+    - cron: "41 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  commits:
+    name: Cited commits
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: Fetch PX4's commits and tags (no files)
+        run: git clone -q --bare --filter=tree:0 https://github.com/PX4/PX4-Autopilot.git "$RUNNER_TEMP/px4.git"
+      - run: python -m unittest -v tests.test_curated
+        env:
+          PARAMLINEAGE_REPO: ${{ runner.temp }}/px4.git
+          PYTHONPATH: src
