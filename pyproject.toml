@@ -41,3 +41,9 @@ path = "src/paramlineage/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/paramlineage"]
+
+# The data the commands read; see paramlineage.query.
+[tool.hatch.build.targets.wheel.force-include]
+"data/params.json" = "paramlineage/data/params.json"
+"data/curated" = "paramlineage/data/curated"
+"data/translations" = "paramlineage/data/translations"
