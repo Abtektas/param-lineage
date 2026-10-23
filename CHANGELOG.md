@@ -28,6 +28,15 @@
   `python -m paramlineage.history`, and its JSON Schema.
 - The commands `param-lineage history`, `diff` and `check`. The package
   carries the data they read.
+- The upgrade check page is built from this data: the snapshots of
+  v1.17.0 and v1.18.0-rc1, the curated facts and the changes between them.
+  Its notes are the curated entries; its conversion rules and suggestions
+  stay in `web/tools/hints_v1_17_to_v1_18.py`, and its tests check every
+  conversion against the translations of v1.18.0-rc1. It now knows
+  `HIL_ACT_FUNC1` to `16` and `HIL_ACT_REV`, which it listed as unknown, and
+  the notes of seven parameters fixed at their old default show that value
+  instead of "{old}". The notes no longer mention fixes proposed to PX4 for
+  some of these parameters: curated facts state what the release does.
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts

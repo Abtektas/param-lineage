@@ -147,7 +147,7 @@ const LICENSES = /*__LICENSES__*/null;
   function source(note) {
     if (!note || !note.commit) return null;
     return el('span', { class: 'desc' }, ' ',
-      el('a', { href: `${REPO}/commit/${note.commit}`, target: '_blank', rel: 'noopener' }, note.commit),
+      el('a', { href: `${REPO}/commit/${note.commit}`, target: '_blank', rel: 'noopener' }, note.commit.slice(0, 10)),
       note.pr ? [' · ', el('a', { href: `${REPO}/pull/${note.pr}`, target: '_blank', rel: 'noopener' }, '#' + note.pr)] : null);
   }
 

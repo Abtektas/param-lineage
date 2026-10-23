@@ -2,8 +2,8 @@
 
 A single offline HTML page that checks a QGroundControl `.params` file saved on PX4 v1.17.0
 before it is loaded on v1.18.0-rc1, and writes a corrected copy. It started as a separate local
-project (px4-param-upgrade, never published) and moved here on 2026-10-23. It will move to the
-project's data as that is built (see [../docs/DESIGN.md](../docs/DESIGN.md)).
+project (px4-param-upgrade, never published) and moved here on 2026-10-23, and is now built from
+the project's data (see [../docs/DESIGN.md](../docs/DESIGN.md)).
 
 PX4 converts renamed parameters (`param_translation.cpp`) only when it upgrades the parameters
 stored on the vehicle. Loading a saved file in QGroundControl sets parameters one by one, so values
@@ -22,22 +22,23 @@ The page stays on the computer and makes no network requests. The terms in the r
 
 ## Build
 
-From this folder:
+From this folder, with a clone of PX4 that has the release tags (it is read only for the startup
+scripts of the airframes):
 
 ```sh
-tools/gen_params_json.sh <PX4 v1.17.0 tree> data/full-v1.17.0.json <python with PX4's requirements>
-tools/gen_params_json.sh <PX4 v1.18.0-rc1 tree> data/full-v1.18.0-rc1.json <python>
-python3 tools/build_data.py <PX4 git repo> data/full-v1.17.0.json v1.17.0 data/full-v1.18.0-rc1.json v1.18.0-rc1 data/v1.17.0_to_v1.18.0-rc1.json
+python3 tools/build_data.py <PX4 git repo> v1.17.0 v1.18.0-rc1 data/v1.17.0_to_v1.18.0-rc1.json
 python3 tools/build_page.py data/v1.17.0_to_v1.18.0-rc1.json dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0-rc1.html
 node --test test/*.test.js
 ```
 
-The python passed to `gen_params_json.sh` must be an absolute path. `gen_params_json.sh` runs
-PX4's own metadata generators over every module config; the `metadata_parameters` target skips
-`src/modules/spacecraft` and `src/systemcmds`, which made 64 existing parameters look removed.
-`build_data.py` stops if `tools/notes_v1_17_to_v1_18.py` does not cover exactly the removed
-parameters and type changes. The two `full-*.json` files are not kept in the repository; only the
-data the page is built from is.
+`build_data.py` reads the repository's data: the snapshots of both tags (`../data/snapshots`), the
+curated facts and the changes of the pair (`../data/curated`, `../data/changes`), and the page's
+own rules in `tools/hints_v1_17_to_v1_18.py`. The notes the page shows are the curated entries as
+they are. The rules are the page's behaviour, not facts: how it converts a `migrated` value in the
+corrected file, and what it suggests setting by hand for the others. The build stops unless the
+curated facts cover exactly the removed parameters, every `migrated` entry and only those has a
+conversion rule writing exactly the entry's successors, the type rules match the type changes, and
+the PX4 clone has each tag at the commit its snapshot was made from.
 
 ## Verification
 
@@ -53,8 +54,10 @@ data the page is built from is.
 - QGroundControl v5.1.5 (release DMG) and master (95680219f), each connected to a fresh
   v1.18.0-rc1 SITL: loading a v1.17 file with `RC1_REV` and `RC3_REV` at `-1.000000` set all
   `RC*_REV` on the vehicle to 0. The corrected file set them to -1, 1, -1.
-- `node --test test/*.test.js`: the analysis and the corrected file, including the conversions of
-  `param_translation.cpp`, and the terms.
+- `node --test test/*.test.js`: the analysis and the corrected file, and the terms. Every conversion
+  rule and the `RC*_REV` fix are checked against every probe value in
+  `../data/translations/v1.18.0-rc1.json`: the corrected file writes what PX4 stores on an in-place
+  upgrade, no more and no less.
 - `test/page_check.js`: the built page with jsdom (rendering, download, no markup injection from a
   file). It needs jsdom; see the comment at its top.
 

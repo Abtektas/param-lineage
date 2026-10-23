@@ -5,7 +5,7 @@ change between releases.
 
 **Status: early development. There is no release yet. The data described
 below is built, the removed parameters of the last two upgrades are curated,
-and the commands work; the upgrade check page does not read this data yet.**
+and the commands and the upgrade check page work on it.**
 The plan is in [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Why
@@ -62,7 +62,9 @@ entry against the snapshots, the translations and PX4's history
 
 [web/](web/) holds a single offline HTML page that checks a QGroundControl
 `.params` file saved on PX4 v1.17.0 before it is loaded on v1.18.0-rc1, and
-writes a corrected copy. It will move to the data above as it is built.
+writes a corrected copy. It is built from the data above: the snapshots of
+both releases, the curated facts and the changes between them. Its tests check
+every conversion it writes against the translations of v1.18.0-rc1.
 
 ## Command line
 

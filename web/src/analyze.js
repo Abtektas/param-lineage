@@ -144,7 +144,7 @@
       if (note) {
         const old = removedMeta[row.name];
         const onOldDefault = old && old.d !== undefined && sameF32(row.value, old.d);
-        const onFixedValue = note.fixed !== undefined && sameF32(row.value, note.fixed);
+        const onFixedValue = note.fixed_value !== undefined && sameF32(row.value, note.fixed_value);
         if (note.kind === 'migrated') {
           // A file that already has the new name (saved from a newer build) keeps its own value;
           // the bitmask rule already merged it.

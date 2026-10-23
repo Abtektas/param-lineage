@@ -302,8 +302,12 @@ every tag.
 - Each transition has a status: `complete`, `partial` or `not-started`.
   Only `complete` transitions are enforced by the completeness check, and
   consumers see the status next to the data.
-- The v1.17.0 → v1.18.0-rc1 notes in `web/tools/notes_v1_17_to_v1_18.py`
-  (60 removals, each checked against its commit) become the first curated file.
+- The upgrade check page in `web/` shows the curated entries of its pair as
+  they are. Its own rules (`web/tools/hints_<from>_to_<to>.py`) say how it
+  converts a `migrated` value and what it suggests for the others; its build
+  stops unless every `migrated` entry, and only those, has a conversion rule
+  that writes exactly the entry's successors, and its tests check each
+  conversion against every probe value of the translations.
 
 ### 4. Built views (derived)
 

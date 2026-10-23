@@ -1,11 +1,13 @@
-"""Build the checker's data from the complete parameter metadata of two PX4 releases.
+"""Build the checker's data from this repository's data for two tracked PX4 releases.
 
-usage: build_data.py <PX4 git repository> <from parameters.json> <from tag>
-                     <to parameters.json> <to tag> <output .json>
+usage: build_data.py <PX4 git repository> <from tag> <to tag> <output .json>
 
-The parameters.json files come from tools/gen_params_json.sh. The build stops if the notes
-do not match the metadata exactly, so a new release cannot silently lose a removed parameter.
+It reads the snapshots of both tags, the curated facts and the changes of the pair, and the
+page's own rules in tools/hints_<from>_to_<to>.py. The PX4 repository is read only for the
+startup scripts of the airframes. The build stops if the facts and the rules do not match
+exactly, so a new release cannot silently lose a removed parameter.
 """
+import importlib
 import json
 import math
 import os
@@ -14,14 +16,22 @@ import struct
 import subprocess
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from notes_v1_17_to_v1_18 import NOTES, TYPE_RULES  # noqa: E402
+TOOLS = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(os.path.dirname(os.path.dirname(TOOLS)), "data")
+sys.path.insert(0, TOOLS)
 
 TYPES = {"Int32": "i", "Float": "f"}
 
 
-def load(path):
-    return {p["name"]: p for p in json.load(open(path))["parameters"]}
+def read(*path):
+    with open(os.path.join(DATA, *path), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def hints(src_tag, dst_tag):
+    def short(tag):
+        return re.sub(r"^v(\d+)\.(\d+)\..*", r"v\1_\2", tag)
+    return importlib.import_module(f"hints_{short(src_tag)}_to_{short(dst_tag)}")
 
 
 def compact(p):
@@ -120,37 +130,57 @@ def airframe_changes(repo, src_tag, dst_tag, src, dst):
 
 
 def main():
-    repo, src_path, src_tag, dst_path, dst_tag, out_path = sys.argv[1:]
-    src_commit = git(repo, "rev-parse", "--short=10", f"{src_tag}^{{commit}}").strip()
-    dst_commit = git(repo, "rev-parse", "--short=10", f"{dst_tag}^{{commit}}").strip()
-    src, dst = load(src_path), load(dst_path)
+    repo, src_tag, dst_tag, out_path = sys.argv[1:]
+    src_snapshot, dst_snapshot = read("snapshots", f"{src_tag}.json"), read("snapshots", f"{dst_tag}.json")
+    src, dst = src_snapshot["parameters"], dst_snapshot["parameters"]
+    pair = f"{src_tag}..{dst_tag}.json"
+    curated, changes = read("curated", pair), read("changes", pair)
+    page = hints(src_tag, dst_tag)
 
     removed = set(src) - set(dst)
     errors = []
-    if set(NOTES) != removed:
-        errors.append(f"notes without removal: {sorted(set(NOTES) - removed)}")
-        errors.append(f"removals without notes: {sorted(removed - set(NOTES))}")
-    for name, note in NOTES.items():
-        rule = note.get("rule", {})
+    if curated["status"] != "complete":
+        errors.append(f"the curated facts of {pair} are {curated['status']}")
+    if set(curated["removed"]) != removed:
+        errors.append(f"curated without removal: {sorted(set(curated['removed']) - removed)}")
+        errors.append(f"removals without curated facts: {sorted(removed - set(curated['removed']))}")
+    errors += [f"rule for {n}, which is not removed" for n in sorted(set(page.RULES) - removed)]
+    for name, fact in sorted(curated["removed"].items()):
+        rule = page.RULES.get(name)
+        converts = rule is not None and rule["type"] in page.CONVERSIONS
+        if (fact["kind"] == "migrated") != converts:
+            errors.append(f"{name}: kind {fact['kind']} with rule {rule}")
+        if rule is None:
+            continue
         to = rule.get("to", [])
-        targets = note.get("see", []) + (to if isinstance(to, list) else [to])
-        targets += [rule[k] for k in ("max", "min") if k in rule]
+        targets = (to if isinstance(to, list) else [to]) + [rule[k] for k in ("max", "min") if k in rule]
         errors += [f"{name}: {t} is not a {dst_tag} parameter" for t in targets if t not in dst]
-    type_changed = {n for n in set(src) & set(dst) if src[n]["type"] != dst[n]["type"]}
-    if set(TYPE_RULES) != type_changed:
-        errors.append(f"type rules {sorted(set(TYPE_RULES) ^ type_changed)} do not match the type changes")
+        if converts and set(targets) != set(fact["successors"]):
+            errors.append(f"{name}: the rule writes {sorted(targets)}, the successors are {fact['successors']}")
+    type_changed = {n for n, c in changes["changed"].items() if "type" in c}
+    if set(page.TYPE_RULES) != type_changed:
+        errors.append(f"type rules {sorted(set(page.TYPE_RULES) ^ type_changed)} do not match the type changes")
     if errors:
         sys.exit("\n".join(errors))
 
+    # the curated entry as it is, and the page's rule for it
+    notes = {n: {**fact, **({"rule": page.RULES[n]} if n in page.RULES else {})}
+             for n, fact in sorted(curated["removed"].items())}
+    commits = {}
+    for tag, snapshot in ((src_tag, src_snapshot), (dst_tag, dst_snapshot)):
+        commit = git(repo, "rev-parse", f"{tag}^{{commit}}").strip()
+        if commit != snapshot["source"]["commit"]:
+            sys.exit(f"{tag} is {commit} in {repo}, but the snapshot was made from {snapshot['source']['commit']}")
+        commits[tag] = commit[:10]
     data = {
-        "from": {"tag": src_tag, "commit": src_commit},
-        "to": {"tag": dst_tag, "commit": dst_commit},
+        "from": {"tag": src_tag, "commit": commits[src_tag]},
+        "to": {"tag": dst_tag, "commit": commits[dst_tag]},
         # [type, default, min, max]: the old range tells a value that only the new range rejects
         "source": {n: [TYPES[p["type"]], p.get("default"), p.get("min"), p.get("max")] for n, p in sorted(src.items())},
         "removedMeta": {n: compact(src[n]) for n in sorted(removed)},
         "target": {n: compact(p) for n, p in sorted(dst.items())},
-        "notes": NOTES,
-        "typeRules": TYPE_RULES,
+        "notes": notes,
+        "typeRules": page.TYPE_RULES,
         "airframes": airframe_changes(repo, src_tag, dst_tag, src, dst),
     }
     with open(out_path, "w") as f:
