@@ -89,7 +89,7 @@ PX4 git tags
 3. curated/        human       what happened to each removed parameter, with evidence
    │  build (deterministic)
    ▼
-4. params/         derived     history of one parameter across all tags
+4. params.json     derived     history of every parameter across all tags
    changes/        derived     everything that changed between two tags
 ```
 
@@ -307,8 +307,15 @@ every tag.
 
 ### 4. Built views (derived)
 
-- `data/params/<NAME>.json`: the history of one parameter. A list of states,
-  each valid over a range of tags, plus `renamed_from` / `renamed_to` links.
+- `data/params.json` (`python -m paramlineage.history --all`; format in
+  `schema/params.schema.json`): the history of every parameter. For each, a
+  list of states, each valid over a range of tags, made of the fields the
+  changes compare, so a new state starts exactly where the changes report
+  one. Each removal carries its curated kind and successors (`removed`), and
+  a successor lists the parameters it took over from (`predecessors`). One
+  file, not one per parameter, so that no file of this project is named
+  after a parameter: some PX4 parameter names contain "PX4"
+  (`SENS_EN_PX4FLOW`).
 - `data/changes/<from>..<to>.json`, one per pair of consecutive tracked tags
   (`python -m paramlineage.changes --all`; format in
   `schema/changes.schema.json`): added, removed (with the curated kind and
@@ -410,7 +417,7 @@ Decision:
 
 ```
 param-lineage/
-  data/              snapshots/ translations/ curated/ changes/; later params/
+  data/              snapshots/ translations/ curated/ changes/ params.json
   schema/            one JSON Schema per data kind
   requirements/      pinned packages for extraction and the schema tests
   src/paramlineage/  legal, cli, extract, translations, harness/, curated, changes; later build, check
@@ -502,7 +509,7 @@ param-lineage/
 | M1 | Snapshots | All tracked tags extract; v1.17.0 archive equals worktree; reproducibility test passes. |
 | M2 | Translations | The harness runs the translation code of every tracked tag; every call site and name literal is reported as reached or not; known cases tested (GNSS, heater, `COM_RC_OVERRIDE`, `CBRK_AIRSPD_CHK`, `MOT_POLE_COUNT`, v1.12 device IDs). |
 | M3 | Changes + curation | Diff engine; completeness check; curated v1.17 → v1.18 and v1.16 → v1.17. |
-| M4 | Histories + CLI | `params/` built; `history`, `diff`, `check <file.params>` commands. |
+| M4 | Histories + CLI | `params.json` built; `history`, `diff`, `check <file.params>` commands. |
 | M5 | Upgrade checker | The page in `web/` reads this data. |
 | M6 | SITL verification | Translation rules tested by in-place upgrade. |
 | M7 | Release v0.1 | Announced with PX4 v1.18.0 final. |
