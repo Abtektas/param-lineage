@@ -1,0 +1,18 @@
+{
+ "added": [
+  "UAVCAN_PUB_MBD",
+  "UAVCAN_PUB_RTCM"
+ ],
+ "changed": {},
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "6823cbc4140e29568f00e1211ae60e057adb1a1f",
+  "tag": "v1.13.0"
+ },
+ "removed": {},
+ "to": {
+  "commit": "dc7f29e2ec7a47a3e425d960af1ee8070fc15ed9",
+  "tag": "v1.13.1"
+ }
+}

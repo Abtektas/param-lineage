@@ -1,0 +1,6521 @@
+{
+ "added": [
+  "ADC_ADS7128_REFV",
+  "ADC_ADS7953_EN",
+  "ADC_ADS7953_REFV",
+  "ADC_TLA2528_REFV",
+  "BAT1_I_FILT",
+  "BAT1_V_FILT",
+  "BAT2_I_FILT",
+  "BAT2_V_FILT",
+  "BAT3_I_OVERWRITE",
+  "CANNODE_NODE_ID",
+  "CANNODE_PT_SENS",
+  "CANNODE_PUB_BAR",
+  "CANNODE_PUB_MAG",
+  "CA_CS_LAUN_LK",
+  "CA_ICE_PERIOD",
+  "CA_SV10_SLEW",
+  "CA_SV11_SLEW",
+  "CA_SV12_SLEW",
+  "CA_SV13_SLEW",
+  "CA_SV14_SLEW",
+  "CA_SV8_SLEW",
+  "CA_SV9_SLEW",
+  "CA_SV_FLAP_SLEW",
+  "CBRK_UAVCAN_FW",
+  "COM_ARM_ON_BOOT",
+  "COM_ARM_TRAFF",
+  "COM_CC_TEMP_WARN",
+  "COM_FLTMODE_BOOT",
+  "COM_GNSSLOSS_ACT",
+  "DSHOT_BIDIR_EDT",
+  "DSHOT_ESC_TYPE",
+  "DSHOT_MOT_POL1",
+  "DSHOT_MOT_POL10",
+  "DSHOT_MOT_POL11",
+  "DSHOT_MOT_POL12",
+  "DSHOT_MOT_POL2",
+  "DSHOT_MOT_POL3",
+  "DSHOT_MOT_POL4",
+  "DSHOT_MOT_POL5",
+  "DSHOT_MOT_POL6",
+  "DSHOT_MOT_POL7",
+  "DSHOT_MOT_POL8",
+  "DSHOT_MOT_POL9",
+  "EKF2_AGP0_CTRL",
+  "EKF2_AGP0_DELAY",
+  "EKF2_AGP0_GATE",
+  "EKF2_AGP0_ID",
+  "EKF2_AGP0_MODE",
+  "EKF2_AGP0_NOISE",
+  "EKF2_AGP1_CTRL",
+  "EKF2_AGP1_DELAY",
+  "EKF2_AGP1_GATE",
+  "EKF2_AGP1_ID",
+  "EKF2_AGP1_MODE",
+  "EKF2_AGP1_NOISE",
+  "EKF2_AGP2_CTRL",
+  "EKF2_AGP2_DELAY",
+  "EKF2_AGP2_GATE",
+  "EKF2_AGP2_ID",
+  "EKF2_AGP2_MODE",
+  "EKF2_AGP2_NOISE",
+  "EKF2_AGP3_CTRL",
+  "EKF2_AGP3_DELAY",
+  "EKF2_AGP3_GATE",
+  "EKF2_AGP3_ID",
+  "EKF2_AGP3_MODE",
+  "EKF2_AGP3_NOISE",
+  "EKF2_AVEL_EN",
+  "EKF2_POS_LOCK",
+  "EKF2_RNGBC_CTRL",
+  "EKF2_RNGBC_DELAY",
+  "EKF2_RNGBC_GATE",
+  "EKF2_RNGBC_NOISE",
+  "EKF2_SENS_EN",
+  "EMM_DIS1",
+  "EMM_DIS2",
+  "EMM_DIS3",
+  "EMM_DIS4",
+  "EMM_FAIL1",
+  "EMM_FAIL2",
+  "EMM_FAIL3",
+  "EMM_FAIL4",
+  "EMM_FUNC1",
+  "EMM_FUNC2",
+  "EMM_FUNC3",
+  "EMM_FUNC4",
+  "EMM_REV",
+  "ESC_TEMP_WARN_TH",
+  "FD_ALT_LOSS",
+  "FD_ALT_LOSS_T",
+  "FW_FLAPS_MAN",
+  "FW_GC_EN",
+  "FW_GC_GAIN_MIN",
+  "FW_LAUN_CS_LK_DY",
+  "FW_WP_RST_DIST",
+  "GPS_UBX_DGNSS_TO",
+  "GPS_UBX_JAM_DET",
+  "GPS_UBX_MIN_CNO",
+  "GPS_UBX_MIN_ELEV",
+  "GPS_UBX_PPK",
+  "GPS_UBX_RATE",
+  "GRF_RATE_CFG",
+  "GRF_SENS_MODEL",
+  "HEATER1_IMAX",
+  "HEATER1_NOM_V",
+  "HEATER1_SENS_ID",
+  "HEATER1_TEMP",
+  "HEATER1_TEMP_FF",
+  "HEATER1_TEMP_I",
+  "HEATER1_TEMP_P",
+  "HEATER1_TEMP_SRC",
+  "HEATER2_IMAX",
+  "HEATER2_NOM_V",
+  "HEATER2_SENS_ID",
+  "HEATER2_TEMP",
+  "HEATER2_TEMP_FF",
+  "HEATER2_TEMP_I",
+  "HEATER2_TEMP_P",
+  "HEATER2_TEMP_SRC",
+  "HEATER3_IMAX",
+  "HEATER3_NOM_V",
+  "HEATER3_SENS_ID",
+  "HEATER3_TEMP",
+  "HEATER3_TEMP_FF",
+  "HEATER3_TEMP_I",
+  "HEATER3_TEMP_P",
+  "HEATER3_TEMP_SRC",
+  "HIWONDER_EMM_EN",
+  "ICE_IDLE_RPM",
+  "ICE_IDLE_RPM_I",
+  "ICE_IDLE_RPM_P",
+  "ICE_IDLE_THR_FF",
+  "MAN_OVERRIDE_SPD",
+  "MC_RAPTOR_ENABLE",
+  "MC_RAPTOR_INTREF",
+  "MC_RAPTOR_OFFB",
+  "MC_RAPTOR_VERBOS",
+  "MC_REF_FF",
+  "MC_REF_FF_MAX",
+  "MC_REF_W_N",
+  "MNT_FIXED_PITCH",
+  "MNT_MAX_PITCH",
+  "MNT_MIN_PITCH",
+  "MNT_TAU",
+  "MOTFAIL_C2T",
+  "MOTFAIL_OFF",
+  "MOTFAIL_TIME",
+  "MPC_AUTO_NUDGING",
+  "MPC_Z_ERR_MAX",
+  "NAV_LTR_LAST_DL",
+  "PASSTHRU_EN",
+  "PCA9685_CENT1",
+  "PCA9685_CENT10",
+  "PCA9685_CENT11",
+  "PCA9685_CENT12",
+  "PCA9685_CENT13",
+  "PCA9685_CENT14",
+  "PCA9685_CENT15",
+  "PCA9685_CENT16",
+  "PCA9685_CENT2",
+  "PCA9685_CENT3",
+  "PCA9685_CENT4",
+  "PCA9685_CENT5",
+  "PCA9685_CENT6",
+  "PCA9685_CENT7",
+  "PCA9685_CENT8",
+  "PCA9685_CENT9",
+  "PCA9685_I2C_ADDR",
+  "PLD_MOVING_T_MAX",
+  "PLD_MOVING_T_MIN",
+  "PLD_YAW_EN",
+  "PPS_CAP_GPS_ID",
+  "PWM_MAIN_CENT1",
+  "PWM_MAIN_CENT2",
+  "PWM_MAIN_CENT3",
+  "PWM_MAIN_CENT4",
+  "PWM_MAIN_CENT5",
+  "PWM_MAIN_CENT6",
+  "PWM_MAIN_CENT7",
+  "PWM_MAIN_CENT8",
+  "SDLOG_MAX_SIZE",
+  "SDLOG_ROTATE",
+  "SENS_AFBR_ROT",
+  "SENS_ASDT1_CFG",
+  "SENS_ASDT1_MODE",
+  "SENS_ASDT1_ROT",
+  "SENS_EN_GRF_CFG",
+  "SENS_EN_MCP9808",
+  "SENS_EN_TMP102",
+  "SENS_GPS0_DELAY",
+  "SENS_GPS0_ID",
+  "SENS_GPS0_OFFX",
+  "SENS_GPS0_OFFY",
+  "SENS_GPS0_OFFZ",
+  "SENS_GPS1_DELAY",
+  "SENS_GPS1_ID",
+  "SENS_GPS1_OFFX",
+  "SENS_GPS1_OFFY",
+  "SENS_GPS1_OFFZ",
+  "SF1XX_ROT",
+  "SIH_F_CP0",
+  "SIH_F_CP1",
+  "SIH_F_CP2",
+  "SIH_F_CT0",
+  "SIH_F_CT1",
+  "SIH_F_CT2",
+  "SIH_F_DIA_INCH",
+  "SIH_F_Q_MAX",
+  "SIH_F_RPM_MAX",
+  "SIH_F_T_MAX",
+  "SIH_RNGBC_NOISE",
+  "SIH_WIND_E",
+  "SIH_WIND_N",
+  "SIM_GZ_EC_DIS10",
+  "SIM_GZ_EC_DIS11",
+  "SIM_GZ_EC_DIS12",
+  "SIM_GZ_EC_DIS13",
+  "SIM_GZ_EC_DIS14",
+  "SIM_GZ_EC_DIS15",
+  "SIM_GZ_EC_DIS16",
+  "SIM_GZ_EC_DIS9",
+  "SIM_GZ_EC_FAIL10",
+  "SIM_GZ_EC_FAIL11",
+  "SIM_GZ_EC_FAIL12",
+  "SIM_GZ_EC_FAIL13",
+  "SIM_GZ_EC_FAIL14",
+  "SIM_GZ_EC_FAIL15",
+  "SIM_GZ_EC_FAIL16",
+  "SIM_GZ_EC_FAIL9",
+  "SIM_GZ_EC_FUNC10",
+  "SIM_GZ_EC_FUNC11",
+  "SIM_GZ_EC_FUNC12",
+  "SIM_GZ_EC_FUNC13",
+  "SIM_GZ_EC_FUNC14",
+  "SIM_GZ_EC_FUNC15",
+  "SIM_GZ_EC_FUNC16",
+  "SIM_GZ_EC_FUNC9",
+  "SIM_GZ_EC_MAX10",
+  "SIM_GZ_EC_MAX11",
+  "SIM_GZ_EC_MAX12",
+  "SIM_GZ_EC_MAX13",
+  "SIM_GZ_EC_MAX14",
+  "SIM_GZ_EC_MAX15",
+  "SIM_GZ_EC_MAX16",
+  "SIM_GZ_EC_MAX9",
+  "SIM_GZ_EC_MIN10",
+  "SIM_GZ_EC_MIN11",
+  "SIM_GZ_EC_MIN12",
+  "SIM_GZ_EC_MIN13",
+  "SIM_GZ_EC_MIN14",
+  "SIM_GZ_EC_MIN15",
+  "SIM_GZ_EC_MIN16",
+  "SIM_GZ_EC_MIN9",
+  "SIM_GZ_EN_IMU",
+  "SIM_GZ_EN_MAG",
+  "SYS_HAS_NUM_GNSS",
+  "UAVCAN_EC_FAIL10",
+  "UAVCAN_EC_FAIL11",
+  "UAVCAN_EC_FAIL12",
+  "UAVCAN_EC_FAIL9",
+  "UAVCAN_EC_FUNC10",
+  "UAVCAN_EC_FUNC11",
+  "UAVCAN_EC_FUNC12",
+  "UAVCAN_EC_FUNC9",
+  "UAVCAN_EC_MAX10",
+  "UAVCAN_EC_MAX11",
+  "UAVCAN_EC_MAX12",
+  "UAVCAN_EC_MAX9",
+  "UAVCAN_EC_MIN10",
+  "UAVCAN_EC_MIN11",
+  "UAVCAN_EC_MIN12",
+  "UAVCAN_EC_MIN9",
+  "UAVCAN_LGT_FN0",
+  "UAVCAN_LGT_FN1",
+  "UAVCAN_LGT_ID0",
+  "UAVCAN_LGT_ID1",
+  "UAVCAN_LGT_MODE",
+  "UAVCAN_LGT_NUM",
+  "UAVCAN_SUB_MBD",
+  "UAVCAN_SV_DIS10",
+  "UAVCAN_SV_DIS11",
+  "UAVCAN_SV_DIS12",
+  "UAVCAN_SV_DIS13",
+  "UAVCAN_SV_DIS14",
+  "UAVCAN_SV_DIS15",
+  "UAVCAN_SV_DIS9",
+  "UAVCAN_SV_FAIL10",
+  "UAVCAN_SV_FAIL11",
+  "UAVCAN_SV_FAIL12",
+  "UAVCAN_SV_FAIL13",
+  "UAVCAN_SV_FAIL14",
+  "UAVCAN_SV_FAIL15",
+  "UAVCAN_SV_FAIL9",
+  "UAVCAN_SV_FUNC10",
+  "UAVCAN_SV_FUNC11",
+  "UAVCAN_SV_FUNC12",
+  "UAVCAN_SV_FUNC13",
+  "UAVCAN_SV_FUNC14",
+  "UAVCAN_SV_FUNC15",
+  "UAVCAN_SV_FUNC9",
+  "UAVCAN_SV_MAX10",
+  "UAVCAN_SV_MAX11",
+  "UAVCAN_SV_MAX12",
+  "UAVCAN_SV_MAX13",
+  "UAVCAN_SV_MAX14",
+  "UAVCAN_SV_MAX15",
+  "UAVCAN_SV_MAX9",
+  "UAVCAN_SV_MIN10",
+  "UAVCAN_SV_MIN11",
+  "UAVCAN_SV_MIN12",
+  "UAVCAN_SV_MIN13",
+  "UAVCAN_SV_MIN14",
+  "UAVCAN_SV_MIN15",
+  "UAVCAN_SV_MIN9",
+  "UAVCAN_TRACE_EN",
+  "UUV_HGT_B_DOWN",
+  "UUV_HGT_B_UP",
+  "UUV_HGT_D",
+  "UUV_HGT_I",
+  "UUV_HGT_I_SPD",
+  "UUV_HGT_MAX_DIFF",
+  "UUV_HGT_P",
+  "UUV_HGT_STR",
+  "UUV_STICK_MODE",
+  "UXRCE_DDS_FLCTRL",
+  "VN_IMU_RATE",
+  "VN_PORT",
+  "VOXL_ESC_CMD",
+  "VOXL_ESC_PWR_MIN",
+  "VOXL_ESC_T_ON",
+  "VTE_ACC_D_UNC",
+  "VTE_ACC_T_UNC",
+  "VTE_ACC_UNC_IN",
+  "VTE_AID_MASK",
+  "VTE_BIAS_UNC",
+  "VTE_BIA_AVG_THR",
+  "VTE_BIA_AVG_TOUT",
+  "VTE_BIA_UNC_IN",
+  "VTE_BTOUT",
+  "VTE_EN",
+  "VTE_EVA_NOISE",
+  "VTE_EVP_NOISE",
+  "VTE_GPS_P_NOISE",
+  "VTE_GPS_V_NOISE",
+  "VTE_M_REC_TOUT",
+  "VTE_M_UPD_TOUT",
+  "VTE_POS_EN",
+  "VTE_POS_NIS_THRE",
+  "VTE_POS_UNC_IN",
+  "VTE_TASK_MASK",
+  "VTE_TGT_TOUT",
+  "VTE_VEL_UNC_IN",
+  "VTE_YAW_ACC_UNC",
+  "VTE_YAW_EN",
+  "VTE_YAW_NIS_THRE",
+  "VTE_YAW_UNC_IN",
+  "VTX_BAND",
+  "VTX_CHANNEL",
+  "VTX_DEVICE",
+  "VTX_FREQUENCY",
+  "VTX_MAP_CONFIG",
+  "VTX_PIT_MODE",
+  "VTX_POWER",
+  "VTX_SER_CFG",
+  "ZENOH_PUB_CC",
+  "ZENOH_PUB_EXPR",
+  "ZENOH_PUB_PRIO",
+  "ZENOH_PUB_REL"
+ ],
+ "changed": {
+  "ADSB_EMIT_TYPE": {
+   "max": {
+    "from": 15,
+    "to": 19
+   }
+  },
+  "ASPD_SCALE_1": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "ASPD_SCALE_2": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "ASPD_SCALE_3": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "BAT1_I_OVERWRITE": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "BAT1_SOURCE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Power Module",
+      "key": 0,
+      "to": "Power Module / Analog"
+     }
+    ]
+   }
+  },
+  "BAT2_I_OVERWRITE": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "BAT2_SOURCE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Power Module",
+      "key": 0,
+      "to": "Power Module / Analog"
+     }
+    ]
+   }
+  },
+  "BAT3_SOURCE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Power Module",
+      "key": 0,
+      "to": "Power Module / Analog"
+     }
+    ]
+   }
+  },
+  "COM_ACT_FAIL_ACT": {
+   "max": {
+    "from": 3,
+    "to": null
+   },
+   "min": {
+    "from": 0,
+    "to": null
+   }
+  },
+  "COM_ARM_ODID": {
+   "values": {
+    "added": [
+     {
+      "description": "Return",
+      "key": 3
+     },
+     {
+      "description": "Land",
+      "key": 4
+     },
+     {
+      "description": "Terminate",
+      "key": 5
+     }
+    ],
+    "changed": [
+     {
+      "from": "Enforce Open Drone ID system presence",
+      "key": 2,
+      "to": "Error only"
+     }
+    ]
+   }
+  },
+  "COM_ARM_WO_GPS": {
+   "values": {
+    "changed": [
+     {
+      "from": "Warning only",
+      "key": 1,
+      "to": "Allow arming (with warning)"
+     },
+     {
+      "from": "Disabled",
+      "key": 2,
+      "to": "Allow arming (no warning)"
+     }
+    ]
+   }
+  },
+  "COM_DLL_EXCEPT": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "External Mode",
+      "key": 3
+     },
+     {
+      "description": "Altitude Cruise",
+      "key": 4
+     }
+    ],
+    "changed": [
+     {
+      "from": "Hold",
+      "key": 1,
+      "to": "Auto modes"
+     }
+    ]
+   },
+   "max": {
+    "from": 7,
+    "to": 31
+   }
+  },
+  "COM_PARACHUTE": {
+   "values": {
+    "added": [
+     {
+      "description": "Error",
+      "key": 2
+     },
+     {
+      "description": "Return",
+      "key": 3
+     },
+     {
+      "description": "Land",
+      "key": 4
+     }
+    ],
+    "changed": [
+     {
+      "from": "Enabled",
+      "key": 1,
+      "to": "Warning"
+     }
+    ]
+   }
+  },
+  "COM_RCL_EXCEPT": {
+   "bitmask": {
+    "changed": [
+     {
+      "from": "Hold",
+      "key": 1,
+      "to": "Auto modes"
+     }
+    ]
+   }
+  },
+  "COM_RC_IN_MODE": {
+   "max": {
+    "from": 8,
+    "to": null
+   },
+   "min": {
+    "from": 0,
+    "to": null
+   }
+  },
+  "EKF2_GPS_CHECK": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "Jamming",
+      "key": 11
+     }
+    ]
+   },
+   "max": {
+    "from": 2047,
+    "to": 4095
+   }
+  },
+  "EKF2_REQ_EPH": {
+   "min": {
+    "from": 2.0,
+    "to": 0.1
+   }
+  },
+  "EKF2_REQ_EPV": {
+   "min": {
+    "from": 2.0,
+    "to": 0.1
+   }
+  },
+  "FD_ACT_EN": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "FW_LND_THRTC_SC": {
+   "units": {
+    "from": "",
+    "to": null
+   }
+  },
+  "FW_PR_FF": {
+   "min": {
+    "from": 0.0,
+    "to": -10.0
+   }
+  },
+  "FW_RR_FF": {
+   "min": {
+    "from": 0.0,
+    "to": -10.0
+   }
+  },
+  "FW_SPOILERS_MAN": {
+   "values": {
+    "added": [
+     {
+      "description": "Aux2",
+      "key": 3
+     },
+     {
+      "description": "Aux3",
+      "key": 4
+     },
+     {
+      "description": "Aux4",
+      "key": 5
+     },
+     {
+      "description": "Aux5",
+      "key": 6
+     }
+    ]
+   }
+  },
+  "FW_T_HRATE_FF": {
+   "default": {
+    "from": 0.3,
+    "to": 0.5
+   }
+  },
+  "FW_YR_FF": {
+   "min": {
+    "from": 0.0,
+    "to": -10.0
+   }
+  },
+  "GPS_UBX_MODE": {
+   "max": {
+    "from": 1,
+    "to": 6
+   }
+  },
+  "HIL_ACT_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "ICE_ON_SOURCE": {
+   "values": {
+    "added": [
+     {
+      "description": "On Vtol Transitions",
+      "key": 3
+     }
+    ]
+   }
+  },
+  "MAV_TYPE": {
+   "max": {
+    "from": 22,
+    "to": 23
+   }
+  },
+  "MNT_DO_STAB": {
+   "max": {
+    "from": 2,
+    "to": null
+   },
+   "min": {
+    "from": 0,
+    "to": null
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Stabilize pitch for absolute/lock mode.",
+      "key": 3
+     }
+    ]
+   }
+  },
+  "MNT_MODE_IN": {
+   "max": {
+    "from": 4,
+    "to": 5
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Fixed world-frame attitude, not user controllable",
+      "key": 5
+     }
+    ]
+   }
+  },
+  "MPC_LAND_RADIUS": {
+   "default": {
+    "from": 1000.0,
+    "to": -1.0
+   },
+   "min": {
+    "from": 0.0,
+    "to": -1.0
+   }
+  },
+  "MPC_MANTHR_MIN": {
+   "max": {
+    "from": 1.0,
+    "to": 0.5
+   }
+  },
+  "MPC_THR_HOVER": {
+   "max": {
+    "from": 0.8,
+    "to": 0.9
+   }
+  },
+  "MPC_XY_ERR_MAX": {
+   "min": {
+    "from": 0.1,
+    "to": 0.0
+   }
+  },
+  "MPC_YAW_MODE": {
+   "max": {
+    "from": 4,
+    "to": 5
+   }
+  },
+  "NAV_DLL_ACT": {
+   "max": {
+    "from": 6,
+    "to": null
+   },
+   "min": {
+    "from": 0,
+    "to": null
+   }
+  },
+  "NAV_RCL_ACT": {
+   "max": {
+    "from": 6,
+    "to": null
+   },
+   "min": {
+    "from": 1,
+    "to": null
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Hold mode (no failsafe)",
+      "key": 7
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_AUX_TIM0": {
+   "values": {
+    "added": [
+     {
+      "description": "BDShot150",
+      "key": -8
+     },
+     {
+      "description": "BDShot300",
+      "key": -7
+     },
+     {
+      "description": "BDShot600",
+      "key": -6
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "RBCLW_DIS1": {
+   "default": {
+    "from": 128,
+    "to": 127
+   },
+   "max": {
+    "from": 128,
+    "to": 127
+   },
+   "min": {
+    "from": 128,
+    "to": 127
+   }
+  },
+  "RBCLW_DIS2": {
+   "default": {
+    "from": 128,
+    "to": 127
+   },
+   "max": {
+    "from": 128,
+    "to": 127
+   },
+   "min": {
+    "from": 128,
+    "to": 127
+   }
+  },
+  "RBCLW_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "RBCLW_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "RBCLW_MAX1": {
+   "default": {
+    "from": 256,
+    "to": 254
+   },
+   "max": {
+    "from": 256,
+    "to": 254
+   },
+   "min": {
+    "from": 128,
+    "to": 127
+   }
+  },
+  "RBCLW_MAX2": {
+   "default": {
+    "from": 256,
+    "to": 254
+   },
+   "max": {
+    "from": 256,
+    "to": 254
+   },
+   "min": {
+    "from": 128,
+    "to": 127
+   }
+  },
+  "RBCLW_MIN1": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "max": {
+    "from": 128,
+    "to": 127
+   },
+   "min": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "RBCLW_MIN2": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "max": {
+    "from": 128,
+    "to": 127
+   },
+   "min": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "RC10_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC11_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC12_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC13_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC14_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC15_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC16_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC17_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC18_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC1_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC2_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC3_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC4_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC5_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC6_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC7_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC8_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RC9_REV": {
+   "type": {
+    "from": "Float",
+    "to": "Int32"
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Reverse",
+      "key": -1.0
+     },
+     {
+      "description": "Normal",
+      "key": 1.0
+     }
+    ]
+   }
+  },
+  "RTL_TYPE": {
+   "values": {
+    "added": [
+     {
+      "description": "Return directly to safe landing point (do not consider mission landing and Home)",
+      "key": 5
+     }
+    ],
+    "changed": [
+     {
+      "from": "Return to closest safe point other than home (mission landing pattern or rally point), via direct path. If no mission landing or rally points are defined return home via direct path. Always chose closest safe landing point if vehicle is a VTOL in hover mode.",
+      "key": 1,
+      "to": "Return to closest safe point other than home (mission landing pattern or rally point), via direct path. If no mission landing or rally points are defined return home via direct path. Always choose closest safe landing point if vehicle is a VTOL in hover mode."
+     },
+     {
+      "from": "Return to a planned mission landing, if available, using the mission path, else return to home via the reverse mission path. Do not consider rally points.",
+      "key": 2,
+      "to": "Return to a planned mission landing, if available, using the mission path while skipping DO_JUMP and other non-position mission items, else return to home via the reverse mission path with the same traversal rules. Do not consider rally points."
+     },
+     {
+      "from": "Return to the planned mission landing, or to home via the reverse mission path, whichever is closer by counting waypoints. Do not consider rally points.",
+      "key": 4,
+      "to": "Return to the planned mission landing, or to home via the reverse mission path, whichever is estimated to be closer using mission item indices. Skip DO_JUMP and other non-position mission items while following either mission path. Do not consider rally points."
+     }
+    ]
+   }
+  },
+  "SENS_EN_AUAVX": {
+   "values": {
+    "added": [
+     {
+      "description": "AUAV L60D",
+      "key": 4
+     }
+    ]
+   }
+  },
+  "SENS_EN_PCF8583": {
+   "values": {
+    "changed": [
+     {
+      "from": "Eneabled",
+      "key": 1,
+      "to": "Enabled"
+     }
+    ]
+   }
+  },
+  "SENS_EN_SF1XX": {
+   "max": {
+    "from": 7,
+    "to": 9
+   },
+   "values": {
+    "added": [
+     {
+      "description": "GRF250",
+      "key": 8
+     },
+     {
+      "description": "GRF500",
+      "key": 9
+     }
+    ]
+   }
+  },
+  "SENS_EN_TRANGER": {
+   "max": {
+    "from": 3,
+    "to": 5
+   }
+  },
+  "SENS_GPS_PRIME": {
+   "max": {
+    "from": 1,
+    "to": 127
+   }
+  },
+  "SENS_MAG_AUTOCAL": {
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "SIM_BAT_DRAIN": {
+   "max": {
+    "from": 86400.0,
+    "to": null
+   },
+   "min": {
+    "from": 1.0,
+    "to": 0.0
+   }
+  },
+  "SIM_GZ_EC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_REV": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "SIM_GZ ESC 9",
+      "key": 8
+     },
+     {
+      "description": "SIM_GZ ESC 10",
+      "key": 9
+     },
+     {
+      "description": "SIM_GZ ESC 11",
+      "key": 10
+     },
+     {
+      "description": "SIM_GZ ESC 12",
+      "key": 11
+     },
+     {
+      "description": "SIM_GZ ESC 13",
+      "key": 12
+     },
+     {
+      "description": "SIM_GZ ESC 14",
+      "key": 13
+     },
+     {
+      "description": "SIM_GZ ESC 15",
+      "key": 14
+     },
+     {
+      "description": "SIM_GZ ESC 16",
+      "key": 15
+     }
+    ]
+   },
+   "max": {
+    "from": 255,
+    "to": 65535
+   }
+  },
+  "SIM_GZ_SV_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "SYS_FAILURE_EN": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "TAP_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_REV": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "UAVCAN ESC 9",
+      "key": 8
+     },
+     {
+      "description": "UAVCAN ESC 10",
+      "key": 9
+     },
+     {
+      "description": "UAVCAN ESC 11",
+      "key": 10
+     },
+     {
+      "description": "UAVCAN ESC 12",
+      "key": 11
+     }
+    ]
+   },
+   "max": {
+    "from": 255,
+    "to": 4095
+   }
+  },
+  "UAVCAN_SV_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_REV": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "UAVCAN Servo 9",
+      "key": 8
+     },
+     {
+      "description": "UAVCAN Servo 10",
+      "key": 9
+     },
+     {
+      "description": "UAVCAN Servo 11",
+      "key": 10
+     },
+     {
+      "description": "UAVCAN Servo 12",
+      "key": 11
+     },
+     {
+      "description": "UAVCAN Servo 13",
+      "key": 12
+     },
+     {
+      "description": "UAVCAN Servo 14",
+      "key": 13
+     },
+     {
+      "description": "UAVCAN Servo 15",
+      "key": 14
+     }
+    ]
+   },
+   "max": {
+    "from": 255,
+    "to": 32767
+   }
+  },
+  "UCAN1_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_MODE": {
+   "max": {
+    "from": 2,
+    "to": 3
+   }
+  },
+  "VTQ_IO_FUNC0": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VTQ_IO_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Servo 9",
+      "key": 209
+     },
+     {
+      "description": "Servo 10",
+      "key": 210
+     },
+     {
+      "description": "Servo 11",
+      "key": 211
+     },
+     {
+      "description": "Servo 12",
+      "key": 212
+     },
+     {
+      "description": "Servo 13",
+      "key": 213
+     },
+     {
+      "description": "Servo 14",
+      "key": 214
+     },
+     {
+      "description": "Servo 15",
+      "key": 215
+     }
+    ]
+   }
+  },
+  "VT_LND_PITCH_MIN": {
+   "default": {
+    "from": -5.0,
+    "to": 0.0
+   }
+  },
+  "VT_PITCH_MIN": {
+   "default": {
+    "from": -5.0,
+    "to": 0.0
+   }
+  }
+ },
+ "curated": "complete",
+ "format": 1,
+ "from": {
+  "commit": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+  "tag": "v1.17.0"
+ },
+ "removed": {
+  "ASPD_BETA_GATE": {
+   "kind": "fixed"
+  },
+  "ASPD_BETA_NOISE": {
+   "kind": "fixed"
+  },
+  "ASPD_SCALE_NSD": {
+   "kind": "fixed"
+  },
+  "ASPD_TAS_GATE": {
+   "kind": "fixed"
+  },
+  "BAT1_I_CHANNEL": {
+   "kind": "fixed"
+  },
+  "BAT2_I_CHANNEL": {
+   "kind": "fixed"
+  },
+  "BAT_ADC_CHANNEL": {
+   "kind": "removed"
+  },
+  "COM_ARM_SDCARD": {
+   "kind": "fixed"
+  },
+  "COM_DISARM_MAN": {
+   "kind": "fixed"
+  },
+  "COM_FLT_PROFILE": {
+   "kind": "removed"
+  },
+  "COM_HLDL_REG_T": {
+   "kind": "fixed"
+  },
+  "COM_IMB_PROP_ACT": {
+   "kind": "fixed"
+  },
+  "COM_KILL_DISARM": {
+   "kind": "fixed"
+  },
+  "COM_LKDOWN_TKO": {
+   "kind": "fixed"
+  },
+  "COM_MOT_TEST_EN": {
+   "kind": "fixed"
+  },
+  "COM_OBC_LOSS_T": {
+   "kind": "fixed"
+  },
+  "COM_RC_ARM_HYST": {
+   "kind": "fixed"
+  },
+  "COM_RC_OVERRIDE": {
+   "kind": "migrated",
+   "successors": [
+    "MAN_OVERRIDE_SPD"
+   ]
+  },
+  "COM_RC_STICK_OV": {
+   "kind": "replaced",
+   "successors": [
+    "MAN_OVERRIDE_SPD"
+   ]
+  },
+  "COM_TAKEOFF_ACT": {
+   "kind": "fixed"
+  },
+  "DSHOT_BIDIR_EN": {
+   "kind": "replaced",
+   "successors": [
+    "PWM_AUX_TIM0",
+    "PWM_AUX_TIM1",
+    "PWM_AUX_TIM2",
+    "PWM_AUX_TIM3",
+    "PWM_MAIN_TIM0",
+    "PWM_MAIN_TIM1",
+    "PWM_MAIN_TIM2"
+   ]
+  },
+  "EKF2_AGP_CTRL": {
+   "kind": "renamed",
+   "successors": [
+    "EKF2_AGP0_CTRL"
+   ]
+  },
+  "EKF2_AGP_DELAY": {
+   "kind": "renamed",
+   "successors": [
+    "EKF2_AGP0_DELAY"
+   ]
+  },
+  "EKF2_AGP_GATE": {
+   "kind": "renamed",
+   "successors": [
+    "EKF2_AGP0_GATE"
+   ]
+  },
+  "EKF2_AGP_MODE": {
+   "kind": "renamed",
+   "successors": [
+    "EKF2_AGP0_MODE"
+   ]
+  },
+  "EKF2_AGP_NOISE": {
+   "kind": "renamed",
+   "successors": [
+    "EKF2_AGP0_NOISE"
+   ]
+  },
+  "EKF2_GPS_DELAY": {
+   "kind": "migrated",
+   "successors": [
+    "SENS_GPS0_DELAY",
+    "SENS_GPS1_DELAY"
+   ]
+  },
+  "EKF2_GPS_POS_X": {
+   "kind": "migrated",
+   "successors": [
+    "SENS_GPS0_OFFX"
+   ]
+  },
+  "EKF2_GPS_POS_Y": {
+   "kind": "migrated",
+   "successors": [
+    "SENS_GPS0_OFFY"
+   ]
+  },
+  "EKF2_GPS_POS_Z": {
+   "kind": "migrated",
+   "successors": [
+    "SENS_GPS0_OFFZ"
+   ]
+  },
+  "FD_ACT_MOT_C2T": {
+   "kind": "replaced",
+   "successors": [
+    "MOTFAIL_C2T",
+    "MOTFAIL_OFF"
+   ]
+  },
+  "FD_ACT_MOT_THR": {
+   "kind": "removed"
+  },
+  "FD_ACT_MOT_TOUT": {
+   "kind": "replaced",
+   "successors": [
+    "MOTFAIL_TIME"
+   ]
+  },
+  "FD_ESCS_EN": {
+   "kind": "replaced",
+   "successors": [
+    "FD_ACT_EN"
+   ]
+  },
+  "FW_AT_START": {
+   "kind": "removed"
+  },
+  "FW_T_SPD_DEV_STD": {
+   "kind": "fixed"
+  },
+  "FW_T_SPD_PRC_STD": {
+   "kind": "fixed"
+  },
+  "FW_T_SPD_STD": {
+   "kind": "fixed"
+  },
+  "GF_PREDICT": {
+   "kind": "removed"
+  },
+  "INA226_CONFIG": {
+   "kind": "removed"
+  },
+  "LNDMC_TRIG_TIME": {
+   "kind": "fixed"
+  },
+  "MC_AT_START": {
+   "kind": "removed"
+  },
+  "MNT_OFF_PITCH": {
+   "kind": "removed"
+  },
+  "MNT_OFF_ROLL": {
+   "kind": "removed"
+  },
+  "MNT_OFF_YAW": {
+   "kind": "removed"
+  },
+  "MNT_RANGE_PITCH": {
+   "kind": "migrated",
+   "successors": [
+    "MNT_MAX_PITCH",
+    "MNT_MIN_PITCH"
+   ]
+  },
+  "MOT_POLE_COUNT": {
+   "kind": "migrated",
+   "successors": [
+    "DSHOT_MOT_POL1",
+    "DSHOT_MOT_POL2",
+    "DSHOT_MOT_POL3",
+    "DSHOT_MOT_POL4",
+    "DSHOT_MOT_POL5",
+    "DSHOT_MOT_POL6",
+    "DSHOT_MOT_POL7",
+    "DSHOT_MOT_POL8",
+    "DSHOT_MOT_POL9",
+    "DSHOT_MOT_POL10",
+    "DSHOT_MOT_POL11",
+    "DSHOT_MOT_POL12"
+   ]
+  },
+  "MPC_LAND_RC_HELP": {
+   "kind": "migrated",
+   "successors": [
+    "MPC_AUTO_NUDGING"
+   ]
+  },
+  "MPC_USE_HTE": {
+   "kind": "fixed"
+  },
+  "SENS_IMU_TEMP": {
+   "kind": "renamed",
+   "successors": [
+    "HEATER1_TEMP"
+   ]
+  },
+  "SENS_IMU_TEMP_FF": {
+   "kind": "renamed",
+   "successors": [
+    "HEATER1_TEMP_FF"
+   ]
+  },
+  "SENS_IMU_TEMP_I": {
+   "kind": "renamed",
+   "successors": [
+    "HEATER1_TEMP_I"
+   ]
+  },
+  "SENS_IMU_TEMP_P": {
+   "kind": "renamed",
+   "successors": [
+    "HEATER1_TEMP_P"
+   ]
+  },
+  "SENS_TEMP_ID": {
+   "kind": "renamed",
+   "successors": [
+    "HEATER1_SENS_ID"
+   ]
+  },
+  "SIM_ARSPD_FAIL": {
+   "kind": "removed"
+  },
+  "SIM_BAT_ENABLE": {
+   "kind": "replaced",
+   "successors": [
+    "SIM_BAT_DRAIN"
+   ]
+  },
+  "UAVCAN_LGT_ANTCL": {
+   "kind": "replaced",
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  },
+  "UAVCAN_LGT_LAND": {
+   "kind": "replaced",
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  },
+  "UAVCAN_LGT_NAV": {
+   "kind": "replaced",
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  },
+  "UAVCAN_LGT_STROB": {
+   "kind": "replaced",
+   "successors": [
+    "UAVCAN_LGT_MODE",
+    "UAVCAN_LGT_NUM",
+    "UAVCAN_LGT_ID0",
+    "UAVCAN_LGT_FN0"
+   ]
+  }
+ },
+ "to": {
+  "commit": "fca3df865af36124a28c9d607e850f111dbaaea9",
+  "tag": "v1.18.0-rc1"
+ }
+}

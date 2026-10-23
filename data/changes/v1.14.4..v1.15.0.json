@@ -1,0 +1,5072 @@
+{
+ "added": [
+  "ATT_EN",
+  "BAT3_CAPACITY",
+  "BAT3_N_CELLS",
+  "BAT3_R_INTERNAL",
+  "BAT3_SOURCE",
+  "BAT3_V_CHARGED",
+  "BAT3_V_EMPTY",
+  "BAT3_V_LOAD_DROP",
+  "CAL_MAG0_PITCH",
+  "CAL_MAG0_ROLL",
+  "CAL_MAG0_YAW",
+  "CAL_MAG1_PITCH",
+  "CAL_MAG1_ROLL",
+  "CAL_MAG1_YAW",
+  "CAL_MAG2_PITCH",
+  "CAL_MAG2_ROLL",
+  "CAL_MAG2_YAW",
+  "CAL_MAG3_PITCH",
+  "CAL_MAG3_ROLL",
+  "CAL_MAG3_YAW",
+  "COM_ARMABLE",
+  "COM_ARM_BAT_MIN",
+  "COM_ARM_ODID",
+  "COM_DISARM_MAN",
+  "COM_FLTT_LOW_ACT",
+  "COM_MODE0_HASH",
+  "COM_MODE1_HASH",
+  "COM_MODE2_HASH",
+  "COM_MODE3_HASH",
+  "COM_MODE4_HASH",
+  "COM_MODE5_HASH",
+  "COM_MODE6_HASH",
+  "COM_MODE7_HASH",
+  "COM_THROW_EN",
+  "COM_THROW_SPEED",
+  "COM_WIND_MAX_ACT",
+  "EKF2_AGP_CTRL",
+  "EKF2_AGP_DELAY",
+  "EKF2_AGP_GATE",
+  "EKF2_AGP_NOISE",
+  "EKF2_DELAY_MAX",
+  "EKF2_EN",
+  "EKF2_MAG_CHK_INC",
+  "EKF2_MAG_CHK_STR",
+  "FW_ACRO_YAW_EN",
+  "FW_AT_SYSID_F0",
+  "FW_AT_SYSID_F1",
+  "FW_AT_SYSID_TIME",
+  "FW_AT_SYSID_TYPE",
+  "FW_SERVICE_CEIL",
+  "FW_T_THR_DAMPING",
+  "FW_T_THR_INTEG",
+  "FW_USE_AIRSPD",
+  "LPE_EN",
+  "MAN_KILL_GEST_T",
+  "MC_SLOW_DEF_HVEL",
+  "MC_SLOW_DEF_VVEL",
+  "MC_SLOW_DEF_YAWR",
+  "MC_SLOW_MAP_HVEL",
+  "MC_SLOW_MAP_VVEL",
+  "MC_SLOW_MAP_YAWR",
+  "MC_SLOW_MIN_HVEL",
+  "MC_SLOW_MIN_VVEL",
+  "MC_SLOW_MIN_YAWR",
+  "MODALAI_CONFIG",
+  "MPC_ACC_DECOUPLE",
+  "MPC_YAWRAUTO_ACC",
+  "PCA9685_DUTY_EN",
+  "PCA9685_PWM_FREQ",
+  "PCA9685_SCHD_HZ",
+  "RBCLW_ADDRESS",
+  "RBCLW_COUNTS_REV",
+  "RBCLW_DIS1",
+  "RBCLW_DIS2",
+  "RBCLW_FAIL1",
+  "RBCLW_FAIL2",
+  "RBCLW_FUNC1",
+  "RBCLW_FUNC2",
+  "RBCLW_MAX1",
+  "RBCLW_MAX2",
+  "RBCLW_MIN1",
+  "RBCLW_MIN2",
+  "RBCLW_REV",
+  "RBCLW_SER_CFG",
+  "RDD_ANG_SCALE",
+  "RDD_I_ANG_VEL",
+  "RDD_I_SPEED",
+  "RDD_MAX_ACCEL",
+  "RDD_MAX_JERK",
+  "RDD_P_ANG_VEL",
+  "RDD_P_HEADING",
+  "RDD_P_SPEED",
+  "RDD_SPEED_SCALE",
+  "RDD_WHEEL_BASE",
+  "RDD_WHEEL_RADIUS",
+  "RDD_WHEEL_SPEED",
+  "RTL_APPR_FORCE",
+  "SENS_AFBR_HYSTER",
+  "SENS_AFBR_L_RATE",
+  "SENS_AFBR_MODE",
+  "SENS_AFBR_S_RATE",
+  "SENS_AFBR_THRESH",
+  "SENS_EN_ASP5033",
+  "SENS_FTX_CFG",
+  "SENS_IMU_CLPNOTI",
+  "SEP_AUTO_CONFIG",
+  "SEP_CONST_USAGE",
+  "SEP_DUMP_COMM",
+  "SEP_HARDW_SETUP",
+  "SEP_LOG_FORCE",
+  "SEP_LOG_HZ",
+  "SEP_LOG_LEVEL",
+  "SEP_OUTP_HZ",
+  "SEP_PITCH_OFFS",
+  "SEP_PORT1_CFG",
+  "SEP_PORT2_CFG",
+  "SEP_SAT_INFO",
+  "SEP_STREAM_LOG",
+  "SEP_STREAM_MAIN",
+  "SEP_YAW_OFFS",
+  "SF1XX_MODE",
+  "SIM_BAT_ENABLE",
+  "SIM_GZ_WH_DIS1",
+  "SIM_GZ_WH_DIS2",
+  "SIM_GZ_WH_FAIL1",
+  "SIM_GZ_WH_FAIL2",
+  "SIM_GZ_WH_FUNC1",
+  "SIM_GZ_WH_FUNC2",
+  "SIM_GZ_WH_MAX1",
+  "SIM_GZ_WH_MAX2",
+  "SIM_GZ_WH_MIN1",
+  "SIM_GZ_WH_MIN2",
+  "SIM_GZ_WH_REV",
+  "SYS_HAS_NUM_ASPD",
+  "SYS_USB_AUTO",
+  "TC_M0_ID",
+  "TC_M0_TMAX",
+  "TC_M0_TMIN",
+  "TC_M0_TREF",
+  "TC_M0_X0_0",
+  "TC_M0_X0_1",
+  "TC_M0_X0_2",
+  "TC_M0_X1_0",
+  "TC_M0_X1_1",
+  "TC_M0_X1_2",
+  "TC_M0_X2_0",
+  "TC_M0_X2_1",
+  "TC_M0_X2_2",
+  "TC_M0_X3_0",
+  "TC_M0_X3_1",
+  "TC_M0_X3_2",
+  "TC_M1_ID",
+  "TC_M1_TMAX",
+  "TC_M1_TMIN",
+  "TC_M1_TREF",
+  "TC_M1_X0_0",
+  "TC_M1_X0_1",
+  "TC_M1_X0_2",
+  "TC_M1_X1_0",
+  "TC_M1_X1_1",
+  "TC_M1_X1_2",
+  "TC_M1_X2_0",
+  "TC_M1_X2_1",
+  "TC_M1_X2_2",
+  "TC_M1_X3_0",
+  "TC_M1_X3_1",
+  "TC_M1_X3_2",
+  "TC_M2_ID",
+  "TC_M2_TMAX",
+  "TC_M2_TMIN",
+  "TC_M2_TREF",
+  "TC_M2_X0_0",
+  "TC_M2_X0_1",
+  "TC_M2_X0_2",
+  "TC_M2_X1_0",
+  "TC_M2_X1_1",
+  "TC_M2_X1_2",
+  "TC_M2_X2_0",
+  "TC_M2_X2_1",
+  "TC_M2_X2_2",
+  "TC_M2_X3_0",
+  "TC_M2_X3_1",
+  "TC_M2_X3_2",
+  "TC_M3_ID",
+  "TC_M3_TMAX",
+  "TC_M3_TMIN",
+  "TC_M3_TREF",
+  "TC_M3_X0_0",
+  "TC_M3_X0_1",
+  "TC_M3_X0_2",
+  "TC_M3_X1_0",
+  "TC_M3_X1_1",
+  "TC_M3_X1_2",
+  "TC_M3_X2_0",
+  "TC_M3_X2_1",
+  "TC_M3_X2_2",
+  "TC_M3_X3_0",
+  "TC_M3_X3_1",
+  "TC_M3_X3_2",
+  "TC_M_ENABLE",
+  "UAVCAN_SUB_GPS_R",
+  "USB_MAV_MODE",
+  "UXRCE_DDS_PTCFG",
+  "UXRCE_DDS_SYNCC",
+  "UXRCE_DDS_SYNCT",
+  "VN_MODE",
+  "VOXL2_IO_BAUD",
+  "VOXL2_IO_FUNC1",
+  "VOXL2_IO_FUNC2",
+  "VOXL2_IO_FUNC3",
+  "VOXL2_IO_FUNC4",
+  "VOXL2_IO_MAX",
+  "VOXL2_IO_MIN",
+  "VOXL2_IO_REV",
+  "VOXL_ESC_BAUD",
+  "VOXL_ESC_CONFIG",
+  "VOXL_ESC_FUNC1",
+  "VOXL_ESC_FUNC2",
+  "VOXL_ESC_FUNC3",
+  "VOXL_ESC_FUNC4",
+  "VOXL_ESC_MODE",
+  "VOXL_ESC_PUB_BST",
+  "VOXL_ESC_REV",
+  "VOXL_ESC_RPM_MAX",
+  "VOXL_ESC_RPM_MIN",
+  "VOXL_ESC_SDIR1",
+  "VOXL_ESC_SDIR2",
+  "VOXL_ESC_SDIR3",
+  "VOXL_ESC_SDIR4",
+  "VOXL_ESC_T_COSP",
+  "VOXL_ESC_T_DEAD",
+  "VOXL_ESC_T_EXPO",
+  "VOXL_ESC_T_MINF",
+  "VOXL_ESC_T_OVER",
+  "VOXL_ESC_T_PERC",
+  "VOXL_ESC_T_WARN",
+  "VOXL_ESC_VLOG",
+  "VT_BT_TILT_DUR",
+  "ZENOH_ENABLE"
+ ],
+ "changed": {
+  "ASPD_BETA_NOISE": {
+   "default": {
+    "from": 0.3,
+    "to": 0.15
+   }
+  },
+  "ASPD_PRIMARY": {
+   "values": {
+    "removed": [
+     {
+      "description": "Disabled",
+      "key": -1
+     }
+    ]
+   }
+  },
+  "ASPD_TAS_GATE": {
+   "default": {
+    "from": 3,
+    "to": 4
+   }
+  },
+  "ASPD_WIND_NSD": {
+   "default": {
+    "from": 0.01,
+    "to": 0.1
+   }
+  },
+  "ATT_ACC_COMP": {
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "BAT1_N_CELLS": {
+   "values": {
+    "added": [
+     {
+      "description": "Unknown",
+      "key": 0
+     }
+    ]
+   }
+  },
+  "BAT2_N_CELLS": {
+   "values": {
+    "added": [
+     {
+      "description": "Unknown",
+      "key": 0
+     }
+    ]
+   }
+  },
+  "CAL_MAG0_ROT": {
+   "max": {
+    "from": 40,
+    "to": 100
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Custom Euler Angle",
+      "key": 100
+     }
+    ]
+   }
+  },
+  "CAL_MAG1_ROT": {
+   "max": {
+    "from": 40,
+    "to": 100
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Custom Euler Angle",
+      "key": 100
+     }
+    ]
+   }
+  },
+  "CAL_MAG2_ROT": {
+   "max": {
+    "from": 40,
+    "to": 100
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Custom Euler Angle",
+      "key": 100
+     }
+    ]
+   }
+  },
+  "CAL_MAG3_ROT": {
+   "max": {
+    "from": 40,
+    "to": 100
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Custom Euler Angle",
+      "key": 100
+     }
+    ]
+   }
+  },
+  "CA_AIRFRAME": {
+   "values": {
+    "added": [
+     {
+      "description": "Helicopter (tail Servo)",
+      "key": 11
+     },
+     {
+      "description": "Helicopter (Coaxial)",
+      "key": 12
+     }
+    ],
+    "changed": [
+     {
+      "from": "Helicopter",
+      "key": 10,
+      "to": "Helicopter (tail ESC)"
+     }
+    ]
+   }
+  },
+  "CA_SP0_COUNT": {
+   "values": {
+    "added": [
+     {
+      "description": "2",
+      "key": 2
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE1": {
+   "values": {
+    "added": [
+     {
+      "description": "Position Slow",
+      "key": 9
+     },
+     {
+      "description": "External Mode 1",
+      "key": 100
+     },
+     {
+      "description": "External Mode 2",
+      "key": 101
+     },
+     {
+      "description": "External Mode 3",
+      "key": 102
+     },
+     {
+      "description": "External Mode 4",
+      "key": 103
+     },
+     {
+      "description": "External Mode 5",
+      "key": 104
+     },
+     {
+      "description": "External Mode 6",
+      "key": 105
+     },
+     {
+      "description": "External Mode 7",
+      "key": 106
+     },
+     {
+      "description": "External Mode 8",
+      "key": 107
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE2": {
+   "values": {
+    "added": [
+     {
+      "description": "Position Slow",
+      "key": 9
+     },
+     {
+      "description": "External Mode 1",
+      "key": 100
+     },
+     {
+      "description": "External Mode 2",
+      "key": 101
+     },
+     {
+      "description": "External Mode 3",
+      "key": 102
+     },
+     {
+      "description": "External Mode 4",
+      "key": 103
+     },
+     {
+      "description": "External Mode 5",
+      "key": 104
+     },
+     {
+      "description": "External Mode 6",
+      "key": 105
+     },
+     {
+      "description": "External Mode 7",
+      "key": 106
+     },
+     {
+      "description": "External Mode 8",
+      "key": 107
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE3": {
+   "values": {
+    "added": [
+     {
+      "description": "Position Slow",
+      "key": 9
+     },
+     {
+      "description": "External Mode 1",
+      "key": 100
+     },
+     {
+      "description": "External Mode 2",
+      "key": 101
+     },
+     {
+      "description": "External Mode 3",
+      "key": 102
+     },
+     {
+      "description": "External Mode 4",
+      "key": 103
+     },
+     {
+      "description": "External Mode 5",
+      "key": 104
+     },
+     {
+      "description": "External Mode 6",
+      "key": 105
+     },
+     {
+      "description": "External Mode 7",
+      "key": 106
+     },
+     {
+      "description": "External Mode 8",
+      "key": 107
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE4": {
+   "values": {
+    "added": [
+     {
+      "description": "Position Slow",
+      "key": 9
+     },
+     {
+      "description": "External Mode 1",
+      "key": 100
+     },
+     {
+      "description": "External Mode 2",
+      "key": 101
+     },
+     {
+      "description": "External Mode 3",
+      "key": 102
+     },
+     {
+      "description": "External Mode 4",
+      "key": 103
+     },
+     {
+      "description": "External Mode 5",
+      "key": 104
+     },
+     {
+      "description": "External Mode 6",
+      "key": 105
+     },
+     {
+      "description": "External Mode 7",
+      "key": 106
+     },
+     {
+      "description": "External Mode 8",
+      "key": 107
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE5": {
+   "values": {
+    "added": [
+     {
+      "description": "Position Slow",
+      "key": 9
+     },
+     {
+      "description": "External Mode 1",
+      "key": 100
+     },
+     {
+      "description": "External Mode 2",
+      "key": 101
+     },
+     {
+      "description": "External Mode 3",
+      "key": 102
+     },
+     {
+      "description": "External Mode 4",
+      "key": 103
+     },
+     {
+      "description": "External Mode 5",
+      "key": 104
+     },
+     {
+      "description": "External Mode 6",
+      "key": 105
+     },
+     {
+      "description": "External Mode 7",
+      "key": 106
+     },
+     {
+      "description": "External Mode 8",
+      "key": 107
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE6": {
+   "values": {
+    "added": [
+     {
+      "description": "Position Slow",
+      "key": 9
+     },
+     {
+      "description": "External Mode 1",
+      "key": 100
+     },
+     {
+      "description": "External Mode 2",
+      "key": 101
+     },
+     {
+      "description": "External Mode 3",
+      "key": 102
+     },
+     {
+      "description": "External Mode 4",
+      "key": 103
+     },
+     {
+      "description": "External Mode 5",
+      "key": 104
+     },
+     {
+      "description": "External Mode 6",
+      "key": 105
+     },
+     {
+      "description": "External Mode 7",
+      "key": 106
+     },
+     {
+      "description": "External Mode 8",
+      "key": 107
+     }
+    ]
+   }
+  },
+  "COM_POS_FS_EPH": {
+   "max": {
+    "from": null,
+    "to": 400.0
+   },
+   "min": {
+    "from": 0.0,
+    "to": -1.0
+   }
+  },
+  "COM_POS_LOW_EPH": {
+   "max": {
+    "from": null,
+    "to": 1000.0
+   }
+  },
+  "EKF2_DECL_TYPE": {
+   "bitmask": {
+    "removed": [
+     {
+      "description": "use declination as an observation",
+      "key": 2
+     }
+    ]
+   },
+   "default": {
+    "from": 7,
+    "to": 3
+   },
+   "max": {
+    "from": 7,
+    "to": 3
+   }
+  },
+  "EKF2_GRAV_NOISE": {
+   "units": {
+    "from": "m/s^2",
+    "to": "g0"
+   }
+  },
+  "EKF2_IMU_CTRL": {
+   "default": {
+    "from": 3,
+    "to": 7
+   }
+  },
+  "EKF2_MAG_CHECK": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "Strength (EKF2_MAG_CHK_STR)",
+      "key": 0
+     },
+     {
+      "description": "Inclination (EKF2_MAG_CHK_INC)",
+      "key": 1
+     },
+     {
+      "description": "Wait for WMM",
+      "key": 2
+     }
+    ]
+   },
+   "max": {
+    "from": null,
+    "to": 7
+   },
+   "min": {
+    "from": null,
+    "to": 0
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Disabled",
+      "key": 0
+     },
+     {
+      "description": "Enabled",
+      "key": 1
+     }
+    ]
+   }
+  },
+  "EKF2_MAG_TYPE": {
+   "values": {
+    "removed": [
+     {
+      "description": "3-axis",
+      "key": 2
+     },
+     {
+      "description": "VTOL custom",
+      "key": 3
+     },
+     {
+      "description": "MC custom",
+      "key": 4
+     }
+    ]
+   }
+  },
+  "EKF2_TAS_GATE": {
+   "default": {
+    "from": 3.0,
+    "to": 5.0
+   }
+  },
+  "EKF2_WIND_NSD": {
+   "default": {
+    "from": 0.01,
+    "to": 0.05
+   }
+  },
+  "FW_T_SPD_STD": {
+   "default": {
+    "from": 0.2,
+    "to": 0.07
+   }
+  },
+  "GPS_1_GNSS": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "NAVIC",
+      "key": 5
+     }
+    ]
+   },
+   "max": {
+    "from": 31,
+    "to": 63
+   }
+  },
+  "GPS_1_PROTOCOL": {
+   "values": {
+    "removed": [
+     {
+      "description": "Septentrio (SBF)",
+      "key": 7
+     }
+    ]
+   }
+  },
+  "GPS_2_GNSS": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "NAVIC",
+      "key": 5
+     }
+    ]
+   },
+   "max": {
+    "from": 31,
+    "to": 63
+   }
+  },
+  "HIL_ACT_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC10": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC11": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC12": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC13": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC14": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC15": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC16": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC9": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "MC_ACRO_EXPO": {
+   "default": {
+    "from": 0.69,
+    "to": 0.0
+   }
+  },
+  "MC_ACRO_EXPO_Y": {
+   "default": {
+    "from": 0.69,
+    "to": 0.0
+   }
+  },
+  "MC_ACRO_P_MAX": {
+   "default": {
+    "from": 720.0,
+    "to": 100.0
+   }
+  },
+  "MC_ACRO_R_MAX": {
+   "default": {
+    "from": 720.0,
+    "to": 100.0
+   }
+  },
+  "MC_ACRO_SUPEXPO": {
+   "default": {
+    "from": 0.7,
+    "to": 0.0
+   }
+  },
+  "MC_ACRO_SUPEXPOY": {
+   "default": {
+    "from": 0.7,
+    "to": 0.0
+   }
+  },
+  "MC_ACRO_Y_MAX": {
+   "default": {
+    "from": 540.0,
+    "to": 100.0
+   }
+  },
+  "MIS_TAKEOFF_ALT": {
+   "max": {
+    "from": 80.0,
+    "to": null
+   }
+  },
+  "MIS_TKO_LAND_REQ": {
+   "values": {
+    "added": [
+     {
+      "description": "Same as previous when landed, in-air require landing only if no valid VTOL approach is present",
+      "key": 5
+     }
+    ]
+   }
+  },
+  "MPC_ALT_MODE": {
+   "default": {
+    "from": 0,
+    "to": 2
+   }
+  },
+  "MPC_LAND_RC_HELP": {
+   "values": {
+    "changed": [
+     {
+      "from": "Fixed descent speed of MPC_LAND_SPEED",
+      "key": 0,
+      "to": "Nudging disabled"
+     },
+     {
+      "from": "User assisted descent speed",
+      "key": 1,
+      "to": "Nudging enabled"
+     }
+    ]
+   }
+  },
+  "MPC_MAN_TILT_MAX": {
+   "max": {
+    "from": 90.0,
+    "to": 70.0
+   },
+   "min": {
+    "from": 0.0,
+    "to": 1.0
+   }
+  },
+  "MPC_POS_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Simple position control",
+      "key": 0,
+      "to": "Direct velocity"
+     },
+     {
+      "from": "Smooth position control (Jerk optimized)",
+      "key": 3,
+      "to": "Smoothed velocity"
+     },
+     {
+      "from": "Acceleration based input",
+      "key": 4,
+      "to": "Acceleration based"
+     }
+    ]
+   }
+  },
+  "MPC_THR_MIN": {
+   "max": {
+    "from": 1.0,
+    "to": 0.5
+   }
+  },
+  "MPC_TILTMAX_LND": {
+   "min": {
+    "from": 10.0,
+    "to": 5.0
+   }
+  },
+  "MPC_TKO_RAMP_T": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "MPC_YAWRAUTO_MAX": {
+   "min": {
+    "from": 0.0,
+    "to": 5.0
+   }
+  },
+  "MPC_Z_P": {
+   "min": {
+    "from": 0.0,
+    "to": 0.1
+   }
+  },
+  "PCA9685_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC10": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC11": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC12": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC13": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC14": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC15": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC16": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC9": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PCA9685_MAX1": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX10": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX11": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX12": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX13": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX14": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX15": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX16": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX2": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX3": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX4": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX5": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX6": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX7": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX8": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MAX9": {
+   "default": {
+    "from": 2000,
+    "to": 1900
+   }
+  },
+  "PCA9685_MIN1": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN10": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN11": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN12": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN13": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN14": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN15": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN16": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN2": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN3": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN4": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN5": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN6": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN7": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN8": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PCA9685_MIN9": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "PWM_AUX_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC10": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC11": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC9": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SENS_EN_SF1XX": {
+   "values": {
+    "added": [
+     {
+      "description": "SF/LW30/d",
+      "key": 7
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "SYS_FAC_CAL_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "All sensors except mag",
+      "key": 2
+     }
+    ],
+    "changed": [
+     {
+      "from": "Enabled",
+      "key": 1,
+      "to": "All sensors"
+     }
+    ]
+   }
+  },
+  "SYS_HAS_NUM_DIST": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "TAP_ESC_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC1": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC10": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC11": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC12": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC13": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC14": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC15": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC16": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC2": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC3": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC4": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC5": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC6": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC7": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC8": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC9": {
+   "values": {
+    "changed": [
+     {
+      "from": "Offboard Actuator Set 1",
+      "key": 301,
+      "to": "Peripheral via Actuator Set 1"
+     },
+     {
+      "from": "Offboard Actuator Set 2",
+      "key": 302,
+      "to": "Peripheral via Actuator Set 2"
+     },
+     {
+      "from": "Offboard Actuator Set 3",
+      "key": 303,
+      "to": "Peripheral via Actuator Set 3"
+     },
+     {
+      "from": "Offboard Actuator Set 4",
+      "key": 304,
+      "to": "Peripheral via Actuator Set 4"
+     },
+     {
+      "from": "Offboard Actuator Set 5",
+      "key": 305,
+      "to": "Peripheral via Actuator Set 5"
+     },
+     {
+      "from": "Offboard Actuator Set 6",
+      "key": 306,
+      "to": "Peripheral via Actuator Set 6"
+     }
+    ]
+   }
+  },
+  "UWB_PORT_CFG": {
+   "default": {
+    "from": 102,
+    "to": 0
+   }
+  }
+ },
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "1555f2bd2229544c43966ab5f94879c41d8e1e01",
+  "tag": "v1.14.4"
+ },
+ "removed": {
+  "CANNODE_NODE_ID": {},
+  "CBRK_AIRSPD_CHK": {},
+  "COM_ARM_ARSP_EN": {},
+  "EKF2_AID_MASK": {},
+  "EKF2_MAG_YAWLIM": {},
+  "FW_ARSP_MODE": {},
+  "FW_T_I_GAIN_THR": {},
+  "FW_T_THR_DAMP": {},
+  "GF_ALTMODE": {},
+  "GF_COUNT": {},
+  "GPS_PITCH_OFFSET": {},
+  "LNDMC_ALT_MAX": {},
+  "MODAL_IO_BAUD": {},
+  "MODAL_IO_CONFIG": {},
+  "MODAL_IO_FUNC1": {},
+  "MODAL_IO_FUNC2": {},
+  "MODAL_IO_FUNC3": {},
+  "MODAL_IO_FUNC4": {},
+  "MODAL_IO_MODE": {},
+  "MODAL_IO_REV": {},
+  "MODAL_IO_RPM_MAX": {},
+  "MODAL_IO_RPM_MIN": {},
+  "MODAL_IO_SDIR1": {},
+  "MODAL_IO_SDIR2": {},
+  "MODAL_IO_SDIR3": {},
+  "MODAL_IO_SDIR4": {},
+  "MODAL_IO_T_COSP": {},
+  "MODAL_IO_T_DEAD": {},
+  "MODAL_IO_T_EXPO": {},
+  "MODAL_IO_T_MINF": {},
+  "MODAL_IO_T_PERC": {},
+  "MODAL_IO_VLOG": {},
+  "PCA9685_RATE": {},
+  "RTL_HDG_MD": {},
+  "SIM_GZ_HOME_ALT": {},
+  "SIM_GZ_HOME_LAT": {},
+  "SIM_GZ_HOME_LON": {},
+  "SYS_MC_EST_GROUP": {},
+  "VT_B_DEC_FF": {},
+  "VT_TILT_SPINUP": {}
+ },
+ "to": {
+  "commit": "30e763b6780061d70a14894e3e8b06e6a656f9b8",
+  "tag": "v1.15.0"
+ }
+}

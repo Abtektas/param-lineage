@@ -1,0 +1,746 @@
+{
+ "added": [
+  "ASPD_FALLBACK",
+  "EKF2_AGP_MODE",
+  "EKF2_GPS_MODE",
+  "EKF2_REQ_FIX",
+  "FW_AIRSPD_FLP_SC",
+  "GPS_CFG_WIPE",
+  "ILABS_MODE",
+  "MAN_DEADZONE",
+  "MAV_S_FORWARD",
+  "MAV_S_MODE",
+  "MC_NN_EN",
+  "MC_NN_MANL_CTRL",
+  "MC_NN_MAX_RPM",
+  "MC_NN_MIN_RPM",
+  "MC_NN_THRST_COEF",
+  "MS_ACCEL_RANGE",
+  "MS_ALIGNMENT",
+  "MS_BARO_RATE_HZ",
+  "MS_EHEAD_YAW",
+  "MS_EMAG_PTCH",
+  "MS_EMAG_ROLL",
+  "MS_EMAG_UNCERT",
+  "MS_EMAG_YAW",
+  "MS_EXT_HEAD_EN",
+  "MS_EXT_MAG_EN",
+  "MS_FILT_RATE_HZ",
+  "MS_GNSS_AID_SRC",
+  "MS_GNSS_OFF1_X",
+  "MS_GNSS_OFF1_Y",
+  "MS_GNSS_OFF1_Z",
+  "MS_GNSS_OFF2_X",
+  "MS_GNSS_OFF2_Y",
+  "MS_GNSS_OFF2_Z",
+  "MS_GNSS_RATE_HZ",
+  "MS_GYRO_RANGE",
+  "MS_IMU_RATE_HZ",
+  "MS_INT_HEAD_EN",
+  "MS_INT_MAG_EN",
+  "MS_MAG_RATE_HZ",
+  "MS_MODE",
+  "MS_OFLW_OFF_X",
+  "MS_OFLW_OFF_Y",
+  "MS_OFLW_OFF_Z",
+  "MS_OFLW_UNCERT",
+  "MS_OPT_FLOW_EN",
+  "MS_SENSOR_PTCH",
+  "MS_SENSOR_ROLL",
+  "MS_SENSOR_YAW",
+  "MS_SVT_EN",
+  "PCA9685_EN_BUS",
+  "PWM_AUX_CENT1",
+  "PWM_AUX_CENT10",
+  "PWM_AUX_CENT11",
+  "PWM_AUX_CENT2",
+  "PWM_AUX_CENT3",
+  "PWM_AUX_CENT4",
+  "PWM_AUX_CENT5",
+  "PWM_AUX_CENT6",
+  "PWM_AUX_CENT7",
+  "PWM_AUX_CENT8",
+  "PWM_AUX_CENT9",
+  "RC_MAP_TERM_SW",
+  "RC_PAYLOAD_MIDTH",
+  "RD_YAW_STK_GAIN",
+  "RM_YAW_STK_GAIN",
+  "RO_SPEED_RED",
+  "RO_YAW_EXPO",
+  "RO_YAW_RATE_CORR",
+  "RO_YAW_SUPEXPO",
+  "SBG_BAUDRATE",
+  "SBG_CONFIGURE_EN",
+  "SBG_MODE",
+  "SC_ACRO_EXPO",
+  "SC_ACRO_EXPO_Y",
+  "SC_ACRO_P_MAX",
+  "SC_ACRO_R_MAX",
+  "SC_ACRO_SUPEXPO",
+  "SC_ACRO_SUPEXPOY",
+  "SC_ACRO_Y_MAX",
+  "SC_BAT_SCALE_EN",
+  "SC_MAN_F_MAX",
+  "SC_MAN_TILT_MAX",
+  "SC_MAN_TILT_TAU",
+  "SC_MAN_T_MAX",
+  "SC_MAN_Y_SCALE",
+  "SC_PITCHRATE_D",
+  "SC_PITCHRATE_FF",
+  "SC_PITCHRATE_I",
+  "SC_PITCHRATE_K",
+  "SC_PITCHRATE_MAX",
+  "SC_PITCHRATE_P",
+  "SC_PITCH_P",
+  "SC_PR_INT_LIM",
+  "SC_ROLLRATE_D",
+  "SC_ROLLRATE_FF",
+  "SC_ROLLRATE_I",
+  "SC_ROLLRATE_K",
+  "SC_ROLLRATE_MAX",
+  "SC_ROLLRATE_P",
+  "SC_ROLL_P",
+  "SC_RR_INT_LIM",
+  "SC_YAWRATE_D",
+  "SC_YAWRATE_FF",
+  "SC_YAWRATE_I",
+  "SC_YAWRATE_K",
+  "SC_YAWRATE_MAX",
+  "SC_YAWRATE_P",
+  "SC_YAW_P",
+  "SC_YAW_WEIGHT",
+  "SC_YR_INT_LIM",
+  "SDLOG_BACKEND",
+  "SENS_BAHRS_CFG",
+  "SENS_BAR_AUTOCAL",
+  "SENS_ILABS_CFG",
+  "SENS_MS_CFG",
+  "SENS_SBG_CFG",
+  "SIM_GZ_EN_ASPD",
+  "SIM_GZ_EN_BARO",
+  "SIM_GZ_EN_FLOW",
+  "SIM_GZ_EN_GPS",
+  "SIM_GZ_EN_LIDAR",
+  "SIM_GZ_EN_ODOM",
+  "SPC_ACC",
+  "SPC_ACC_MAX",
+  "SPC_JERK_AUTO",
+  "SPC_JERK_MAX",
+  "SPC_MAN_Y_MAX",
+  "SPC_MAN_Y_TAU",
+  "SPC_POS_I",
+  "SPC_POS_I_LIM",
+  "SPC_POS_P",
+  "SPC_THR_MAX",
+  "SPC_VEHICLE_RESP",
+  "SPC_VELD_LP",
+  "SPC_VEL_ALL",
+  "SPC_VEL_CRUISE",
+  "SPC_VEL_D",
+  "SPC_VEL_I",
+  "SPC_VEL_I_LIM",
+  "SPC_VEL_MANUAL",
+  "SPC_VEL_MAX",
+  "SPC_VEL_P",
+  "SYS_HF_MAV",
+  "UAVCAN_ESC_IFACE",
+  "UUV_MGM_PITCH",
+  "UUV_MGM_ROLL",
+  "UUV_MGM_THRTL",
+  "UUV_MGM_YAW",
+  "UUV_PGM_VEL",
+  "UUV_POS_MODE",
+  "UUV_POS_STICK_DB",
+  "UUV_RGM_PITCH",
+  "UUV_RGM_ROLL",
+  "UUV_RGM_THRTL",
+  "UUV_RGM_YAW",
+  "UUV_SGM_PITCH",
+  "UUV_SGM_ROLL",
+  "UUV_SGM_THRTL",
+  "UUV_SGM_YAW",
+  "UUV_SP_MAX_AGE",
+  "UUV_THRUST_SAT",
+  "UUV_TORQUE_SAT",
+  "UXRCE_DDS_NS_IDX",
+  "ZENOH_DOMAIN_ID"
+ ],
+ "changed": {
+  "ASPD_PRIMARY": {
+   "values": {
+    "added": [
+     {
+      "description": "Thrust based airspeed",
+      "key": 4
+     }
+    ]
+   }
+  },
+  "ASPD_WERR_THR": {
+   "default": {
+    "from": 0.55,
+    "to": 2.0
+   },
+   "min": {
+    "from": 0.001,
+    "to": 0.01
+   }
+  },
+  "COM_FLTMODE1": {
+   "values": {
+    "added": [
+     {
+      "description": "Altitude Cruise",
+      "key": 16
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE2": {
+   "values": {
+    "added": [
+     {
+      "description": "Altitude Cruise",
+      "key": 16
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE3": {
+   "values": {
+    "added": [
+     {
+      "description": "Altitude Cruise",
+      "key": 16
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE4": {
+   "values": {
+    "added": [
+     {
+      "description": "Altitude Cruise",
+      "key": 16
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE5": {
+   "values": {
+    "added": [
+     {
+      "description": "Altitude Cruise",
+      "key": 16
+     }
+    ]
+   }
+  },
+  "COM_FLTMODE6": {
+   "values": {
+    "added": [
+     {
+      "description": "Altitude Cruise",
+      "key": 16
+     }
+    ]
+   }
+  },
+  "COM_FLTT_LOW_ACT": {
+   "default": {
+    "from": 3,
+    "to": 0
+   }
+  },
+  "COM_RCL_EXCEPT": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "External Mode",
+      "key": 3
+     },
+     {
+      "description": "Altitude Cruise",
+      "key": 4
+     }
+    ]
+   },
+   "max": {
+    "from": 7,
+    "to": 31
+   }
+  },
+  "COM_RC_IN_MODE": {
+   "max": {
+    "from": 4,
+    "to": 8
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Prio: RC > MAVL 1 > MAVL 2",
+      "key": 5
+     },
+     {
+      "description": "Prio: MAVL 1 > MAVL 2 > RC",
+      "key": 6
+     },
+     {
+      "description": "Prio: RC > MAVL 2 > MAVL 1",
+      "key": 7
+     },
+     {
+      "description": "Prio: MAVL 2 > MAVL 1 > RC",
+      "key": 8
+     }
+    ],
+    "changed": [
+     {
+      "from": "RC Transmitter only",
+      "key": 0,
+      "to": "RC only"
+     },
+     {
+      "from": "Joystick only",
+      "key": 1,
+      "to": "MAVLink only"
+     },
+     {
+      "from": "RC and Joystick with fallback",
+      "key": 2,
+      "to": "RC or MAVLink with fallback"
+     },
+     {
+      "from": "RC or Joystick keep first",
+      "key": 3,
+      "to": "RC or MAVLink keep first"
+     },
+     {
+      "from": "Stick input disabled",
+      "key": 4,
+      "to": "Disable manual control"
+     }
+    ]
+   }
+  },
+  "DSHOT_MIN": {
+   "units": {
+    "from": "%",
+    "to": "norm"
+   }
+  },
+  "EKF2_GPS_CHECK": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "GPS fix type (EKF2_REQ_FIX)",
+      "key": 10
+     }
+    ]
+   },
+   "default": {
+    "from": 1023,
+    "to": 2047
+   },
+   "max": {
+    "from": 1023,
+    "to": 2047
+   }
+  },
+  "EKF2_MIN_RNG": {
+   "default": {
+    "from": 0.1,
+    "to": 0.01
+   }
+  },
+  "FW_AT_SYSID_F1": {
+   "default": {
+    "from": 20.0,
+    "to": 10.0
+   }
+  },
+  "FW_AT_SYSID_TYPE": {
+   "default": {
+    "from": 0,
+    "to": 1
+   }
+  },
+  "FW_GPSF_LT": {
+   "max": {
+    "from": 3600,
+    "to": null
+   }
+  },
+  "FW_GPSF_R": {
+   "max": {
+    "from": 30.0,
+    "to": 60.0
+   }
+  },
+  "FW_LND_ANG": {
+   "max": {
+    "from": 15.0,
+    "to": 45.0
+   }
+  },
+  "FW_P_LIM_MAX": {
+   "max": {
+    "from": 60.0,
+    "to": 80.0
+   }
+  },
+  "FW_R_LIM": {
+   "max": {
+    "from": 65.0,
+    "to": 75.0
+   }
+  },
+  "FW_THR_IDLE": {
+   "max": {
+    "from": 0.4,
+    "to": 1.0
+   }
+  },
+  "FW_TKO_PITCH_MIN": {
+   "max": {
+    "from": 30.0,
+    "to": 80.0
+   }
+  },
+  "FW_T_CLMB_MAX": {
+   "max": {
+    "from": 15.0,
+    "to": null
+   }
+  },
+  "FW_T_CLMB_R_SP": {
+   "max": {
+    "from": 15.0,
+    "to": null
+   },
+   "min": {
+    "from": 0.5,
+    "to": 0.1
+   }
+  },
+  "FW_T_SINK_MIN": {
+   "max": {
+    "from": 5.0,
+    "to": null
+   }
+  },
+  "FW_T_SINK_R_SP": {
+   "max": {
+    "from": 15.0,
+    "to": null
+   },
+   "min": {
+    "from": 0.5,
+    "to": 0.1
+   }
+  },
+  "GPS_UBX_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "Ground Control Station (UART2 outputs NMEA)",
+      "key": 6
+     }
+    ]
+   }
+  },
+  "ICE_EN": {
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "IMU_DGYRO_CUTOFF": {
+   "default": {
+    "from": 30.0,
+    "to": 20.0
+   }
+  },
+  "INA238_SHUNT": {
+   "default": {
+    "from": 0.0003,
+    "to": 0.0005
+   }
+  },
+  "MAV_PROTO_VER": {
+   "default": {
+    "from": 0,
+    "to": 2
+   },
+   "values": {
+    "changed": [
+     {
+      "from": "Always use version 1",
+      "key": 1,
+      "to": "Version 1 with auto-upgrade to v2 if detected"
+     },
+     {
+      "from": "Always use version 2",
+      "key": 2,
+      "to": "Version 2"
+     }
+    ],
+    "removed": [
+     {
+      "description": "Default to 1, switch to 2 if GCS sends version 2",
+      "key": 0
+     }
+    ]
+   }
+  },
+  "MC_ORBIT_YAW_MOD": {
+   "values": {
+    "changed": [
+     {
+      "from": "RC Controlled",
+      "key": 4,
+      "to": "Manually (yaw stick) Controlled"
+     }
+    ]
+   }
+  },
+  "MC_PITCH_P": {
+   "default": {
+    "from": 6.5,
+    "to": 4.0
+   }
+  },
+  "MC_ROLL_P": {
+   "default": {
+    "from": 6.5,
+    "to": 4.0
+   }
+  },
+  "MC_YAWRATE_K": {
+   "min": {
+    "from": 0.0,
+    "to": 0.01
+   }
+  },
+  "MPC_YAWRAUTO_ACC": {
+   "default": {
+    "from": 60.0,
+    "to": 20.0
+   }
+  },
+  "MPC_YAWRAUTO_MAX": {
+   "default": {
+    "from": 45.0,
+    "to": 60.0
+   }
+  },
+  "NAV_LOITER_RAD": {
+   "max": {
+    "from": 1000.0,
+    "to": 10000.0
+   },
+   "min": {
+    "from": 25.0,
+    "to": -10000.0
+   }
+  },
+  "RC_SBUS_PRT_CFG": {
+   "default": {
+    "from": 300,
+    "to": 0
+   }
+  },
+  "SDLOG_MODE": {
+   "values": {
+    "removed": [
+     {
+      "description": "disabled",
+      "key": -1
+     }
+    ]
+   }
+  },
+  "SDLOG_PROFILE": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "High rate sensors",
+      "key": 11
+     }
+    ]
+   },
+   "max": {
+    "from": 2047,
+    "to": 4095
+   }
+  },
+  "SENS_BOARD_X_OFF": {
+   "max": {
+    "from": null,
+    "to": 45.0
+   },
+   "min": {
+    "from": null,
+    "to": -45.0
+   }
+  },
+  "SENS_BOARD_Y_OFF": {
+   "max": {
+    "from": null,
+    "to": 45.0
+   },
+   "min": {
+    "from": null,
+    "to": -45.0
+   }
+  },
+  "SENS_BOARD_Z_OFF": {
+   "max": {
+    "from": null,
+    "to": 45.0
+   },
+   "min": {
+    "from": null,
+    "to": -45.0
+   }
+  },
+  "SENS_EN_SF1XX": {
+   "max": {
+    "from": 6,
+    "to": 7
+   }
+  },
+  "SIH_VEHICLE_TYPE": {
+   "values": {
+    "added": [
+     {
+      "description": "Hexacopter",
+      "key": 4
+     },
+     {
+      "description": "Rover Ackermann",
+      "key": 5
+     }
+    ],
+    "changed": [
+     {
+      "from": "Multicopter",
+      "key": 0,
+      "to": "Quadcopter"
+     }
+    ]
+   }
+  },
+  "USB_MAV_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "Low Bandwidth",
+      "key": 13
+     }
+    ]
+   }
+  },
+  "UUV_STAB_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Position Control",
+      "key": 0,
+      "to": "Tracks previous attitude setpoint"
+     },
+     {
+      "from": "Stabilization Mode",
+      "key": 1,
+      "to": "Tracks horizontal attitude (allows yaw change)"
+     }
+    ]
+   }
+  },
+  "ZENOH_ENABLE": {
+   "values": {
+    "added": [
+     {
+      "description": "Disabled",
+      "key": 0
+     },
+     {
+      "description": "Enabled",
+      "key": 1
+     }
+    ]
+   }
+  }
+ },
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+  "tag": "v1.16.2"
+ },
+ "removed": {
+  "ASPD_FALLBACK_GW": {},
+  "COM_POSCTL_NAVL": {},
+  "EKF2_RNG_A_IGATE": {},
+  "FW_AT_SYSID_AMP": {},
+  "GND_L1_DAMPING": {},
+  "GND_L1_DIST": {},
+  "GND_L1_PERIOD": {},
+  "GND_MAN_Y_MAX": {},
+  "GND_MAX_ANG": {},
+  "GND_SPEED_D": {},
+  "GND_SPEED_I": {},
+  "GND_SPEED_IMAX": {},
+  "GND_SPEED_MAX": {},
+  "GND_SPEED_P": {},
+  "GND_SPEED_THR_SC": {},
+  "GND_SPEED_TRIM": {},
+  "GND_SP_CTRL_MODE": {},
+  "GND_THR_CRUISE": {},
+  "GND_THR_MAX": {},
+  "GND_THR_MIN": {},
+  "GND_WHEEL_BASE": {},
+  "MPC_HOLD_DZ": {},
+  "MPC_XY_MAN_EXPO": {},
+  "MPC_YAW_EXPO": {},
+  "MPC_Z_MAN_EXPO": {},
+  "NPFG_EN_MIN_GSP": {},
+  "NPFG_GSP_MAX_TK": {},
+  "NPFG_TRACK_KEEP": {},
+  "NPFG_WIND_REG": {},
+  "RC10_DZ": {},
+  "RC11_DZ": {},
+  "RC12_DZ": {},
+  "RC13_DZ": {},
+  "RC14_DZ": {},
+  "RC15_DZ": {},
+  "RC16_DZ": {},
+  "RC17_DZ": {},
+  "RC18_DZ": {},
+  "RC1_DZ": {},
+  "RC2_DZ": {},
+  "RC3_DZ": {},
+  "RC4_DZ": {},
+  "RC5_DZ": {},
+  "RC6_DZ": {},
+  "RC7_DZ": {},
+  "RC8_DZ": {},
+  "RC9_DZ": {},
+  "RD_MAX_THR_YAW_R": {},
+  "RD_MISS_SPD_GAIN": {},
+  "RM_MAX_THR_YAW_R": {},
+  "RM_MISS_SPD_GAIN": {},
+  "RWTO_HDG": {},
+  "RWTO_NPFG_PERIOD": {},
+  "UUV_DIRCT_PITCH": {},
+  "UUV_DIRCT_ROLL": {},
+  "UUV_DIRCT_THRUST": {},
+  "UUV_DIRCT_YAW": {},
+  "UUV_INPUT_MODE": {},
+  "UUV_SKIP_CTRL": {}
+ },
+ "to": {
+  "commit": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+  "tag": "v1.17.0"
+ }
+}

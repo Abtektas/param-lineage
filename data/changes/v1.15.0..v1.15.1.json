@@ -1,0 +1,22 @@
+{
+ "added": [],
+ "changed": {
+  "SEP_PORT1_CFG": {
+   "default": {
+    "from": 201,
+    "to": 0
+   }
+  }
+ },
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "30e763b6780061d70a14894e3e8b06e6a656f9b8",
+  "tag": "v1.15.0"
+ },
+ "removed": {},
+ "to": {
+  "commit": "93eef0c78719a9ac972d46593262c76c978ed3c4",
+  "tag": "v1.15.1"
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "added": [
+  "RC_MAP_PAY_SW",
+  "RC_PAYLOAD_TH"
+ ],
+ "changed": {},
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "4817c0618a1286846116e90c6eb8919efaa013cf",
+  "tag": "v1.15.2"
+ },
+ "removed": {},
+ "to": {
+  "commit": "80171359656faf881dc643022f61ebde734d7cb6",
+  "tag": "v1.15.3"
+ }
+}

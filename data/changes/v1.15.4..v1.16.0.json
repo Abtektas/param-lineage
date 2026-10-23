@@ -1,0 +1,3829 @@
+{
+ "added": [
+  "ASPD_FP_T_WINDOW",
+  "BAT1_I_OVERWRITE",
+  "BAT2_I_OVERWRITE",
+  "BMM350_AVG",
+  "BMM350_DRIVE",
+  "BMM350_ODR",
+  "CANNODE_PUB_IMU",
+  "CA_HELI_RPM_I",
+  "CA_HELI_RPM_P",
+  "CA_HELI_RPM_SP",
+  "CA_MAX_SVO_THROW",
+  "COM_DLL_EXCEPT",
+  "COM_MODE_ARM_CHK",
+  "COM_POS_LOW_ACT",
+  "COM_RAM_MAX",
+  "DSHOT_BIDIR_EN",
+  "EKF2_GPS_YAW_OFF",
+  "EKF2_LOG_VERBOSE",
+  "EKF2_OF_GYR_SRC",
+  "EKF2_RNG_FOG",
+  "EKF2_VEL_LIM",
+  "FW_T_F_ALT_ERR",
+  "FW_T_THR_LOW_HGT",
+  "ICE_CHOKE_ST_DUR",
+  "ICE_EN",
+  "ICE_IGN_DELAY",
+  "ICE_MIN_RUN_RPM",
+  "ICE_ON_SOURCE",
+  "ICE_RUN_FAULT_D",
+  "ICE_STOP_CHOKE",
+  "ICE_STRT_ATTEMPT",
+  "ICE_STRT_DUR",
+  "ICE_STRT_THR",
+  "ICE_THR_SLEW",
+  "LNDFW_ROT_MAX",
+  "MAV_0_HL_FREQ",
+  "MAV_1_HL_FREQ",
+  "MAV_2_HL_FREQ",
+  "MC_ORBIT_YAW_MOD",
+  "MC_SLOW_MAP_PTCH",
+  "MC_YAW_TQ_CUTOFF",
+  "MIS_COMMAND_TOUT",
+  "MPC_VEL_LP",
+  "MPC_VEL_NF_BW",
+  "MPC_VEL_NF_FRQ",
+  "NAV_MIN_GND_DIST",
+  "OSD_RC_STICK",
+  "PP_LOOKAHD_GAIN",
+  "PP_LOOKAHD_MAX",
+  "PP_LOOKAHD_MIN",
+  "RA_ACC_RAD_GAIN",
+  "RA_ACC_RAD_MAX",
+  "RA_MAX_STR_ANG",
+  "RA_STR_RATE_LIM",
+  "RA_WHEEL_BASE",
+  "RC_DSM_PRT_CFG",
+  "RC_GHST_PRT_CFG",
+  "RC_GHST_TEL_EN",
+  "RC_SBUS_PRT_CFG",
+  "RD_MAX_THR_YAW_R",
+  "RD_MISS_SPD_GAIN",
+  "RD_TRANS_DRV_TRN",
+  "RD_TRANS_TRN_DRV",
+  "RD_WHEEL_TRACK",
+  "RM_COURSE_CTL_TH",
+  "RM_MAX_THR_YAW_R",
+  "RM_MISS_SPD_GAIN",
+  "RM_WHEEL_TRACK",
+  "RO_ACCEL_LIM",
+  "RO_DECEL_LIM",
+  "RO_JERK_LIM",
+  "RO_MAX_THR_SPEED",
+  "RO_SPEED_I",
+  "RO_SPEED_LIM",
+  "RO_SPEED_P",
+  "RO_SPEED_TH",
+  "RO_YAW_ACCEL_LIM",
+  "RO_YAW_DECEL_LIM",
+  "RO_YAW_P",
+  "RO_YAW_RATE_I",
+  "RO_YAW_RATE_LIM",
+  "RO_YAW_RATE_P",
+  "RO_YAW_RATE_TH",
+  "RO_YAW_STICK_DZ",
+  "RPM_CAP_ENABLE",
+  "RPM_PULS_PER_REV",
+  "SCH16T_ACC_FILT",
+  "SCH16T_DECIM",
+  "SCH16T_GYRO_FILT",
+  "SENS_DPRES_REV",
+  "SENS_EN_AGPSIM",
+  "SENS_EN_AUAVX",
+  "SENS_EN_SCH16T",
+  "SENS_FLOW_SCALE",
+  "SENS_TFMINI_HW",
+  "SIM_AGP_FAIL",
+  "SIM_GZ_SV_MAXA1",
+  "SIM_GZ_SV_MAXA2",
+  "SIM_GZ_SV_MAXA3",
+  "SIM_GZ_SV_MAXA4",
+  "SIM_GZ_SV_MAXA5",
+  "SIM_GZ_SV_MAXA6",
+  "SIM_GZ_SV_MAXA7",
+  "SIM_GZ_SV_MAXA8",
+  "SIM_GZ_SV_MINA1",
+  "SIM_GZ_SV_MINA2",
+  "SIM_GZ_SV_MINA3",
+  "SIM_GZ_SV_MINA4",
+  "SIM_GZ_SV_MINA5",
+  "SIM_GZ_SV_MINA6",
+  "SIM_GZ_SV_MINA7",
+  "SIM_GZ_SV_MINA8",
+  "SIM_GZ_WH_DIS3",
+  "SIM_GZ_WH_DIS4",
+  "SIM_GZ_WH_FAIL3",
+  "SIM_GZ_WH_FAIL4",
+  "SIM_GZ_WH_FUNC3",
+  "SIM_GZ_WH_FUNC4",
+  "SIM_GZ_WH_MAX3",
+  "SIM_GZ_WH_MAX4",
+  "SIM_GZ_WH_MIN3",
+  "SIM_GZ_WH_MIN4",
+  "SYS_HAS_NUM_OF",
+  "SYS_PARAM_VER",
+  "UAVCAN_ECU_FUELT",
+  "UAVCAN_ECU_MAXF",
+  "UAVCAN_SUB_FUEL",
+  "UCAN1_FB0_SUB",
+  "UCAN1_FB1_SUB",
+  "UCAN1_FB2_SUB",
+  "UCAN1_FB3_SUB",
+  "UCAN1_FB4_SUB",
+  "UCAN1_FB5_SUB",
+  "UCAN1_FB6_SUB",
+  "UCAN1_FB7_SUB",
+  "UCAN1_READ_PUB",
+  "UXRCE_DDS_RX_TO",
+  "UXRCE_DDS_TX_TO",
+  "VERTIQ_IO_CFG",
+  "VOXL2_IO_CMAX",
+  "VOXL2_IO_CMIN",
+  "VOXL2_IO_DIS",
+  "VOXL2_IO_FUNC5",
+  "VOXL2_IO_FUNC6",
+  "VOXL2_IO_FUNC7",
+  "VOXL2_IO_FUNC8",
+  "VOXL_ESC_GPIO_CH",
+  "VTQ_ARM_BEHAVE",
+  "VTQ_BAUD",
+  "VTQ_CONTROL_MODE",
+  "VTQ_DISARM_TRIG",
+  "VTQ_DISARM_VELO",
+  "VTQ_FC_DIR",
+  "VTQ_IO_DIS0",
+  "VTQ_IO_DIS1",
+  "VTQ_IO_DIS10",
+  "VTQ_IO_DIS11",
+  "VTQ_IO_DIS12",
+  "VTQ_IO_DIS13",
+  "VTQ_IO_DIS14",
+  "VTQ_IO_DIS15",
+  "VTQ_IO_DIS2",
+  "VTQ_IO_DIS3",
+  "VTQ_IO_DIS4",
+  "VTQ_IO_DIS5",
+  "VTQ_IO_DIS6",
+  "VTQ_IO_DIS7",
+  "VTQ_IO_DIS8",
+  "VTQ_IO_DIS9",
+  "VTQ_IO_FAIL0",
+  "VTQ_IO_FAIL1",
+  "VTQ_IO_FAIL10",
+  "VTQ_IO_FAIL11",
+  "VTQ_IO_FAIL12",
+  "VTQ_IO_FAIL13",
+  "VTQ_IO_FAIL14",
+  "VTQ_IO_FAIL15",
+  "VTQ_IO_FAIL2",
+  "VTQ_IO_FAIL3",
+  "VTQ_IO_FAIL4",
+  "VTQ_IO_FAIL5",
+  "VTQ_IO_FAIL6",
+  "VTQ_IO_FAIL7",
+  "VTQ_IO_FAIL8",
+  "VTQ_IO_FAIL9",
+  "VTQ_IO_FUNC0",
+  "VTQ_IO_FUNC1",
+  "VTQ_IO_FUNC10",
+  "VTQ_IO_FUNC11",
+  "VTQ_IO_FUNC12",
+  "VTQ_IO_FUNC13",
+  "VTQ_IO_FUNC14",
+  "VTQ_IO_FUNC15",
+  "VTQ_IO_FUNC2",
+  "VTQ_IO_FUNC3",
+  "VTQ_IO_FUNC4",
+  "VTQ_IO_FUNC5",
+  "VTQ_IO_FUNC6",
+  "VTQ_IO_FUNC7",
+  "VTQ_IO_FUNC8",
+  "VTQ_IO_FUNC9",
+  "VTQ_IO_MAX0",
+  "VTQ_IO_MAX1",
+  "VTQ_IO_MAX10",
+  "VTQ_IO_MAX11",
+  "VTQ_IO_MAX12",
+  "VTQ_IO_MAX13",
+  "VTQ_IO_MAX14",
+  "VTQ_IO_MAX15",
+  "VTQ_IO_MAX2",
+  "VTQ_IO_MAX3",
+  "VTQ_IO_MAX4",
+  "VTQ_IO_MAX5",
+  "VTQ_IO_MAX6",
+  "VTQ_IO_MAX7",
+  "VTQ_IO_MAX8",
+  "VTQ_IO_MAX9",
+  "VTQ_IO_MIN0",
+  "VTQ_IO_MIN1",
+  "VTQ_IO_MIN10",
+  "VTQ_IO_MIN11",
+  "VTQ_IO_MIN12",
+  "VTQ_IO_MIN13",
+  "VTQ_IO_MIN14",
+  "VTQ_IO_MIN15",
+  "VTQ_IO_MIN2",
+  "VTQ_IO_MIN3",
+  "VTQ_IO_MIN4",
+  "VTQ_IO_MIN5",
+  "VTQ_IO_MIN6",
+  "VTQ_IO_MIN7",
+  "VTQ_IO_MIN8",
+  "VTQ_IO_MIN9",
+  "VTQ_IO_REV",
+  "VTQ_MAX_VELOCITY",
+  "VTQ_MAX_VOLTS",
+  "VTQ_MOTOR_DIR",
+  "VTQ_NUM_CVS",
+  "VTQ_PULSE_V_LIM",
+  "VTQ_PULSE_V_MODE",
+  "VTQ_REDO_READ",
+  "VTQ_TELEM_IDS_1",
+  "VTQ_TELEM_IDS_2",
+  "VTQ_THROTTLE_CVI",
+  "VTQ_TQUE_OFF_ANG",
+  "VTQ_TRGT_MOD_ID",
+  "VTQ_VELO_CUTOFF",
+  "VTQ_X_CVI",
+  "VTQ_Y_CVI",
+  "VTQ_ZERO_ANGLE"
+ ],
+ "changed": {
+  "ASPD_DO_CHECKS": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "First principle check (airspeed change vs. throttle and pitch)",
+      "key": 4
+     }
+    ]
+   },
+   "max": {
+    "from": 15,
+    "to": 31
+   }
+  },
+  "ASPD_FS_T_START": {
+   "max": {
+    "from": 1000,
+    "to": null
+   },
+   "type": {
+    "from": "Int32",
+    "to": "Float"
+   }
+  },
+  "ASPD_FS_T_STOP": {
+   "default": {
+    "from": 2,
+    "to": 1.0
+   },
+   "max": {
+    "from": 10,
+    "to": null
+   },
+   "min": {
+    "from": 1,
+    "to": 0.0
+   },
+   "type": {
+    "from": "Int32",
+    "to": "Float"
+   }
+  },
+  "BAT1_N_CELLS": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "BAT1_R_INTERNAL": {
+   "default": {
+    "from": 0.005,
+    "to": -1.0
+   }
+  },
+  "BAT2_N_CELLS": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "BAT2_R_INTERNAL": {
+   "default": {
+    "from": 0.005,
+    "to": -1.0
+   }
+  },
+  "BAT3_N_CELLS": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "BAT3_R_INTERNAL": {
+   "default": {
+    "from": 0.005,
+    "to": -1.0
+   }
+  },
+  "BAT_CRIT_THR": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   }
+  },
+  "BAT_EMERGEN_THR": {
+   "max": {
+    "from": 0.1,
+    "to": 0.5
+   }
+  },
+  "CA_AIRFRAME": {
+   "values": {
+    "added": [
+     {
+      "description": "Rover (Mecanum)",
+      "key": 13
+     },
+     {
+      "description": "Spacecraft 2D",
+      "key": 14
+     },
+     {
+      "description": "Spacecraft 3D",
+      "key": 15
+     }
+    ]
+   }
+  },
+  "CA_R0_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R10_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R11_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R1_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R2_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R3_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R4_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R5_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R6_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R7_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R8_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_R9_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV0_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV1_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV2_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV3_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV4_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV5_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV6_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "CA_SV7_SLEW": {
+   "units": {
+    "from": null,
+    "to": "s"
+   }
+  },
+  "COM_ARM_BAT_MIN": {
+   "default": {
+    "from": 0.0,
+    "to": -1.0
+   },
+   "min": {
+    "from": 0.0,
+    "to": -1.0
+   }
+  },
+  "COM_ARM_WO_GPS": {
+   "values": {
+    "added": [
+     {
+      "description": "Disabled",
+      "key": 2
+     }
+    ],
+    "changed": [
+     {
+      "from": "Require GPS lock to arm",
+      "key": 0,
+      "to": "Deny arming"
+     },
+     {
+      "from": "Allow arming without GPS",
+      "key": 1,
+      "to": "Warning only"
+     }
+    ]
+   }
+  },
+  "COM_OBL_RC_ACT": {
+   "values": {
+    "changed": [
+     {
+      "from": "Manual",
+      "key": 2,
+      "to": "Stabilized"
+     }
+    ]
+   }
+  },
+  "COM_POSCTL_NAVL": {
+   "values": {
+    "changed": [
+     {
+      "from": "Altitude/Manual",
+      "key": 0,
+      "to": "Altitude mode"
+     },
+     {
+      "from": "Land/Descend",
+      "key": 1,
+      "to": "Land mode (descend)"
+     }
+    ]
+   }
+  },
+  "COM_RCL_EXCEPT": {
+   "max": {
+    "from": 31,
+    "to": 7
+   }
+  },
+  "EKF2_AGP_CTRL": {
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "EKF2_EV_CTRL": {
+   "default": {
+    "from": 15,
+    "to": 0
+   }
+  },
+  "EKF2_GPS_CHECK": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "Spoofing",
+      "key": 9
+     }
+    ],
+    "changed": [
+     {
+      "from": "Min sat count (EKF2_REQ_NSATS)",
+      "key": 0,
+      "to": "Sat count (EKF2_REQ_NSATS)"
+     },
+     {
+      "from": "Max PDOP (EKF2_REQ_PDOP)",
+      "key": 1,
+      "to": "PDOP (EKF2_REQ_PDOP)"
+     },
+     {
+      "from": "Max horizontal position error (EKF2_REQ_EPH)",
+      "key": 2,
+      "to": "EPH (EKF2_REQ_EPH)"
+     },
+     {
+      "from": "Max vertical position error (EKF2_REQ_EPV)",
+      "key": 3,
+      "to": "EPV (EKF2_REQ_EPV)"
+     },
+     {
+      "from": "Max speed error (EKF2_REQ_SACC)",
+      "key": 4,
+      "to": "Speed accuracy (EKF2_REQ_SACC)"
+     },
+     {
+      "from": "Max horizontal position rate (EKF2_REQ_HDRIFT)",
+      "key": 5,
+      "to": "Horizontal position drift (EKF2_REQ_HDRIFT)"
+     },
+     {
+      "from": "Max vertical position rate (EKF2_REQ_VDRIFT)",
+      "key": 6,
+      "to": "Vertical position drift (EKF2_REQ_VDRIFT)"
+     },
+     {
+      "from": "Max horizontal speed (EKF2_REQ_HDRIFT)",
+      "key": 7,
+      "to": "Horizontal speed offset (EKF2_REQ_HDRIFT)"
+     },
+     {
+      "from": "Max vertical velocity discrepancy (EKF2_REQ_VDRIFT)",
+      "key": 8,
+      "to": "Vertical speed offset (EKF2_REQ_VDRIFT)"
+     }
+    ]
+   },
+   "default": {
+    "from": 245,
+    "to": 1023
+   },
+   "max": {
+    "from": 511,
+    "to": 1023
+   }
+  },
+  "EKF2_MAG_TYPE": {
+   "values": {
+    "added": [
+     {
+      "description": "Init",
+      "key": 6
+     }
+    ]
+   }
+  },
+  "EKF2_OF_CTRL": {
+   "default": {
+    "from": 0,
+    "to": 1
+   }
+  },
+  "HIL_ACT_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "INA226_CONFIG": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA226_CURRENT": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA226_SHUNT": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA228_CONFIG": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA228_CURRENT": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA228_SHUNT": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA238_CURRENT": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "INA238_SHUNT": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "LNDFW_AIRSPD_MAX": {
+   "max": {
+    "from": 20.0,
+    "to": 30.0
+   }
+  },
+  "LNDFW_VEL_XY_MAX": {
+   "max": {
+    "from": 10.0,
+    "to": 20.0
+   }
+  },
+  "LNDFW_XYACC_MAX": {
+   "max": {
+    "from": 15.0,
+    "to": 30.0
+   }
+  },
+  "MAV_0_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "Low Bandwidth",
+      "key": 13
+     }
+    ]
+   }
+  },
+  "MAV_1_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "Low Bandwidth",
+      "key": 13
+     }
+    ]
+   }
+  },
+  "MAV_2_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "Low Bandwidth",
+      "key": 13
+     }
+    ]
+   }
+  },
+  "MIS_DIST_1WP": {
+   "default": {
+    "from": 900.0,
+    "to": 10000.0
+   },
+   "max": {
+    "from": 10000.0,
+    "to": 100000.0
+   }
+  },
+  "MPC_POS_MODE": {
+   "values": {
+    "removed": [
+     {
+      "description": "Smoothed velocity",
+      "key": 3
+     }
+    ]
+   }
+  },
+  "MPC_THR_CURVE": {
+   "values": {
+    "added": [
+     {
+      "description": "Rescale to parameter",
+      "key": 2
+     }
+    ],
+    "changed": [
+     {
+      "from": "Rescale to hover thrust",
+      "key": 0,
+      "to": "Rescale to estimate"
+     },
+     {
+      "from": "No Rescale",
+      "key": 1,
+      "to": "No rescale"
+     }
+    ]
+   }
+  },
+  "MPC_VELD_LP": {
+   "max": {
+    "from": 10.0,
+    "to": 50.0
+   }
+  },
+  "MPC_YAW_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "yaw fixed",
+      "key": 5
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PD_GRIPPER_TO": {
+   "default": {
+    "from": 3.0,
+    "to": 1.0
+   }
+  },
+  "PWM_AUX_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     },
+     {
+      "description": "RPM Input",
+      "key": 2070
+     }
+    ]
+   }
+  },
+  "PWM_AUX_TIM0": {
+   "values": {
+    "removed": [
+     {
+      "description": "DShot1200",
+      "key": -2
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "RBCLW_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "RBCLW_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "RTL_TYPE": {
+   "values": {
+    "added": [
+     {
+      "description": "Return to the planned mission landing, or to home via the reverse mission path, whichever is closer by counting waypoints. Do not consider rally points.",
+      "key": 4
+     }
+    ]
+   }
+  },
+  "SDLOG_ALGORITHM": {
+   "values": {
+    "removed": [
+     {
+      "description": "AES",
+      "key": 3
+     }
+    ]
+   }
+  },
+  "SDLOG_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "depending on AUX1 RC channel",
+      "key": 3,
+      "to": "while manual input AUX1 >30%"
+     }
+    ]
+   }
+  },
+  "SENS_CM8JL65_R_0": {
+   "values": {
+    "added": [
+     {
+      "description": "ROTATION_BACKWARD_FACING",
+      "key": 4
+     }
+    ],
+    "removed": [
+     {
+      "description": "ROTATION_BACKWARD_FACING",
+      "key": 12
+     }
+    ]
+   }
+  },
+  "SENS_EN_SF45_CFG": {
+   "default": {
+    "from": 102,
+    "to": 0
+   }
+  },
+  "SF1XX_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Disabled during VTOL fast forward flight",
+      "key": 2,
+      "to": "Enabled in VTOL MC mode, listen to request from system in FW mode"
+     }
+    ]
+   }
+  },
+  "SF45_ORIENT_CFG": {
+   "default": {
+    "from": 0,
+    "to": 24
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Rotation upward",
+      "key": 24
+     },
+     {
+      "description": "Rotation downward",
+      "key": 25
+     }
+    ],
+    "removed": [
+     {
+      "description": "Rotation upward",
+      "key": 0
+     },
+     {
+      "description": "Rotation downward",
+      "key": 1
+     }
+    ]
+   }
+  },
+  "SF45_UPDATE_CFG": {
+   "default": {
+    "from": 1,
+    "to": 5
+   }
+  },
+  "SF45_YAW_CFG": {
+   "values": {
+    "added": [
+     {
+      "description": "Rotation backward",
+      "key": 4
+     },
+     {
+      "description": "Rotation left",
+      "key": 6
+     }
+    ],
+    "removed": [
+     {
+      "description": "Rotation backward",
+      "key": 1
+     },
+     {
+      "description": "Rotation left",
+      "key": 3
+     }
+    ]
+   }
+  },
+  "SIH_LOC_H0": {
+   "default": {
+    "from": 32.34,
+    "to": 489.4
+   }
+  },
+  "SIH_LOC_LAT0": {
+   "default": {
+    "from": 454671160,
+    "to": 47.397742
+   },
+   "max": {
+    "from": 850000000,
+    "to": 90.0
+   },
+   "min": {
+    "from": -850000000,
+    "to": -90.0
+   },
+   "type": {
+    "from": "Int32",
+    "to": "Float"
+   },
+   "units": {
+    "from": "deg*1e7",
+    "to": "deg"
+   }
+  },
+  "SIH_LOC_LON0": {
+   "default": {
+    "from": -737578370,
+    "to": 8.545594
+   },
+   "max": {
+    "from": 1800000000,
+    "to": 180.0
+   },
+   "min": {
+    "from": -1800000000,
+    "to": -180.0
+   },
+   "type": {
+    "from": "Int32",
+    "to": "Float"
+   },
+   "units": {
+    "from": "deg*1e7",
+    "to": "deg"
+   }
+  },
+  "SIH_VEHICLE_TYPE": {
+   "values": {
+    "added": [
+     {
+      "description": "Standard VTOL",
+      "key": 3
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_EC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_SV_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "SIM_GZ_WH_REV": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "SIM_GZ Wheels 3",
+      "key": 2
+     },
+     {
+      "description": "SIM_GZ Wheels 4",
+      "key": 3
+     }
+    ]
+   },
+   "max": {
+    "from": 3,
+    "to": 15
+   }
+  },
+  "SYS_DM_BACKEND": {
+   "values": {
+    "changed": [
+     {
+      "from": "Disabled",
+      "key": -1,
+      "to": "Dataman disabled"
+     },
+     {
+      "from": "default (SD card)",
+      "key": 0,
+      "to": "Default storage"
+     },
+     {
+      "from": "RAM (not persistent)",
+      "key": 1,
+      "to": "RAM storage"
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "TRIG_INTERFACE": {
+   "values": {
+    "changed": [
+     {
+      "from": "MAVLink (forward via MAV_CMD_IMAGE_START_CAPTURE)",
+      "key": 3,
+      "to": "MAVLink (Camera Protocol v1)"
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_RNG_MAX": {
+   "default": {
+    "from": 200.0,
+    "to": 999.0
+   }
+  },
+  "UAVCAN_RNG_MIN": {
+   "default": {
+    "from": 0.3,
+    "to": 0.0
+   }
+  },
+  "UAVCAN_SV_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL2_IO_MIN": {
+   "default": {
+    "from": 1000,
+    "to": 1100
+   }
+  },
+  "VOXL2_IO_REV": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "VOXL2 IO Output PWM Channel 5",
+      "key": 4
+     },
+     {
+      "description": "VOXL2 IO Output PWM Channel 6",
+      "key": 5
+     },
+     {
+      "description": "VOXL2 IO Output PWM Channel 7",
+      "key": 6
+     },
+     {
+      "description": "VOXL2 IO Output PWM Channel 8",
+      "key": 7
+     }
+    ]
+   },
+   "max": {
+    "from": 15,
+    "to": 255
+   }
+  },
+  "VOXL_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VOXL_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "IC Engine Ignition",
+      "key": 450
+     },
+     {
+      "description": "IC Engine Throttle",
+      "key": 451
+     },
+     {
+      "description": "IC Engine Choke",
+      "key": 452
+     },
+     {
+      "description": "IC Engine Starter",
+      "key": 453
+     }
+    ]
+   }
+  },
+  "VT_FWD_THRUST_EN": {
+   "values": {
+    "changed": [
+     {
+      "from": "Enabled if distance to ground above MPC_LAND_ALT1",
+      "key": 2,
+      "to": "Enabled if above MPC_LAND_ALT1"
+     },
+     {
+      "from": "Enabled if distance to ground above MPC_LAND_ALT2",
+      "key": 3,
+      "to": "Enabled if above MPC_LAND_ALT2"
+     },
+     {
+      "from": "Enabled if distance to ground above MPC_LAND_ALT1 (except LANDING)",
+      "key": 5,
+      "to": "Enabled if above MPC_LAND_ALT1 (except LANDING)"
+     },
+     {
+      "from": "Enabled if distance to ground above MPC_LAND_ALT2 (except LANDING)",
+      "key": 6,
+      "to": "Enabled if above MPC_LAND_ALT2 (except LANDING)"
+     }
+    ]
+   }
+  },
+  "VT_FWD_THRUST_SC": {
+   "max": {
+    "from": 2.0,
+    "to": 5.0
+   }
+  }
+ },
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "99c40407ffd7ac184e2d7b4b293f36f10fe561ef",
+  "tag": "v1.15.4"
+ },
+ "removed": {
+  "BAT1_V_LOAD_DROP": {},
+  "BAT2_V_LOAD_DROP": {},
+  "BAT3_V_LOAD_DROP": {},
+  "BAT_N_CELLS": {},
+  "BAT_V_CHARGED": {},
+  "BAT_V_EMPTY": {},
+  "BAT_V_LOAD_DROP": {},
+  "COM_ARM_EKF_HGT": {},
+  "COM_ARM_EKF_POS": {},
+  "COM_ARM_EKF_VEL": {},
+  "COM_ARM_EKF_YAW": {},
+  "COM_OBS_AVOID": {},
+  "COM_POS_FS_DELAY": {},
+  "EKF2_TERR_MASK": {},
+  "FW_SPOILERS_DESC": {},
+  "MIS_PD_TO": {},
+  "MOT_SLEW_MAX": {},
+  "PD_GRIPPER_EN": {},
+  "RC_MAP_ACRO_SW": {},
+  "RC_MAP_MAN_SW": {},
+  "RC_MAP_POSCTL_SW": {},
+  "RC_MAP_RATT_SW": {},
+  "RC_MAP_STAB_SW": {},
+  "RDD_ANG_SCALE": {},
+  "RDD_I_ANG_VEL": {},
+  "RDD_I_SPEED": {},
+  "RDD_MAX_ACCEL": {},
+  "RDD_MAX_JERK": {},
+  "RDD_P_ANG_VEL": {},
+  "RDD_P_HEADING": {},
+  "RDD_P_SPEED": {},
+  "RDD_SPEED_SCALE": {},
+  "RDD_WHEEL_BASE": {},
+  "RDD_WHEEL_RADIUS": {},
+  "RDD_WHEEL_SPEED": {}
+ },
+ "to": {
+  "commit": "6ea3539157ca358c70a515878b77077af7d4611d",
+  "tag": "v1.16.0"
+ }
+}

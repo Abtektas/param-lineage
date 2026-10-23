@@ -1,0 +1,17 @@
+{
+ "added": [
+  "SYS_HAS_GPS"
+ ],
+ "changed": {},
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "1682fd5671421ea52120c17aa2ed73dbd2457921",
+  "tag": "v1.12.1"
+ },
+ "removed": {},
+ "to": {
+  "commit": "ba0b512f0d39df673655995b9c8277eb608283e4",
+  "tag": "v1.12.2"
+ }
+}

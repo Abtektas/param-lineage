@@ -304,9 +304,18 @@ every tag.
 
 - `data/params/<NAME>.json`: the history of one parameter. A list of states,
   each valid over a range of tags, plus `renamed_from` / `renamed_to` links.
-- `data/changes/<from>..<to>.json`: added, removed (with curated kind),
-  renamed, and changes to type, default, min, max, units, enum values, bitmask
-  bits and reboot-required.
+- `data/changes/<from>..<to>.json`, one per pair of consecutive tracked tags
+  (`python -m paramlineage.changes --all`; format in
+  `schema/changes.schema.json`): added, removed (with the curated kind and
+  successors, and the curated status of the pair), and changes to type,
+  default, min, max, units, enum values, bitmask bits and reboot-required.
+  Descriptions, group, category, decimal places, increment and volatile are
+  not compared. A change between releases further apart is built from the
+  snapshots when asked for.
+- The views show PX4's metadata as its generators write it. For example
+  v1.18.0-rc1 defines `RC*_REV` as `int32` with values, but the generator
+  writes values only for enum and float parameters, so the change reads
+  "values removed".
 
 Floats are compared as IEEE-754 float32, the way PX4 stores them, so a
 default written as `0.1` in one release and `0.100000001` in another is not

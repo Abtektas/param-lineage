@@ -1,0 +1,15 @@
+{
+ "added": [],
+ "changed": {},
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "6ea3539157ca358c70a515878b77077af7d4611d",
+  "tag": "v1.16.0"
+ },
+ "removed": {},
+ "to": {
+  "commit": "94cb2012792b2ae89f0b147cfee53ee31ae550be",
+  "tag": "v1.16.1"
+ }
+}

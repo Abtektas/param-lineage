@@ -1,0 +1,104 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/Abtektas/param-lineage/schema/changes.schema.json",
+ "title": "param-lineage changes",
+ "description": "What differs between the parameters of two consecutive tracked PX4 releases (data/changes/<from>..<to>.json), built from the snapshots and the curated facts; see docs/DESIGN.md.",
+ "type": "object",
+ "required": ["format", "from", "to", "curated", "added", "removed", "changed"],
+ "additionalProperties": false,
+ "properties": {
+  "format": {"const": 1, "description": "Layout of this file. Changes when a field is added, renamed or removed."},
+  "from": {"$ref": "#/$defs/release"},
+  "to": {"$ref": "#/$defs/release"},
+  "curated": {
+   "enum": ["complete", "partial", "not-started", "none"],
+   "description": "The status of the curated facts of this pair; none when there is no file. Only with complete does every removed parameter have a kind."
+  },
+  "added": {"type": "array", "items": {"$ref": "#/$defs/name"}, "description": "Parameters of 'to' that 'from' does not have."},
+  "removed": {
+   "type": "object",
+   "description": "Parameters of 'from' that 'to' does not have, with the kind and successors of their curated entry, if any.",
+   "propertyNames": {"$ref": "#/$defs/name"},
+   "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "kind": {"enum": ["migrated", "renamed", "replaced", "fixed", "removed"]},
+     "successors": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/name"}}
+    }
+   }
+  },
+  "changed": {
+   "type": "object",
+   "description": "Parameters of both releases whose compared fields differ. Default, min and max of a Float parameter are compared as float32. Descriptions, group, category, decimal places, increment and volatile are not compared.",
+   "propertyNames": {"$ref": "#/$defs/name"},
+   "additionalProperties": {
+    "type": "object",
+    "minProperties": 1,
+    "additionalProperties": false,
+    "properties": {
+     "type": {"$ref": "#/$defs/fromTo"},
+     "default": {"$ref": "#/$defs/fromTo"},
+     "min": {"$ref": "#/$defs/fromTo"},
+     "max": {"$ref": "#/$defs/fromTo"},
+     "units": {"$ref": "#/$defs/fromTo"},
+     "rebootRequired": {"$ref": "#/$defs/fromTo"},
+     "values": {"$ref": "#/$defs/labels"},
+     "bitmask": {"$ref": "#/$defs/labels"}
+    }
+   }
+  }
+ },
+ "$defs": {
+  "name": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$", "maxLength": 16},
+  "release": {
+   "type": "object",
+   "required": ["tag", "commit"],
+   "additionalProperties": false,
+   "properties": {
+    "tag": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(-(alpha|beta|rc)[0-9]+)?$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+   }
+  },
+  "fromTo": {
+   "type": "object",
+   "required": ["from", "to"],
+   "additionalProperties": false,
+   "description": "null: the field is not set in that release.",
+   "properties": {
+    "from": {"type": ["string", "number", "boolean", "null"]},
+    "to": {"type": ["string", "number", "boolean", "null"]}
+   }
+  },
+  "labels": {
+   "type": "object",
+   "minProperties": 1,
+   "additionalProperties": false,
+   "description": "Enum values (key: the value) or bitmask bits (key: the bit index) that were added, removed, or kept with another description.",
+   "properties": {
+    "added": {"$ref": "#/$defs/described"},
+    "removed": {"$ref": "#/$defs/described"},
+    "changed": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "object",
+      "required": ["key", "from", "to"],
+      "additionalProperties": false,
+      "properties": {"key": {"type": "number"}, "from": {"type": "string"}, "to": {"type": "string"}}
+     }
+    }
+   }
+  },
+  "described": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": ["key", "description"],
+    "additionalProperties": false,
+    "properties": {"key": {"type": "number"}, "description": {"type": "string"}}
+   }
+  }
+ }
+}

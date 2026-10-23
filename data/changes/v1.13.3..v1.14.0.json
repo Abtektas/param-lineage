@@ -1,0 +1,5570 @@
+{
+ "added": [
+  "ADSB_CALLSIGN_1",
+  "ADSB_CALLSIGN_2",
+  "ADSB_EMERGC",
+  "ADSB_EMIT_TYPE",
+  "ADSB_GPS_OFF_LAT",
+  "ADSB_GPS_OFF_LON",
+  "ADSB_ICAO_ID",
+  "ADSB_ICAO_SPECL",
+  "ADSB_IDENT",
+  "ADSB_LEN_WIDTH",
+  "ADSB_LIST_MAX",
+  "ADSB_MAX_SPEED",
+  "ADSB_SQUAWK",
+  "ASPD_SCALE_NSD",
+  "ASPD_WERR_THR",
+  "ASPD_WIND_NSD",
+  "CANNODE_PUB_MBD",
+  "CANNODE_SUB_MBD",
+  "CANNODE_SUB_RTCM",
+  "CA_FAILURE_MODE",
+  "CA_HELI_PITCH_C0",
+  "CA_HELI_PITCH_C1",
+  "CA_HELI_PITCH_C2",
+  "CA_HELI_PITCH_C3",
+  "CA_HELI_PITCH_C4",
+  "CA_HELI_THR_C0",
+  "CA_HELI_THR_C1",
+  "CA_HELI_THR_C2",
+  "CA_HELI_THR_C3",
+  "CA_HELI_THR_C4",
+  "CA_HELI_YAW_CCW",
+  "CA_HELI_YAW_CP_O",
+  "CA_HELI_YAW_CP_S",
+  "CA_HELI_YAW_TH_S",
+  "CA_R10_SLEW",
+  "CA_R11_SLEW",
+  "CA_R8_SLEW",
+  "CA_R9_SLEW",
+  "CA_ROTOR10_AX",
+  "CA_ROTOR10_AY",
+  "CA_ROTOR10_AZ",
+  "CA_ROTOR10_CT",
+  "CA_ROTOR10_KM",
+  "CA_ROTOR10_PX",
+  "CA_ROTOR10_PY",
+  "CA_ROTOR10_PZ",
+  "CA_ROTOR10_TILT",
+  "CA_ROTOR11_AX",
+  "CA_ROTOR11_AY",
+  "CA_ROTOR11_AZ",
+  "CA_ROTOR11_CT",
+  "CA_ROTOR11_KM",
+  "CA_ROTOR11_PX",
+  "CA_ROTOR11_PY",
+  "CA_ROTOR11_PZ",
+  "CA_ROTOR11_TILT",
+  "CA_ROTOR8_AX",
+  "CA_ROTOR8_AY",
+  "CA_ROTOR8_AZ",
+  "CA_ROTOR8_CT",
+  "CA_ROTOR8_KM",
+  "CA_ROTOR8_PX",
+  "CA_ROTOR8_PY",
+  "CA_ROTOR8_PZ",
+  "CA_ROTOR8_TILT",
+  "CA_ROTOR9_AX",
+  "CA_ROTOR9_AY",
+  "CA_ROTOR9_AZ",
+  "CA_ROTOR9_CT",
+  "CA_ROTOR9_KM",
+  "CA_ROTOR9_PX",
+  "CA_ROTOR9_PY",
+  "CA_ROTOR9_PZ",
+  "CA_ROTOR9_TILT",
+  "CA_SP0_ANG0",
+  "CA_SP0_ANG1",
+  "CA_SP0_ANG2",
+  "CA_SP0_ANG3",
+  "CA_SP0_ARM_L0",
+  "CA_SP0_ARM_L1",
+  "CA_SP0_ARM_L2",
+  "CA_SP0_ARM_L3",
+  "CA_SP0_COUNT",
+  "CA_SV_CS0_FLAP",
+  "CA_SV_CS0_SPOIL",
+  "CA_SV_CS1_FLAP",
+  "CA_SV_CS1_SPOIL",
+  "CA_SV_CS2_FLAP",
+  "CA_SV_CS2_SPOIL",
+  "CA_SV_CS3_FLAP",
+  "CA_SV_CS3_SPOIL",
+  "CA_SV_CS4_FLAP",
+  "CA_SV_CS4_SPOIL",
+  "CA_SV_CS5_FLAP",
+  "CA_SV_CS5_SPOIL",
+  "CA_SV_CS6_FLAP",
+  "CA_SV_CS6_SPOIL",
+  "CA_SV_CS7_FLAP",
+  "CA_SV_CS7_SPOIL",
+  "COM_ACT_FAIL_ACT",
+  "COM_ARM_HFLT_CHK",
+  "COM_FAIL_ACT_T",
+  "COM_FLT_TIME_MAX",
+  "COM_POS_LOW_EPH",
+  "COM_SPOOLUP_TIME",
+  "COM_WIND_MAX",
+  "CYPHAL_BAUD",
+  "CYPHAL_ENABLE",
+  "CYPHAL_ID",
+  "EKF2_BARO_CTRL",
+  "EKF2_DRAG_CTRL",
+  "EKF2_EV_CTRL",
+  "EKF2_EV_QMIN",
+  "EKF2_GPS_CTRL",
+  "EKF2_GRAV_NOISE",
+  "EKF2_GYR_B_LIM",
+  "EKF2_HGT_REF",
+  "EKF2_IMU_CTRL",
+  "EKF2_OF_CTRL",
+  "EKF2_OF_QMIN_GND",
+  "EKF2_RNG_CTRL",
+  "EKF2_WIND_NSD",
+  "FD_ACT_EN",
+  "FD_ACT_MOT_C2T",
+  "FD_ACT_MOT_THR",
+  "FD_ACT_MOT_TOUT",
+  "FLW_TGT_ALT_M",
+  "FLW_TGT_DST",
+  "FLW_TGT_FA",
+  "FLW_TGT_HT",
+  "FLW_TGT_MAX_VEL",
+  "FLW_TGT_RS",
+  "FW_AT_MAN_AUX",
+  "FW_LAUN_AC_T",
+  "FW_LAUN_AC_THLD",
+  "FW_LAUN_DETCN_ON",
+  "FW_LAUN_MOT_DEL",
+  "FW_LND_ABORT",
+  "FW_LND_AIRSPD",
+  "FW_LND_FL_SINK",
+  "FW_LND_FL_TIME",
+  "FW_LND_NUDGE",
+  "FW_LND_TD_OFF",
+  "FW_LND_TD_TIME",
+  "FW_MAN_YR_MAX",
+  "FW_PN_R_SLEW_MAX",
+  "FW_PR_D",
+  "FW_RR_D",
+  "FW_SPOILERS_DESC",
+  "FW_SPOILERS_LND",
+  "FW_SPOILERS_MAN",
+  "FW_THR_ASPD_MAX",
+  "FW_THR_ASPD_MIN",
+  "FW_THR_TRIM",
+  "FW_TKO_AIRSPD",
+  "FW_T_SPD_DEV_STD",
+  "FW_T_SPD_PRC_STD",
+  "FW_T_SPD_STD",
+  "FW_WIND_ARSP_SC",
+  "FW_WING_HEIGHT",
+  "FW_WING_SPAN",
+  "FW_YR_D",
+  "GPS_PITCH_OFFSET",
+  "GPS_UBX_BAUD2",
+  "GPS_UBX_CFG_INTF",
+  "IMU_GYRO_DNF_MIN",
+  "INA220_CONFIG",
+  "INA220_CUR_BAT",
+  "INA220_CUR_REG",
+  "INA220_SHUNT_BAT",
+  "INA220_SHUNT_REG",
+  "LNDFW_TRIG_TIME",
+  "MC_ORBIT_RAD_MAX",
+  "MIS_LND_ABRT_ALT",
+  "MIS_PD_TO",
+  "MIS_TKO_LAND_REQ",
+  "MODAL_IO_BAUD",
+  "MODAL_IO_CONFIG",
+  "MODAL_IO_FUNC1",
+  "MODAL_IO_FUNC2",
+  "MODAL_IO_FUNC3",
+  "MODAL_IO_FUNC4",
+  "MODAL_IO_MODE",
+  "MODAL_IO_REV",
+  "MODAL_IO_RPM_MAX",
+  "MODAL_IO_RPM_MIN",
+  "MODAL_IO_SDIR1",
+  "MODAL_IO_SDIR2",
+  "MODAL_IO_SDIR3",
+  "MODAL_IO_SDIR4",
+  "MODAL_IO_T_COSP",
+  "MODAL_IO_T_DEAD",
+  "MODAL_IO_T_EXPO",
+  "MODAL_IO_T_MINF",
+  "MODAL_IO_T_PERC",
+  "MODAL_IO_VLOG",
+  "MPC_LAND_RADIUS",
+  "MPC_VEL_MAN_BACK",
+  "MPC_VEL_MAN_SIDE",
+  "MSP_OSD_CONFIG",
+  "MXS_EXT_CFG",
+  "MXS_OP_MODE",
+  "MXS_SER_CFG",
+  "MXS_TARG_PORT",
+  "NAV_MIN_LTR_ALT",
+  "NAV_TRAFF_A_HOR",
+  "NAV_TRAFF_A_VER",
+  "NAV_TRAFF_COLL_T",
+  "OSD_CH_HEIGHT",
+  "OSD_DWELL_TIME",
+  "OSD_LOG_LEVEL",
+  "OSD_SCROLL_RATE",
+  "OSD_SYMBOLS",
+  "PCA9685_RATE",
+  "PD_GRIPPER_EN",
+  "PD_GRIPPER_TO",
+  "PD_GRIPPER_TYPE",
+  "RC_CRSF_PRT_CFG",
+  "RC_CRSF_TEL_EN",
+  "RC_ENG_MOT_TH",
+  "RC_MAP_ENG_MOT",
+  "RWTO_NPFG_PERIOD",
+  "RWTO_NUDGE",
+  "RWTO_ROT_AIRSPD",
+  "RWTO_ROT_TIME",
+  "SENS_EN_ADIS165X",
+  "SENS_EN_ARSPDSIM",
+  "SENS_EN_BAROSIM",
+  "SENS_EN_GPSSIM",
+  "SENS_EN_INA220",
+  "SENS_EN_MAGSIM",
+  "SENS_EN_SF45_CFG",
+  "SENS_EN_TF02PRO",
+  "SENS_EN_VL53L0X",
+  "SENS_FLOW_RATE",
+  "SENS_MAG_AUTOROT",
+  "SENS_MAG_SIDES",
+  "SENS_VN_CFG",
+  "SER_EXT2_BAUD",
+  "SER_MXS_BAUD",
+  "SF45_ORIENT_CFG",
+  "SF45_UPDATE_CFG",
+  "SF45_YAW_CFG",
+  "SIM_ARSPD_FAIL",
+  "SIM_GZ_EC_DIS1",
+  "SIM_GZ_EC_DIS2",
+  "SIM_GZ_EC_DIS3",
+  "SIM_GZ_EC_DIS4",
+  "SIM_GZ_EC_DIS5",
+  "SIM_GZ_EC_DIS6",
+  "SIM_GZ_EC_DIS7",
+  "SIM_GZ_EC_DIS8",
+  "SIM_GZ_EC_FAIL1",
+  "SIM_GZ_EC_FAIL2",
+  "SIM_GZ_EC_FAIL3",
+  "SIM_GZ_EC_FAIL4",
+  "SIM_GZ_EC_FAIL5",
+  "SIM_GZ_EC_FAIL6",
+  "SIM_GZ_EC_FAIL7",
+  "SIM_GZ_EC_FAIL8",
+  "SIM_GZ_EC_FUNC1",
+  "SIM_GZ_EC_FUNC2",
+  "SIM_GZ_EC_FUNC3",
+  "SIM_GZ_EC_FUNC4",
+  "SIM_GZ_EC_FUNC5",
+  "SIM_GZ_EC_FUNC6",
+  "SIM_GZ_EC_FUNC7",
+  "SIM_GZ_EC_FUNC8",
+  "SIM_GZ_EC_MAX1",
+  "SIM_GZ_EC_MAX2",
+  "SIM_GZ_EC_MAX3",
+  "SIM_GZ_EC_MAX4",
+  "SIM_GZ_EC_MAX5",
+  "SIM_GZ_EC_MAX6",
+  "SIM_GZ_EC_MAX7",
+  "SIM_GZ_EC_MAX8",
+  "SIM_GZ_EC_MIN1",
+  "SIM_GZ_EC_MIN2",
+  "SIM_GZ_EC_MIN3",
+  "SIM_GZ_EC_MIN4",
+  "SIM_GZ_EC_MIN5",
+  "SIM_GZ_EC_MIN6",
+  "SIM_GZ_EC_MIN7",
+  "SIM_GZ_EC_MIN8",
+  "SIM_GZ_EC_REV",
+  "SIM_GZ_EN",
+  "SIM_GZ_HOME_ALT",
+  "SIM_GZ_HOME_LAT",
+  "SIM_GZ_HOME_LON",
+  "SIM_GZ_SV_DIS1",
+  "SIM_GZ_SV_DIS2",
+  "SIM_GZ_SV_DIS3",
+  "SIM_GZ_SV_DIS4",
+  "SIM_GZ_SV_DIS5",
+  "SIM_GZ_SV_DIS6",
+  "SIM_GZ_SV_DIS7",
+  "SIM_GZ_SV_DIS8",
+  "SIM_GZ_SV_FAIL1",
+  "SIM_GZ_SV_FAIL2",
+  "SIM_GZ_SV_FAIL3",
+  "SIM_GZ_SV_FAIL4",
+  "SIM_GZ_SV_FAIL5",
+  "SIM_GZ_SV_FAIL6",
+  "SIM_GZ_SV_FAIL7",
+  "SIM_GZ_SV_FAIL8",
+  "SIM_GZ_SV_FUNC1",
+  "SIM_GZ_SV_FUNC2",
+  "SIM_GZ_SV_FUNC3",
+  "SIM_GZ_SV_FUNC4",
+  "SIM_GZ_SV_FUNC5",
+  "SIM_GZ_SV_FUNC6",
+  "SIM_GZ_SV_FUNC7",
+  "SIM_GZ_SV_FUNC8",
+  "SIM_GZ_SV_MAX1",
+  "SIM_GZ_SV_MAX2",
+  "SIM_GZ_SV_MAX3",
+  "SIM_GZ_SV_MAX4",
+  "SIM_GZ_SV_MAX5",
+  "SIM_GZ_SV_MAX6",
+  "SIM_GZ_SV_MAX7",
+  "SIM_GZ_SV_MAX8",
+  "SIM_GZ_SV_MIN1",
+  "SIM_GZ_SV_MIN2",
+  "SIM_GZ_SV_MIN3",
+  "SIM_GZ_SV_MIN4",
+  "SIM_GZ_SV_MIN5",
+  "SIM_GZ_SV_MIN6",
+  "SIM_GZ_SV_MIN7",
+  "SIM_GZ_SV_MIN8",
+  "SIM_GZ_SV_REV",
+  "UAVCAN_PUB_ARM",
+  "UWB_SENS_ROT",
+  "UXRCE_DDS_AG_IP",
+  "UXRCE_DDS_CFG",
+  "UXRCE_DDS_DOM_ID",
+  "UXRCE_DDS_KEY",
+  "UXRCE_DDS_PRT",
+  "VT_FW_DIFTHR_S_P",
+  "VT_FW_DIFTHR_S_R",
+  "VT_FW_DIFTHR_S_Y",
+  "VT_FW_QC_HMAX",
+  "VT_LND_PITCH_MIN",
+  "VT_PITCH_MIN",
+  "VT_PSHER_SLEW",
+  "VT_QC_ALT_LOSS",
+  "VT_QC_T_ALT_LOSS",
+  "VT_SPOILER_MC_LD",
+  "WEIGHT_BASE",
+  "WEIGHT_GROSS"
+ ],
+ "changed": {
+  "ASPD_DO_CHECKS": {
+   "bitmask": {
+    "changed": [
+     {
+      "from": "Data stuck (triggers if data is exactly constant for 2s)",
+      "key": 1,
+      "to": "Data stuck (triggers if data is exactly constant for 2s in FW mode)"
+     }
+    ]
+   }
+  },
+  "ASPD_SCALE_APPLY": {
+   "default": {
+    "from": 1,
+    "to": 2
+   }
+  },
+  "BAT1_R_INTERNAL": {
+   "default": {
+    "from": -1.0,
+    "to": 0.005
+   }
+  },
+  "BAT1_V_EMPTY": {
+   "default": {
+    "from": 3.5,
+    "to": 3.6
+   }
+  },
+  "BAT1_V_LOAD_DROP": {
+   "default": {
+    "from": 0.3,
+    "to": 0.1
+   }
+  },
+  "BAT2_R_INTERNAL": {
+   "default": {
+    "from": -1.0,
+    "to": 0.005
+   }
+  },
+  "BAT2_V_EMPTY": {
+   "default": {
+    "from": 3.5,
+    "to": 3.6
+   }
+  },
+  "BAT2_V_LOAD_DROP": {
+   "default": {
+    "from": 0.3,
+    "to": 0.1
+   }
+  },
+  "BAT_V_EMPTY": {
+   "default": {
+    "from": 3.5,
+    "to": 3.6
+   }
+  },
+  "CAL_ACC0_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC0_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC0_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC1_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC1_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC1_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC2_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC2_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC2_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC3_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC3_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_ACC3_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "m/s^2"
+   }
+  },
+  "CAL_GYRO0_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO0_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO0_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO1_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO1_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO1_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO2_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO2_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO2_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO3_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO3_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_GYRO3_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "rad/s"
+   }
+  },
+  "CAL_MAG0_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG0_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG0_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG1_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG1_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG1_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG2_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG2_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG2_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG3_XOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG3_YOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG3_ZOFF": {
+   "units": {
+    "from": "m",
+    "to": "gauss"
+   }
+  },
+  "CAL_MAG_SIDES": {
+   "max": {
+    "from": 63,
+    "to": null
+   },
+   "min": {
+    "from": 34,
+    "to": null
+   },
+   "values": {
+    "removed": [
+     {
+      "description": "Two side calibration",
+      "key": 34
+     },
+     {
+      "description": "Three side calibration",
+      "key": 38
+     },
+     {
+      "description": "Six side calibration",
+      "key": 63
+     }
+    ]
+   }
+  },
+  "CA_AIRFRAME": {
+   "values": {
+    "added": [
+     {
+      "description": "Helicopter",
+      "key": 10
+     }
+    ]
+   }
+  },
+  "CA_ROTOR_COUNT": {
+   "values": {
+    "added": [
+     {
+      "description": "9",
+      "key": 9
+     },
+     {
+      "description": "10",
+      "key": 10
+     },
+     {
+      "description": "11",
+      "key": 11
+     },
+     {
+      "description": "12",
+      "key": 12
+     }
+    ]
+   }
+  },
+  "CA_R_REV": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 8
+     },
+     {
+      "description": "Motor 10",
+      "key": 9
+     },
+     {
+      "description": "Motor 11",
+      "key": 10
+     },
+     {
+      "description": "Motor 12",
+      "key": 11
+     }
+    ]
+   },
+   "max": {
+    "from": 255,
+    "to": 4095
+   }
+  },
+  "CA_SV_CS0_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS1_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS2_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS3_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS4_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS5_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS6_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "CA_SV_CS7_TYPE": {
+   "default": {
+    "from": 1,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "(Not set)",
+      "key": 0
+     },
+     {
+      "description": "Left A-tail",
+      "key": 13
+     },
+     {
+      "description": "Right A-tail",
+      "key": 14
+     },
+     {
+      "description": "Single Channel Aileron",
+      "key": 15
+     },
+     {
+      "description": "Steering Wheel",
+      "key": 16
+     },
+     {
+      "description": "Left Spoiler",
+      "key": 17
+     },
+     {
+      "description": "Right Spoiler",
+      "key": 18
+     }
+    ],
+    "changed": [
+     {
+      "from": "Airbrakes",
+      "key": 11,
+      "to": "Airbrake"
+     }
+    ]
+   }
+  },
+  "COM_ARM_MAG_ANG": {
+   "default": {
+    "from": 45,
+    "to": 60
+   }
+  },
+  "COM_CPU_MAX": {
+   "default": {
+    "from": 90.0,
+    "to": 95.0
+   }
+  },
+  "COM_OBL_RC_ACT": {
+   "values": {
+    "changed": [
+     {
+      "from": "Lockdown",
+      "key": 7,
+      "to": "Disarm"
+     }
+    ],
+    "removed": [
+     {
+      "description": "Disabled",
+      "key": -1
+     }
+    ]
+   }
+  },
+  "COM_POSCTL_NAVL": {
+   "values": {
+    "changed": [
+     {
+      "from": "Altitude/Manual. Assume use of remote control after fallback. Switch to Altitude mode if a height estimate is available, else switch to MANUAL.",
+      "key": 0,
+      "to": "Altitude/Manual"
+     },
+     {
+      "from": "Land/Terminate. Assume no use of remote control after fallback. Switch to Land mode if a height estimate is available, else switch to TERMINATION.",
+      "key": 1,
+      "to": "Land/Descend"
+     }
+    ]
+   }
+  },
+  "COM_POS_FS_EPH": {
+   "min": {
+    "from": null,
+    "to": 0.0
+   }
+  },
+  "COM_QC_ACT": {
+   "values": {
+    "changed": [
+     {
+      "from": "No action: stay in current flight mode",
+      "key": -1,
+      "to": "Warning only"
+     }
+    ]
+   }
+  },
+  "COM_VEL_FS_EVH": {
+   "min": {
+    "from": null,
+    "to": 0.0
+   }
+  },
+  "COM_WIND_WARN": {
+   "max": {
+    "from": 30.0,
+    "to": null
+   }
+  },
+  "DSHOT_TEL_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "EKF2_AID_MASK": {
+   "bitmask": {
+    "changed": [
+     {
+      "from": "use GPS",
+      "key": 0,
+      "to": "unused"
+     },
+     {
+      "from": "use optical flow",
+      "key": 1,
+      "to": "unused"
+     },
+     {
+      "from": "inhibit IMU bias estimation",
+      "key": 2,
+      "to": "unused"
+     },
+     {
+      "from": "vision position fusion",
+      "key": 3,
+      "to": "unused"
+     },
+     {
+      "from": "vision yaw fusion",
+      "key": 4,
+      "to": "unused"
+     },
+     {
+      "from": "multi-rotor drag fusion",
+      "key": 5,
+      "to": "unused"
+     },
+     {
+      "from": "rotate external vision",
+      "key": 6,
+      "to": "unused"
+     },
+     {
+      "from": "GPS yaw fusion",
+      "key": 7,
+      "to": "unused"
+     },
+     {
+      "from": "vision velocity fusion",
+      "key": 8,
+      "to": "unused"
+     }
+    ]
+   },
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "EKF2_EVA_NOISE": {
+   "default": {
+    "from": 0.05,
+    "to": 0.1
+   }
+  },
+  "EKF2_EV_DELAY": {
+   "default": {
+    "from": 175.0,
+    "to": 0.0
+   }
+  },
+  "EKF2_EV_NOISE_MD": {
+   "values": {
+    "changed": [
+     {
+      "from": "Disabled",
+      "key": 0,
+      "to": "EV reported variance (parameter lower bound)"
+     },
+     {
+      "from": "Enabled",
+      "key": 1,
+      "to": "EV noise parameters"
+     }
+    ]
+   }
+  },
+  "EKF2_MAG_YAWLIM": {
+   "default": {
+    "from": 0.25,
+    "to": 0.2
+   }
+  },
+  "FD_FAIL_P": {
+   "min": {
+    "from": 60,
+    "to": 0
+   }
+  },
+  "FD_FAIL_R": {
+   "min": {
+    "from": 60,
+    "to": 0
+   }
+  },
+  "FW_ACRO_X_MAX": {
+   "min": {
+    "from": 45.0,
+    "to": 10.0
+   }
+  },
+  "FW_ACRO_Y_MAX": {
+   "min": {
+    "from": 45.0,
+    "to": 10.0
+   }
+  },
+  "FW_ACRO_Z_MAX": {
+   "max": {
+    "from": 180.0,
+    "to": 720.0
+   }
+  },
+  "FW_AIRSPD_MAX": {
+   "max": {
+    "from": 40.0,
+    "to": null
+   }
+  },
+  "FW_AIRSPD_MIN": {
+   "max": {
+    "from": 40.0,
+    "to": null
+   }
+  },
+  "FW_AIRSPD_STALL": {
+   "max": {
+    "from": 40.0,
+    "to": null
+   }
+  },
+  "FW_AIRSPD_TRIM": {
+   "max": {
+    "from": 40.0,
+    "to": null
+   }
+  },
+  "FW_ARSP_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "Normal (use airspeed if available)",
+      "key": 0,
+      "to": "Use airspeed in controller"
+     },
+     {
+      "from": "Airspeed disabled",
+      "key": 1,
+      "to": "Do not use airspeed in controller"
+     }
+    ]
+   }
+  },
+  "FW_DTRIM_P_VMAX": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "FW_DTRIM_P_VMIN": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "FW_DTRIM_R_VMAX": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "FW_DTRIM_R_VMIN": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "FW_DTRIM_Y_VMAX": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "FW_DTRIM_Y_VMIN": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "FW_LND_FLALT": {
+   "default": {
+    "from": 3.0,
+    "to": 0.5
+   },
+   "max": {
+    "from": 25.0,
+    "to": null
+   }
+  },
+  "FW_LND_FL_PMIN": {
+   "min": {
+    "from": 0.0,
+    "to": -5.0
+   }
+  },
+  "FW_LND_USETER": {
+   "default": {
+    "from": 0,
+    "to": 1
+   },
+   "max": {
+    "from": null,
+    "to": 2
+   },
+   "min": {
+    "from": null,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Calculate landing glide slope relative to the terrain estimate",
+      "key": 2
+     }
+    ],
+    "changed": [
+     {
+      "from": "Disabled",
+      "key": 0,
+      "to": "Disable the terrain estimate"
+     },
+     {
+      "from": "Enabled",
+      "key": 1,
+      "to": "Use the terrain estimate to trigger the flare (only)"
+     }
+    ]
+   }
+  },
+  "FW_MAN_P_MAX": {
+   "default": {
+    "from": 45.0,
+    "to": 30.0
+   }
+  },
+  "FW_PR_I": {
+   "max": {
+    "from": 0.5,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_PR_P": {
+   "max": {
+    "from": 1.0,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_P_LIM_MAX": {
+   "default": {
+    "from": 45.0,
+    "to": 30.0
+   }
+  },
+  "FW_P_LIM_MIN": {
+   "default": {
+    "from": -45.0,
+    "to": -30.0
+   }
+  },
+  "FW_P_RMAX_NEG": {
+   "max": {
+    "from": 90.0,
+    "to": 180.0
+   }
+  },
+  "FW_P_RMAX_POS": {
+   "max": {
+    "from": 90.0,
+    "to": 180.0
+   }
+  },
+  "FW_RR_I": {
+   "max": {
+    "from": 0.2,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_RR_P": {
+   "max": {
+    "from": 1.0,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_R_RMAX": {
+   "max": {
+    "from": 90.0,
+    "to": 180.0
+   }
+  },
+  "FW_R_TC": {
+   "min": {
+    "from": 0.4,
+    "to": 0.2
+   }
+  },
+  "FW_THR_IDLE": {
+   "default": {
+    "from": 0.15,
+    "to": 0.0
+   }
+  },
+  "FW_T_I_GAIN_THR": {
+   "default": {
+    "from": 0.3,
+    "to": 0.05
+   }
+  },
+  "FW_WR_I": {
+   "max": {
+    "from": 0.5,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_WR_IMAX": {
+   "default": {
+    "from": 1.0,
+    "to": 0.4
+   }
+  },
+  "FW_WR_P": {
+   "max": {
+    "from": 1.0,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_YR_I": {
+   "max": {
+    "from": 50.0,
+    "to": 10.0
+   }
+  },
+  "FW_YR_P": {
+   "max": {
+    "from": 1.0,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.005,
+    "to": 0.0
+   }
+  },
+  "FW_Y_RMAX": {
+   "max": {
+    "from": 90.0,
+    "to": 180.0
+   }
+  },
+  "GF_PREDICT": {
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "GPS_1_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "GPS_1_PROTOCOL": {
+   "max": {
+    "from": 5,
+    "to": 7
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Septentrio (SBF)",
+      "key": 7
+     }
+    ]
+   }
+  },
+  "GPS_2_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "GPS_2_PROTOCOL": {
+   "max": {
+    "from": 5,
+    "to": 6
+   }
+  },
+  "GPS_UBX_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "Rover with Static Base on UART2 (similar to Default, except coming in on UART2)",
+      "key": 5
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "HIL_ACT_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "IMU_GYRO_DNF_BW": {
+   "units": {
+    "from": null,
+    "to": "Hz"
+   }
+  },
+  "ISBD_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "LNDFW_VEL_Z_MAX": {
+   "default": {
+    "from": 2.0,
+    "to": 1.0
+   }
+  },
+  "LNDMC_Z_VEL_MAX": {
+   "default": {
+    "from": 0.5,
+    "to": 0.25
+   },
+   "min": {
+    "from": null,
+    "to": 0.0
+   }
+  },
+  "MAN_ARM_GESTURE": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "MAV_0_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "MAV_0_FLOW_CTRL": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "MAV_0_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "uAvionix",
+      "key": 12
+     }
+    ]
+   }
+  },
+  "MAV_1_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "MAV_1_FLOW_CTRL": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "MAV_1_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "uAvionix",
+      "key": 12
+     }
+    ]
+   }
+  },
+  "MAV_2_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "MAV_2_FLOW_CTRL": {
+   "rebootRequired": {
+    "from": false,
+    "to": true
+   }
+  },
+  "MAV_2_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "uAvionix",
+      "key": 12
+     }
+    ]
+   }
+  },
+  "MIS_DIST_1WP": {
+   "min": {
+    "from": 0.0,
+    "to": -1.0
+   }
+  },
+  "MPC_LAND_CRWL": {
+   "min": {
+    "from": 0.3,
+    "to": 0.1
+   }
+  },
+  "MPC_Z_VEL_MAX_DN": {
+   "default": {
+    "from": 1.0,
+    "to": 1.5
+   }
+  },
+  "MPC_Z_V_AUTO_DN": {
+   "default": {
+    "from": 1.0,
+    "to": 1.5
+   }
+  },
+  "NAV_DLL_ACT": {
+   "values": {
+    "changed": [
+     {
+      "from": "Lockdown",
+      "key": 6,
+      "to": "Disarm"
+     }
+    ]
+   }
+  },
+  "NAV_RCL_ACT": {
+   "values": {
+    "changed": [
+     {
+      "from": "Lockdown",
+      "key": 6,
+      "to": "Disarm"
+     }
+    ]
+   }
+  },
+  "PCA9685_DIS1": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS10": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS11": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS12": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS13": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS14": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS15": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS16": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS2": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS3": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS4": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS5": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS6": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS7": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS8": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_DIS9": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PCA9685_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PCA9685_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_DIS1": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS10": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS11": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS2": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS3": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS4": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS5": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS6": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS7": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS8": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_DIS9": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_AUX_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_AUX_TIM0": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_TIM1": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_TIM2": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "PWM_AUX_TIM3": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_DIS1": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS2": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS3": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS4": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS5": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS6": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS7": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_DIS8": {
+   "default": {
+    "from": 900,
+    "to": 1000
+   }
+  },
+  "PWM_MAIN_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_TIM0": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_TIM1": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "PWM_MAIN_TIM2": {
+   "values": {
+    "changed": [
+     {
+      "from": "PWM50",
+      "key": 50,
+      "to": "PWM 50 Hz"
+     },
+     {
+      "from": "PWM100",
+      "key": 100,
+      "to": "PWM 100 Hz"
+     },
+     {
+      "from": "PWM200",
+      "key": 200,
+      "to": "PWM 200 Hz"
+     },
+     {
+      "from": "PWM400",
+      "key": 400,
+      "to": "PWM 400 Hz"
+     }
+    ]
+   }
+  },
+  "RC_PORT_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "RTL_DESCEND_ALT": {
+   "max": {
+    "from": 100.0,
+    "to": null
+   },
+   "min": {
+    "from": 2.0,
+    "to": 0.0
+   }
+  },
+  "RTL_LAND_DELAY": {
+   "max": {
+    "from": 300.0,
+    "to": null
+   }
+  },
+  "RTL_LOITER_RAD": {
+   "max": {
+    "from": 1000.0,
+    "to": null
+   }
+  },
+  "RTL_MIN_DIST": {
+   "max": {
+    "from": 100.0,
+    "to": null
+   }
+  },
+  "RTL_RETURN_ALT": {
+   "max": {
+    "from": 150.0,
+    "to": null
+   }
+  },
+  "RWTO_HDG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Waypoint",
+      "key": 1,
+      "to": "Runway"
+     }
+    ]
+   }
+  },
+  "SDLOG_MODE": {
+   "values": {
+    "added": [
+     {
+      "description": "from 1st armed until shutdown",
+      "key": 4
+     }
+    ]
+   }
+  },
+  "SENS_CM8JL65_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "SENS_FLOW_MAXHGT": {
+   "default": {
+    "from": 3.0,
+    "to": 100.0
+   },
+   "max": {
+    "from": 25.0,
+    "to": 100.0
+   }
+  },
+  "SENS_FLOW_MAXR": {
+   "default": {
+    "from": 2.5,
+    "to": 8.0
+   }
+  },
+  "SENS_FLOW_MINHGT": {
+   "default": {
+    "from": 0.7,
+    "to": 0.08
+   }
+  },
+  "SENS_FLOW_ROT": {
+   "default": {
+    "from": 6,
+    "to": 0
+   },
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "SENS_GPS_MASK": {
+   "default": {
+    "from": 0,
+    "to": 7
+   }
+  },
+  "SENS_LEDDAR1_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "SENS_MAG_AUTOCAL": {
+   "default": {
+    "from": 0,
+    "to": 1
+   }
+  },
+  "SENS_SF0X_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "SENS_TFLOW_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "SENS_TFMINI_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "SENS_ULAND_CFG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "SYS_HAS_MAG": {
+   "values": {
+    "removed": [
+     {
+      "description": "Disabled",
+      "key": 0
+     },
+     {
+      "description": "Enabled",
+      "key": 1
+     }
+    ]
+   }
+  },
+  "SYS_USE_IO": {
+   "default": {
+    "from": 1,
+    "to": 0
+   }
+  },
+  "TAP_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TAP_ESC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "TEL_FRSKY_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "TEL_HOTT_CONFIG": {
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "TRIM_PITCH": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "TRIM_ROLL": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "TRIM_YAW": {
+   "max": {
+    "from": 0.25,
+    "to": 0.5
+   },
+   "min": {
+    "from": -0.25,
+    "to": -0.5
+   }
+  },
+  "UAVCAN_EC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_EC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SUB_BAT": {
+   "max": {
+    "from": null,
+    "to": 2
+   },
+   "min": {
+    "from": null,
+    "to": 0
+   },
+   "values": {
+    "added": [
+     {
+      "description": "Filter data",
+      "key": 2
+     }
+    ],
+    "changed": [
+     {
+      "from": "Disabled",
+      "key": 0,
+      "to": "Disable"
+     },
+     {
+      "from": "Enabled",
+      "key": 1,
+      "to": "Raw data"
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UAVCAN_SV_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC1": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC10": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC11": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC12": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC13": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC14": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC15": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC16": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC2": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC3": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC4": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC5": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC6": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC7": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC8": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UCAN1_ESC_FUNC9": {
+   "values": {
+    "added": [
+     {
+      "description": "Motor 9",
+      "key": 109
+     },
+     {
+      "description": "Motor 10",
+      "key": 110
+     },
+     {
+      "description": "Motor 11",
+      "key": 111
+     },
+     {
+      "description": "Motor 12",
+      "key": 112
+     },
+     {
+      "description": "Gripper",
+      "key": 430
+     },
+     {
+      "description": "Landing Gear Wheel",
+      "key": 440
+     }
+    ]
+   }
+  },
+  "UWB_PORT_CFG": {
+   "default": {
+    "from": 0,
+    "to": 102
+   },
+   "values": {
+    "changed": [
+     {
+      "from": "Pixhawk Payload Bus",
+      "key": 401,
+      "to": "EXT2"
+     }
+    ]
+   }
+  },
+  "VT_B_TRANS_DUR": {
+   "default": {
+    "from": 4.0,
+    "to": 10.0
+   },
+   "min": {
+    "from": 0.0,
+    "to": 0.1
+   }
+  },
+  "VT_FWD_THRUST_EN": {
+   "values": {
+    "changed": [
+     {
+      "from": "Disable FW forward actuation in hover.",
+      "key": 0,
+      "to": "Disabled"
+     },
+     {
+      "from": "Enable FW forward actuation in hover in altitude, position and auto modes (except LANDING).",
+      "key": 1,
+      "to": "Enabled (except LANDING)"
+     },
+     {
+      "from": "Enable FW forward actuation in hover in altitude, position and auto modes if above MPC_LAND_ALT1.",
+      "key": 2,
+      "to": "Enabled if distance to ground above MPC_LAND_ALT1"
+     },
+     {
+      "from": "Enable FW forward actuation in hover in altitude, position and auto modes if above MPC_LAND_ALT2.",
+      "key": 3,
+      "to": "Enabled if distance to ground above MPC_LAND_ALT2"
+     },
+     {
+      "from": "Enable FW forward actuation in hover in altitude, position and auto modes.",
+      "key": 4,
+      "to": "Enabled constantly"
+     },
+     {
+      "from": "Enable FW forward actuation in hover in altitude, position and auto modes if above MPC_LAND_ALT1 (except LANDING).",
+      "key": 5,
+      "to": "Enabled if distance to ground above MPC_LAND_ALT1 (except LANDING)"
+     },
+     {
+      "from": "Enable FW forward actuation in hover in altitude, position and auto modes if above MPC_LAND_ALT2 (except LANDING).",
+      "key": 6,
+      "to": "Enabled if distance to ground above MPC_LAND_ALT2 (except LANDING)"
+     }
+    ]
+   }
+  },
+  "VT_FW_DIFTHR_EN": {
+   "bitmask": {
+    "added": [
+     {
+      "description": "Yaw",
+      "key": 0
+     },
+     {
+      "description": "Roll",
+      "key": 1
+     },
+     {
+      "description": "Pitch",
+      "key": 2
+     }
+    ]
+   },
+   "max": {
+    "from": 1,
+    "to": 7
+   }
+  },
+  "VT_FW_MIN_ALT": {
+   "units": {
+    "from": null,
+    "to": "m"
+   }
+  },
+  "VT_FW_QC_P": {
+   "units": {
+    "from": null,
+    "to": "deg"
+   }
+  },
+  "VT_FW_QC_R": {
+   "units": {
+    "from": null,
+    "to": "deg"
+   }
+  },
+  "VT_F_TRANS_DUR": {
+   "min": {
+    "from": 0.0,
+    "to": 0.1
+   }
+  },
+  "VT_TILT_TRANS": {
+   "default": {
+    "from": 0.3,
+    "to": 0.4
+   }
+  },
+  "VT_TRANS_TIMEOUT": {
+   "min": {
+    "from": 0.0,
+    "to": 0.1
+   }
+  }
+ },
+ "curated": "none",
+ "format": 1,
+ "from": {
+  "commit": "1c8ab2a0d7db2d14a6f320ebd8766b5ffaea28fa",
+  "tag": "v1.13.3"
+ },
+ "removed": {
+  "ASPD_SC_P_NOISE": {},
+  "ASPD_W_P_NOISE": {},
+  "AVC_X_D": {},
+  "AVC_X_FF": {},
+  "AVC_X_I": {},
+  "AVC_X_I_LIM": {},
+  "AVC_X_K": {},
+  "AVC_X_P": {},
+  "AVC_Y_D": {},
+  "AVC_Y_FF": {},
+  "AVC_Y_I": {},
+  "AVC_Y_I_LIM": {},
+  "AVC_Y_K": {},
+  "AVC_Y_P": {},
+  "AVC_Z_D": {},
+  "AVC_Z_FF": {},
+  "AVC_Z_I": {},
+  "AVC_Z_I_LIM": {},
+  "AVC_Z_K": {},
+  "AVC_Z_P": {},
+  "CAL_MAG_ROT_AUTO": {},
+  "CANNODE_FLOW_ROT": {},
+  "CANNODE_GPS_RTCM": {},
+  "CBRK_ENGINEFAIL": {},
+  "CBRK_RATE_CTRL": {},
+  "CBRK_VELPOSERR": {},
+  "COM_BAT_ACT_T": {},
+  "COM_EF_C2T": {},
+  "COM_EF_THROT": {},
+  "COM_EF_TIME": {},
+  "COM_OBL_ACT": {},
+  "COM_POS_FS_EPV": {},
+  "COM_RCL_ACT_T": {},
+  "DSHOT_CONFIG": {},
+  "EKF2_HGT_MODE": {},
+  "EKF2_RNG_AID": {},
+  "EKF2_WIND_NOISE": {},
+  "EXFW_HDNG_P": {},
+  "EXFW_PITCH_P": {},
+  "EXFW_ROLL_P": {},
+  "FW_CLMBOUT_DIFF": {},
+  "FW_DTRIM_P_FLPS": {},
+  "FW_DTRIM_R_FLPS": {},
+  "FW_FLAPERON_SCL": {},
+  "FW_FLAPS_SCL": {},
+  "FW_L1_DAMPING": {},
+  "FW_L1_PERIOD": {},
+  "FW_L1_R_SLEW_MAX": {},
+  "FW_LND_AIRSPD_SC": {},
+  "FW_LND_HHDIST": {},
+  "FW_LND_HVIRT": {},
+  "FW_LND_TLALT": {},
+  "FW_THR_ALT_SCL": {},
+  "FW_THR_CRUISE": {},
+  "FW_THR_LND_MAX": {},
+  "FW_T_SPD_OMEGA": {},
+  "FW_T_TAS_R_TC": {},
+  "FW_USE_NPFG": {},
+  "LAUN_ALL_ON": {},
+  "LAUN_CAT_A": {},
+  "LAUN_CAT_MDEL": {},
+  "LAUN_CAT_PMAX": {},
+  "LAUN_CAT_T": {},
+  "MAV_ODOM_LP": {},
+  "MIS_DIST_WPS": {},
+  "MIS_LTRMIN_ALT": {},
+  "MIS_TAKEOFF_REQ": {},
+  "MNT_OB_LOCK_MODE": {},
+  "MNT_OB_NORM_MODE": {},
+  "MOT_ORDERING": {},
+  "MPC_SPOOLUP_TIME": {},
+  "NAV_AH_ALT": {},
+  "NAV_AH_LAT": {},
+  "NAV_AH_LON": {},
+  "NAV_FT_DST": {},
+  "NAV_FT_FS": {},
+  "NAV_FT_RS": {},
+  "NAV_MIN_FT_HT": {},
+  "NAV_TRAFF_A_RADM": {},
+  "NAV_TRAFF_A_RADU": {},
+  "PWM_AUX_DISARM": {},
+  "PWM_AUX_MAX": {},
+  "PWM_AUX_MIN": {},
+  "PWM_AUX_OUT": {},
+  "PWM_AUX_RATE": {},
+  "PWM_AUX_RATE1": {},
+  "PWM_AUX_REV1": {},
+  "PWM_AUX_REV2": {},
+  "PWM_AUX_REV3": {},
+  "PWM_AUX_REV4": {},
+  "PWM_AUX_REV5": {},
+  "PWM_AUX_REV6": {},
+  "PWM_AUX_REV7": {},
+  "PWM_AUX_REV8": {},
+  "PWM_AUX_TRIM1": {},
+  "PWM_AUX_TRIM2": {},
+  "PWM_AUX_TRIM3": {},
+  "PWM_AUX_TRIM4": {},
+  "PWM_AUX_TRIM5": {},
+  "PWM_AUX_TRIM6": {},
+  "PWM_AUX_TRIM7": {},
+  "PWM_AUX_TRIM8": {},
+  "PWM_EXTRA_DIS1": {},
+  "PWM_EXTRA_DIS2": {},
+  "PWM_EXTRA_DIS3": {},
+  "PWM_EXTRA_DIS4": {},
+  "PWM_EXTRA_DIS5": {},
+  "PWM_EXTRA_DIS6": {},
+  "PWM_EXTRA_DIS7": {},
+  "PWM_EXTRA_DIS8": {},
+  "PWM_EXTRA_DISARM": {},
+  "PWM_EXTRA_FAIL1": {},
+  "PWM_EXTRA_FAIL2": {},
+  "PWM_EXTRA_FAIL3": {},
+  "PWM_EXTRA_FAIL4": {},
+  "PWM_EXTRA_FAIL5": {},
+  "PWM_EXTRA_FAIL6": {},
+  "PWM_EXTRA_FAIL7": {},
+  "PWM_EXTRA_FAIL8": {},
+  "PWM_EXTRA_MAX": {},
+  "PWM_EXTRA_MAX1": {},
+  "PWM_EXTRA_MAX2": {},
+  "PWM_EXTRA_MAX3": {},
+  "PWM_EXTRA_MAX4": {},
+  "PWM_EXTRA_MAX5": {},
+  "PWM_EXTRA_MAX6": {},
+  "PWM_EXTRA_MAX7": {},
+  "PWM_EXTRA_MAX8": {},
+  "PWM_EXTRA_MIN": {},
+  "PWM_EXTRA_MIN1": {},
+  "PWM_EXTRA_MIN2": {},
+  "PWM_EXTRA_MIN3": {},
+  "PWM_EXTRA_MIN4": {},
+  "PWM_EXTRA_MIN5": {},
+  "PWM_EXTRA_MIN6": {},
+  "PWM_EXTRA_MIN7": {},
+  "PWM_EXTRA_MIN8": {},
+  "PWM_EXTRA_RATE": {},
+  "PWM_EXTRA_RATE1": {},
+  "PWM_EXTRA_REV1": {},
+  "PWM_EXTRA_REV2": {},
+  "PWM_EXTRA_REV3": {},
+  "PWM_EXTRA_REV4": {},
+  "PWM_EXTRA_REV5": {},
+  "PWM_EXTRA_REV6": {},
+  "PWM_EXTRA_REV7": {},
+  "PWM_EXTRA_REV8": {},
+  "PWM_EXTRA_TRIM1": {},
+  "PWM_EXTRA_TRIM2": {},
+  "PWM_EXTRA_TRIM3": {},
+  "PWM_EXTRA_TRIM4": {},
+  "PWM_EXTRA_TRIM5": {},
+  "PWM_EXTRA_TRIM6": {},
+  "PWM_EXTRA_TRIM7": {},
+  "PWM_EXTRA_TRIM8": {},
+  "PWM_MAIN_DISARM": {},
+  "PWM_MAIN_MAX": {},
+  "PWM_MAIN_MIN": {},
+  "PWM_MAIN_OUT": {},
+  "PWM_MAIN_RATE": {},
+  "PWM_MAIN_RATE1": {},
+  "PWM_MAIN_REV1": {},
+  "PWM_MAIN_REV10": {},
+  "PWM_MAIN_REV11": {},
+  "PWM_MAIN_REV12": {},
+  "PWM_MAIN_REV13": {},
+  "PWM_MAIN_REV14": {},
+  "PWM_MAIN_REV2": {},
+  "PWM_MAIN_REV3": {},
+  "PWM_MAIN_REV4": {},
+  "PWM_MAIN_REV5": {},
+  "PWM_MAIN_REV6": {},
+  "PWM_MAIN_REV7": {},
+  "PWM_MAIN_REV8": {},
+  "PWM_MAIN_REV9": {},
+  "PWM_MAIN_TRIM1": {},
+  "PWM_MAIN_TRIM10": {},
+  "PWM_MAIN_TRIM11": {},
+  "PWM_MAIN_TRIM12": {},
+  "PWM_MAIN_TRIM13": {},
+  "PWM_MAIN_TRIM14": {},
+  "PWM_MAIN_TRIM2": {},
+  "PWM_MAIN_TRIM3": {},
+  "PWM_MAIN_TRIM4": {},
+  "PWM_MAIN_TRIM5": {},
+  "PWM_MAIN_TRIM6": {},
+  "PWM_MAIN_TRIM7": {},
+  "PWM_MAIN_TRIM8": {},
+  "PWM_MAIN_TRIM9": {},
+  "RBCLW_ADDRESS": {},
+  "RBCLW_BAUD": {},
+  "RBCLW_COUNTS_REV": {},
+  "RBCLW_READ_PER": {},
+  "RBCLW_SER_CFG": {},
+  "RBCLW_WRITE_PER": {},
+  "RTPS_CONFIG": {},
+  "RTPS_MAV_CONFIG": {},
+  "RTPS_RATE": {},
+  "RV_YAW_P": {},
+  "RWTO_AIRSPD_SCL": {},
+  "RWTO_MAX_PITCH": {},
+  "RWTO_MAX_ROLL": {},
+  "RWTO_NAV_ALT": {},
+  "SER_PPB_BAUD": {},
+  "SIH_BARO_OFFSET": {},
+  "SIH_GPS_USED": {},
+  "SIH_LOC_MU_X": {},
+  "SIH_LOC_MU_Y": {},
+  "SIH_LOC_MU_Z": {},
+  "SIH_MAG_OFFSET_X": {},
+  "SIH_MAG_OFFSET_Y": {},
+  "SIH_MAG_OFFSET_Z": {},
+  "SYS_CTRL_ALLOC": {},
+  "TRIG_PINS": {},
+  "TRIG_PINS_EX": {},
+  "UAVCAN_ESC_IDLT": {},
+  "UAVCAN_V1_BAUD": {},
+  "UAVCAN_V1_ENABLE": {},
+  "UAVCAN_V1_ID": {},
+  "UWB_INIT_OFF_YAW": {},
+  "VM_INERTIA_XX": {},
+  "VM_INERTIA_XY": {},
+  "VM_INERTIA_XZ": {},
+  "VM_INERTIA_YY": {},
+  "VM_INERTIA_YZ": {},
+  "VM_INERTIA_ZZ": {},
+  "VM_MASS": {},
+  "VT_B_REV_DEL": {},
+  "VT_B_REV_OUT": {},
+  "VT_B_TRANS_THR": {},
+  "VT_FW_ALT_ERR": {},
+  "VT_FW_DIFTHR_SC": {},
+  "VT_FW_MOT_OFFID": {},
+  "VT_FW_PERM_STAB": {},
+  "VT_IDLE_PWM_MC": {},
+  "VT_LND_PTCH_MIN": {},
+  "VT_MC_ON_FMU": {},
+  "VT_MOT_ID": {},
+  "VT_PSHER_RMP_DT": {},
+  "VT_PTCH_MIN": {}
+ },
+ "to": {
+  "commit": "b8c541dd7277ed735139d7d1bfb829d61fbe29fb",
+  "tag": "v1.14.0"
+ }
+}
