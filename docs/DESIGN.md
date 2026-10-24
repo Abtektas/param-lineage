@@ -86,7 +86,7 @@ PX4 git tags
    ▼
 1. snapshots/      generated   all parameter metadata at one tag
 2. translations/   generated   what that tag's param_translation.cpp does, found by running it
-3. curated/        human       what happened to each removed parameter, with evidence
+3. curated/        written     what happened to each removed parameter, with evidence
    │  build (deterministic)
    ▼
 4. params.json     derived     history of every parameter across all tags
@@ -271,7 +271,7 @@ reported. Checked on 2026-10-23: Apple clang 21 on macOS (arm64), and GCC 13.3
 on Linux arm64 and on Linux x86_64 (QEMU emulation), give the same data for
 every tag.
 
-### 3. Curated facts (human)
+### 3. Curated facts (written)
 
 `data/curated/<from>..<to>.json`: one entry for every parameter that exists in
 `<from>` and not in `<to>`. The format is described by
@@ -491,6 +491,9 @@ param-lineage/
 - Users decide whether to fly and are responsible for the result; the
   authors accept no liability for damage, injury or loss of any kind (as in
   actuator-lint).
+- The code, data and documentation were mostly written by an AI assistant,
+  and a person has not reviewed all of them. The terms say so, and that the
+  authors accept no liability for their errors.
 - These terms appear in the README, in CLI output and on the page, and they
   are never weakened (same rule as actuator-lint).
 

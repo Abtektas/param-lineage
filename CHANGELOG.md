@@ -37,6 +37,11 @@
   the notes of seven parameters fixed at their old default show that value
   instead of "{old}". The notes no longer mention fixes proposed to PX4 for
   some of these parameters: curated facts state what the release does.
+- The terms say that the code, the data and the documentation were mostly
+  written by an AI assistant, that a person has not reviewed all of them, and
+  that the authors accept no liability for their errors: in the README, in
+  `--version`, after the output of every command and on the page. The curated
+  facts are no longer described as written by hand.
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts

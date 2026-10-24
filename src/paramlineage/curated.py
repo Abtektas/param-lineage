@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 """Curated facts: what happened to each parameter a release removed (data/curated/<from>..<to>.json).
 
-The files are written by hand. This module checks them against the snapshots and, given a PX4
+The files are written rather than extracted. This module checks them against the snapshots and, given a PX4
 repository, against the commits they cite.
 """
 

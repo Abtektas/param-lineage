@@ -54,6 +54,8 @@ class Terms(unittest.TestCase):
             "without warranty of any kind",
             "accept no liability and no responsibility",
             "does not approve a vehicle as safe or airworthy",
+            "mostly written by an AI assistant, and a person has not reviewed all of them",
+            "the authors accept no liability for their errors",
             "Data that has not been checked is marked as such",
             "not affiliated with or endorsed by the PX4 project",
             "PX4 is a trademark of Dronecode Project, Inc.",
@@ -68,7 +70,8 @@ class Terms(unittest.TestCase):
         self.assertEqual(exit_.exception.code, 0)
         text = out.getvalue()
         self.assertTrue(text.startswith(f"param-lineage {__version__}\n"))
-        for part in (legal.COPYRIGHT, legal.NO_WARRANTY, legal.INFORMATION_ONLY, legal.PX4_DATA, legal.TRADEMARK):
+        for part in (legal.COPYRIGHT, legal.NO_WARRANTY, legal.MADE_WITH_AI, legal.INFORMATION_ONLY, legal.PX4_DATA,
+                     legal.TRADEMARK):
             self.assertIn(part, text)
 
 

@@ -78,6 +78,12 @@ NO_WARRANTY = (
     "contributors accept no liability and no responsibility for any use of it or of its results."
 )
 
+MADE_WITH_AI = (
+    "The code, data and documentation of param-lineage were mostly written by an AI assistant, "
+    "and a person has not reviewed all of them. They can be wrong, and the authors accept no "
+    "liability for their errors. Check every value against PX4 itself before you rely on it."
+)
+
 INFORMATION_ONLY = (
     "param-lineage describes how PX4 parameters changed between releases. It is not a safety "
     "assessment and does not say which values are safe to fly. Data that has not been checked "
@@ -121,6 +127,7 @@ def version_text() -> str:
             COPYRIGHT,
             'License: BSD-3-Clause. "param-lineage license" prints the full texts.',
             NO_WARRANTY,
+            MADE_WITH_AI,
             INFORMATION_ONLY,
             PX4_DATA,
             TRADEMARK,

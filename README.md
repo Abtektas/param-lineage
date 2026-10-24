@@ -52,11 +52,11 @@ which parts of the code no probe reached, and what the data does not cover
 ([docs/DESIGN.md](docs/DESIGN.md#2-translations-generated)). PX4 runs this code
 only when it upgrades the stored parameters of a vehicle in place.
 
-The curated facts are written by hand: for every parameter a release removed,
-whether PX4 converts it, renamed or replaced it, fixed the behaviour in code,
-or dropped the feature, with the commit that removed it. The tests check each
-entry against the snapshots, the translations and PX4's history
-([docs/DESIGN.md](docs/DESIGN.md#3-curated-facts-human)).
+The curated facts are written rather than extracted: for every parameter a
+release removed, whether PX4 converts it, renamed or replaced it, fixed the
+behaviour in code, or dropped the feature, with the commit that removed it.
+The tests check each entry against the snapshots, the translations and PX4's
+history ([docs/DESIGN.md](docs/DESIGN.md#3-curated-facts-written)).
 
 ## The upgrade check page
 
@@ -92,6 +92,10 @@ data, so nothing else is needed.
 - The project and its authors accept no liability and no responsibility for
   any use of the software, the data or their results. Whether and how you use
   them is entirely your own decision, at your own risk.
+- The code, the data and this documentation were mostly written by an AI
+  assistant, and a person has not reviewed all of them. They can be wrong, and
+  the authors accept no liability for their errors. Check every value against
+  PX4 itself before you rely on it.
 - It describes what changed. It does not approve a vehicle as safe or
   airworthy, and it does not say which values are right for a vehicle.
 - Data that has not been checked is marked as such. A check that lists

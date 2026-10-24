@@ -20,7 +20,7 @@ class _Version(argparse.Action):
 
 
 # Every command that shows data ends with these, in text and in JSON.
-TERMS = [legal.NO_WARRANTY, legal.INFORMATION_ONLY, legal.PX4_DATA]
+TERMS = [legal.NO_WARRANTY, legal.MADE_WITH_AI, legal.INFORMATION_ONLY, legal.PX4_DATA]
 
 
 def build_parser() -> argparse.ArgumentParser:

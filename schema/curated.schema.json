@@ -2,7 +2,7 @@
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "https://github.com/Abtektas/param-lineage/schema/curated.schema.json",
  "title": "param-lineage curated facts",
- "description": "What happened to each parameter that one PX4 release has and the next tracked release does not (data/curated/<from>..<to>.json). Written by hand, each entry checked against the commit that removed the parameter; see docs/DESIGN.md.",
+ "description": "What happened to each parameter that one PX4 release has and the next tracked release does not (data/curated/<from>..<to>.json). Written rather than extracted, each entry checked against the commit that removed the parameter; see docs/DESIGN.md.",
  "type": "object",
  "required": ["format", "from", "to", "status", "removed"],
  "additionalProperties": false,
