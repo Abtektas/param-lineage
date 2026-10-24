@@ -111,8 +111,6 @@ python -m paramlineage.history --all
 
 ## Commits
 
-- Sign off your commits (`git commit -s`). The sign-off certifies the
-  [Developer Certificate of Origin](https://developercertificate.org/).
 - If an AI assistant helped with a change, say so with an `Assisted-by:`
   trailer in the commit message. Do not add an AI as co-author. You are
   responsible for everything you submit.
