@@ -15,7 +15,8 @@ in English.
   hand. Change the extractor and rebuild them.
 - A curated fact names its evidence: the PX4 commit (required), the pull
   request when known, and its basis (`code-inspection`, `release-notes` or
-  `sitl-tested`). Only claim `sitl-tested` for what was run.
+  `sitl-tested`). `sitl-tested` is for a `migrated` entry whose every
+  successor passed in `data/sitl`; a test checks this both ways.
 - Do not mark a transition `complete` until every removed parameter in it has
   an entry.
 
@@ -88,6 +89,12 @@ python -m paramlineage.history --all
    source, and choose the kind. Every entry needs the full commit hash and a
    note that a user of the previous release can act on. Set the status to
    `complete` only when every removed parameter is listed.
+7. Optionally, run the upgrade in SITL: check out both releases, build each
+   with `make px4_sitl_default`, and run
+   `python -m paramlineage.sitl --old <tree of previous> --new <tree of tag> <previous> <tag>`.
+   It needs no simulator GUI and starts PX4 as instance 0, so no other SITL
+   may run at the same time. Then set `basis` to `sitl-tested` for the
+   `migrated` entries whose every successor passed; the tests say which.
 
 ## What a change needs
 

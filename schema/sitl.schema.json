@@ -1,0 +1,98 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/Abtektas/param-lineage/schema/sitl.schema.json",
+ "title": "param-lineage SITL upgrades",
+ "description": "What a PX4 release made of the parameters the previous tracked release stored, on in-place upgrades in software-in-the-loop simulation (data/sitl/<from>..<to>.json). Made with python -m paramlineage.sitl; see docs/DESIGN.md, \"Behaviour verification\".",
+ "type": "object",
+ "required": ["format", "from", "to", "build", "notes", "runs", "unsteady", "checks", "unexpected"],
+ "additionalProperties": false,
+ "properties": {
+  "format": {"const": 1, "description": "Layout of this file. Changes when a field is added, renamed or removed."},
+  "from": {"$ref": "#/$defs/release"},
+  "to": {"$ref": "#/$defs/release"},
+  "build": {
+   "type": "object",
+   "required": ["target", "airframe", "compiler", "platform"],
+   "additionalProperties": false,
+   "properties": {
+    "target": {"const": "px4_sitl_default"},
+    "airframe": {"type": "string", "description": "The SITL airframe both releases started with."},
+    "compiler": {"type": "object", "additionalProperties": {"type": "string"}, "description": "Per tag, the first line of the C++ compiler's --version."},
+    "platform": {"type": "string", "description": "Operating system and machine the runs were made on."}
+   }
+  },
+  "notes": {"type": "array", "items": {"type": "string"}, "description": "What the results cover and what they do not."},
+  "runs": {
+   "type": "array",
+   "minItems": 2,
+   "items": {
+    "type": "object",
+    "required": ["name", "purpose", "set", "not_in_build", "old_saved", "after", "new_saved", "import_log"],
+    "additionalProperties": false,
+    "properties": {
+     "name": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+     "purpose": {"type": "string"},
+     "set": {"$ref": "#/$defs/values", "description": "The values the older release stored, as it stored them."},
+     "not_in_build": {"type": "array", "items": {"$ref": "#/$defs/name"}, "description": "Parameters the run meant to set that the older build does not have."},
+     "storage": {
+      "type": "array",
+      "items": {"type": "array", "prefixItems": [{"$ref": "#/$defs/name"}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+      "description": "Import-order runs only: the elements at the end of the storage the newer release started on, in file order."
+     },
+     "after": {
+      "type": "object",
+      "propertyNames": {"$ref": "#/$defs/name"},
+      "additionalProperties": {"type": ["number", "null"]},
+      "description": "Watched parameters as the newer release had them after it started; null: the build does not have the parameter."
+     },
+     "set_by_name": {
+      "type": "object",
+      "propertyNames": {"$ref": "#/$defs/name"},
+      "additionalProperties": {"type": "boolean"},
+      "description": "By-name run only: whether the newer release accepted each old name set by name."
+     },
+     "old_saved": {"$ref": "#/$defs/values", "description": "Everything the older release saved: the storage the newer one started on, unless the run is an import-order run."},
+     "new_saved": {"$ref": "#/$defs/values", "description": "Everything the newer release saved after it started."},
+     "import_log": {"type": "array", "items": {"type": "string"}, "description": "What the newer release's parameter code logged while it imported."}
+    }
+   }
+  },
+  "unsteady": {"type": "array", "items": {"$ref": "#/$defs/name"}, "description": "Saved parameters whose value differs between the two control runs; not compared."},
+  "checks": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": ["run", "parameter", "stored", "target", "expected", "read", "result"],
+    "additionalProperties": false,
+    "properties": {
+     "run": {"type": "string"},
+     "parameter": {"$ref": "#/$defs/name"},
+     "stored": {"type": "number"},
+     "target": {"$ref": "#/$defs/name"},
+     "expected": {"type": ["number", "null"], "description": "From the translations and the control run; null where the import order decides and the translations do not say."},
+     "read": {"type": ["number", "null"]},
+     "result": {"enum": ["pass", "fail", "not-in-build", "observed"]}
+    }
+   }
+  },
+  "unexpected": {
+   "type": "object",
+   "additionalProperties": {"$ref": "#/$defs/maybeValues"},
+   "description": "Per run, saved values that differ from the control run without a stored value to explain them. Empty when the runs agree with the translations."
+  }
+ },
+ "$defs": {
+  "name": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$", "maxLength": 16},
+  "release": {
+   "type": "object",
+   "required": ["tag", "commit"],
+   "additionalProperties": false,
+   "properties": {
+    "tag": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(-(alpha|beta|rc)[0-9]+)?$"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+   }
+  },
+  "values": {"type": "object", "propertyNames": {"$ref": "#/$defs/name"}, "additionalProperties": {"type": "number"}},
+  "maybeValues": {"type": "object", "propertyNames": {"$ref": "#/$defs/name"}, "additionalProperties": {"type": ["number", "null"]}}
+ }
+}

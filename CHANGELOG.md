@@ -42,6 +42,15 @@
   that the authors accept no liability for their errors: in the README, in
   `--version`, after the output of every command and on the page. The curated
   facts are no longer described as written by hand.
+- In-place upgrades run in PX4 SITL in `data/sitl/`, made with
+  `python -m paramlineage.sitl`, and their JSON Schema: v1.16.2 to v1.17.0
+  and v1.17.0 to v1.18.0-rc1, on `px4_sitl_default` with the SIH quadrotor.
+  Every conversion runs with a value from each probe case and matches the
+  translations; the other removed parameters are dropped; two runs show the
+  import order, and one shows that setting an old name by name converts
+  nothing. The eight `migrated` entries whose every successor passed are now
+  `sitl-tested`. `MOT_POLE_COUNT` is not: the SITL build has no DShot
+  parameters.
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts

@@ -127,7 +127,7 @@
    "note": "Removed; arming and disarming with sticks or a button take 1 s (1000 ms)."
   },
   "COM_RC_OVERRIDE": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "b8c5f66af053f609c9269f1e3cda2a4955bb0df0",
    "kind": "migrated",
    "note": "Replaced by MAN_OVERRIDE_SPD: stick speed in 1/s, a negative value disables it. Only \"disabled\" (0) is converted, to MAN_OVERRIDE_SPD = -1. Otherwise override now works by stick speed and applies in both auto and offboard modes, on multicopters and VTOLs in multicopter mode.",
@@ -220,7 +220,7 @@
    ]
   },
   "EKF2_GPS_DELAY": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "4b2e0a6f59a7b2b18ef59aae767bc105c3adc935",
    "kind": "migrated",
    "note": "Replaced by the per-receiver SENS_GPS0_DELAY and SENS_GPS1_DELAY (integer ms).",
@@ -231,7 +231,7 @@
    ]
   },
   "EKF2_GPS_POS_X": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "89855926ef9195434ff495c970ae204a4a707e71",
    "kind": "migrated",
    "note": "Replaced by the per-receiver SENS_GPS0_OFFX.",
@@ -241,7 +241,7 @@
    ]
   },
   "EKF2_GPS_POS_Y": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "89855926ef9195434ff495c970ae204a4a707e71",
    "kind": "migrated",
    "note": "Replaced by the per-receiver SENS_GPS0_OFFY.",
@@ -251,7 +251,7 @@
    ]
   },
   "EKF2_GPS_POS_Z": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "89855926ef9195434ff495c970ae204a4a707e71",
    "kind": "migrated",
    "note": "Replaced by the per-receiver SENS_GPS0_OFFZ.",
@@ -369,7 +369,7 @@
    "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
   },
   "MNT_RANGE_PITCH": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "0fa5a8340954290c518189a038cae9bb6b11c209",
    "kind": "migrated",
    "note": "Replaced by MNT_MAX_PITCH and MNT_MIN_PITCH (half the range each way).",
@@ -399,7 +399,7 @@
    ]
   },
   "MPC_LAND_RC_HELP": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "7ed3c5bad42f05d5c8264c4ee347943de37edf17",
    "kind": "migrated",
    "note": "Replaced by bit 1 (landing nudging) of MPC_AUTO_NUDGING.",

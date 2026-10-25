@@ -36,6 +36,7 @@ pages. param-lineage turns it into data that tools can use:
 | What happened to each removed parameter | `data/curated/<from>..<to>.json` ([schema](schema/curated.schema.json)) | v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
 | Changes between consecutive releases | `data/changes/<from>..<to>.json` ([schema](schema/changes.schema.json)) | every pair of consecutive tracked releases |
 | History of every parameter | `data/params.json` ([schema](schema/params.schema.json)) | every parameter of the tracked releases |
+| In-place upgrades run in PX4 SITL | `data/sitl/<from>..<to>.json` ([schema](schema/sitl.schema.json)) | v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
 
 The snapshots are made from the release tags by PX4's own generators. Each one
 records the commit it came from and how it was made, and the tests compare
@@ -57,6 +58,14 @@ release removed, whether PX4 converts it, renamed or replaced it, fixed the
 behaviour in code, or dropped the feature, with the commit that removed it.
 The tests check each entry against the snapshots, the translations and PX4's
 history ([docs/DESIGN.md](docs/DESIGN.md#3-curated-facts-written)).
+
+The SITL files record in-place upgrades run in PX4's software-in-the-loop
+simulation: the older release stores values, the newer one starts on the same
+storage, and what it then has is compared with the translations. They cover
+one board, `px4_sitl_default` with the SIH quadrotor, so a parameter that board
+does not have is reported as not in the build. A curated entry is
+`sitl-tested` only when every successor passed there
+([docs/DESIGN.md](docs/DESIGN.md#behaviour-verification-sitl)).
 
 ## The upgrade check page
 

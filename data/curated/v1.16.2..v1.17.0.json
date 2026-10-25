@@ -3,7 +3,7 @@
  "from": "v1.16.2",
  "removed": {
   "ASPD_FALLBACK_GW": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "5842c991ecc1564f3ca96ab40560684a6352b8f8",
    "kind": "migrated",
    "note": "Replaced by ASPD_FALLBACK, which adds a third option (2: thrust based airspeed estimation). 0 and 1 keep their meaning.",

@@ -87,6 +87,7 @@ PX4 git tags
 1. snapshots/      generated   all parameter metadata at one tag
 2. translations/   generated   what that tag's param_translation.cpp does, found by running it
 3. curated/        written     what happened to each removed parameter, with evidence
+   sitl/           measured    in-place upgrades run in PX4 SITL (optional, see Behaviour verification)
    │  build (deterministic)
    ▼
 4. params.json     derived     history of every parameter across all tags
@@ -177,7 +178,8 @@ The format is described by `schema/translations.schema.json`.
 
 PX4 applies this only when the stored parameters of a vehicle are upgraded in
 place. Loading a `.params` file by name does not run it (verified in SITL on
-2026-10-20). The data says this explicitly.
+2026-10-20, and by the `by-name` runs in `data/sitl`). The data says this
+explicitly.
 
 **Run, not parse.** `param_translation.cpp` is free-form C++, not a list of
 rules. Across the tracked tags it uses loops over arrays of names, helper
@@ -257,12 +259,11 @@ as not reached, and tests run them with constructed values.
   whether a parameter exists.
 - `param_get` during import returns values imported earlier from the same
   storage, and a value set by a translation can be overwritten by a stored
-  value imported later; each probe here is imported on its own. Not yet
-  checked against the real import order.
+  value imported later; each probe here is imported on its own.
 - What happens after import (for example `CAL_ACC0_PRIO=-1` being replaced by
   a default later) is outside this layer.
 
-All three are candidates for the SITL checks of M6.
+All three were checked on one board in SITL; see Behaviour verification.
 
 **Reproducible.** The 23 tracked tags have 7 different versions of the file.
 Each tag is still extracted on its own, and `--check` compares the output
@@ -354,16 +355,75 @@ reported as a change.
      The heater and `EKF2_AGP` parameters of v1.18.0-rc1 are such entries.
 5. **History:** every commit a curated entry cites lies between its two tags
    (`.github/workflows/curated.yml`, with PX4's commits only).
+6. **SITL:** the results in `data/sitl` follow from their runs and agree with
+   the translations, and `basis: sitl-tested` is on exactly the entries they
+   back (see Behaviour verification).
 
-## Behaviour verification (later milestone)
+## Behaviour verification (SITL)
 
-Optional checks that run PX4 SITL:
+`data/sitl/<from>..<to>.json`: in-place upgrades run in PX4 SITL with
+`python -m paramlineage.sitl`, from two `px4_sitl_default` builds with the SIH
+quadrotor (airframe 10040) and no simulator GUI. The format is described by
+`schema/sitl.schema.json`.
 
-- For each translation rule: store the old parameter in the older release,
-  upgrade in place to the newer one, and read the new parameter back.
-- An entry that passes gets `basis: sitl-tested`.
+Each run stores values in the older release, starts the newer one on the same
+parameter storage, as a firmware upgrade in place does, and reads what it has
+once it has started:
 
-The manual version of this was done for v1.17.0 → v1.18.0-rc1 on 2026-10-20.
+- `control-1`, `control-2`: nothing stored, for what the upgrade does on its
+  own and which values change from run to run.
+- `converted-<n>`: every `migrated` entry and every parameter whose type
+  changed, with a value from probe case `<n>` of the newer release's
+  translations, so that every branch of a rule runs where the older release
+  accepts such a value.
+- `removed`: every other removed parameter, with a value that is not its
+  default.
+- `order-target-later`, `order-target-earlier`: the storage also holds the
+  parameters a value is converted to, after or before the converted one.
+- `by-name`: nothing stored; the old names are then set by name in the newer
+  release, one at a time, as loading a parameter file does.
+
+Every stored value is compared with what the translations say it becomes:
+`pass`, `fail`, `not-in-build` (the build does not have the parameter), or
+`observed` where the import order decides and the translations do not say.
+The tests recompute the comparison from the runs, and require no `fail`, no
+change that neither a stored value nor the older release explains, and
+`basis: sitl-tested` on exactly the `migrated` entries whose every successor
+passed. The runs need two PX4 builds, so CI does not repeat them; a file
+records one run.
+
+Results of 2026-10-25 (GCC 13.3, Linux x86_64):
+
+- v1.17.0 → v1.18.0-rc1: 16 runs, 89 checks, 88 pass and 1 observed. The
+  conversions of `COM_RC_OVERRIDE`, `EKF2_GPS_DELAY`, `EKF2_GPS_POS_X/Y/Z`,
+  `MNT_RANGE_PITCH` and `MPC_LAND_RC_HELP`, and `RC*_REV` from float to int32,
+  all as the translations say. `MOT_POLE_COUNT` was not run: this build has
+  neither it (v1.17.0) nor `DSHOT_MOT_POL1` to `12` (v1.18.0-rc1). Of the
+  other removed parameters, 38 were stored and none was passed on; 14 are not
+  in this build.
+- v1.16.2 → v1.17.0: 7 runs, 9 checks, all pass: `ASPD_FALLBACK_GW` is copied
+  to `ASPD_FALLBACK`, and the 58 other removed parameters are dropped, their
+  successors unchanged.
+- Setting an old name by name in the newer release is refused, so nothing is
+  converted.
+
+The limits of the translations (section 2), as seen in these runs:
+
+- **Board:** a parameter the build does not have is neither stored nor
+  converted to; on this board that is the DShot, heater, battery ADC, INA226
+  and UAVCAN light parameters.
+- **Import order:** a target stored after the converted parameter overwrites
+  the conversion; stored before, the conversion overwrites it. `param_get`
+  reads the value imported before it: with `MPC_AUTO_NUDGING=1` before
+  `MPC_LAND_RC_HELP=1`, v1.18.0-rc1 gives 3, where the translations, which
+  read the default, give 2. The storage files PX4 saved list parameters in
+  name order. An upgrade in place from v1.17.0 cannot have
+  `MPC_AUTO_NUDGING` stored, because v1.17.0 does not have it, so this matters
+  only for a storage that already holds newer names.
+- **After import:** every converted value was still there after the newer
+  release had started. The one other change, `EKF2_DELAY_MAX` raised to 300
+  with `EKF2_GPS_DELAY=300`, was made and saved by v1.17.0's EKF2 before the
+  upgrade.
 
 ## Tracked versions
 
@@ -501,7 +561,7 @@ param-lineage/
 
 | Risk | Safeguard |
 |---|---|
-| Wrong data misleads a user | Provenance on every fact; `basis` on curated facts; transition status; tests on known history; SITL checks later |
+| Wrong data misleads a user | Provenance on every fact; `basis` on curated facts; transition status; tests on known history; the conversions run in SITL |
 | Looks official | No PX4 in the name; trademark and non-affiliation notice |
 | License breach | PX4 notice kept with derived data; nothing copied from submodules or other projects |
 | AI-generated noise | AI help disclosed (`Assisted-by` trailer in commits); every fact checkable; announced once, with findings, not as an idea |
