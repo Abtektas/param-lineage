@@ -482,13 +482,13 @@ Decision:
 
 ```
 param-lineage/
-  data/              snapshots/ translations/ curated/ changes/ params.json
+  data/              snapshots/ translations/ curated/ changes/ params.json sitl/
   schema/            one JSON Schema per data kind
   requirements/      pinned packages for extraction and the schema tests
-  src/paramlineage/  legal, cli, extract, translations, harness/, curated, changes, history, query, check
+  src/paramlineage/  legal, cli, extract, translations, harness/, curated, changes, history, query, check, sitl
   web/               the upgrade check page
-  tests/             unit tests, known history, firmware parameter lists
-  docs/              DESIGN.md; later how to add a release
+  tests/             unit tests, known history, firmware parameter lists, the built distributions
+  docs/              DESIGN.md (adding and making a release: CONTRIBUTING.md)
 ```
 
 ## Licensing

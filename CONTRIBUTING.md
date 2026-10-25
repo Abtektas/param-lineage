@@ -96,6 +96,39 @@ python -m paramlineage.history --all
    may run at the same time. Then set `basis` to `sitl-tested` for the
    `migrated` entries whose every successor passed; the tests say which.
 
+## Making a release
+
+1. Add the PX4 release the version goes with, as above, with its SITL run.
+2. Set the version in `src/paramlineage/__init__.py` (`0.1.0` for v0.1),
+   turn "Unreleased" in `CHANGELOG.md` into the version and the date, and
+   commit.
+3. Run the weekly workflows on that commit by hand (`workflow_dispatch`) and
+   read every job, as well as those the push started.
+4. Build the wheel and the sdist from a clean copy of the commit, with build
+   packages (hatchling and what it needs) published at least two weeks
+   earlier:
+   ```
+   git archive HEAD | tar -x -C <empty directory>
+   cd <that directory>
+   UV_EXCLUDE_NEWER=<date at least two weeks ago> uv build --out-dir <dist directory>
+   ```
+5. Check them from the repository root:
+   ```
+   PYTHONPATH=src PARAMLINEAGE_DIST=<dist directory> python3 -m unittest tests.test_dist
+   ```
+   The wheel must hold the package, the data the commands read and both
+   licenses, the sdist exactly the committed files, and no file name may
+   contain "PX4".
+6. Install the wheel in a new virtual environment outside the repository and
+   run `param-lineage --version`, `history`, `diff` and `check`; the output
+   must be the same as from the checkout.
+7. Build the upgrade check page for the new release
+   ([web/README.md](web/README.md)).
+8. Tag the commit `v<version>` and publish a GitHub release with the wheel,
+   the sdist and the page; its notes are the changelog entry.
+9. Set the version to the next development version (such as `0.2.0.dev0`)
+   and start a new "Unreleased" section.
+
 ## What a change needs
 
 - Tests.

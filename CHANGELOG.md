@@ -51,6 +51,10 @@
   nothing. The eight `migrated` entries whose every successor passed are now
   `sitl-tested`. `MOT_POLE_COUNT` is not: the SITL build has no DShot
   parameters.
+- How to make a release, in [CONTRIBUTING.md](CONTRIBUTING.md), and a test
+  of the built wheel and sdist (`PARAMLINEAGE_DIST`): the wheel holds the
+  package, the data the commands read and both licenses, and the sdist
+  exactly the committed files.
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts
