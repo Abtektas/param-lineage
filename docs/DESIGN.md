@@ -1,9 +1,10 @@
 # param-lineage: design
 
-Status: draft 7, 2026-10-24. M0 (skeleton), M1 (snapshots of all tracked
+Status: draft 8, 2026-10-25. M0 (skeleton), M1 (snapshots of all tracked
 releases), M2 (translations), M3 (changes and curation of the last two
-upgrades) and M4 (histories and the `history`, `diff` and `check` commands)
-are done; the upgrade check page does not read this data yet (M5).
+upgrades), M4 (histories and the `history`, `diff` and `check` commands), M5
+(the upgrade check page built from this data) and M6 (the last two upgrades
+run in SITL) are done; M7 (release v0.1) waits for PX4 v1.18.0 final.
 Name: **param-lineage**, "parameter history for PX4". The name must not
 contain "PX4" (see [Trademarks](#trademarks)).
 
@@ -270,7 +271,7 @@ Each tag is still extracted on its own, and `--check` compares the output
 byte by byte like the snapshots; only a different compiler is tolerated, and
 reported. Checked on 2026-10-23: Apple clang 21 on macOS (arm64), and GCC 13.3
 on Linux arm64 and on Linux x86_64 (QEMU emulation), give the same data for
-every tag.
+every tag; on 2026-10-25 also GCC 13.3 on Linux x86_64 without emulation.
 
 ### 3. Curated facts (written)
 
