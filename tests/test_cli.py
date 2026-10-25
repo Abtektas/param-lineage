@@ -58,7 +58,7 @@ class Commands(unittest.TestCase):
         code, out, _ = run("history", "MPC_HOLD_DZ", "@data", DATA)
         self.assertEqual(code, 0)
         self.assertIn("removed in v1.17.0 (renamed: MAN_DEADZONE)", out)
-        self.assertTrue(out.rstrip().endswith(legal.PX4_DATA))
+        self.assertTrue(out.rstrip().endswith(legal.TRADEMARK))
         for term in cli.TERMS:
             self.assertIn(term, out)
 
@@ -67,6 +67,7 @@ class Commands(unittest.TestCase):
             code, out, _ = run(*argv, "--json", "@data", DATA)
             self.assertEqual(code, 0)
             self.assertEqual(json.loads(out)["terms"], cli.TERMS)
+            self.assertIn(legal.TRADEMARK, json.loads(out)["terms"])
 
     def test_diff_text(self):
         code, out, _ = run("diff", "v1.16.2", "v1.17.0", "@data", DATA)

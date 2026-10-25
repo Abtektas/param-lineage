@@ -51,6 +51,8 @@
   nothing. The eight `migrated` entries whose every successor passed are now
   `sitl-tested`. `MOT_POLE_COUNT` is not: the SITL build has no DShot
   parameters.
+- Every command now also ends with the trademark notice, in text and in
+  JSON, as `--version`, the README and the page already did.
 - How to make a release, in [CONTRIBUTING.md](CONTRIBUTING.md), and a test
   of the built wheel and sdist (`PARAMLINEAGE_DIST`): the wheel holds the
   package, the data the commands read and both licenses, and the sdist

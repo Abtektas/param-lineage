@@ -118,7 +118,8 @@ data, so nothing else is needed.
   used here only to name the software this project describes.
 
 These terms are part of the program: the command prints them with
-`--version`, and the page shows them under every check.
+`--version` and after the output of every command, and the page shows them
+under every check.
 
 ## Licenses
 
