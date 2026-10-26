@@ -51,6 +51,10 @@
   nothing. The eight `migrated` entries whose every successor passed are now
   `sitl-tested`. `MOT_POLE_COUNT` is not: the SITL build has no DShot
   parameters.
+- Curated facts for the parameters removed from v1.15.4 to v1.16.0 (35) and
+  from v1.14.0 to v1.14.1 (1), each read from the commit that removed it and
+  from the source of both releases. `check` and `history` now say what
+  happened to them.
 - Every command now also ends with the trademark notice, in text and in
   JSON, as `--version`, the README and the page already did.
 - How to make a release, in [CONTRIBUTING.md](CONTRIBUTING.md), and a test

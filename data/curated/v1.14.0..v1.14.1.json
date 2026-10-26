@@ -1,0 +1,16 @@
+{
+ "format": 1,
+ "from": "v1.14.0",
+ "removed": {
+  "SYS_USE_IO": {
+   "basis": "code-inspection",
+   "commit": "c3ed50488f4e96e4bb8394419a0e6ce9f13970a4",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; the IO processor of boards that have one is always used for RC input and PWM outputs (the old value 1), except in HITL. Which of its outputs are used is set in the actuator configuration.",
+   "pr": 22339
+  }
+ },
+ "status": "complete",
+ "to": "v1.14.1"
+}

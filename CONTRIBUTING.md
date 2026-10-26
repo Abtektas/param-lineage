@@ -85,8 +85,11 @@ python -m paramlineage.history --all
    and `python -m paramlineage.history --all`; again after step 6).
 6. Curate the parameters it removed in `data/curated/<previous>..<tag>.json`:
    for each one, find the commit that deletes its definition
-   (`git log -S <NAME> <previous>..<tag>`), read it and the new release's
-   source, and choose the kind. Every entry needs the full commit hash and a
+   (`git log -S <NAME> <previous>..<tag>`), read it and the source of both
+   releases, and choose the kind. Read the previous release's own source,
+   not only the commit: a release branch can still use a parameter that
+   `main` had stopped using (`EKF2_TERR_MASK` was unused on `main` when it was
+   removed, but v1.15.4 used it). Every entry needs the full commit hash and a
    note that a user of the previous release can act on. Set the status to
    `complete` only when every removed parameter is listed.
 7. Optionally, run the upgrade in SITL: check out both releases, build each

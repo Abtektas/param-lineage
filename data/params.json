@@ -2334,7 +2334,13 @@
    ]
   },
   "BAT1_R_INTERNAL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "BAT1_V_LOAD_DROP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -2536,7 +2542,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "BAT1_R_INTERNAL"
+     ]
     }
    ],
    "states": [
@@ -2948,7 +2958,13 @@
    ]
   },
   "BAT2_R_INTERNAL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "BAT2_V_LOAD_DROP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -3121,7 +3137,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "BAT2_R_INTERNAL"
+     ]
     }
    ],
    "states": [
@@ -3337,7 +3357,13 @@
    ]
   },
   "BAT3_R_INTERNAL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "BAT3_V_LOAD_DROP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -3450,7 +3476,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "BAT3_R_INTERNAL"
+     ]
     }
    ],
    "states": [
@@ -3698,7 +3728,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -3871,7 +3902,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -3913,7 +3945,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -3945,7 +3978,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -21243,7 +21277,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -21262,7 +21297,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -21281,7 +21317,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -21300,7 +21337,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -24855,7 +24893,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -25019,7 +25058,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -29462,7 +29502,13 @@
    ]
   },
   "EKF2_OF_CTRL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "EKF2_TERR_MASK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -30110,7 +30156,13 @@
    ]
   },
   "EKF2_RNG_CTRL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "EKF2_TERR_MASK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -30546,7 +30598,12 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "EKF2_RNG_CTRL",
+      "EKF2_OF_CTRL"
+     ]
     }
    ],
    "states": [
@@ -34602,7 +34659,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -61147,7 +61205,13 @@
    ]
   },
   "MIS_COMMAND_TOUT": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "MIS_PD_TO"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -61281,7 +61345,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "MIS_COMMAND_TOUT"
+     ]
     }
    ],
    "states": [
@@ -63585,7 +63653,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -85455,7 +85524,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "PD_GRIPPER_TYPE"
+     ]
     }
    ],
    "states": [
@@ -85503,7 +85576,13 @@
    ]
   },
   "PD_GRIPPER_TYPE": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "PD_GRIPPER_EN"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -116362,7 +116441,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -117850,7 +117930,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -118598,7 +118679,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -118695,7 +118777,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -118978,7 +119061,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -119976,7 +120060,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -119995,7 +120080,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_YAW_RATE_I"
+     ]
     }
    ],
    "states": [
@@ -120014,7 +120103,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_SPEED_I"
+     ]
     }
    ],
    "states": [
@@ -120033,7 +120126,12 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_ACCEL_LIM",
+      "RO_DECEL_LIM"
+     ]
     }
    ],
    "states": [
@@ -120053,7 +120151,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_JERK_LIM"
+     ]
     }
    ],
    "states": [
@@ -120073,7 +120175,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_YAW_RATE_P"
+     ]
     }
    ],
    "states": [
@@ -120092,7 +120198,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_YAW_P"
+     ]
     }
    ],
    "states": [
@@ -120111,7 +120221,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_SPEED_P"
+     ]
     }
    ],
    "states": [
@@ -120130,7 +120244,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -120149,7 +120264,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "renamed",
+     "successors": [
+      "RD_WHEEL_TRACK"
+     ]
     }
    ],
    "states": [
@@ -120169,7 +120288,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -120189,7 +120309,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.16.0"
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "successors": [
+      "RO_MAX_THR_SPEED"
+     ]
     }
    ],
    "states": [
@@ -120285,7 +120409,13 @@
    ]
   },
   "RD_WHEEL_TRACK": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "renamed",
+     "name": "RDD_WHEEL_BASE"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120410,7 +120540,13 @@
    ]
   },
   "RO_ACCEL_LIM": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_MAX_ACCEL"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120426,7 +120562,13 @@
    ]
   },
   "RO_DECEL_LIM": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_MAX_ACCEL"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120442,7 +120584,13 @@
    ]
   },
   "RO_JERK_LIM": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_MAX_JERK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120458,7 +120606,13 @@
    ]
   },
   "RO_MAX_THR_SPEED": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_WHEEL_SPEED"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120474,7 +120628,13 @@
    ]
   },
   "RO_SPEED_I": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_I_SPEED"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120505,7 +120665,13 @@
    ]
   },
   "RO_SPEED_P": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_P_SPEED"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120609,7 +120775,13 @@
    ]
   },
   "RO_YAW_P": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_P_HEADING"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120650,7 +120822,13 @@
    ]
   },
   "RO_YAW_RATE_I": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_I_ANG_VEL"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -120681,7 +120859,13 @@
    ]
   },
   "RO_YAW_RATE_P": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.16.0",
+     "kind": "replaced",
+     "name": "RDD_P_ANG_VEL"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -153490,7 +153674,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.14.1"
+     "in": "v1.14.1",
+     "kind": "fixed"
     }
    ],
    "states": [

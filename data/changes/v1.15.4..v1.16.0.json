@@ -3779,48 +3779,165 @@
    }
   }
  },
- "curated": "none",
+ "curated": "complete",
  "format": 1,
  "from": {
   "commit": "99c40407ffd7ac184e2d7b4b293f36f10fe561ef",
   "tag": "v1.15.4"
  },
  "removed": {
-  "BAT1_V_LOAD_DROP": {},
-  "BAT2_V_LOAD_DROP": {},
-  "BAT3_V_LOAD_DROP": {},
-  "BAT_N_CELLS": {},
-  "BAT_V_CHARGED": {},
-  "BAT_V_EMPTY": {},
-  "BAT_V_LOAD_DROP": {},
-  "COM_ARM_EKF_HGT": {},
-  "COM_ARM_EKF_POS": {},
-  "COM_ARM_EKF_VEL": {},
-  "COM_ARM_EKF_YAW": {},
-  "COM_OBS_AVOID": {},
-  "COM_POS_FS_DELAY": {},
-  "EKF2_TERR_MASK": {},
-  "FW_SPOILERS_DESC": {},
-  "MIS_PD_TO": {},
-  "MOT_SLEW_MAX": {},
-  "PD_GRIPPER_EN": {},
-  "RC_MAP_ACRO_SW": {},
-  "RC_MAP_MAN_SW": {},
-  "RC_MAP_POSCTL_SW": {},
-  "RC_MAP_RATT_SW": {},
-  "RC_MAP_STAB_SW": {},
-  "RDD_ANG_SCALE": {},
-  "RDD_I_ANG_VEL": {},
-  "RDD_I_SPEED": {},
-  "RDD_MAX_ACCEL": {},
-  "RDD_MAX_JERK": {},
-  "RDD_P_ANG_VEL": {},
-  "RDD_P_HEADING": {},
-  "RDD_P_SPEED": {},
-  "RDD_SPEED_SCALE": {},
-  "RDD_WHEEL_BASE": {},
-  "RDD_WHEEL_RADIUS": {},
-  "RDD_WHEEL_SPEED": {}
+  "BAT1_V_LOAD_DROP": {
+   "kind": "replaced",
+   "successors": [
+    "BAT1_R_INTERNAL"
+   ]
+  },
+  "BAT2_V_LOAD_DROP": {
+   "kind": "replaced",
+   "successors": [
+    "BAT2_R_INTERNAL"
+   ]
+  },
+  "BAT3_V_LOAD_DROP": {
+   "kind": "replaced",
+   "successors": [
+    "BAT3_R_INTERNAL"
+   ]
+  },
+  "BAT_N_CELLS": {
+   "kind": "removed"
+  },
+  "BAT_V_CHARGED": {
+   "kind": "removed"
+  },
+  "BAT_V_EMPTY": {
+   "kind": "removed"
+  },
+  "BAT_V_LOAD_DROP": {
+   "kind": "removed"
+  },
+  "COM_ARM_EKF_HGT": {
+   "kind": "fixed"
+  },
+  "COM_ARM_EKF_POS": {
+   "kind": "fixed"
+  },
+  "COM_ARM_EKF_VEL": {
+   "kind": "fixed"
+  },
+  "COM_ARM_EKF_YAW": {
+   "kind": "fixed"
+  },
+  "COM_OBS_AVOID": {
+   "kind": "removed"
+  },
+  "COM_POS_FS_DELAY": {
+   "kind": "fixed"
+  },
+  "EKF2_TERR_MASK": {
+   "kind": "replaced",
+   "successors": [
+    "EKF2_RNG_CTRL",
+    "EKF2_OF_CTRL"
+   ]
+  },
+  "FW_SPOILERS_DESC": {
+   "kind": "removed"
+  },
+  "MIS_PD_TO": {
+   "kind": "replaced",
+   "successors": [
+    "MIS_COMMAND_TOUT"
+   ]
+  },
+  "MOT_SLEW_MAX": {
+   "kind": "removed"
+  },
+  "PD_GRIPPER_EN": {
+   "kind": "replaced",
+   "successors": [
+    "PD_GRIPPER_TYPE"
+   ]
+  },
+  "RC_MAP_ACRO_SW": {
+   "kind": "removed"
+  },
+  "RC_MAP_MAN_SW": {
+   "kind": "removed"
+  },
+  "RC_MAP_POSCTL_SW": {
+   "kind": "removed"
+  },
+  "RC_MAP_RATT_SW": {
+   "kind": "removed"
+  },
+  "RC_MAP_STAB_SW": {
+   "kind": "removed"
+  },
+  "RDD_ANG_SCALE": {
+   "kind": "removed"
+  },
+  "RDD_I_ANG_VEL": {
+   "kind": "replaced",
+   "successors": [
+    "RO_YAW_RATE_I"
+   ]
+  },
+  "RDD_I_SPEED": {
+   "kind": "replaced",
+   "successors": [
+    "RO_SPEED_I"
+   ]
+  },
+  "RDD_MAX_ACCEL": {
+   "kind": "replaced",
+   "successors": [
+    "RO_ACCEL_LIM",
+    "RO_DECEL_LIM"
+   ]
+  },
+  "RDD_MAX_JERK": {
+   "kind": "replaced",
+   "successors": [
+    "RO_JERK_LIM"
+   ]
+  },
+  "RDD_P_ANG_VEL": {
+   "kind": "replaced",
+   "successors": [
+    "RO_YAW_RATE_P"
+   ]
+  },
+  "RDD_P_HEADING": {
+   "kind": "replaced",
+   "successors": [
+    "RO_YAW_P"
+   ]
+  },
+  "RDD_P_SPEED": {
+   "kind": "replaced",
+   "successors": [
+    "RO_SPEED_P"
+   ]
+  },
+  "RDD_SPEED_SCALE": {
+   "kind": "removed"
+  },
+  "RDD_WHEEL_BASE": {
+   "kind": "renamed",
+   "successors": [
+    "RD_WHEEL_TRACK"
+   ]
+  },
+  "RDD_WHEEL_RADIUS": {
+   "kind": "removed"
+  },
+  "RDD_WHEEL_SPEED": {
+   "kind": "replaced",
+   "successors": [
+    "RO_MAX_THR_SPEED"
+   ]
+  }
  },
  "to": {
   "commit": "6ea3539157ca358c70a515878b77077af7d4611d",

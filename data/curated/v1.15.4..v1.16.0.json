@@ -1,0 +1,305 @@
+{
+ "format": 1,
+ "from": "v1.15.4",
+ "removed": {
+  "BAT1_V_LOAD_DROP": {
+   "basis": "code-inspection",
+   "commit": "f65653a3911c0a87db68da1e41b60163815d96c2",
+   "kind": "replaced",
+   "note": "Removed; the voltage drop under load is now worked out from the measured current and the cell internal resistance: BAT1_R_INTERNAL when it is 0 or more, otherwise PX4's own estimate. BAT1_R_INTERNAL now defaults to -1 (estimate) instead of 0.005. v1.15.4 used this parameter, with the throttle, only when BAT1_R_INTERNAL was negative or no current was measured; without a current measurement v1.16.0 does not correct for the load drop.",
+   "pr": 23205,
+   "successors": [
+    "BAT1_R_INTERNAL"
+   ]
+  },
+  "BAT2_V_LOAD_DROP": {
+   "basis": "code-inspection",
+   "commit": "f65653a3911c0a87db68da1e41b60163815d96c2",
+   "kind": "replaced",
+   "note": "Removed; the voltage drop under load is now worked out from the measured current and the cell internal resistance: BAT2_R_INTERNAL when it is 0 or more, otherwise PX4's own estimate. BAT2_R_INTERNAL now defaults to -1 (estimate) instead of 0.005. v1.15.4 used this parameter, with the throttle, only when BAT2_R_INTERNAL was negative or no current was measured; without a current measurement v1.16.0 does not correct for the load drop.",
+   "pr": 23205,
+   "successors": [
+    "BAT2_R_INTERNAL"
+   ]
+  },
+  "BAT3_V_LOAD_DROP": {
+   "basis": "code-inspection",
+   "commit": "f65653a3911c0a87db68da1e41b60163815d96c2",
+   "kind": "replaced",
+   "note": "Removed; the voltage drop under load is now worked out from the measured current and the cell internal resistance: BAT3_R_INTERNAL when it is 0 or more, otherwise PX4's own estimate. BAT3_R_INTERNAL now defaults to -1 (estimate) instead of 0.005. v1.15.4 used this parameter, with the throttle, only when BAT3_R_INTERNAL was negative or no current was measured; without a current measurement v1.16.0 does not correct for the load drop.",
+   "pr": 23205,
+   "successors": [
+    "BAT3_R_INTERNAL"
+   ]
+  },
+  "BAT_N_CELLS": {
+   "basis": "code-inspection",
+   "commit": "f4e76cd3920b0cb1bc85f8ea7cf6fd54d9f4d963",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 kept this deprecated name only for QGroundControl and used BAT1_N_CELLS. Removed.",
+   "pr": 22872
+  },
+  "BAT_V_CHARGED": {
+   "basis": "code-inspection",
+   "commit": "f4e76cd3920b0cb1bc85f8ea7cf6fd54d9f4d963",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 kept this deprecated name only for QGroundControl and used BAT1_V_CHARGED. Removed.",
+   "pr": 22872
+  },
+  "BAT_V_EMPTY": {
+   "basis": "code-inspection",
+   "commit": "f4e76cd3920b0cb1bc85f8ea7cf6fd54d9f4d963",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 kept this deprecated name only for QGroundControl and used BAT1_V_EMPTY. Removed.",
+   "pr": 22872
+  },
+  "BAT_V_LOAD_DROP": {
+   "basis": "code-inspection",
+   "commit": "f4e76cd3920b0cb1bc85f8ea7cf6fd54d9f4d963",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 kept this deprecated name only for QGroundControl and used BAT1_V_LOAD_DROP, which v1.16.0 removed as well (see BAT1_V_LOAD_DROP). Removed.",
+   "pr": 22872
+  },
+  "COM_ARM_EKF_HGT": {
+   "basis": "code-inspection",
+   "commit": "eac14b7db2e66612e0438fb2413720b018109115",
+   "fixed_value": 0.5,
+   "kind": "fixed",
+   "note": "Removed; arming is now refused when the EKF height innovation test ratio is above 0.5, a limit fixed in the EKF. The old default was 1.0, so the check is stricter unless it was set lower.",
+   "pr": 23411
+  },
+  "COM_ARM_EKF_POS": {
+   "basis": "code-inspection",
+   "commit": "eac14b7db2e66612e0438fb2413720b018109115",
+   "fixed_value": 0.5,
+   "kind": "fixed",
+   "note": "Removed; arming is now refused when the EKF horizontal position innovation test ratio is above 0.5, a limit fixed in the EKF (the old default).",
+   "pr": 23411
+  },
+  "COM_ARM_EKF_VEL": {
+   "basis": "code-inspection",
+   "commit": "eac14b7db2e66612e0438fb2413720b018109115",
+   "fixed_value": 0.5,
+   "kind": "fixed",
+   "note": "Removed; arming is now refused when the EKF horizontal or vertical velocity innovation test ratio is above 0.5, a limit fixed in the EKF (the old default).",
+   "pr": 23411
+  },
+  "COM_ARM_EKF_YAW": {
+   "basis": "code-inspection",
+   "commit": "eac14b7db2e66612e0438fb2413720b018109115",
+   "fixed_value": 0.5,
+   "kind": "fixed",
+   "note": "Removed; arming is now refused when the EKF heading innovation test ratio is above 0.5, a limit fixed in the EKF (the old default).",
+   "pr": 23411
+  },
+  "COM_OBS_AVOID": {
+   "basis": "code-inspection",
+   "commit": "1f2dba68d28b6a819656568d4f34f949f09f385f",
+   "kind": "removed",
+   "note": "Removed with PX4's interface to an obstacle avoidance system on a companion computer: Auto modes no longer take its setpoints, and arming no longer waits for it. Collision prevention (CP_DIST) is separate and still available.",
+   "pr": 24172
+  },
+  "COM_POS_FS_DELAY": {
+   "basis": "code-inspection",
+   "commit": "d416cd2a6cfc34a59cf8f85c25e7c90286049ba7",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; the position and altitude estimates now count as invalid when they have not been updated for 1 s (the old default 1). Fixed-wing airframes had 5 s by default (rc.fw_defaults).",
+   "pr": 24063
+  },
+  "EKF2_TERR_MASK": {
+   "basis": "code-inspection",
+   "commit": "a665764b0ea3feca23c079b545919bd958411b58",
+   "kind": "replaced",
+   "note": "Removed; the terrain estimate is now part of the EKF and uses the range finder unless EKF2_RNG_CTRL is 0, and optical flow when EKF2_OF_CTRL is 1. There is no separate setting for the terrain: to keep a sensor out of it, turn off its fusion.",
+   "pr": 23263,
+   "successors": [
+    "EKF2_RNG_CTRL",
+    "EKF2_OF_CTRL"
+   ]
+  },
+  "FW_SPOILERS_DESC": {
+   "basis": "code-inspection",
+   "commit": "77709c29487c5e8788ce7b28dd969e08b3bd94bf",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 never read it. Removed.",
+   "pr": 23267
+  },
+  "MIS_PD_TO": {
+   "basis": "code-inspection",
+   "commit": "ce3fcd503f473652a76b66a4f4d372a4ca0eab32",
+   "kind": "replaced",
+   "note": "Replaced by MIS_COMMAND_TOUT. v1.15.4 continued a mission after a gripper or winch command when the payload acknowledged it, or after this timeout (default 5 s). v1.16.0 waits MIS_COMMAND_TOUT seconds after a gripper, winch or gimbal command and does not wait for an acknowledgement; it defaults to 0 (no wait).",
+   "pr": 23960,
+   "successors": [
+    "MIS_COMMAND_TOUT"
+   ]
+  },
+  "MOT_SLEW_MAX": {
+   "basis": "code-inspection",
+   "commit": "b9942ad7e0a0f78fd51e85e12b99f3f5c0b2f06a",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 never read it. Removed.",
+   "pr": 23794
+  },
+  "PD_GRIPPER_EN": {
+   "basis": "code-inspection",
+   "commit": "2471afd4239c165619d747731459e27807373fd0",
+   "kind": "replaced",
+   "note": "Removed; the payload deliverer now always starts and sets up a gripper of type PD_GRIPPER_TYPE (default 0, servo). To turn the gripper off, set PD_GRIPPER_TYPE to -1 (undefined). PD_GRIPPER_TO now defaults to 1 s instead of 3 s.",
+   "pr": 25318,
+   "successors": [
+    "PD_GRIPPER_TYPE"
+   ]
+  },
+  "RC_MAP_ACRO_SW": {
+   "basis": "code-inspection",
+   "commit": "f9160853fa2a0db214fcd4004d6622fd9c78e5ba",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 reset it to 0 with a warning whenever it was set. Flight modes are selected with RC_MAP_FLTMODE and COM_FLTMODE1 to COM_FLTMODE6.",
+   "pr": 23282
+  },
+  "RC_MAP_MAN_SW": {
+   "basis": "code-inspection",
+   "commit": "f9160853fa2a0db214fcd4004d6622fd9c78e5ba",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 reset it to 0 with a warning whenever it was set. Flight modes are selected with RC_MAP_FLTMODE and COM_FLTMODE1 to COM_FLTMODE6.",
+   "pr": 23282
+  },
+  "RC_MAP_POSCTL_SW": {
+   "basis": "code-inspection",
+   "commit": "f9160853fa2a0db214fcd4004d6622fd9c78e5ba",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 reset it to 0 with a warning whenever it was set. Flight modes are selected with RC_MAP_FLTMODE and COM_FLTMODE1 to COM_FLTMODE6.",
+   "pr": 23282
+  },
+  "RC_MAP_RATT_SW": {
+   "basis": "code-inspection",
+   "commit": "f9160853fa2a0db214fcd4004d6622fd9c78e5ba",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 reset it to 0 with a warning whenever it was set. Flight modes are selected with RC_MAP_FLTMODE and COM_FLTMODE1 to COM_FLTMODE6.",
+   "pr": 23282
+  },
+  "RC_MAP_STAB_SW": {
+   "basis": "code-inspection",
+   "commit": "f9160853fa2a0db214fcd4004d6622fd9c78e5ba",
+   "kind": "removed",
+   "note": "Had no effect: v1.15.4 reset it to 0 with a warning whenever it was set. Flight modes are selected with RC_MAP_FLTMODE and COM_FLTMODE1 to COM_FLTMODE6.",
+   "pr": 23282
+  },
+  "RDD_ANG_SCALE": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "removed",
+   "note": "Removed; v1.16.0 has no manual yaw rate scale. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430
+  },
+  "RDD_I_ANG_VEL": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_YAW_RATE_I. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_YAW_RATE_I"
+   ]
+  },
+  "RDD_I_SPEED": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_SPEED_I. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_SPEED_I"
+   ]
+  },
+  "RDD_MAX_ACCEL": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_ACCEL_LIM and RO_DECEL_LIM. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_ACCEL_LIM",
+    "RO_DECEL_LIM"
+   ]
+  },
+  "RDD_MAX_JERK": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_JERK_LIM. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_JERK_LIM"
+   ]
+  },
+  "RDD_P_ANG_VEL": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_YAW_RATE_P. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_YAW_RATE_P"
+   ]
+  },
+  "RDD_P_HEADING": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_YAW_P. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_YAW_P"
+   ]
+  },
+  "RDD_P_SPEED": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_SPEED_P. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_SPEED_P"
+   ]
+  },
+  "RDD_SPEED_SCALE": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "removed",
+   "note": "Removed; v1.16.0 has no manual speed scale. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430
+  },
+  "RDD_WHEEL_BASE": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "renamed",
+   "note": "Renamed to RD_WHEEL_TRACK, with the same meaning: the distance from the centre of the right wheel to the centre of the left wheel, in m. The value is not converted, and RD_WHEEL_TRACK defaults to 0. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again.",
+   "pr": 23430,
+   "successors": [
+    "RD_WHEEL_TRACK"
+   ]
+  },
+  "RDD_WHEEL_RADIUS": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "removed",
+   "note": "Removed; v1.16.0 has no wheel radius. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430
+  },
+  "RDD_WHEEL_SPEED": {
+   "basis": "code-inspection",
+   "commit": "33d99a13e835743943b15fe8a75c00acd2fe01b9",
+   "kind": "replaced",
+   "note": "Replaced by RO_MAX_THR_SPEED, the speed in m/s the rover drives at full throttle; v1.15.4 took the maximum speed from RDD_WHEEL_SPEED times RDD_WHEEL_RADIUS. The differential-drive rover module was rewritten as rover_differential, with new parameters (RD_* for this rover type, RO_* shared by all rovers) and different controllers. Set up and tune the rover again; do not copy the old values.",
+   "pr": 23430,
+   "successors": [
+    "RO_MAX_THR_SPEED"
+   ]
+  }
+ },
+ "status": "complete",
+ "to": "v1.16.0"
+}
