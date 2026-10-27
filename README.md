@@ -4,9 +4,8 @@ Parameter history for PX4: a machine-readable record of how PX4 parameters
 change between releases.
 
 **Status: early development. There is no release yet. The data described
-below is built, the parameters removed after v1.15.0 (and the one v1.14.1
-removed) are curated, and the commands and the upgrade check page work on
-it.**
+below is built, every parameter removed after v1.14.0 is curated, and the
+commands and the upgrade check page work on it.**
 The plan is in [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Why
@@ -34,7 +33,7 @@ pages. param-lineage turns it into data that tools can use:
 |---|---|---|
 | All parameter metadata of a release | `data/snapshots/<tag>.json` ([schema](schema/snapshot.schema.json)) | v1.12.0 to v1.17.0 with their patch releases, and v1.18.0-rc1 |
 | Conversions PX4 performs on upgrade | `data/translations/<tag>.json` ([schema](schema/translations.schema.json)) | the same releases |
-| What happened to each removed parameter | `data/curated/<from>..<to>.json` ([schema](schema/curated.schema.json)) | v1.14.0 to v1.14.1, v1.15.4 to v1.16.0, v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
+| What happened to each removed parameter | `data/curated/<from>..<to>.json` ([schema](schema/curated.schema.json)) | v1.14.0 to v1.14.1, v1.14.4 to v1.15.0, v1.15.4 to v1.16.0, v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
 | Changes between consecutive releases | `data/changes/<from>..<to>.json` ([schema](schema/changes.schema.json)) | every pair of consecutive tracked releases |
 | History of every parameter | `data/params.json` ([schema](schema/params.schema.json)) | every parameter of the tracked releases |
 | In-place upgrades run in PX4 SITL | `data/sitl/<from>..<to>.json` ([schema](schema/sitl.schema.json)) | v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |

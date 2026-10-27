@@ -55,6 +55,11 @@
   from v1.14.0 to v1.14.1 (1), each read from the commit that removed it and
   from the source of both releases. `check` and `history` now say what
   happened to them.
+- Curated facts for the 40 parameters removed from v1.14.4 to v1.15.0, read
+  the same way. Three are converted by v1.15.0 (`CBRK_AIRSPD_CHK`,
+  `FW_ARSP_MODE`, `SYS_MC_EST_GROUP`) and match its translations; the 20
+  `MODAL_IO_*` parameters were renamed to `VOXL_ESC_*`. Every parameter
+  removed after v1.14.0 is now curated.
 - Every command now also ends with the trademark notice, in text and in
   JSON, as `--version`, the README and the page already did.
 - How to make a release, in [CONTRIBUTING.md](CONTRIBUTING.md), and a test

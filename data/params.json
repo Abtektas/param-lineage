@@ -1435,7 +1435,13 @@
    ]
   },
   "ATT_EN": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "name": "SYS_MC_EST_GROUP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -13044,7 +13050,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -20799,7 +20806,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "successors": [
+      "SYS_HAS_NUM_ASPD"
+     ]
     }
    ],
    "states": [
@@ -21114,7 +21125,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -27455,7 +27467,15 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "successors": [
+      "EKF2_GPS_CTRL",
+      "EKF2_OF_CTRL",
+      "EKF2_EV_CTRL",
+      "EKF2_IMU_CTRL",
+      "EKF2_DRAG_CTRL"
+     ]
     }
    ],
    "states": [
@@ -27875,7 +27895,13 @@
    ]
   },
   "EKF2_DRAG_CTRL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "EKF2_AID_MASK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -27930,7 +27956,13 @@
    ]
   },
   "EKF2_EN": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "name": "SYS_MC_EST_GROUP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -28037,7 +28069,13 @@
    ]
   },
   "EKF2_EV_CTRL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "EKF2_AID_MASK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -28523,7 +28561,13 @@
    ]
   },
   "EKF2_GPS_CTRL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "EKF2_AID_MASK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -28935,7 +28979,13 @@
    ]
   },
   "EKF2_IMU_CTRL": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "EKF2_AID_MASK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -29334,7 +29384,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -29503,6 +29554,11 @@
   },
   "EKF2_OF_CTRL": {
    "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "EKF2_AID_MASK"
+    },
     {
      "in": "v1.16.0",
      "kind": "replaced",
@@ -32668,7 +32724,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "successors": [
+      "FW_USE_AIRSPD"
+     ]
     }
    ],
    "states": [
@@ -35106,7 +35166,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "FW_T_THR_INTEG"
+     ]
     }
    ],
    "states": [
@@ -35401,7 +35465,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "FW_T_THR_DAMPING"
+     ]
     }
    ],
    "states": [
@@ -35417,7 +35485,13 @@
    ]
   },
   "FW_T_THR_DAMPING": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "FW_T_THR_DAMP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -35432,7 +35506,13 @@
    ]
   },
   "FW_T_THR_INTEG": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "FW_T_I_GAIN_THR"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -35478,7 +35558,13 @@
    ]
   },
   "FW_USE_AIRSPD": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "name": "FW_ARSP_MODE"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -35905,7 +35991,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -35934,7 +36021,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -35966,7 +36054,13 @@
    ]
   },
   "GF_MAX_VER_DIST": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "LNDMC_ALT_MAX"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -37261,7 +37355,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "SEP_PITCH_OFFS"
+     ]
     }
    ],
    "states": [
@@ -56485,7 +56583,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "successors": [
+      "GF_MAX_VER_DIST"
+     ]
     }
    ],
    "states": [
@@ -56650,7 +56752,13 @@
    ]
   },
   "LPE_EN": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "name": "SYS_MC_EST_GROUP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -62311,7 +62419,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_BAUD"
+     ]
     }
    ],
    "states": [
@@ -62329,7 +62441,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_CONFIG"
+     ]
     }
    ],
    "states": [
@@ -62358,7 +62474,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_FUNC1"
+     ]
     }
    ],
    "states": [
@@ -62565,7 +62685,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_FUNC2"
+     ]
     }
    ],
    "states": [
@@ -62772,7 +62896,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_FUNC3"
+     ]
     }
    ],
    "states": [
@@ -62979,7 +63107,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_FUNC4"
+     ]
     }
    ],
    "states": [
@@ -63186,7 +63318,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_MODE"
+     ]
     }
    ],
    "states": [
@@ -63223,7 +63359,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_REV"
+     ]
     }
    ],
    "states": [
@@ -63260,7 +63400,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_RPM_MAX"
+     ]
     }
    ],
    "states": [
@@ -63278,7 +63422,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_RPM_MIN"
+     ]
     }
    ],
    "states": [
@@ -63296,7 +63444,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_SDIR1"
+     ]
     }
    ],
    "states": [
@@ -63323,7 +63475,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_SDIR2"
+     ]
     }
    ],
    "states": [
@@ -63350,7 +63506,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_SDIR3"
+     ]
     }
    ],
    "states": [
@@ -63377,7 +63537,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_SDIR4"
+     ]
     }
    ],
    "states": [
@@ -63404,7 +63568,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_T_COSP"
+     ]
     }
    ],
    "states": [
@@ -63423,7 +63591,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_T_DEAD"
+     ]
     }
    ],
    "states": [
@@ -63442,7 +63614,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_T_EXPO"
+     ]
     }
    ],
    "states": [
@@ -63461,7 +63637,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_T_MINF"
+     ]
     }
    ],
    "states": [
@@ -63480,7 +63660,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_T_PERC"
+     ]
     }
    ],
    "states": [
@@ -63499,7 +63683,11 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "successors": [
+      "VOXL_ESC_VLOG"
+     ]
     }
    ],
    "states": [
@@ -85322,7 +85510,13 @@
    ]
   },
   "PCA9685_PWM_FREQ": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "PCA9685_RATE"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -85340,7 +85534,12 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "successors": [
+      "PCA9685_PWM_FREQ",
+      "PCA9685_SCHD_HZ"
+     ]
     }
    ],
    "states": [
@@ -85438,7 +85637,13 @@
    ]
   },
   "PCA9685_SCHD_HZ": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "replaced",
+     "name": "PCA9685_RATE"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -121075,7 +121280,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -129331,7 +129537,13 @@
    ]
   },
   "SEP_PITCH_OFFS": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "GPS_PITCH_OFFSET"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -142428,7 +142640,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -142446,7 +142659,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -142464,7 +142678,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "removed"
     }
    ],
    "states": [
@@ -153399,7 +153614,13 @@
    ]
   },
   "SYS_HAS_NUM_ASPD": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "name": "CBRK_AIRSPD_CHK"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -153525,7 +153746,13 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "migrated",
+     "successors": [
+      "EKF2_EN",
+      "LPE_EN",
+      "ATT_EN"
+     ]
     }
    ],
    "states": [
@@ -212308,7 +212535,13 @@
    ]
   },
   "VOXL_ESC_BAUD": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_BAUD"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -212347,7 +212580,13 @@
    ]
   },
   "VOXL_ESC_CONFIG": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_CONFIG"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -212372,7 +212611,13 @@
    ]
   },
   "VOXL_ESC_FUNC1": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_FUNC1"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -213029,7 +213274,13 @@
    ]
   },
   "VOXL_ESC_FUNC2": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_FUNC2"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -213686,7 +213937,13 @@
    ]
   },
   "VOXL_ESC_FUNC3": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_FUNC3"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -214343,7 +214600,13 @@
    ]
   },
   "VOXL_ESC_FUNC4": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_FUNC4"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215021,7 +215284,13 @@
    ]
   },
   "VOXL_ESC_MODE": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_MODE"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215121,7 +215390,13 @@
    ]
   },
   "VOXL_ESC_REV": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_REV"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215154,7 +215429,13 @@
    ]
   },
   "VOXL_ESC_RPM_MAX": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_RPM_MAX"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215168,7 +215449,13 @@
    ]
   },
   "VOXL_ESC_RPM_MIN": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_RPM_MIN"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215182,7 +215469,13 @@
    ]
   },
   "VOXL_ESC_SDIR1": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_SDIR1"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215205,7 +215498,13 @@
    ]
   },
   "VOXL_ESC_SDIR2": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_SDIR2"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215228,7 +215527,13 @@
    ]
   },
   "VOXL_ESC_SDIR3": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_SDIR3"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215251,7 +215556,13 @@
    ]
   },
   "VOXL_ESC_SDIR4": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_SDIR4"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215274,7 +215585,13 @@
    ]
   },
   "VOXL_ESC_T_COSP": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_T_COSP"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215289,7 +215606,13 @@
    ]
   },
   "VOXL_ESC_T_DEAD": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_T_DEAD"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215304,7 +215627,13 @@
    ]
   },
   "VOXL_ESC_T_EXPO": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_T_EXPO"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215319,7 +215648,13 @@
    ]
   },
   "VOXL_ESC_T_MINF": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_T_MINF"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215376,7 +215711,13 @@
    ]
   },
   "VOXL_ESC_T_PERC": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_T_PERC"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -215412,7 +215753,13 @@
    ]
   },
   "VOXL_ESC_VLOG": {
-   "predecessors": [],
+   "predecessors": [
+    {
+     "in": "v1.15.0",
+     "kind": "renamed",
+     "name": "MODAL_IO_VLOG"
+    }
+   ],
    "removed": [],
    "states": [
     {
@@ -225434,7 +225781,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "fixed"
     }
    ],
    "states": [
@@ -226380,7 +226728,8 @@
    "predecessors": [],
    "removed": [
     {
-     "in": "v1.15.0"
+     "in": "v1.15.0",
+     "kind": "removed"
     }
    ],
    "states": [

@@ -5017,53 +5017,227 @@
    }
   }
  },
- "curated": "none",
+ "curated": "complete",
  "format": 1,
  "from": {
   "commit": "1555f2bd2229544c43966ab5f94879c41d8e1e01",
   "tag": "v1.14.4"
  },
  "removed": {
-  "CANNODE_NODE_ID": {},
-  "CBRK_AIRSPD_CHK": {},
-  "COM_ARM_ARSP_EN": {},
-  "EKF2_AID_MASK": {},
-  "EKF2_MAG_YAWLIM": {},
-  "FW_ARSP_MODE": {},
-  "FW_T_I_GAIN_THR": {},
-  "FW_T_THR_DAMP": {},
-  "GF_ALTMODE": {},
-  "GF_COUNT": {},
-  "GPS_PITCH_OFFSET": {},
-  "LNDMC_ALT_MAX": {},
-  "MODAL_IO_BAUD": {},
-  "MODAL_IO_CONFIG": {},
-  "MODAL_IO_FUNC1": {},
-  "MODAL_IO_FUNC2": {},
-  "MODAL_IO_FUNC3": {},
-  "MODAL_IO_FUNC4": {},
-  "MODAL_IO_MODE": {},
-  "MODAL_IO_REV": {},
-  "MODAL_IO_RPM_MAX": {},
-  "MODAL_IO_RPM_MIN": {},
-  "MODAL_IO_SDIR1": {},
-  "MODAL_IO_SDIR2": {},
-  "MODAL_IO_SDIR3": {},
-  "MODAL_IO_SDIR4": {},
-  "MODAL_IO_T_COSP": {},
-  "MODAL_IO_T_DEAD": {},
-  "MODAL_IO_T_EXPO": {},
-  "MODAL_IO_T_MINF": {},
-  "MODAL_IO_T_PERC": {},
-  "MODAL_IO_VLOG": {},
-  "PCA9685_RATE": {},
-  "RTL_HDG_MD": {},
-  "SIM_GZ_HOME_ALT": {},
-  "SIM_GZ_HOME_LAT": {},
-  "SIM_GZ_HOME_LON": {},
-  "SYS_MC_EST_GROUP": {},
-  "VT_B_DEC_FF": {},
-  "VT_TILT_SPINUP": {}
+  "CANNODE_NODE_ID": {
+   "kind": "removed"
+  },
+  "CBRK_AIRSPD_CHK": {
+   "kind": "migrated",
+   "successors": [
+    "SYS_HAS_NUM_ASPD"
+   ]
+  },
+  "COM_ARM_ARSP_EN": {
+   "kind": "fixed"
+  },
+  "EKF2_AID_MASK": {
+   "kind": "replaced",
+   "successors": [
+    "EKF2_GPS_CTRL",
+    "EKF2_OF_CTRL",
+    "EKF2_EV_CTRL",
+    "EKF2_IMU_CTRL",
+    "EKF2_DRAG_CTRL"
+   ]
+  },
+  "EKF2_MAG_YAWLIM": {
+   "kind": "fixed"
+  },
+  "FW_ARSP_MODE": {
+   "kind": "migrated",
+   "successors": [
+    "FW_USE_AIRSPD"
+   ]
+  },
+  "FW_T_I_GAIN_THR": {
+   "kind": "renamed",
+   "successors": [
+    "FW_T_THR_INTEG"
+   ]
+  },
+  "FW_T_THR_DAMP": {
+   "kind": "renamed",
+   "successors": [
+    "FW_T_THR_DAMPING"
+   ]
+  },
+  "GF_ALTMODE": {
+   "kind": "fixed"
+  },
+  "GF_COUNT": {
+   "kind": "fixed"
+  },
+  "GPS_PITCH_OFFSET": {
+   "kind": "renamed",
+   "successors": [
+    "SEP_PITCH_OFFS"
+   ]
+  },
+  "LNDMC_ALT_MAX": {
+   "kind": "replaced",
+   "successors": [
+    "GF_MAX_VER_DIST"
+   ]
+  },
+  "MODAL_IO_BAUD": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_BAUD"
+   ]
+  },
+  "MODAL_IO_CONFIG": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_CONFIG"
+   ]
+  },
+  "MODAL_IO_FUNC1": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_FUNC1"
+   ]
+  },
+  "MODAL_IO_FUNC2": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_FUNC2"
+   ]
+  },
+  "MODAL_IO_FUNC3": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_FUNC3"
+   ]
+  },
+  "MODAL_IO_FUNC4": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_FUNC4"
+   ]
+  },
+  "MODAL_IO_MODE": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_MODE"
+   ]
+  },
+  "MODAL_IO_REV": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_REV"
+   ]
+  },
+  "MODAL_IO_RPM_MAX": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_RPM_MAX"
+   ]
+  },
+  "MODAL_IO_RPM_MIN": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_RPM_MIN"
+   ]
+  },
+  "MODAL_IO_SDIR1": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_SDIR1"
+   ]
+  },
+  "MODAL_IO_SDIR2": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_SDIR2"
+   ]
+  },
+  "MODAL_IO_SDIR3": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_SDIR3"
+   ]
+  },
+  "MODAL_IO_SDIR4": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_SDIR4"
+   ]
+  },
+  "MODAL_IO_T_COSP": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_T_COSP"
+   ]
+  },
+  "MODAL_IO_T_DEAD": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_T_DEAD"
+   ]
+  },
+  "MODAL_IO_T_EXPO": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_T_EXPO"
+   ]
+  },
+  "MODAL_IO_T_MINF": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_T_MINF"
+   ]
+  },
+  "MODAL_IO_T_PERC": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_T_PERC"
+   ]
+  },
+  "MODAL_IO_VLOG": {
+   "kind": "renamed",
+   "successors": [
+    "VOXL_ESC_VLOG"
+   ]
+  },
+  "PCA9685_RATE": {
+   "kind": "replaced",
+   "successors": [
+    "PCA9685_PWM_FREQ",
+    "PCA9685_SCHD_HZ"
+   ]
+  },
+  "RTL_HDG_MD": {
+   "kind": "removed"
+  },
+  "SIM_GZ_HOME_ALT": {
+   "kind": "removed"
+  },
+  "SIM_GZ_HOME_LAT": {
+   "kind": "removed"
+  },
+  "SIM_GZ_HOME_LON": {
+   "kind": "removed"
+  },
+  "SYS_MC_EST_GROUP": {
+   "kind": "migrated",
+   "successors": [
+    "EKF2_EN",
+    "LPE_EN",
+    "ATT_EN"
+   ]
+  },
+  "VT_B_DEC_FF": {
+   "kind": "fixed"
+  },
+  "VT_TILT_SPINUP": {
+   "kind": "removed"
+  }
  },
  "to": {
   "commit": "30e763b6780061d70a14894e3e8b06e6a656f9b8",

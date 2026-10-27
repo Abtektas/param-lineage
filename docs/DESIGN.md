@@ -454,9 +454,9 @@ Decision:
 - **Curation order:** newest first (v1.17 → v1.18, v1.16 → v1.17, …),
   because that is where people are upgrading now. v1.13 → v1.14 (mixer files
   to control allocation) is the largest transition and comes last. Done:
-  v1.17 → v1.18, v1.16 → v1.17, v1.15 → v1.16, and v1.14.0 → v1.14.1; next
-  v1.14 → v1.15 (40 removed), then v1.12 → v1.13 (166) and v1.13 → v1.14
-  (240).
+  every removal after v1.14.0 (v1.17 → v1.18, v1.16 → v1.17, v1.15 → v1.16,
+  v1.14 → v1.15 and v1.14.0 → v1.14.1); next v1.12 → v1.13 (166 removed),
+  then v1.13 → v1.14 (240).
 - **Not tracked:** `main` (changes daily, not reproducible from a tag; a dated
   snapshot may be added later, marked as such) and releases before v1.12.
 

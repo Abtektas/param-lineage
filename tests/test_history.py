@@ -80,7 +80,7 @@ class KnownHistory(unittest.TestCase):
     def test_a_parameter_that_comes_back_has_a_gap(self):
         h = load("CANNODE_NODE_ID")
         self.assertEqual([(s["from"], s["to"]) for s in h["states"]], [("v1.12.0", "v1.14.4"), ("v1.18.0-rc1", "v1.18.0-rc1")])
-        self.assertEqual(h["removed"], [{"in": "v1.15.0"}])
+        self.assertEqual(h["removed"], [{"in": "v1.15.0", "kind": "removed"}])
 
     def test_float_defaults_are_compared_as_float32(self):
         old = {"parameters": {"A": {"type": "Float", "default": 0.1}}}

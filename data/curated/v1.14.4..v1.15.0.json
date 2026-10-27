@@ -1,0 +1,387 @@
+{
+ "format": 1,
+ "from": "v1.14.4",
+ "removed": {
+  "CANNODE_NODE_ID": {
+   "basis": "code-inspection",
+   "commit": "3d61ab84c42ff8623bd48ff0ba74f9cf26bb402b",
+   "kind": "removed",
+   "note": "Removed; a PX4 CAN node now takes its node ID from the bootloader or, without one, gets it by dynamic node ID allocation on the bus. v1.15.0 has no setting for it.",
+   "pr": 21270
+  },
+  "CBRK_AIRSPD_CHK": {
+   "basis": "code-inspection",
+   "commit": "29807a5e502fcde9810b1a9ac4b9709295f8a4e0",
+   "kind": "migrated",
+   "note": "Replaced by SYS_HAS_NUM_ASPD, which says whether the vehicle has an airspeed sensor (fixed-wing and VTOL airframes default to 1). Only 162128, the value that turned the airspeed check off, is converted, to SYS_HAS_NUM_ASPD = 0; other values are dropped.",
+   "pr": 22510,
+   "successors": [
+    "SYS_HAS_NUM_ASPD"
+   ]
+  },
+  "COM_ARM_ARSP_EN": {
+   "basis": "code-inspection",
+   "commit": "88c5565a29c0b3b1f1afa3e950beb5044654fbf5",
+   "fixed_value": 1,
+   "kind": "fixed",
+   "note": "Removed; the preflight check that reports \"Airspeed too high\" when the measured airspeed is above FW_AIRSPD_MAX is now always on (the old value 1). As before, it is reported as an error but does not prevent arming.",
+   "pr": 21736
+  },
+  "EKF2_AID_MASK": {
+   "basis": "code-inspection",
+   "commit": "3b2d76657312d47e6495736dfd4d694b546497d5",
+   "kind": "replaced",
+   "note": "Replaced by EKF2_GPS_CTRL, EKF2_OF_CTRL, EKF2_EV_CTRL, EKF2_IMU_CTRL and EKF2_DRAG_CTRL, which v1.14.4 already used. At start-up v1.14.4 moved the optical flow, external vision, accelerometer bias and drag bits of this mask to them, cleared its GPS bits with a warning, and saved the mask without them. v1.15.0 does neither, so set those parameters instead.",
+   "pr": 22380,
+   "successors": [
+    "EKF2_GPS_CTRL",
+    "EKF2_OF_CTRL",
+    "EKF2_EV_CTRL",
+    "EKF2_IMU_CTRL",
+    "EKF2_DRAG_CTRL"
+   ]
+  },
+  "EKF2_MAG_YAWLIM": {
+   "basis": "code-inspection",
+   "commit": "b80f15f7b54d6f8ed82f52184c118df1d66fa3df",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; in automatic magnetometer mode (EKF2_MAG_TYPE 0) the EKF now uses 3-axis fusion whenever the magnetometer has been aligned in flight, without waiting for yaw rotation, as with the old value 0 (the fixed-wing default).",
+   "pr": 22752
+  },
+  "FW_ARSP_MODE": {
+   "basis": "code-inspection",
+   "commit": "9e0c8fd75eb3ba6f3c51749f4b78e2baa44cd5e7",
+   "kind": "migrated",
+   "note": "Replaced by FW_USE_AIRSPD, with the meaning inverted: FW_USE_AIRSPD = 1 uses the airspeed in the fixed-wing controllers. 0 (use airspeed) is converted to FW_USE_AIRSPD = 1, any other value to 0.",
+   "pr": 22510,
+   "successors": [
+    "FW_USE_AIRSPD"
+   ]
+  },
+  "FW_T_I_GAIN_THR": {
+   "basis": "code-inspection",
+   "commit": "a38abdbf9d5590a8572651ab1d0baecccd2cb7bb",
+   "kind": "renamed",
+   "note": "Renamed to FW_T_THR_INTEG, with the same meaning, in the same change as FW_T_THR_DAMP. The value is not converted; the new default is 0.02 instead of 0.05, and the maximum 1 instead of 2.",
+   "pr": 22548,
+   "successors": [
+    "FW_T_THR_INTEG"
+   ]
+  },
+  "FW_T_THR_DAMP": {
+   "basis": "code-inspection",
+   "commit": "a38abdbf9d5590a8572651ab1d0baecccd2cb7bb",
+   "kind": "renamed",
+   "note": "Renamed to FW_T_THR_DAMPING, with the same meaning. PX4 did not convert it on purpose, so that values tuned before v1.14 are not carried over: v1.14 fixed a bug that weakened the damping. A value tuned on v1.14.4 already has the fix. The new default is 0.05 instead of 0.1, and the maximum 1 instead of 2.",
+   "pr": 22548,
+   "successors": [
+    "FW_T_THR_DAMPING"
+   ]
+  },
+  "GF_ALTMODE": {
+   "basis": "code-inspection",
+   "commit": "fd709e05b0634c6aad1c01b657c5997259d114a3",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; the geofence uses the altitude of the position it checks (the old value 0). The raw barometer altitude (1) is no longer available.",
+   "pr": 22394
+  },
+  "GF_COUNT": {
+   "basis": "code-inspection",
+   "commit": "563bfbf6e7483cb8d5ced4704063f9b790d0aef8",
+   "fixed_value": -1,
+   "kind": "fixed",
+   "note": "Removed; the geofence is breached at the first position outside it (the old default -1). There is no count of positions outside any more.",
+   "pr": 22394
+  },
+  "GPS_PITCH_OFFSET": {
+   "basis": "code-inspection",
+   "commit": "5216453b392b9f51eca354f29058bdb902d3db94",
+   "kind": "renamed",
+   "note": "Renamed to SEP_PITCH_OFFS when the Septentrio driver, the only one that used it, became a driver of its own; same meaning and range, in degrees. The value is not converted.",
+   "pr": 23386,
+   "successors": [
+    "SEP_PITCH_OFFS"
+   ]
+  },
+  "LNDMC_ALT_MAX": {
+   "basis": "code-inspection",
+   "commit": "9bed8f48c7b2f441a8b377b0a1d2ced523006c54",
+   "kind": "replaced",
+   "note": "Replaced by the geofence's GF_MAX_VER_DIST, the maximum height above home. It is not a hard limit like this one: crossing it is a geofence breach, handled by GF_ACTION. v1.14.4 kept multicopters below this height above home (default -1: no limit).",
+   "pr": 22376,
+   "successors": [
+    "GF_MAX_VER_DIST"
+   ]
+  },
+  "MODAL_IO_BAUD": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_BAUD when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_BAUD"
+   ]
+  },
+  "MODAL_IO_CONFIG": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_CONFIG when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_CONFIG"
+   ]
+  },
+  "MODAL_IO_FUNC1": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_FUNC1 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_FUNC1"
+   ]
+  },
+  "MODAL_IO_FUNC2": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_FUNC2 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_FUNC2"
+   ]
+  },
+  "MODAL_IO_FUNC3": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_FUNC3 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_FUNC3"
+   ]
+  },
+  "MODAL_IO_FUNC4": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_FUNC4 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_FUNC4"
+   ]
+  },
+  "MODAL_IO_MODE": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_MODE when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_MODE"
+   ]
+  },
+  "MODAL_IO_REV": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_REV when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_REV"
+   ]
+  },
+  "MODAL_IO_RPM_MAX": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_RPM_MAX when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_RPM_MAX"
+   ]
+  },
+  "MODAL_IO_RPM_MIN": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_RPM_MIN when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_RPM_MIN"
+   ]
+  },
+  "MODAL_IO_SDIR1": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_SDIR1 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_SDIR1"
+   ]
+  },
+  "MODAL_IO_SDIR2": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_SDIR2 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_SDIR2"
+   ]
+  },
+  "MODAL_IO_SDIR3": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_SDIR3 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_SDIR3"
+   ]
+  },
+  "MODAL_IO_SDIR4": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_SDIR4 when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_SDIR4"
+   ]
+  },
+  "MODAL_IO_T_COSP": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_T_COSP when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_T_COSP"
+   ]
+  },
+  "MODAL_IO_T_DEAD": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_T_DEAD when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_T_DEAD"
+   ]
+  },
+  "MODAL_IO_T_EXPO": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_T_EXPO when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_T_EXPO"
+   ]
+  },
+  "MODAL_IO_T_MINF": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_T_MINF when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_T_MINF"
+   ]
+  },
+  "MODAL_IO_T_PERC": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_T_PERC when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_T_PERC"
+   ]
+  },
+  "MODAL_IO_VLOG": {
+   "basis": "code-inspection",
+   "commit": "2b69a3d290aa92af76e5a5ffe49fe61b4b204184",
+   "kind": "renamed",
+   "note": "Renamed to VOXL_ESC_VLOG when the ModalAI ESC driver modal_io became voxl_esc, with the same type, default and range. The value is not converted.",
+   "pr": 22588,
+   "successors": [
+    "VOXL_ESC_VLOG"
+   ]
+  },
+  "PCA9685_RATE": {
+   "basis": "code-inspection",
+   "commit": "f68f88b97c77d38054d54696fca5ef1a3e91822b",
+   "kind": "replaced",
+   "note": "Replaced by PCA9685_PWM_FREQ, the PWM frequency, and PCA9685_SCHD_HZ, how often the outputs are updated; both default to 50 Hz, and PX4 advises setting them to the same value in most cases. The value is not converted.",
+   "pr": 21528,
+   "successors": [
+    "PCA9685_PWM_FREQ",
+    "PCA9685_SCHD_HZ"
+   ]
+  },
+  "RTL_HDG_MD": {
+   "basis": "code-inspection",
+   "commit": "b19e35ec7cd7931f7c30745c9bde9138bfd531c2",
+   "kind": "removed",
+   "note": "Removed; RTL has no heading mode any more. It leaves the heading to the controller and sets one only once above the landing point (or when RTL starts close to it), and never when weather vane is enabled.",
+   "pr": 22731
+  },
+  "SIM_GZ_HOME_ALT": {
+   "basis": "code-inspection",
+   "commit": "bb53781b8f94fdc3b3d94c23dda429f0932c28fc",
+   "kind": "removed",
+   "note": "Simulation only. Removed; Gazebo now takes the altitude of its origin from the vehicle's navsat sensor, that is from the spherical coordinates of the world.",
+   "pr": 22638
+  },
+  "SIM_GZ_HOME_LAT": {
+   "basis": "code-inspection",
+   "commit": "bb53781b8f94fdc3b3d94c23dda429f0932c28fc",
+   "kind": "removed",
+   "note": "Simulation only. Removed; Gazebo now takes the latitude of its origin from the vehicle's navsat sensor, that is from the spherical coordinates of the world.",
+   "pr": 22638
+  },
+  "SIM_GZ_HOME_LON": {
+   "basis": "code-inspection",
+   "commit": "bb53781b8f94fdc3b3d94c23dda429f0932c28fc",
+   "kind": "removed",
+   "note": "Simulation only. Removed; Gazebo now takes the longitude of its origin from the vehicle's navsat sensor, that is from the spherical coordinates of the world.",
+   "pr": 22638
+  },
+  "SYS_MC_EST_GROUP": {
+   "basis": "code-inspection",
+   "commit": "78bbb66568e6a47291dc4d96ed177318704075fb",
+   "kind": "migrated",
+   "note": "Replaced by one switch per estimator: EKF2_EN, LPE_EN and ATT_EN. 2 (EKF2) is converted to EKF2_EN 1 with LPE_EN and ATT_EN 0; 1 to LPE_EN and ATT_EN 1 with EKF2_EN 0; 3 to ATT_EN 1 with EKF2_EN and LPE_EN 0.",
+   "pr": 22567,
+   "successors": [
+    "EKF2_EN",
+    "LPE_EN",
+    "ATT_EN"
+   ]
+  },
+  "VT_B_DEC_FF": {
+   "basis": "code-inspection",
+   "commit": "351f2a828798b0efb2365cbfa6ac21854daf1187",
+   "fixed_value": 0,
+   "kind": "fixed",
+   "note": "Removed; the back-transition deceleration is controlled by the integrator VT_B_DEC_I alone, as with the old default 0.",
+   "pr": 21736
+  },
+  "VT_TILT_SPINUP": {
+   "basis": "code-inspection",
+   "commit": "0eb276f2737284733f6375296f09ae0b4e1c2c42",
+   "kind": "removed",
+   "note": "Removed; after arming, the tilts of a tiltrotor now stay at their disarmed position until the spool-up time (COM_SPOOLUP_TIME) has passed, and then move to the multicopter position. The spool-up tilt is set by the disarmed value of the tilt outputs.",
+   "pr": 21991
+  }
+ },
+ "status": "complete",
+ "to": "v1.15.0"
+}
