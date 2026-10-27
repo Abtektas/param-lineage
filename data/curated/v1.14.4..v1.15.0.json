@@ -13,7 +13,7 @@
    "basis": "code-inspection",
    "commit": "29807a5e502fcde9810b1a9ac4b9709295f8a4e0",
    "kind": "migrated",
-   "note": "Replaced by SYS_HAS_NUM_ASPD, which says whether the vehicle has an airspeed sensor (fixed-wing and VTOL airframes default to 1). Only 162128, the value that turned the airspeed check off, is converted, to SYS_HAS_NUM_ASPD = 0; other values are dropped.",
+   "note": "Replaced by SYS_HAS_NUM_ASPD, which says whether the vehicle has an airspeed sensor; PX4's fixed-wing and VTOL defaults set it to 1. Only 162128, the value that turned the airspeed check off, is converted, to SYS_HAS_NUM_ASPD = 0; other values are dropped.",
    "pr": 22510,
    "successors": [
     "SYS_HAS_NUM_ASPD"
@@ -31,7 +31,7 @@
    "basis": "code-inspection",
    "commit": "3b2d76657312d47e6495736dfd4d694b546497d5",
    "kind": "replaced",
-   "note": "Replaced by EKF2_GPS_CTRL, EKF2_OF_CTRL, EKF2_EV_CTRL, EKF2_IMU_CTRL and EKF2_DRAG_CTRL, which v1.14.4 already used. At start-up v1.14.4 moved the optical flow, external vision, accelerometer bias and drag bits of this mask to them, cleared its GPS bits with a warning, and saved the mask without them. v1.15.0 does neither, so set those parameters instead.",
+   "note": "Replaced by EKF2_GPS_CTRL, EKF2_OF_CTRL, EKF2_EV_CTRL, EKF2_IMU_CTRL and EKF2_DRAG_CTRL, which v1.14.4 already used; there every bit of this mask was marked unused. At start-up v1.14.4 moved the optical flow, external vision, accelerometer bias and drag bits to those parameters (in firmware with the feature), cleared the GPS bits with a warning, and saved the mask without them, so a vehicle that has run v1.14.4 has them moved already. v1.15.0 does none of this: a mask from an older release has to be set in those parameters by hand.",
    "pr": 22380,
    "successors": [
     "EKF2_GPS_CTRL",
@@ -46,14 +46,14 @@
    "commit": "b80f15f7b54d6f8ed82f52184c118df1d66fa3df",
    "fixed_value": 0,
    "kind": "fixed",
-   "note": "Removed; in automatic magnetometer mode (EKF2_MAG_TYPE 0) the EKF now uses 3-axis fusion whenever the magnetometer has been aligned in flight, without waiting for yaw rotation, as with the old value 0 (the fixed-wing default).",
+   "note": "Removed; in automatic magnetometer mode (EKF2_MAG_TYPE 0) the EKF now uses 3-axis fusion once the magnetometer has been aligned in flight, as with the old value 0 (the fixed-wing default). With the general default of 0.2 rad/s, v1.14.4 used it only while the vehicle turned faster than that or accelerated enough; v1.15.0 waits for neither.",
    "pr": 22752
   },
   "FW_ARSP_MODE": {
    "basis": "code-inspection",
    "commit": "9e0c8fd75eb3ba6f3c51749f4b78e2baa44cd5e7",
    "kind": "migrated",
-   "note": "Replaced by FW_USE_AIRSPD, with the meaning inverted: FW_USE_AIRSPD = 1 uses the airspeed in the fixed-wing controllers. 0 (use airspeed) is converted to FW_USE_AIRSPD = 1, any other value to 0.",
+   "note": "Replaced by FW_USE_AIRSPD, with the meaning inverted: FW_USE_AIRSPD = 1 uses the airspeed in the fixed-wing controllers. 0 (use airspeed) is converted to FW_USE_AIRSPD = 1, any other value to 0. In v1.14.4 the value 1 also kept the preflight check from failing with \"No airspeed data\" when no validated airspeed was published. In v1.15.0 that check depends only on SYS_HAS_NUM_ASPD, which is not set from this parameter: PX4's fixed-wing and VTOL defaults set it to 1, and its description says to set it to 0 if there is no airspeed sensor.",
    "pr": 22510,
    "successors": [
     "FW_USE_AIRSPD"
@@ -63,7 +63,7 @@
    "basis": "code-inspection",
    "commit": "a38abdbf9d5590a8572651ab1d0baecccd2cb7bb",
    "kind": "renamed",
-   "note": "Renamed to FW_T_THR_INTEG, with the same meaning, in the same change as FW_T_THR_DAMP. The value is not converted; the new default is 0.02 instead of 0.05, and the maximum 1 instead of 2.",
+   "note": "Renamed to FW_T_THR_INTEG, with the same meaning, in the same change as FW_T_THR_DAMP; PX4 did not convert it on purpose, for the reason it gives there. The new default is 0.02 instead of 0.05, and the maximum 1 instead of 2.",
    "pr": 22548,
    "successors": [
     "FW_T_THR_INTEG"
@@ -330,35 +330,35 @@
    "basis": "code-inspection",
    "commit": "b19e35ec7cd7931f7c30745c9bde9138bfd531c2",
    "kind": "removed",
-   "note": "Removed; RTL has no heading mode any more. It leaves the heading to the controller and sets one only once above the landing point (or when RTL starts close to it), and never when weather vane is enabled.",
+   "note": "Removed; RTL has no heading mode any more. It keeps the current heading while climbing, leaves the heading to the flight task on the way back (for multicopters MPC_YAW_MODE, by default towards the waypoint), and sets the heading of the destination only once above it, or from the start when RTL begins within RTL_MIN_DIST of it. With weather vane enabled it sets no heading at all.",
    "pr": 22731
   },
   "SIM_GZ_HOME_ALT": {
    "basis": "code-inspection",
    "commit": "bb53781b8f94fdc3b3d94c23dda429f0932c28fc",
    "kind": "removed",
-   "note": "Simulation only. Removed; Gazebo now takes the altitude of its origin from the vehicle's navsat sensor, that is from the spherical coordinates of the world.",
+   "note": "Simulation only. Removed; PX4's Gazebo bridge now takes the altitude of its reference point from the first reading of the vehicle's navsat sensor, which Gazebo computes from the spherical coordinates of the world.",
    "pr": 22638
   },
   "SIM_GZ_HOME_LAT": {
    "basis": "code-inspection",
    "commit": "bb53781b8f94fdc3b3d94c23dda429f0932c28fc",
    "kind": "removed",
-   "note": "Simulation only. Removed; Gazebo now takes the latitude of its origin from the vehicle's navsat sensor, that is from the spherical coordinates of the world.",
+   "note": "Simulation only. Removed; PX4's Gazebo bridge now takes the latitude of its reference point from the first reading of the vehicle's navsat sensor, which Gazebo computes from the spherical coordinates of the world.",
    "pr": 22638
   },
   "SIM_GZ_HOME_LON": {
    "basis": "code-inspection",
    "commit": "bb53781b8f94fdc3b3d94c23dda429f0932c28fc",
    "kind": "removed",
-   "note": "Simulation only. Removed; Gazebo now takes the longitude of its origin from the vehicle's navsat sensor, that is from the spherical coordinates of the world.",
+   "note": "Simulation only. Removed; PX4's Gazebo bridge now takes the longitude of its reference point from the first reading of the vehicle's navsat sensor, which Gazebo computes from the spherical coordinates of the world.",
    "pr": 22638
   },
   "SYS_MC_EST_GROUP": {
    "basis": "code-inspection",
    "commit": "78bbb66568e6a47291dc4d96ed177318704075fb",
    "kind": "migrated",
-   "note": "Replaced by one switch per estimator: EKF2_EN, LPE_EN and ATT_EN. 2 (EKF2) is converted to EKF2_EN 1 with LPE_EN and ATT_EN 0; 1 to LPE_EN and ATT_EN 1 with EKF2_EN 0; 3 to ATT_EN 1 with EKF2_EN and LPE_EN 0.",
+   "note": "Replaced by one switch per estimator: EKF2_EN, LPE_EN and ATT_EN. 2 (EKF2) is converted to EKF2_EN 1 with LPE_EN and ATT_EN 0; 1 to LPE_EN and ATT_EN 1 with EKF2_EN 0; 3 to ATT_EN 1 with EKF2_EN and LPE_EN 0; other values are dropped. For 1 and 3, EKF2_EN is set to 1 instead if the firmware lacks an estimator that the value enables.",
    "pr": 22567,
    "successors": [
     "EKF2_EN",
