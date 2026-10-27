@@ -60,6 +60,11 @@
   `FW_ARSP_MODE`, `SYS_MC_EST_GROUP`) and match its translations; the 20
   `MODAL_IO_*` parameters were renamed to `VOXL_ESC_*`. Every parameter
   removed after v1.14.0 is now curated.
+- The curated entries from v1.14.0 to v1.16.0 were read a second time against
+  the source of both releases. Commits, pull requests, kinds and fixed values
+  held; ten notes of v1.14.4 to v1.15.0 and five of v1.15.4 to v1.16.0 and
+  v1.14.0 to v1.14.1 were incomplete or imprecise and are corrected.
+  CONTRIBUTING.md now asks for that second reading.
 - Every command now also ends with the trademark notice, in text and in
   JSON, as `--version`, the README and the page already did.
 - How to make a release, in [CONTRIBUTING.md](CONTRIBUTING.md), and a test

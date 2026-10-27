@@ -89,8 +89,16 @@ python -m paramlineage.history --all
    releases, and choose the kind. Read the previous release's own source,
    not only the commit: a release branch can still use a parameter that
    `main` had stopped using (`EKF2_TERR_MASK` was unused on `main` when it was
-   removed, but v1.15.4 used it). Every entry needs the full commit hash and a
-   note that a user of the previous release can act on. Set the status to
+   removed, but v1.15.4 used it). `git log -S` misses a rename to a longer
+   name that contains the old one (`FW_T_THR_DAMP` to `FW_T_THR_DAMPING`), so
+   read the diff too. Every entry needs the full commit hash and a note that a
+   user of the previous release can act on. Then read every entry a second
+   time, as a separate pass, against the source of both releases: that the
+   commit deletes the definition, that the pull request is the one GitHub
+   shows for the commit, and that every claim of the note (defaults, the
+   conditions under which something happens, what the release does instead)
+   holds in the code. A first reading misses details: the second reading of
+   v1.14.4 to v1.15.0 corrected ten of its forty notes. Set the status to
    `complete` only when every removed parameter is listed.
 7. Optionally, run the upgrade in SITL: check out both releases, build each
    with `make px4_sitl_default`, and run
