@@ -7,7 +7,7 @@
    "commit": "c3ed50488f4e96e4bb8394419a0e6ce9f13970a4",
    "fixed_value": 1,
    "kind": "fixed",
-   "note": "Removed; the IO processor of boards that have one is always used for RC input and PWM outputs (the old value 1), except in HITL. Which of its outputs are used is set in the actuator configuration.",
+   "note": "Removed; the IO processor of boards that have one is always used for RC input and PWM outputs (the old value 1, which those boards set by default), except in HITL. Which of its outputs are used is set in the actuator configuration. On board variants without one, which v1.14.0 set to 0 (some fmu-v5 and ARK FMUv6X hardware types), v1.14.1 tries to start it at boot and reports \"PX4IO start failed\".",
    "pr": 22339
   }
  },

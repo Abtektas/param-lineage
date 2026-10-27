@@ -36,7 +36,7 @@
    "basis": "code-inspection",
    "commit": "f4e76cd3920b0cb1bc85f8ea7cf6fd54d9f4d963",
    "kind": "removed",
-   "note": "Had no effect: v1.15.4 kept this deprecated name only for QGroundControl and used BAT1_N_CELLS. Removed.",
+   "note": "Had no effect: v1.15.4 kept this deprecated name only for QGroundControl and used BAT1_N_CELLS. Removed. v1.15.4's BatMon smart battery driver wrote the cell count into it; v1.16.0's writes it into BAT1_N_CELLS.",
    "pr": 22872
   },
   "BAT_V_CHARGED": {
@@ -89,7 +89,7 @@
    "commit": "eac14b7db2e66612e0438fb2413720b018109115",
    "fixed_value": 0.5,
    "kind": "fixed",
-   "note": "Removed; arming is now refused when the EKF heading innovation test ratio is above 0.5, a limit fixed in the EKF (the old default).",
+   "note": "Removed; arming is now refused when the EKF heading innovation test ratio is above 0.5, a limit fixed in the EKF (the old default). v1.15.4 checked the magnetometer test ratio against it; v1.16.0 checks the heading test ratio, whatever the heading source.",
    "pr": 23411
   },
   "COM_OBS_AVOID": {
@@ -111,7 +111,7 @@
    "basis": "code-inspection",
    "commit": "a665764b0ea3feca23c079b545919bd958411b58",
    "kind": "replaced",
-   "note": "Removed; the terrain estimate is now part of the EKF and uses the range finder unless EKF2_RNG_CTRL is 0, and optical flow when EKF2_OF_CTRL is 1. There is no separate setting for the terrain: to keep a sensor out of it, turn off its fusion.",
+   "note": "Removed; the terrain estimate is now part of the EKF and uses the range finder unless EKF2_RNG_CTRL is 0, and optical flow when EKF2_OF_CTRL is 1 and the height reference (EKF2_HGT_REF) is not the range finder. EKF2_OF_CTRL now defaults to 1 instead of 0. There is no separate setting for the terrain: to keep a sensor out of it, turn off its fusion.",
    "pr": 23263,
    "successors": [
     "EKF2_RNG_CTRL",
@@ -146,7 +146,7 @@
    "basis": "code-inspection",
    "commit": "2471afd4239c165619d747731459e27807373fd0",
    "kind": "replaced",
-   "note": "Removed; the payload deliverer now always starts and sets up a gripper of type PD_GRIPPER_TYPE (default 0, servo). To turn the gripper off, set PD_GRIPPER_TYPE to -1 (undefined). PD_GRIPPER_TO now defaults to 1 s instead of 3 s.",
+   "note": "Removed; the payload deliverer now always starts and sets up a gripper of type PD_GRIPPER_TYPE (default 0, servo). In v1.15.4 it started only with PD_GRIPPER_EN = 1, and the default was 0. To turn the gripper off, set PD_GRIPPER_TYPE to -1 (undefined). PD_GRIPPER_TO now defaults to 1 s instead of 3 s.",
    "pr": 25318,
    "successors": [
     "PD_GRIPPER_TYPE"
