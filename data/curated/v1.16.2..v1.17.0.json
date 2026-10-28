@@ -411,7 +411,7 @@
    "basis": "code-inspection",
    "commit": "3e3f10f5bc773afde11e3d0150a608928fbf7134",
    "kind": "replaced",
-   "note": "The separate guidance period for steering on the runway is gone; the ground roll is guided with the general guidance settings (NPFG_PERIOD).",
+   "note": "The separate guidance period for steering on the runway is gone. v1.16.2 used it for the takeoff ground roll and blended it in during the landing flare; v1.17.0 uses the general guidance settings (NPFG_PERIOD) for both.",
    "pr": 24056,
    "successors": [
     "NPFG_PERIOD"

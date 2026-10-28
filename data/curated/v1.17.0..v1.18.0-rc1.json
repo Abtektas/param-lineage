@@ -7,28 +7,32 @@
    "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
    "fixed_value": 1,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (1)."
+   "note": "Removed; the value is now fixed in the code at the old default (1).",
+   "pr": 27109
   },
   "ASPD_BETA_NOISE": {
    "basis": "code-inspection",
    "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
    "fixed_value": 0.15,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (0.15)."
+   "note": "Removed; the value is now fixed in the code at the old default (0.15).",
+   "pr": 27109
   },
   "ASPD_SCALE_NSD": {
    "basis": "code-inspection",
    "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
    "fixed_value": 0.0001,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (0.0001)."
+   "note": "Removed; the value is now fixed in the code at the old default (0.0001).",
+   "pr": 27109
   },
   "ASPD_TAS_GATE": {
    "basis": "code-inspection",
    "commit": "86800b4fdfc0c67b645812603290bd2f92f50405",
    "fixed_value": 4,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (4)."
+   "note": "Removed; the value is now fixed in the code at the old default (4).",
+   "pr": 27109
   },
   "BAT1_I_CHANNEL": {
    "basis": "code-inspection",
@@ -48,7 +52,8 @@
    "basis": "code-inspection",
    "commit": "1550c8d245b2e784d334305ee54611a7fd6dc374",
    "kind": "removed",
-   "note": "Was already unused (deprecated) in v1.17; removed."
+   "note": "Was already unused (deprecated) in v1.17; removed.",
+   "pr": 26591
   },
   "COM_ARM_SDCARD": {
    "basis": "code-inspection",
@@ -63,7 +68,8 @@
    "commit": "0c0be0004693e122ced2a170c0c75ae2c53e1dd6",
    "fixed_value": 1,
    "kind": "fixed",
-   "note": "Removed; disarming in flight with a stick, switch or button in manual thrust modes on multicopters is now always allowed (the old value 1)."
+   "note": "Removed; disarming in flight with a stick, switch or button in manual thrust modes on multicopters is now always allowed (the old value 1).",
+   "pr": 27248
   },
   "COM_FLT_PROFILE": {
    "basis": "code-inspection",
@@ -109,7 +115,8 @@
    "commit": "09cb22f7996362a58aef3426b57dda8b67151cd9",
    "fixed_value": 1,
    "kind": "fixed",
-   "note": "Removed; actuator testing can no longer be disabled."
+   "note": "Removed; actuator testing can no longer be disabled.",
+   "pr": 26775
   },
   "COM_OBC_LOSS_T": {
    "basis": "code-inspection",
@@ -124,7 +131,8 @@
    "commit": "c8286d4bba7e908199224f8a474fef66f5d0431d",
    "fixed_value": 1000,
    "kind": "fixed",
-   "note": "Removed; arming and disarming with sticks or a button take 1 s (1000 ms)."
+   "note": "Removed; arming and disarming with sticks or a button take 1 s (1000 ms).",
+   "pr": 25999
   },
   "COM_RC_OVERRIDE": {
    "basis": "sitl-tested",
@@ -159,6 +167,7 @@
    "commit": "f00e46f61856640dcef3d419dd39fc8c62758d0b",
    "kind": "replaced",
    "note": "Bidirectional DShot is now chosen per timer group in the output protocol parameters (PWM_MAIN_TIMn / PWM_AUX_TIMn, Actuators setup): BDShot150 (-8), BDShot300 (-7) or BDShot600 (-6). Not converted.",
+   "pr": 26263,
    "successors": [
     "PWM_AUX_TIM0",
     "PWM_AUX_TIM1",
@@ -275,13 +284,15 @@
    "basis": "code-inspection",
    "commit": "c5652b2084639abc341b31cfbfc52ba77f488650",
    "kind": "removed",
-   "note": "Removed with the motor failure detection rework; there is no replacement."
+   "note": "Removed with the motor failure detection rework; there is no replacement.",
+   "pr": 26420
   },
   "FD_ACT_MOT_TOUT": {
    "basis": "code-inspection",
    "commit": "c5652b2084639abc341b31cfbfc52ba77f488650",
    "kind": "replaced",
    "note": "Replaced by MOTFAIL_TIME, in seconds instead of milliseconds, in the reworked motor failure detection (default 1 s instead of 100 ms). Not converted.",
+   "pr": 26420,
    "successors": [
     "MOTFAIL_TIME"
    ]
@@ -291,6 +302,7 @@
    "commit": "c5652b2084639abc341b31cfbfc52ba77f488650",
    "kind": "replaced",
    "note": "The check of the ESCs' arming state now runs together with the motor failure check, both enabled by FD_ACT_EN, whose default changed from 1 to 0.",
+   "pr": 26420,
    "successors": [
     "FD_ACT_EN"
    ]
@@ -299,28 +311,32 @@
    "basis": "code-inspection",
    "commit": "ca83b8330d683ff4da9239ebd981a50e3c20c212",
    "kind": "removed",
-   "note": "Was a trigger, not a setting. Autotune is now started with the autotune command from the ground station or with the AUX switch (FW_AT_MAN_AUX)."
+   "note": "Was a trigger, not a setting. Autotune is now started with the autotune command from the ground station or with the AUX switch (FW_AT_MAN_AUX).",
+   "pr": 25797
   },
   "FW_T_SPD_DEV_STD": {
    "basis": "code-inspection",
    "commit": "c4c68df4e485064956dab5dd50e7b2e034d5329d",
    "fixed_value": 0.2,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (0.2)."
+   "note": "Removed; the value is now fixed in the code at the old default (0.2).",
+   "pr": 27196
   },
   "FW_T_SPD_PRC_STD": {
    "basis": "code-inspection",
    "commit": "c4c68df4e485064956dab5dd50e7b2e034d5329d",
    "fixed_value": 0.2,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (0.2)."
+   "note": "Removed; the value is now fixed in the code at the old default (0.2).",
+   "pr": 27196
   },
   "FW_T_SPD_STD": {
    "basis": "code-inspection",
    "commit": "c4c68df4e485064956dab5dd50e7b2e034d5329d",
    "fixed_value": 0.07,
    "kind": "fixed",
-   "note": "Removed; the value is now fixed in the code at the old default (0.07)."
+   "note": "Removed; the value is now fixed in the code at the old default (0.07).",
+   "pr": 27196
   },
   "GF_PREDICT": {
    "basis": "code-inspection",
@@ -341,38 +357,43 @@
    "commit": "62f5f5267ed60e6a069291065f1fc9a2516f6389",
    "fixed_value": 1.0,
    "kind": "fixed",
-   "note": "Removed; the multicopter land detection time is fixed (1 s, the old default).",
+   "note": "Removed; the multicopter land detection time is fixed at 1 s, the old default, and 3 s while a range finder does not measure the distance to the ground, as v1.17.0 did with the default.",
    "pr": 25251
   },
   "MC_AT_START": {
    "basis": "code-inspection",
    "commit": "ca83b8330d683ff4da9239ebd981a50e3c20c212",
    "kind": "removed",
-   "note": "Was a trigger, not a setting. Autotune is now started with the autotune command from the ground station."
+   "note": "Was a trigger, not a setting. Autotune is now started with the autotune command from the ground station.",
+   "pr": 25797
   },
   "MNT_OFF_PITCH": {
    "basis": "code-inspection",
    "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
    "kind": "removed",
-   "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
+   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0-rc1: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
+   "pr": 25899
   },
   "MNT_OFF_ROLL": {
    "basis": "code-inspection",
    "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
    "kind": "removed",
-   "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
+   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0-rc1: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
+   "pr": 25899
   },
   "MNT_OFF_YAW": {
    "basis": "code-inspection",
    "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
    "kind": "removed",
-   "note": "Removed; set the gimbal output offset with the trim of that output in the Actuators setup instead."
+   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0-rc1: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
+   "pr": 25899
   },
   "MNT_RANGE_PITCH": {
    "basis": "sitl-tested",
    "commit": "0fa5a8340954290c518189a038cae9bb6b11c209",
    "kind": "migrated",
    "note": "Replaced by MNT_MAX_PITCH and MNT_MIN_PITCH (half the range each way).",
+   "pr": 25899,
    "successors": [
     "MNT_MAX_PITCH",
     "MNT_MIN_PITCH"
@@ -383,6 +404,7 @@
    "commit": "f00e46f61856640dcef3d419dd39fc8c62758d0b",
    "kind": "migrated",
    "note": "Replaced by the per-motor DSHOT_MOT_POL1 to DSHOT_MOT_POL12.",
+   "pr": 26263,
    "successors": [
     "DSHOT_MOT_POL1",
     "DSHOT_MOT_POL2",
@@ -430,7 +452,7 @@
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
    "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP_FF of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "note": "Replaced by HEATER1_TEMP_FF of the multi-instance heater driver. Not converted by v1.18.0-rc1. The driver applies a new value without a reboot, although PX4's parameter metadata marks it as needing one.",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP_FF"
@@ -440,7 +462,7 @@
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
    "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP_I of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "note": "Replaced by HEATER1_TEMP_I of the multi-instance heater driver. Not converted by v1.18.0-rc1. The driver applies a new value without a reboot, although PX4's parameter metadata marks it as needing one.",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP_I"
@@ -450,7 +472,7 @@
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
    "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP_P of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "note": "Replaced by HEATER1_TEMP_P of the multi-instance heater driver. Not converted by v1.18.0-rc1. The driver applies a new value without a reboot, although PX4's parameter metadata marks it as needing one.",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP_P"
@@ -470,7 +492,8 @@
    "basis": "code-inspection",
    "commit": "4b34cb88349549a792adf373f919cf62d6462d30",
    "kind": "removed",
-   "note": "Simulation only; removed."
+   "note": "Simulation only; removed.",
+   "pr": 27006
   },
   "SIM_BAT_ENABLE": {
    "basis": "code-inspection",
