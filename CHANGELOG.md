@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 - 2026-11-24
 
 - Project started: design ([docs/DESIGN.md](docs/DESIGN.md)), licenses and
   notices, and the `param-lineage --version` command.
