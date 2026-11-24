@@ -71,6 +71,16 @@
    "note": "Removed; disarming in flight with a stick, switch or button in manual thrust modes on multicopters is now always allowed (the old value 1).",
    "pr": 27248
   },
+  "COM_FLTT_LOW_ACT": {
+   "basis": "code-inspection",
+   "commit": "c6ddbe14993dffe70ed422161237ff32d33ec45e",
+   "kind": "replaced",
+   "note": "The distance-aware return is part of COM_LOW_BAT_ACT 3 again, and the new option 5 is option 3 without it. Not converted: with COM_LOW_BAT_ACT 3, v1.18.0 returns when the remaining flight time is only just enough to return, whatever COM_FLTT_LOW_ACT was, and with COM_FLTT_LOW_ACT 3 and another COM_LOW_BAT_ACT that return is lost. Choose 3 to keep it, 5 to turn it off.",
+   "pr": 29620,
+   "successors": [
+    "COM_LOW_BAT_ACT"
+   ]
+  },
   "COM_FLT_PROFILE": {
    "basis": "code-inspection",
    "commit": "576e33684940d633d6d3ac5d3c8495812e71f151",
@@ -179,50 +189,51 @@
    ]
   },
   "EKF2_AGP_CTRL": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
-   "kind": "renamed",
-   "note": "Replaced by the per-source EKF2_AGPn_CTRL. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_CTRL; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "kind": "migrated",
+   "note": "Replaced by the per-source EKF2_AGPn_CTRL; converted to EKF2_AGP0_CTRL (PX4 #29541). The first set only fuses messages whose id matches EKF2_AGP0_ID (0 disables it, a change needs a reboot); the conversion sets it to 1 when EKF2_AGP_CTRL was set, the id that v1.17 sources arrive with. A source that sends another id needs EKF2_AGP0_ID set to it. As in v1.17.0, only bit 0 (horizontal position) enables fusion; bit 1 (vertical position) is reserved.",
    "pr": 26306,
    "successors": [
-    "EKF2_AGP0_CTRL"
+    "EKF2_AGP0_CTRL",
+    "EKF2_AGP0_ID"
    ]
   },
   "EKF2_AGP_DELAY": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
-   "kind": "renamed",
-   "note": "Replaced by the per-source EKF2_AGPn_DELAY. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_DELAY; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "kind": "migrated",
+   "note": "Replaced by the per-source EKF2_AGPn_DELAY; converted to EKF2_AGP0_DELAY (PX4 #29541). The first set only fuses messages whose id matches EKF2_AGP0_ID (0 disables it, a change needs a reboot); the conversion sets it to 1 when EKF2_AGP_CTRL was set, the id that v1.17 sources arrive with. A source that sends another id needs EKF2_AGP0_ID set to it.",
    "pr": 26306,
    "successors": [
     "EKF2_AGP0_DELAY"
    ]
   },
   "EKF2_AGP_GATE": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
-   "kind": "renamed",
-   "note": "Replaced by the per-source EKF2_AGPn_GATE. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_GATE; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "kind": "migrated",
+   "note": "Replaced by the per-source EKF2_AGPn_GATE; converted to EKF2_AGP0_GATE (PX4 #29541). The first set only fuses messages whose id matches EKF2_AGP0_ID (0 disables it, a change needs a reboot); the conversion sets it to 1 when EKF2_AGP_CTRL was set, the id that v1.17 sources arrive with. A source that sends another id needs EKF2_AGP0_ID set to it.",
    "pr": 26306,
    "successors": [
     "EKF2_AGP0_GATE"
    ]
   },
   "EKF2_AGP_MODE": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
-   "kind": "renamed",
-   "note": "Replaced by the per-source EKF2_AGPn_MODE. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_MODE; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "kind": "migrated",
+   "note": "Replaced by the per-source EKF2_AGPn_MODE; converted to EKF2_AGP0_MODE (PX4 #29541). The first set only fuses messages whose id matches EKF2_AGP0_ID (0 disables it, a change needs a reboot); the conversion sets it to 1 when EKF2_AGP_CTRL was set, the id that v1.17 sources arrive with. A source that sends another id needs EKF2_AGP0_ID set to it.",
    "pr": 26306,
    "successors": [
     "EKF2_AGP0_MODE"
    ]
   },
   "EKF2_AGP_NOISE": {
-   "basis": "code-inspection",
+   "basis": "sitl-tested",
    "commit": "1d852907a25c8bb1acb81cb1d89ac763d82fc699",
-   "kind": "renamed",
-   "note": "Replaced by the per-source EKF2_AGPn_NOISE. Not converted by v1.18.0-rc1. Put the value in EKF2_AGP0_NOISE; the source is only used once EKF2_AGP0_ID matches the id field of its AuxGlobalPosition messages (0 disables it), and a changed ID needs a reboot.",
+   "kind": "migrated",
+   "note": "Replaced by the per-source EKF2_AGPn_NOISE; converted to EKF2_AGP0_NOISE (PX4 #29541). The first set only fuses messages whose id matches EKF2_AGP0_ID (0 disables it, a change needs a reboot); the conversion sets it to 1 when EKF2_AGP_CTRL was set, the id that v1.17 sources arrive with. A source that sends another id needs EKF2_AGP0_ID set to it. The default is now 1.0 m (0.9 m before), so a vehicle on the old default takes the new one.",
    "pr": 26306,
    "successors": [
     "EKF2_AGP0_NOISE"
@@ -371,21 +382,21 @@
    "basis": "code-inspection",
    "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
    "kind": "removed",
-   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0-rc1: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
+   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
    "pr": 25899
   },
   "MNT_OFF_ROLL": {
    "basis": "code-inspection",
    "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
    "kind": "removed",
-   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0-rc1: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
+   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
    "pr": 25899
   },
   "MNT_OFF_YAW": {
    "basis": "code-inspection",
    "commit": "0da6efa52dc6682c362f47a55937fb1eafded548",
    "kind": "removed",
-   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0-rc1: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
+   "note": "Removed; for a gimbal on servo outputs, set the center value of those outputs instead (for PWM outputs PWM_MAIN_CENTn or PWM_AUX_CENTn, new in v1.18.0: 800 to 2200 us, -1 for none). It is in us, not degrees, so the old value cannot be copied.",
    "pr": 25899
   },
   "MNT_RANGE_PITCH": {
@@ -441,8 +452,8 @@
   "SENS_IMU_TEMP": {
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
-   "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "kind": "migrated",
+   "note": "Replaced by HEATER1_TEMP of the multi-instance heater driver (converted by PX4 #29354). A new value needs a reboot.",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP"
@@ -451,8 +462,8 @@
   "SENS_IMU_TEMP_FF": {
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
-   "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP_FF of the multi-instance heater driver. Not converted by v1.18.0-rc1. The driver applies a new value without a reboot, although PX4's parameter metadata marks it as needing one.",
+   "kind": "migrated",
+   "note": "Replaced by HEATER1_TEMP_FF of the multi-instance heater driver (converted by PX4 #29354).",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP_FF"
@@ -461,8 +472,8 @@
   "SENS_IMU_TEMP_I": {
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
-   "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP_I of the multi-instance heater driver. Not converted by v1.18.0-rc1. The driver applies a new value without a reboot, although PX4's parameter metadata marks it as needing one.",
+   "kind": "migrated",
+   "note": "Replaced by HEATER1_TEMP_I of the multi-instance heater driver (converted by PX4 #29354).",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP_I"
@@ -471,8 +482,8 @@
   "SENS_IMU_TEMP_P": {
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
-   "kind": "renamed",
-   "note": "Replaced by HEATER1_TEMP_P of the multi-instance heater driver. Not converted by v1.18.0-rc1. The driver applies a new value without a reboot, although PX4's parameter metadata marks it as needing one.",
+   "kind": "migrated",
+   "note": "Replaced by HEATER1_TEMP_P of the multi-instance heater driver (converted by PX4 #29354).",
    "pr": 26325,
    "successors": [
     "HEATER1_TEMP_P"
@@ -481,8 +492,8 @@
   "SENS_TEMP_ID": {
    "basis": "code-inspection",
    "commit": "963a776fa620e5d8befce5a7d662273a4c411cd2",
-   "kind": "renamed",
-   "note": "Replaced by HEATER1_SENS_ID of the multi-instance heater driver. Not converted by v1.18.0-rc1; reboot after setting it.",
+   "kind": "migrated",
+   "note": "Replaced by HEATER1_SENS_ID of the multi-instance heater driver (converted by PX4 #29354): -1 disables the heater, and 0 selects a sensor automatically on boards with one heater. SENS_TEMP_ID 0 kept the heater from starting, so a stored 0 becomes -1. The v1.17.0 default 0 is not stored and so not converted: where SENS_EN_THERMAL is 1 and the board sets no sensor (holybro_durandal-v1 by default), v1.17.0 did not start the heater and v1.18.0 starts it at HEATER1_TEMP. Set HEATER1_SENS_ID to -1 to keep it off.",
    "pr": 26325,
    "successors": [
     "HEATER1_SENS_ID"
@@ -559,5 +570,5 @@
   }
  },
  "status": "complete",
- "to": "v1.18.0-rc1"
+ "to": "v1.18.0"
 }

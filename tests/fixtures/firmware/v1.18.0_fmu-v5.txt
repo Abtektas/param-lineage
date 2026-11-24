@@ -1,6 +1,6 @@
-# url: https://github.com/PX4/PX4-Autopilot/releases/download/v1.18.0-rc1/px4_fmu-v5_default.px4
-# sha256: d561181122481d735a14dac248a0e51fa18f4455f842fb5ae89de31bc1e63bf3
-# built from: v1.18.0-rc1 fca3df865af36124a28c9d607e850f111dbaaea9
+# url: https://github.com/PX4/PX4-Autopilot/releases/download/v1.18.0/px4_fmu-v5_default.px4
+# sha256: 222dec2a2f121ca4f025c21b3b0dc5cebfb00ec1c3a5cc79a9ea4310c5188e98
+# built from: v1.18.0 935addf1d6bec6e955b155494a52e7eb4b750eb3
 # Parameter data of PX4, BSD-3-Clause, see LICENSE-THIRD-PARTY.
 # name type default
 ADC_ADS1115_EN INT32 0
@@ -523,7 +523,6 @@ COM_FLTMODE4 INT32 -1
 COM_FLTMODE5 INT32 -1
 COM_FLTMODE6 INT32 -1
 COM_FLTMODE_BOOT INT32 4
-COM_FLTT_LOW_ACT INT32 0
 COM_FLT_TIME_MAX INT32 -1
 COM_FORCE_SAFETY INT32 0
 COM_GNSSLOSS_ACT INT32 0

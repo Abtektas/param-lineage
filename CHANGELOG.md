@@ -73,6 +73,23 @@
   of the built wheel and sdist (`PARAMLINEAGE_DIST`): the wheel holds the
   package, the data the commands read and both licenses, and the sdist
   exactly the committed files.
+- PX4 v1.18.0 replaces v1.18.0-rc1: its snapshot, translations, firmware
+  lists of fmu-v5 and fmu-v6x, changes, histories and SITL run, and the
+  upgrade check page for v1.17.0 to v1.18.0. v1.18.0 converts the heater
+  parameters (`SENS_IMU_TEMP*`, `SENS_TEMP_ID`) and the `EKF2_AGP_*`
+  parameters, which rc1 did not, so their ten curated entries are now
+  `migrated` (the five `EKF2_AGP` ones `sitl-tested`), and the page writes
+  them to the corrected file instead of suggesting them. `COM_FLTT_LOW_ACT`,
+  removed after rc1, has an entry (61 in all). The `SENS_TEMP_ID` entry says
+  that its default 0 is not stored and so not converted, which starts the
+  heater on boards that enable it without a sensor default.
+- The page no longer converts a removed parameter whose value is its old
+  default: PX4 does not store such a value, so it does not convert it, and
+  the successor keeps its own default (`EKF2_AGP0_NOISE` is 1.0 where
+  `EKF2_AGP_NOISE` was 0.9).
+- `python -m paramlineage.sitl` finds a value for the import-order runs when
+  an enum has no value other than its default and the converted one
+  (`EKF2_AGP0_MODE`).
 - Tests: the snapshots against the parameter lists of official PX4 firmware
   builds, known history, the license check, and the extractor on a fake
   source tree. CI checks the schema with a pinned `jsonschema` and extracts

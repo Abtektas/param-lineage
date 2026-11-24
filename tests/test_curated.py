@@ -24,7 +24,7 @@ def snapshot(tag: str) -> dict:
 EXAMPLE = {
     "format": 1,
     "from": "v1.17.0",
-    "to": "v1.18.0-rc1",
+    "to": "v1.18.0",
     "status": "partial",
     "removed": {
         "EKF2_GPS_POS_X": {"kind": "migrated", "commit": "a" * 40, "pr": 26634, "successors": ["SENS_GPS0_OFFX"],
@@ -81,7 +81,7 @@ class Schema(unittest.TestCase):
 
 class Files(unittest.TestCase):
     def test_there_is_a_file(self):
-        self.assertIn(os.path.join(CURATED, "v1.17.0..v1.18.0-rc1.json"), files())
+        self.assertIn(os.path.join(CURATED, "v1.17.0..v1.18.0.json"), files())
 
     def test_files_are_written_the_one_way(self):
         for name in files():
@@ -97,19 +97,19 @@ class Files(unittest.TestCase):
             self.assertEqual(curated.problems(data, snapshot(data["from"]), snapshot(data["to"])), [], name)
 
     def test_problems_are_found(self):
-        data = curated.load(CURATED, "v1.17.0", "v1.18.0-rc1")
-        old, new = snapshot("v1.17.0"), snapshot("v1.18.0-rc1")
+        data = curated.load(CURATED, "v1.17.0", "v1.18.0")
+        old, new = snapshot("v1.17.0"), snapshot("v1.18.0")
 
         def found(change):
             d = copy.deepcopy(data)
             change(d)
             return curated.problems(d, old, new)
 
-        self.assertEqual(found(lambda d: d["removed"].pop("GF_PREDICT")), ["GF_PREDICT: removed in v1.18.0-rc1 but not listed"])
+        self.assertEqual(found(lambda d: d["removed"].pop("GF_PREDICT")), ["GF_PREDICT: removed in v1.18.0 but not listed"])
         self.assertEqual(found(lambda d: d["removed"]["MOT_POLE_COUNT"].update({"successors": ["DSHOT_MOT_POL13"]})),
-                         ["MOT_POLE_COUNT: successor DSHOT_MOT_POL13 is not a parameter of v1.18.0-rc1"])
+                         ["MOT_POLE_COUNT: successor DSHOT_MOT_POL13 is not a parameter of v1.18.0"])
         self.assertEqual(found(lambda d: d["removed"].update({"MC_ROLL_P": d["removed"]["GF_PREDICT"]})),
-                         ["MC_ROLL_P: still a parameter of v1.18.0-rc1"])
+                         ["MC_ROLL_P: still a parameter of v1.18.0"])
         self.assertEqual(found(lambda d: d["removed"].update({"NO_SUCH_PARAM": d["removed"]["GF_PREDICT"]})),
                          ["NO_SUCH_PARAM: not a parameter of v1.17.0"])
         self.assertEqual(found(lambda d: (d.update({"status": "partial"}), d["removed"].pop("GF_PREDICT"))), [])
@@ -129,8 +129,8 @@ class Translations(unittest.TestCase):
             self.assertEqual(curated.translation_problems(data, self.translations(data["to"])), [], name)
 
     def test_disagreements_are_found(self):
-        data = curated.load(CURATED, "v1.17.0", "v1.18.0-rc1")
-        translations = self.translations("v1.18.0-rc1")
+        data = curated.load(CURATED, "v1.17.0", "v1.18.0")
+        translations = self.translations("v1.18.0")
 
         def found(change):
             d = copy.deepcopy(data)
@@ -138,9 +138,9 @@ class Translations(unittest.TestCase):
             return curated.translation_problems(d, translations)
 
         self.assertEqual(found(lambda r: r["EKF2_GPS_POS_X"].update({"kind": "renamed"})),
-                         ["EKF2_GPS_POS_X: renamed, but v1.18.0-rc1 converts it to SENS_GPS0_OFFX"])
-        self.assertEqual(found(lambda r: r["SENS_TEMP_ID"].update({"kind": "migrated"})),
-                         ["SENS_TEMP_ID: migrated, but v1.18.0-rc1 does not convert it"])
+                         ["EKF2_GPS_POS_X: renamed, but v1.18.0 converts it to SENS_GPS0_OFFX"])
+        self.assertEqual(found(lambda r: r["COM_FLTT_LOW_ACT"].update({"kind": "migrated"})),
+                         ["COM_FLTT_LOW_ACT: migrated, but v1.18.0 does not convert it"])
         self.assertEqual(found(lambda r: r["EKF2_GPS_DELAY"].update({"successors": ["SENS_GPS0_DELAY"]})),
                          ["EKF2_GPS_DELAY: converted to SENS_GPS1_DELAY, which are not its successors"])
 
@@ -155,10 +155,10 @@ class RealCommits(unittest.TestCase):
 
     def test_a_commit_outside_the_range_is_found(self):
         repo = os.environ["PARAMLINEAGE_REPO"]
-        data = curated.load(CURATED, "v1.17.0", "v1.18.0-rc1")
+        data = curated.load(CURATED, "v1.17.0", "v1.18.0")
         outside = extract.git(repo, "rev-parse", "v1.17.0^{commit}").decode().strip()
         data["removed"]["GF_PREDICT"]["commit"] = outside
-        self.assertEqual(curated.commit_problems(repo, data), [f"{outside}: not between v1.17.0 and v1.18.0-rc1"])
+        self.assertEqual(curated.commit_problems(repo, data), [f"{outside}: not between v1.17.0 and v1.18.0"])
 
 
 

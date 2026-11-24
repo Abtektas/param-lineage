@@ -279,13 +279,13 @@ class Plan:
 
     def craft_value(self, name: str, avoid: list) -> int | float:
         """A value the newer release accepts for a parameter (one of its enum values, or near its
-        default within its range) that is neither its default nor any of ``avoid``."""
+        default within its range) that is neither its default nor any of ``avoid``. An enum with no
+        other value (EKF2_AGP0_MODE has two) gets a value near its default: the import stores it
+        without checking it against the enum (param_import_callback() in parameters.cpp)."""
         meta = self.new_params[name]
         default = meta.get("default", 0)
-        if meta.get("values"):
-            options = [v["value"] for v in meta["values"]]
-        else:
-            options = [default + step for step in (1, -1, 2, -2, 3, -3)]
+        options = [v["value"] for v in meta.get("values") or []]
+        options += [default + step for step in (1, -1, 2, -2, 3, -3)]
         for v in options:
             v = int(v) if meta["type"] == "Int32" else float(v)
             if (meta.get("min") is None or v >= meta["min"]) and (meta.get("max") is None or v <= meta["max"]) \

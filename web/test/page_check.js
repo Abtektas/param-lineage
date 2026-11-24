@@ -3,9 +3,9 @@
 const { JSDOM } = require('jsdom');
 const fs = require('fs');
 const T = require('path').join(__dirname, '..');
-const html = fs.readFileSync(`${T}/dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0-rc1.html`, 'utf8');
+const html = fs.readFileSync(`${T}/dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0.html`, 'utf8');
 const A = require(`${T}/src/analyze.js`);
-const data = JSON.parse(fs.readFileSync(`${T}/data/v1.17.0_to_v1.18.0-rc1.json`));
+const data = JSON.parse(fs.readFileSync(`${T}/data/v1.17.0_to_v1.18.0.json`));
 
 async function load(name, text) {
   const dom = new JSDOM(html, { runScripts: 'dangerously', pretendToBeVisual: true });

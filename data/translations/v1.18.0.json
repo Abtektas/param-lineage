@@ -600,39 +600,15 @@
    },
    {
     "call": "strcmp",
-    "line": 276,
+    "line": 283,
     "reached": [
      "nuttx",
      "posix"
     ]
    },
    {
-    "call": "param_find",
-    "line": 279,
-    "reached": [
-     "nuttx",
-     "posix"
-    ]
-   },
-   {
-    "call": "param_get",
-    "line": 279,
-    "reached": [
-     "nuttx",
-     "posix"
-    ]
-   },
-   {
-    "call": "param_find",
-    "line": 281,
-    "reached": [
-     "nuttx",
-     "posix"
-    ]
-   },
-   {
-    "call": "param_set",
-    "line": 281,
+    "call": "strcpy",
+    "line": 284,
     "reached": [
      "nuttx",
      "posix"
@@ -640,7 +616,135 @@
    },
    {
     "call": "log",
-    "line": 284,
+    "line": 285,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 291,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 296,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 297,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 305,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 308,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_get",
+    "line": 308,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 310,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 310,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 313,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 323,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_find",
+    "line": 325,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "param_set",
+    "line": 325,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 326,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcmp",
+    "line": 338,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "strcpy",
+    "line": 339,
+    "reached": [
+     "nuttx",
+     "posix"
+    ]
+   },
+   {
+    "call": "log",
+    "line": 340,
     "reached": [
      "nuttx",
      "posix"
@@ -691,6 +795,95 @@
      253
     ],
     "name": "COM_RC_OVERRIDE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     330
+    ],
+    "name": "EKF2_AGP0_CTRL",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     332
+    ],
+    "name": "EKF2_AGP0_DELAY",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     334
+    ],
+    "name": "EKF2_AGP0_GATE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     325
+    ],
+    "name": "EKF2_AGP0_ID",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     331
+    ],
+    "name": "EKF2_AGP0_MODE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     333
+    ],
+    "name": "EKF2_AGP0_NOISE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     323,
+     330
+    ],
+    "name": "EKF2_AGP_CTRL",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     332
+    ],
+    "name": "EKF2_AGP_DELAY",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     334
+    ],
+    "name": "EKF2_AGP_GATE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     331
+    ],
+    "name": "EKF2_AGP_MODE",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     333
+    ],
+    "name": "EKF2_AGP_NOISE",
     "reached": true,
     "tracked": true
    },
@@ -789,6 +982,47 @@
    },
    {
     "lines": [
+     296,
+     297
+    ],
+    "name": "HEATER1_SENS_ID",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     276
+    ],
+    "name": "HEATER1_TEMP",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     277
+    ],
+    "name": "HEATER1_TEMP_FF",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     278
+    ],
+    "name": "HEATER1_TEMP_I",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     279
+    ],
+    "name": "HEATER1_TEMP_P",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
      86,
      109,
      126
@@ -844,8 +1078,8 @@
    },
    {
     "lines": [
-     279,
-     281
+     308,
+     310
     ],
     "name": "MPC_AUTO_NUDGING",
     "reached": true,
@@ -853,7 +1087,7 @@
    },
    {
     "lines": [
-     276
+     305
     ],
     "name": "MPC_LAND_RC_HELP",
     "reached": true,
@@ -933,6 +1167,47 @@
    },
    {
     "lines": [
+     276
+    ],
+    "name": "SENS_IMU_TEMP",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     277
+    ],
+    "name": "SENS_IMU_TEMP_FF",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     278
+    ],
+    "name": "SENS_IMU_TEMP_I",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     279
+    ],
+    "name": "SENS_IMU_TEMP_P",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
+     291,
+     297
+    ],
+    "name": "SENS_TEMP_ID",
+    "reached": true,
+    "tracked": true
+   },
+   {
+    "lines": [
      68,
      69
     ],
@@ -951,7 +1226,7 @@
   ]
  },
  "extraction": {
-  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
   "extractor": 1,
   "flags": [
    "-std=c++17",
@@ -965,9 +1240,9 @@
    "posix"
   ],
   "probes": {
-   "listed": 924,
+   "listed": 1115,
    "names": 3707,
-   "untouched_not_listed": 81592,
+   "untouched_not_listed": 81401,
    "values": 82516
   },
   "snapshots": [
@@ -993,7 +1268,7 @@
    "v1.16.1",
    "v1.16.2",
    "v1.17.0",
-   "v1.18.0-rc1"
+   "v1.18.0"
   ]
  },
  "format": 1,
@@ -1181,6 +1456,267 @@
      "type": "Int32",
      "values": [
       0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_AGP_CTRL": [
+   {
+    "calls": [
+     {
+      "call": "param_find",
+      "found": true,
+      "line": 325,
+      "name": "EKF2_AGP0_ID"
+     },
+     {
+      "call": "param_set",
+      "line": 325,
+      "param": "EKF2_AGP0_ID",
+      "result": 0,
+      "value": 1
+     }
+    ],
+    "matched": [
+     323,
+     338
+    ],
+    "node": {
+     "name": "EKF2_AGP0_CTRL",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "also_set": {
+      "EKF2_AGP0_ID": 1
+     },
+     "name": "EKF2_AGP0_CTRL",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -162128,
+      -20,
+      -16,
+      -12,
+      -6,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      6,
+      12,
+      16,
+      20,
+      162128
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     323,
+     338
+    ],
+    "node": {
+     "name": "EKF2_AGP0_CTRL",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_AGP0_CTRL",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_AGP_DELAY": [
+   {
+    "calls": [],
+    "matched": [
+     338
+    ],
+    "node": {
+     "name": "EKF2_AGP0_DELAY",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_AGP0_DELAY",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      300.0,
+      162128.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_AGP_GATE": [
+   {
+    "calls": [],
+    "matched": [
+     338
+    ],
+    "node": {
+     "name": "EKF2_AGP0_GATE",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_AGP0_GATE",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      162128.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_AGP_MODE": [
+   {
+    "calls": [],
+    "matched": [
+     338
+    ],
+    "node": {
+     "name": "EKF2_AGP0_MODE",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_AGP0_MODE",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -162128,
+      -20,
+      -16,
+      -12,
+      -6,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      6,
+      12,
+      16,
+      20,
+      162128
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "EKF2_AGP_NOISE": [
+   {
+    "calls": [],
+    "matched": [
+     338
+    ],
+    "node": {
+     "name": "EKF2_AGP0_NOISE",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "EKF2_AGP0_NOISE",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.01,
+      0.5,
+      0.9,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      162128.0
      ]
     },
     "touched": true
@@ -4038,12 +4574,12 @@
      {
       "call": "param_find",
       "found": true,
-      "line": 279,
+      "line": 308,
       "name": "MPC_AUTO_NUDGING"
      },
      {
       "call": "param_get",
-      "line": 279,
+      "line": 308,
       "param": "MPC_AUTO_NUDGING",
       "result": 0,
       "value": 0
@@ -4051,19 +4587,19 @@
      {
       "call": "param_find",
       "found": true,
-      "line": 281,
+      "line": 310,
       "name": "MPC_AUTO_NUDGING"
      },
      {
       "call": "param_set",
-      "line": 281,
+      "line": 310,
       "param": "MPC_AUTO_NUDGING",
       "result": 0,
       "value": 2
      }
     ],
     "matched": [
-     276
+     305
     ],
     "node": {
      "name": "MPC_LAND_RC_HELP",
@@ -4103,7 +4639,7 @@
    {
     "calls": [],
     "matched": [
-     276
+     305
     ],
     "node": {
      "name": "MPC_LAND_RC_HELP",
@@ -6132,6 +6668,251 @@
     "touched": true
    }
   ],
+  "SENS_IMU_TEMP": [
+   {
+    "calls": [],
+    "matched": [
+     283
+    ],
+    "node": {
+     "name": "HEATER1_TEMP",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "HEATER1_TEMP",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      55.0,
+      85.0,
+      162128.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SENS_IMU_TEMP_FF": [
+   {
+    "calls": [],
+    "matched": [
+     283
+    ],
+    "node": {
+     "name": "HEATER1_TEMP_FF",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "HEATER1_TEMP_FF",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.05,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      162128.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SENS_IMU_TEMP_I": [
+   {
+    "calls": [],
+    "matched": [
+     283
+    ],
+    "node": {
+     "name": "HEATER1_TEMP_I",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "HEATER1_TEMP_I",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.025,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      162128.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SENS_IMU_TEMP_P": [
+   {
+    "calls": [],
+    "matched": [
+     283
+    ],
+    "node": {
+     "name": "HEATER1_TEMP_P",
+     "type": "Float",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "HEATER1_TEMP_P",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Float",
+     "values": [
+      -162128.0,
+      -20.0,
+      -16.0,
+      -12.0,
+      -6.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      6.0,
+      12.0,
+      16.0,
+      20.0,
+      162128.0
+     ]
+    },
+    "touched": true
+   }
+  ],
+  "SENS_TEMP_ID": [
+   {
+    "calls": [],
+    "matched": [
+     291
+    ],
+    "node": {
+     "name": "HEATER1_SENS_ID",
+     "type": "Int32",
+     "value": "stored"
+    },
+    "outcome": {
+     "name": "HEATER1_SENS_ID",
+     "result": "stored",
+     "value": "stored"
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      -162128,
+      -20,
+      -16,
+      -12,
+      -6,
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3,
+      6,
+      12,
+      16,
+      20,
+      162128
+     ]
+    },
+    "touched": true
+   },
+   {
+    "calls": [],
+    "matched": [
+     291
+    ],
+    "node": {
+     "name": "HEATER1_SENS_ID",
+     "type": "Int32",
+     "value": -1
+    },
+    "outcome": {
+     "name": "HEATER1_SENS_ID",
+     "result": "stored",
+     "value": -1
+    },
+    "return": "PARAM_MODIFIED",
+    "stored": {
+     "type": "Int32",
+     "values": [
+      0
+     ]
+    },
+    "touched": true
+   }
+  ],
   "SYS_MC_EST_GROUP": [
    {
     "calls": [],
@@ -6376,9 +7157,9 @@
   ]
  },
  "source": {
-  "commit": "fca3df865af36124a28c9d607e850f111dbaaea9",
+  "commit": "935addf1d6bec6e955b155494a52e7eb4b750eb3",
   "file": "src/lib/parameters/param_translation.cpp",
   "repository": "https://github.com/PX4/PX4-Autopilot",
-  "tag": "v1.18.0-rc1"
+  "tag": "v1.18.0"
  }
 }

@@ -8,7 +8,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const A = require('../src/analyze.js');
 
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/v1.17.0_to_v1.18.0-rc1.json')));
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/v1.17.0_to_v1.18.0.json')));
 const translations = JSON.parse(fs.readFileSync(path.join(__dirname, `../../data/translations/${data.to.tag}.json`))).parameters;
 const TYPE = { i: 'Int32', f: 'Float' };
 

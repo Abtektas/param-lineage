@@ -184,7 +184,7 @@ class Schema(unittest.TestCase):
 
     def test_schema_rejects_broken_files(self):
         def broken(change):
-            data = json.loads(text("v1.18.0-rc1"))
+            data = json.loads(text("v1.18.0"))
             change(data)
             return list(self.validator.iter_errors(data))
 
@@ -205,31 +205,31 @@ class KnownHistory(unittest.TestCase):
     def test_gnss_offsets_move_to_the_sensor(self):
         # v1.18: EKF2_GPS_POS_X/Y/Z -> SENS_GPS0_OFFX/Y/Z, value kept
         for axis in "XYZ":
-            (case,) = groups("v1.18.0-rc1", f"EKF2_GPS_POS_{axis}")
+            (case,) = groups("v1.18.0", f"EKF2_GPS_POS_{axis}")
             self.assertEqual(case["outcome"], {"result": "stored", "name": f"SENS_GPS0_OFF{axis}", "value": "stored"})
             self.assertEqual(case["return"], "PARAM_MODIFIED")
 
     def test_rc_override_off_becomes_override_speed(self):
         # v1.18: only COM_RC_OVERRIDE = 0 is converted (to MAN_OVERRIDE_SPD = -1); other values are dropped
-        self.assertEqual(group_of("v1.18.0-rc1", "COM_RC_OVERRIDE", "Int32", 0)["outcome"],
+        self.assertEqual(group_of("v1.18.0", "COM_RC_OVERRIDE", "Int32", 0)["outcome"],
                          {"result": "stored", "name": "MAN_OVERRIDE_SPD", "value": -1})
-        self.assertEqual(group_of("v1.18.0-rc1", "COM_RC_OVERRIDE", "Int32", 1)["outcome"],
+        self.assertEqual(group_of("v1.18.0", "COM_RC_OVERRIDE", "Int32", 1)["outcome"],
                          {"result": "ignored-unknown-name", "name": "COM_RC_OVERRIDE"})
 
     def test_rc_reverse_becomes_an_integer(self):
-        self.assertEqual(group_of("v1.18.0-rc1", "RC1_REV", "Float", -1.0)["outcome"],
+        self.assertEqual(group_of("v1.18.0", "RC1_REV", "Float", -1.0)["outcome"],
                          {"result": "stored", "name": "RC1_REV", "value": -1})
-        self.assertEqual(group_of("v1.18.0-rc1", "RC1_REV", "Float", 1.0)["outcome"],
+        self.assertEqual(group_of("v1.18.0", "RC1_REV", "Float", 1.0)["outcome"],
                          {"result": "stored", "name": "RC1_REV", "value": 1})
 
     def test_motor_pole_count_goes_to_every_motor(self):
-        (case,) = groups("v1.18.0-rc1", "MOT_POLE_COUNT")
+        (case,) = groups("v1.18.0", "MOT_POLE_COUNT")
         self.assertEqual(case["outcome"], {"result": "skipped",
                                            "also_set": {f"DSHOT_MOT_POL{i}": "stored" for i in range(1, 13)}})
 
     def test_heater_rule_is_not_reached(self):
         # HEATER*_IMU_ID only existed on main, after v1.17 had branched off and before v1.18, so no tracked parameter reaches it
-        (heater,) = [n for n in load("v1.18.0-rc1")["coverage"]["names"] if n["name"] == "HEATER"]
+        (heater,) = [n for n in load("v1.18.0")["coverage"]["names"] if n["name"] == "HEATER"]
         self.assertEqual((heater["prefix"], heater["tracked"], heater["reached"]), (True, False, False))
 
     def test_airspeed_circuit_breaker(self):
@@ -544,7 +544,7 @@ class RealReleases(unittest.TestCase):
         self.assertIs(out["posix"][0]["return"], True)
 
     def test_v1_18_heater_sensor_ids(self):
-        out = translations.run_probes(self.repo, "v1.18.0-rc1", CXX, snapshot("v1.18.0-rc1")["parameters"],
+        out = translations.run_probes(self.repo, "v1.18.0", CXX, snapshot("v1.18.0")["parameters"],
                                       [("HEATER1_IMU_ID", "i", 5), ("HEATER3_IMU_ID", "i", -1)])
         for platform in translations.PLATFORMS:
             self.assertEqual([r["node"] for r in out[platform]], [{"name": "HEATER1_SENS_ID", "type": "i", "value": 5},

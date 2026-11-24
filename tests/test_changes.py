@@ -60,17 +60,17 @@ class KnownHistory(unittest.TestCase):
     """Checked by hand against PX4's source."""
 
     def test_rc_reverse_becomes_int32(self):
-        # v1.18.0-rc1 defines RC*_REV as int32 with values, but PX4's generator writes values only
+        # v1.18.0 defines RC*_REV as int32 with values, but PX4's generator writes values only
         # for enum and float types, so its metadata has none.
-        rev = load("v1.17.0", "v1.18.0-rc1")["changed"]["RC1_REV"]
+        rev = load("v1.17.0", "v1.18.0")["changed"]["RC1_REV"]
         self.assertEqual(rev["type"], {"from": "Float", "to": "Int32"})
         self.assertEqual([v["key"] for v in rev["values"]["removed"]], [-1.0, 1.0])
 
     def test_fd_act_en_is_off_by_default(self):
-        self.assertEqual(load("v1.17.0", "v1.18.0-rc1")["changed"]["FD_ACT_EN"]["default"], {"from": 1, "to": 0})
+        self.assertEqual(load("v1.17.0", "v1.18.0")["changed"]["FD_ACT_EN"]["default"], {"from": 1, "to": 0})
 
     def test_removed_parameters_carry_the_curated_kind(self):
-        data = load("v1.17.0", "v1.18.0-rc1")
+        data = load("v1.17.0", "v1.18.0")
         self.assertEqual(data["curated"], "complete")
         self.assertEqual(data["removed"]["COM_RC_OVERRIDE"], {"kind": "migrated", "successors": ["MAN_OVERRIDE_SPD"]})
         self.assertIn("MAN_OVERRIDE_SPD", data["added"])
@@ -104,7 +104,7 @@ class Schema(unittest.TestCase):
 
     def test_schema_rejects_broken_files(self):
         def broken(change):
-            data = load("v1.17.0", "v1.18.0-rc1")
+            data = load("v1.17.0", "v1.18.0")
             change(data)
             return list(self.validator.iter_errors(data))
 

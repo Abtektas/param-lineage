@@ -370,10 +370,46 @@
   "ZENOH_PUB_REL"
  ],
  "changed": {
+  "ADSB_EMERGC": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
   "ADSB_EMIT_TYPE": {
    "max": {
     "from": 15,
     "to": 19
+   }
+  },
+  "ADSB_GPS_OFF_LAT": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "ADSB_GPS_OFF_LON": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "ADSB_ICAO_SPECL": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "ADSB_IDENT": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "ADSB_SQUAWK": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
    }
   },
   "ASPD_SCALE_1": {
@@ -513,6 +549,23 @@
    "max": {
     "from": 7,
     "to": 31
+   }
+  },
+  "COM_LOW_BAT_ACT": {
+   "values": {
+    "added": [
+     {
+      "description": "Critical level return, Emergency level land",
+      "key": 5
+     }
+    ],
+    "changed": [
+     {
+      "from": "Return at critical level, land at emergency level",
+      "key": 3,
+      "to": "Distance-aware return, Critical level return, Emergency level land"
+     }
+    ]
    }
   },
   "COM_PARACHUTE": {
@@ -1209,6 +1262,75 @@
     ]
    }
   },
+  "IMU_DGYRO_CUTOFF": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "IMU_GYRO_CUTOFF": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "IMU_GYRO_NF0_BW": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "IMU_GYRO_NF0_FRQ": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "IMU_GYRO_NF1_BW": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "IMU_GYRO_NF1_FRQ": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "MAV_0_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "uAvionix",
+      "key": 12,
+      "to": "ADS-B/Traffic (uAvionix)"
+     }
+    ]
+   }
+  },
+  "MAV_1_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "uAvionix",
+      "key": 12,
+      "to": "ADS-B/Traffic (uAvionix)"
+     }
+    ]
+   }
+  },
+  "MAV_2_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "uAvionix",
+      "key": 12,
+      "to": "ADS-B/Traffic (uAvionix)"
+     }
+    ]
+   }
+  },
   "MAV_TYPE": {
    "max": {
     "from": 22,
@@ -1279,6 +1401,18 @@
    "max": {
     "from": 4,
     "to": 5
+   }
+  },
+  "MXS_OP_MODE": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
+   }
+  },
+  "MXS_TARG_PORT": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
    }
   },
   "NAV_DLL_ACT": {
@@ -3018,6 +3152,12 @@
       "to": "Return to the planned mission landing, or to home via the reverse mission path, whichever is estimated to be closer using mission item indices. Skip DO_JUMP and other non-position mission items while following either mission path. Do not consider rally points."
      }
     ]
+   }
+  },
+  "SDLOG_DIRS_MAX": {
+   "rebootRequired": {
+    "from": true,
+    "to": false
    }
   },
   "SENS_EN_AUAVX": {
@@ -5239,6 +5379,17 @@
     ]
    }
   },
+  "USB_MAV_MODE": {
+   "values": {
+    "changed": [
+     {
+      "from": "uavionix",
+      "key": 12,
+      "to": "ADS-B/Traffic (uAvionix)"
+     }
+    ]
+   }
+  },
   "VOXL2_IO_FUNC1": {
    "values": {
     "added": [
@@ -6244,6 +6395,12 @@
   "COM_DISARM_MAN": {
    "kind": "fixed"
   },
+  "COM_FLTT_LOW_ACT": {
+   "kind": "replaced",
+   "successors": [
+    "COM_LOW_BAT_ACT"
+   ]
+  },
   "COM_FLT_PROFILE": {
    "kind": "removed"
   },
@@ -6296,31 +6453,32 @@
    ]
   },
   "EKF2_AGP_CTRL": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
-    "EKF2_AGP0_CTRL"
+    "EKF2_AGP0_CTRL",
+    "EKF2_AGP0_ID"
    ]
   },
   "EKF2_AGP_DELAY": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "EKF2_AGP0_DELAY"
    ]
   },
   "EKF2_AGP_GATE": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "EKF2_AGP0_GATE"
    ]
   },
   "EKF2_AGP_MODE": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "EKF2_AGP0_MODE"
    ]
   },
   "EKF2_AGP_NOISE": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "EKF2_AGP0_NOISE"
    ]
@@ -6439,31 +6597,31 @@
    "kind": "fixed"
   },
   "SENS_IMU_TEMP": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "HEATER1_TEMP"
    ]
   },
   "SENS_IMU_TEMP_FF": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "HEATER1_TEMP_FF"
    ]
   },
   "SENS_IMU_TEMP_I": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "HEATER1_TEMP_I"
    ]
   },
   "SENS_IMU_TEMP_P": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "HEATER1_TEMP_P"
    ]
   },
   "SENS_TEMP_ID": {
-   "kind": "renamed",
+   "kind": "migrated",
    "successors": [
     "HEATER1_SENS_ID"
    ]
@@ -6515,7 +6673,7 @@
   }
  },
  "to": {
-  "commit": "fca3df865af36124a28c9d607e850f111dbaaea9",
-  "tag": "v1.18.0-rc1"
+  "commit": "935addf1d6bec6e955b155494a52e7eb4b750eb3",
+  "tag": "v1.18.0"
  }
 }

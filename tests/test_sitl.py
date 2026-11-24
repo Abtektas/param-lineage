@@ -61,6 +61,18 @@ class Values(unittest.TestCase):
         case = {"outcome": {"result": "stored", "name": "SENS_GPS0_OFFX", "value": "stored"}}
         self.assertEqual(sitl.expected(case, -0.5, params), {"SENS_GPS0_OFFX": -0.5})
 
+    def test_crafted_values_avoid_the_default_and_the_given_values(self):
+        plan = object.__new__(sitl.Plan)
+        plan.new_params = {"A": {"type": "Int32", "default": 0, "values": [{"value": 0}, {"value": 1}, {"value": 2}]},
+                           "MODE": {"type": "Int32", "default": 0, "values": [{"value": 0}, {"value": 1}]},
+                           "F": {"type": "Float", "default": 1.0, "min": 0.0, "max": 2.0}}
+        self.assertEqual(plan.craft_value("A", [1]), 2)
+        # an enum with no other value gets one near its default
+        self.assertEqual(plan.craft_value("MODE", [1]), -1)
+        self.assertEqual(plan.craft_value("F", [2.0]), 0.0)
+        with self.assertRaises(SystemExit):
+            plan.craft_value("F", [0.0, 2.0])
+
     def test_float_values_compare_as_float32(self):
         self.assertTrue(sitl.same(0.1, 0.10000000149011612))
         self.assertFalse(sitl.same(0.1, 0.1001))

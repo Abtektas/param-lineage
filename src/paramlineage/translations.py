@@ -55,8 +55,8 @@ IMPORT_CODE = {
     "3905e605f97b2c29": "return ignored",  # flashparams.cpp, v1.12.0 to v1.12.3
     "3a17a035242f7802": "return ignored",  # parameters.cpp, v1.13.0 to v1.14.4
     "b7a9f56a2674244c": "return ignored",  # flashparams.cpp, v1.13.0 to v1.14.4
-    "587bb5a9b2fcc587": "PARAM_SKIP_IMPORT skips",  # parameters.cpp, v1.15.0 to v1.18.0-rc1
-    "6dae47c63f4c26ef": "PARAM_SKIP_IMPORT skips",  # flashparams.cpp, v1.15.0 to v1.18.0-rc1
+    "587bb5a9b2fcc587": "PARAM_SKIP_IMPORT skips",  # parameters.cpp, v1.15.0 to v1.18.0
+    "6dae47c63f4c26ef": "PARAM_SKIP_IMPORT skips",  # flashparams.cpp, v1.15.0 to v1.18.0
 }
 IMPORT_FILES = ["src/lib/parameters/parameters.cpp", "src/lib/parameters/flashparams/flashparams.cpp"]
 

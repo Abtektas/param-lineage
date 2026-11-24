@@ -1,11 +1,11 @@
-"""What the page does with the parameters PX4 v1.18.0-rc1 removed or retyped.
+"""What the page does with the parameters PX4 v1.18.0 removed or retyped.
 
-The facts (kind, commit, note, successors) are in data/curated/v1.17.0..v1.18.0-rc1.json. This
+The facts (kind, commit, note, successors) are in data/curated/v1.17.0..v1.18.0.json. This
 file holds only the page's behaviour, keyed by parameter name:
 
   conversion rules  for the "migrated" entries: repeat what param_translation.cpp of the target
                     does on an in-place upgrade, so the corrected file gets the same values. The
-                    page tests check every rule against data/translations/v1.18.0-rc1.json.
+                    page tests check every rule against data/translations/v1.18.0.json.
   suggestions       for other entries: a value the user can set by hand. The page never writes
                     it to the corrected file, because PX4 does not convert it.
 """
@@ -17,19 +17,23 @@ RULES = {
     "MNT_RANGE_PITCH": {"type": "half_range", "max": "MNT_MAX_PITCH", "min": "MNT_MIN_PITCH"},
     "MOT_POLE_COUNT": {"type": "copy", "to": [f"DSHOT_MOT_POL{i}" for i in range(1, 13)]},
     "MPC_LAND_RC_HELP": {"type": "if_nonzero_set_bit", "to": "MPC_AUTO_NUDGING", "bit": 1},
+    # the first source slot fuses only messages with id EKF2_AGP0_ID, which the import sets to 1
+    # (the id v1.17 sources arrive with) when fusion was enabled
+    "EKF2_AGP_CTRL": {"type": "rename_if_nonzero_also", "to": "EKF2_AGP0_CTRL", "also": {"EKF2_AGP0_ID": 1}},
+    **{f"EKF2_AGP_{s}": {"type": "rename", "to": f"EKF2_AGP0_{s}"} for s in ("MODE", "DELAY", "NOISE", "GATE")},
+    **{old: {"type": "rename", "to": new}
+       for old, new in (("SENS_IMU_TEMP", "HEATER1_TEMP"), ("SENS_IMU_TEMP_FF", "HEATER1_TEMP_FF"),
+                        ("SENS_IMU_TEMP_I", "HEATER1_TEMP_I"), ("SENS_IMU_TEMP_P", "HEATER1_TEMP_P"))},
+    # SENS_TEMP_ID 0 kept the heater off; HEATER1_SENS_ID 0 selects a sensor, -1 disables it
+    "SENS_TEMP_ID": {"type": "rename_zero_to", "to": "HEATER1_SENS_ID", "zero": -1},
 
     "DSHOT_BIDIR_EN": {"type": "bdshot_hint"},
-    **{f"EKF2_AGP_{s}": {"type": "suggest_rename", "to": f"EKF2_AGP0_{s}"}
-       for s in ("CTRL", "MODE", "DELAY", "NOISE", "GATE")},
     "FD_ACT_MOT_TOUT": {"type": "suggest_scale", "to": "MOTFAIL_TIME", "factor": 0.001},
-    **{old: {"type": "suggest_rename", "to": new}
-       for old, new in (("SENS_IMU_TEMP", "HEATER1_TEMP"), ("SENS_IMU_TEMP_FF", "HEATER1_TEMP_FF"),
-                        ("SENS_IMU_TEMP_I", "HEATER1_TEMP_I"), ("SENS_IMU_TEMP_P", "HEATER1_TEMP_P"),
-                        ("SENS_TEMP_ID", "HEATER1_SENS_ID"))},
 }
 
 # The rule types that write to the corrected file. Only "migrated" entries may have them.
-CONVERSIONS = {"rename", "copy", "copy_int", "half_range", "if_zero_set", "if_nonzero_set_bit"}
+CONVERSIONS = {"rename", "copy", "copy_int", "half_range", "if_zero_set", "if_nonzero_set_bit",
+               "rename_zero_to", "rename_if_nonzero_also"}
 
 # Parameters whose type changed (data/changes), with the conversion the target's
 # param_translation.cpp applies and how QGroundControl loads the old value.

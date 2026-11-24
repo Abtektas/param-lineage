@@ -41,7 +41,7 @@ def build_parser() -> argparse.ArgumentParser:
     history.add_argument("name", help="a parameter name, such as MPC_HOLD_DZ")
     diff = commands.add_parser("diff", parents=[data], help="what changed between two tracked releases")
     diff.add_argument("old", help="the older release, such as v1.16.2")
-    diff.add_argument("new", help="the newer release, such as v1.18.0-rc1")
+    diff.add_argument("new", help="the newer release, such as v1.18.0")
     check = commands.add_parser("check", parents=[data], help="check a parameter file saved on one release against a newer one")
     check.add_argument("file", help="a .params file saved by QGroundControl")
     check.add_argument("--from", dest="old", help="the release the file was saved on (default: from the file's Version line)")

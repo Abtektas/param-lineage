@@ -153,7 +153,7 @@ def main():
         if rule is None:
             continue
         to = rule.get("to", [])
-        targets = (to if isinstance(to, list) else [to]) + [rule[k] for k in ("max", "min") if k in rule]
+        targets = (to if isinstance(to, list) else [to]) + [rule[k] for k in ("max", "min") if k in rule] + list(rule.get("also", {}))
         errors += [f"{name}: {t} is not a {dst_tag} parameter" for t in targets if t not in dst]
         if converts and set(targets) != set(fact["successors"]):
             errors.append(f"{name}: the rule writes {sorted(targets)}, the successors are {fact['successors']}")

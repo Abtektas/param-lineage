@@ -125,7 +125,7 @@ class KnownHistory(unittest.TestCase):
 
     def test_counts(self):
         counts = {"v1.12.0": 1738, "v1.13.0": 2169, "v1.14.0": 2280, "v1.15.0": 2478,
-                  "v1.16.0": 2696, "v1.17.0": 2801, "v1.18.0-rc1": 3109}
+                  "v1.16.0": 2696, "v1.17.0": 2801, "v1.18.0": 3108}
         for tag, count in counts.items():
             self.assertEqual(len(self.names(tag)), count, tag)
 
@@ -139,10 +139,10 @@ class KnownHistory(unittest.TestCase):
         # v1.18 moved these from .c files to YAML files that PX4's metadata target does not read
         for name in ("TEST_1", "TEST_PARAMS", "SC_ROLL_P", "SC_YAW_P"):
             self.assertIn(name, self.names("v1.17.0"))
-            self.assertIn(name, self.names("v1.18.0-rc1"))
+            self.assertIn(name, self.names("v1.18.0"))
 
     def test_hil_outputs_are_included(self):
-        for tag in ("v1.13.0", "v1.17.0", "v1.18.0-rc1"):
+        for tag in ("v1.13.0", "v1.17.0", "v1.18.0"):
             self.assertIn("HIL_ACT_FUNC1", self.names(tag))
 
     def test_control_allocation_comes_from_the_control_allocator(self):

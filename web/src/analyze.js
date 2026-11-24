@@ -63,6 +63,10 @@
         return value > 0 ? [{ name: rule.max, value: f32(value) * 0.5 }, { name: rule.min, value: -f32(value) * 0.5 }] : [];
       case 'if_zero_set':
         return value === 0 ? [{ name: rule.to, value: rule.value }] : [];
+      case 'rename_zero_to':
+        return [{ name: rule.to, value: value === 0 ? rule.zero : value }];
+      case 'rename_if_nonzero_also':
+        return [{ name: rule.to, value }, ...(value !== 0 ? Object.entries(rule.also).map(([name, v]) => ({ name, value: v })) : [])];
       case 'if_nonzero_set_bit': {
         if (value === 0) return [];
         const base = fileValues.has(rule.to) ? fileValues.get(rule.to) : target[rule.to].d;
@@ -146,9 +150,10 @@
         const onOldDefault = old && old.d !== undefined && sameF32(row.value, old.d);
         const onFixedValue = note.fixed_value !== undefined && sameF32(row.value, note.fixed_value);
         if (note.kind === 'migrated') {
-          // A file that already has the new name (saved from a newer build) keeps its own value;
-          // the bitmask rule already merged it.
-          const writes = applyRule(note.rule, row.value, fileValues, target)
+          // A value on the old default is not stored on the vehicle, so PX4 does not convert it and
+          // the successors keep their own defaults. A file that already has the new name (saved
+          // from a newer build) keeps its own value; the bitmask rule already merged it.
+          const writes = onOldDefault ? [] : applyRule(note.rule, row.value, fileValues, target)
             .filter((w) => !fileValues.has(w.name) || note.rule.type === 'if_nonzero_set_bit');
           add(onOldDefault ? 'removedDefault' : 'migrated', row, { note, writes, oldDefault: old.d });
         } else if (onOldDefault || onFixedValue) {

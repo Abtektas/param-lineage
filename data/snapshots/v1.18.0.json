@@ -37,7 +37,7 @@
   ],
   "tools": {
    "jinja2": "3.1.6",
-   "python": "3.14.9",
+   "python": "3.14.10",
    "pyyaml": "6.0.3"
   }
  },
@@ -158,7 +158,6 @@
    "longDesc": "Sets the vehicle emergency state\n",
    "max": 6,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "ADSB-Out Emergency State",
    "type": "Int32",
    "values": [
@@ -292,7 +291,6 @@
    "longDesc": "Sets GPS lataral offset encoding\n",
    "max": 7,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "ADSB-Out GPS Offset lat",
    "type": "Int32",
    "values": [
@@ -337,7 +335,6 @@
    "longDesc": "Sets GPS longitudinal offset encoding\n",
    "max": 1,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "ADSB-Out GPS Offset lon",
    "type": "Int32",
    "values": [
@@ -369,7 +366,6 @@
    "longDesc": "This vehicle is always tracked. Use 0 to disable.\n",
    "max": 16777215,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "ADSB-In Special ICAO configuration",
    "type": "Int32"
   },
@@ -378,7 +374,6 @@
    "default": 0,
    "group": "ADSB",
    "longDesc": "Enable Identification of Position feature\n",
-   "rebootRequired": true,
    "shortDesc": "ADSB-Out Ident Configuration",
    "type": "Int32",
    "values": [
@@ -528,7 +523,6 @@
    "longDesc": "This parameter defines the squawk code. Value should be between 0000 and 7777.\n",
    "max": 7777,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "ADSB-Out squawk code configuration",
    "type": "Int32"
   },
@@ -1728,6 +1722,7 @@
    "decimalPlaces": 3,
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Accelerometer 0 priority",
    "type": "Int32",
    "values": [
@@ -2018,6 +2013,7 @@
    "decimalPlaces": 3,
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Accelerometer 1 priority",
    "type": "Int32",
    "values": [
@@ -2308,6 +2304,7 @@
    "decimalPlaces": 3,
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Accelerometer 2 priority",
    "type": "Int32",
    "values": [
@@ -2598,6 +2595,7 @@
    "decimalPlaces": 3,
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Accelerometer 3 priority",
    "type": "Int32",
    "values": [
@@ -3146,6 +3144,7 @@
    "category": "System",
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Gyroscope 0 priority",
    "type": "Int32",
    "values": [
@@ -3401,6 +3400,7 @@
    "category": "System",
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Gyroscope 1 priority",
    "type": "Int32",
    "values": [
@@ -3656,6 +3656,7 @@
    "category": "System",
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Gyroscope 2 priority",
    "type": "Int32",
    "values": [
@@ -3911,6 +3912,7 @@
    "category": "System",
    "default": -1,
    "group": "Sensor Calibration",
+   "longDesc": "Uninitialized sensors default to Medium when internal and Low when\nexternal, so an on-board IMU is preferred over one behind a bus.\n\n",
    "shortDesc": "Gyroscope 3 priority",
    "type": "Int32",
    "values": [
@@ -5796,8 +5798,10 @@
    "category": "Standard",
    "default": 0,
    "group": "UAVCAN",
-   "max": 127,
+   "longDesc": "Set to 0 (default) to use dynamic node ID allocation (DNA).\nSet to 1-125 to use a static node ID, which must be unique on the bus.\n",
+   "max": 125,
    "min": 0,
+   "rebootRequired": true,
    "shortDesc": "UAVCAN CAN node ID (0 for dynamic allocation)",
    "type": "Int32"
   },
@@ -11179,29 +11183,6 @@
     }
    ]
   },
-  "COM_FLTT_LOW_ACT": {
-   "category": "Standard",
-   "default": 0,
-   "group": "Commander",
-   "increment": 1,
-   "longDesc": "Action the system takes when the remaining flight time is below\nthe estimated time it takes to reach the RTL destination.\n",
-   "shortDesc": "Remaining flight time low failsafe",
-   "type": "Int32",
-   "values": [
-    {
-     "description": "None",
-     "value": 0
-    },
-    {
-     "description": "Warning",
-     "value": 1
-    },
-    {
-     "description": "Return",
-     "value": 3
-    }
-   ]
-  },
   "COM_FLT_TIME_MAX": {
    "category": "Standard",
    "default": -1,
@@ -11308,7 +11289,7 @@
    "category": "Standard",
    "default": 0,
    "group": "Commander",
-   "longDesc": "Action the system takes at critical battery. See also BAT_CRIT_THR and BAT_EMERGEN_THR\nfor definition of battery states.\n",
+   "longDesc": "Action when the battery drops below the critical (BAT_CRIT_THR) or emergency (BAT_EMERGEN_THR) level.\n\nOption 3 also engages Return mode when the remaining flight time is only just enough to return (distance-aware return, with the margin set by RTL_TIME_FACTOR and RTL_TIME_MARGIN).\nThis needs a remaining flight time estimate, such as from BATn_CAPACITY or a smart battery.\nThe other options only warn.\n",
    "shortDesc": "Battery failsafe mode",
    "type": "Int32",
    "values": [
@@ -11321,8 +11302,12 @@
      "value": 2
     },
     {
-     "description": "Return at critical level, land at emergency level",
+     "description": "Distance-aware return, Critical level return, Emergency level land",
      "value": 3
+    },
+    {
+     "description": "Critical level return, Emergency level land",
+     "value": 5
     }
    ]
   },
@@ -12279,14 +12264,14 @@
      "index": 0
     },
     {
-     "description": "Vertical position",
+     "description": "Vertical position (reserved, not implemented)",
      "index": 1
     }
    ],
    "category": "Standard",
    "default": 0,
    "group": "EKF2",
-   "longDesc": "Set bits in the following positions to enable: 0 : Horizontal position fusion 1 : Vertical position fusion\n",
+   "longDesc": "Set bit 0 to enable the horizontal position fusion. Bit 1 is reserved for vertical position fusion, which is not implemented: the altitude is not fused, it only takes part when the global origin is first set from this source.\n",
    "max": 3,
    "min": 0,
    "shortDesc": "Auxiliary global position sensor 0 aiding",
@@ -12322,6 +12307,7 @@
    "longDesc": "Sensor ID for slot 0. Set to 0 to disable this slot.\n",
    "max": 255,
    "min": 0,
+   "rebootRequired": true,
    "shortDesc": "Auxiliary global position sensor 0 ID",
    "type": "Int32"
   },
@@ -12361,14 +12347,14 @@
      "index": 0
     },
     {
-     "description": "Vertical position",
+     "description": "Vertical position (reserved, not implemented)",
      "index": 1
     }
    ],
    "category": "Standard",
    "default": 0,
    "group": "EKF2",
-   "longDesc": "Set bits in the following positions to enable: 0 : Horizontal position fusion 1 : Vertical position fusion\n",
+   "longDesc": "Set bit 0 to enable the horizontal position fusion. Bit 1 is reserved for vertical position fusion, which is not implemented: the altitude is not fused, it only takes part when the global origin is first set from this source.\n",
    "max": 3,
    "min": 0,
    "shortDesc": "Auxiliary global position sensor 1 aiding",
@@ -12404,6 +12390,7 @@
    "longDesc": "Sensor ID for slot 1. Set to 0 to disable this slot.\n",
    "max": 255,
    "min": 0,
+   "rebootRequired": true,
    "shortDesc": "Auxiliary global position sensor 1 ID",
    "type": "Int32"
   },
@@ -12443,14 +12430,14 @@
      "index": 0
     },
     {
-     "description": "Vertical position",
+     "description": "Vertical position (reserved, not implemented)",
      "index": 1
     }
    ],
    "category": "Standard",
    "default": 0,
    "group": "EKF2",
-   "longDesc": "Set bits in the following positions to enable: 0 : Horizontal position fusion 1 : Vertical position fusion\n",
+   "longDesc": "Set bit 0 to enable the horizontal position fusion. Bit 1 is reserved for vertical position fusion, which is not implemented: the altitude is not fused, it only takes part when the global origin is first set from this source.\n",
    "max": 3,
    "min": 0,
    "shortDesc": "Auxiliary global position sensor 2 aiding",
@@ -12486,6 +12473,7 @@
    "longDesc": "Sensor ID for slot 2. Set to 0 to disable this slot.\n",
    "max": 255,
    "min": 0,
+   "rebootRequired": true,
    "shortDesc": "Auxiliary global position sensor 2 ID",
    "type": "Int32"
   },
@@ -12525,14 +12513,14 @@
      "index": 0
     },
     {
-     "description": "Vertical position",
+     "description": "Vertical position (reserved, not implemented)",
      "index": 1
     }
    ],
    "category": "Standard",
    "default": 0,
    "group": "EKF2",
-   "longDesc": "Set bits in the following positions to enable: 0 : Horizontal position fusion 1 : Vertical position fusion\n",
+   "longDesc": "Set bit 0 to enable the horizontal position fusion. Bit 1 is reserved for vertical position fusion, which is not implemented: the altitude is not fused, it only takes part when the global origin is first set from this source.\n",
    "max": 3,
    "min": 0,
    "shortDesc": "Auxiliary global position sensor 3 aiding",
@@ -12568,6 +12556,7 @@
    "longDesc": "Sensor ID for slot 3. Set to 0 to disable this slot.\n",
    "max": 255,
    "min": 0,
+   "rebootRequired": true,
    "shortDesc": "Auxiliary global position sensor 3 ID",
    "type": "Int32"
   },
@@ -18192,7 +18181,6 @@
    "longDesc": "Limits the maximum (and minimum) contribution of the integrator term to the controller output.\n\n",
    "max": 0.25,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater controller 1 integrator clamp",
    "type": "Float"
   },
@@ -18204,7 +18192,6 @@
    "longDesc": "Used to limit the PWM duty cycle when the actual supply voltage exceeds this value,\nto prevent excess power dissipation. Set to 0 to disable voltage-based limiting.\n\n",
    "max": 100.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Nominal supply voltage for heater 1",
    "type": "Float",
    "units": "V"
@@ -18239,7 +18226,6 @@
    "longDesc": "Used to predict the baseline power consumption required to maintain temperature,\nhelping to reduce adjustment time.\n\n",
    "max": 1.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 1 controller feedforward value",
    "type": "Float",
    "units": "%"
@@ -18252,7 +18238,6 @@
    "longDesc": "Integral gain is used to eliminate steady-state error,\nensuring that the temperature ultimately reaches the setpoint target.\n\n",
    "max": 1.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 1 controller integrator gain value",
    "type": "Float",
    "units": "us/C"
@@ -18265,7 +18250,6 @@
    "longDesc": "The proportional gain determines how quickly the controller responds to temperature deviations.\n\n",
    "max": 2.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 1 controller proportional gain value",
    "type": "Float",
    "units": "us/C"
@@ -18287,7 +18271,6 @@
    "longDesc": "Limits the maximum (and minimum) contribution of the integrator term to the controller output.\n\n",
    "max": 0.25,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater controller 2 integrator clamp",
    "type": "Float"
   },
@@ -18299,7 +18282,6 @@
    "longDesc": "Used to limit the PWM duty cycle when the actual supply voltage exceeds this value,\nto prevent excess power dissipation. Set to 0 to disable voltage-based limiting.\n\n",
    "max": 100.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Nominal supply voltage for heater 2",
    "type": "Float",
    "units": "V"
@@ -18334,7 +18316,6 @@
    "longDesc": "Used to predict the baseline power consumption required to maintain temperature,\nhelping to reduce adjustment time.\n\n",
    "max": 1.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 2 controller feedforward value",
    "type": "Float",
    "units": "%"
@@ -18347,7 +18328,6 @@
    "longDesc": "Integral gain is used to eliminate steady-state error,\nensuring that the temperature ultimately reaches the setpoint target.\n\n",
    "max": 1.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 2 controller integrator gain value",
    "type": "Float",
    "units": "us/C"
@@ -18360,7 +18340,6 @@
    "longDesc": "The proportional gain determines how quickly the controller responds to temperature deviations.\n\n",
    "max": 2.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 2 controller proportional gain value",
    "type": "Float",
    "units": "us/C"
@@ -18382,7 +18361,6 @@
    "longDesc": "Limits the maximum (and minimum) contribution of the integrator term to the controller output.\n\n",
    "max": 0.25,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater controller 3 integrator clamp",
    "type": "Float"
   },
@@ -18394,7 +18372,6 @@
    "longDesc": "Used to limit the PWM duty cycle when the actual supply voltage exceeds this value,\nto prevent excess power dissipation. Set to 0 to disable voltage-based limiting.\n\n",
    "max": 100.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Nominal supply voltage for heater 3",
    "type": "Float",
    "units": "V"
@@ -18429,7 +18406,6 @@
    "longDesc": "Used to predict the baseline power consumption required to maintain temperature,\nhelping to reduce adjustment time.\n\n",
    "max": 1.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 3 controller feedforward value",
    "type": "Float",
    "units": "%"
@@ -18442,7 +18418,6 @@
    "longDesc": "Integral gain is used to eliminate steady-state error,\nensuring that the temperature ultimately reaches the setpoint target.\n\n",
    "max": 1.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 3 controller integrator gain value",
    "type": "Float",
    "units": "us/C"
@@ -18455,7 +18430,6 @@
    "longDesc": "The proportional gain determines how quickly the controller responds to temperature deviations.\n\n",
    "max": 2.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Heater 3 controller proportional gain value",
    "type": "Float",
    "units": "us/C"
@@ -22759,7 +22733,6 @@
    "longDesc": "The cutoff frequency for the 2nd order butterworth filter used on\nthe time derivative of the measured angular velocity, also known as\nthe D-term filter in the rate controller. The D-term uses the derivative of\nthe rate and thus is the most susceptible to noise. Therefore, using\na D-term filter allows to increase IMU_GYRO_CUTOFF, which\nleads to reduced control latency and permits to increase the P gains.\n\nA value of 0 disables the filter.\n",
    "max": 1000.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Cutoff frequency for angular acceleration (D-Term filter)",
    "type": "Float",
    "units": "Hz"
@@ -22791,7 +22764,6 @@
    "longDesc": "The cutoff frequency for the 2nd order butterworth filter on the primary gyro.\nThis only affects the angular velocity sent to the controllers, not the estimators.\nIt applies also to the angular acceleration (D-Term filter), see IMU_DGYRO_CUTOFF.\n\nA value of 0 disables the filter.\n",
    "max": 1000.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Low pass filter cutoff frequency for gyro",
    "type": "Float",
    "units": "Hz"
@@ -22935,7 +22907,6 @@
    "longDesc": "The frequency width of the stop band for the 2nd order notch filter on the primary gyro.\nSee \"IMU_GYRO_NF0_FRQ\" to activate the filter and to set the notch frequency.\nApplies to both angular velocity and angular acceleration sent to the controllers.\n",
    "max": 100.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Notch filter bandwidth for gyro",
    "type": "Float",
    "units": "Hz"
@@ -22949,7 +22920,6 @@
    "longDesc": "The center frequency for the 2nd order notch filter on the primary gyro.\nThis filter can be enabled to avoid feedback amplification of structural resonances at a specific frequency.\nThis only affects the signal sent to the controllers, not the estimators.\nApplies to both angular velocity and angular acceleration sent to the controllers.\nSee \"IMU_GYRO_NF0_BW\" to set the bandwidth of the filter.\n\nA value of 0 disables the filter.\n",
    "max": 1000.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Notch filter frequency for gyro",
    "type": "Float",
    "units": "Hz"
@@ -22963,7 +22933,6 @@
    "longDesc": "The frequency width of the stop band for the 2nd order notch filter on the primary gyro.\nSee \"IMU_GYRO_NF1_FRQ\" to activate the filter and to set the notch frequency.\nApplies to both angular velocity and angular acceleration sent to the controllers.\n",
    "max": 100.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Notch filter 1 bandwidth for gyro",
    "type": "Float",
    "units": "Hz"
@@ -22977,7 +22946,6 @@
    "longDesc": "The center frequency for the 2nd order notch filter on the primary gyro.\nThis filter can be enabled to avoid feedback amplification of structural resonances at a specific frequency.\nThis only affects the signal sent to the controllers, not the estimators.\nApplies to both angular velocity and angular acceleration sent to the controllers.\nSee \"IMU_GYRO_NF1_BW\" to set the bandwidth of the filter.\n\nA value of 0 disables the filter.\n",
    "max": 1000.0,
    "min": 0.0,
-   "rebootRequired": true,
    "shortDesc": "Notch filter 2 frequency for gyro",
    "type": "Float",
    "units": "Hz"
@@ -24255,7 +24223,7 @@
    "category": "Standard",
    "default": 0,
    "group": "MAVLink",
-   "longDesc": "The MAVLink Mode defines the set of streamed messages (for example the\nvehicle's attitude) and their sending rates.\n\n",
+   "longDesc": "The MAVLink Mode defines the set of streamed messages (for example the\nvehicle's attitude) and their sending rates.\n\nUse ADS-B/Traffic for a traffic receiver such as an ADS-B or FLARM\ndevice. With message signing active, unsigned ADSB_VEHICLE and\nCOLLISION messages are only accepted on links in this mode.\n\n",
    "rebootRequired": true,
    "shortDesc": "MAVLink Mode for instance 0",
    "type": "Int32",
@@ -24301,7 +24269,7 @@
      "value": 11
     },
     {
-     "description": "uAvionix",
+     "description": "ADS-B/Traffic (uAvionix)",
      "value": 12
     },
     {
@@ -24503,7 +24471,7 @@
    "category": "Standard",
    "default": 2,
    "group": "MAVLink",
-   "longDesc": "The MAVLink Mode defines the set of streamed messages (for example the\nvehicle's attitude) and their sending rates.\n\n",
+   "longDesc": "The MAVLink Mode defines the set of streamed messages (for example the\nvehicle's attitude) and their sending rates.\n\nUse ADS-B/Traffic for a traffic receiver such as an ADS-B or FLARM\ndevice. With message signing active, unsigned ADSB_VEHICLE and\nCOLLISION messages are only accepted on links in this mode.\n\n",
    "rebootRequired": true,
    "shortDesc": "MAVLink Mode for instance 1",
    "type": "Int32",
@@ -24549,7 +24517,7 @@
      "value": 11
     },
     {
-     "description": "uAvionix",
+     "description": "ADS-B/Traffic (uAvionix)",
      "value": 12
     },
     {
@@ -24751,7 +24719,7 @@
    "category": "Standard",
    "default": 0,
    "group": "MAVLink",
-   "longDesc": "The MAVLink Mode defines the set of streamed messages (for example the\nvehicle's attitude) and their sending rates.\n\n",
+   "longDesc": "The MAVLink Mode defines the set of streamed messages (for example the\nvehicle's attitude) and their sending rates.\n\nUse ADS-B/Traffic for a traffic receiver such as an ADS-B or FLARM\ndevice. With message signing active, unsigned ADSB_VEHICLE and\nCOLLISION messages are only accepted on links in this mode.\n\n",
    "rebootRequired": true,
    "shortDesc": "MAVLink Mode for instance 2",
    "type": "Int32",
@@ -24797,7 +24765,7 @@
      "value": 11
     },
     {
-     "description": "uAvionix",
+     "description": "ADS-B/Traffic (uAvionix)",
      "value": 12
     },
     {
@@ -27924,7 +27892,6 @@
    "longDesc": "This parameter defines the operating mode of the MXS\n",
    "max": 3,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "Sagetech MXS mode configuration",
    "type": "Int32",
    "values": [
@@ -28012,7 +27979,6 @@
    "longDesc": "The MXS communication port to receive Target data from\n",
    "max": 2,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "Sagetech MXS Participant Configuration",
    "type": "Int32",
    "values": [
@@ -45681,7 +45647,6 @@
    "longDesc": "If greater than 0, the oldest log directories are deleted at log start to keep the total directory count at or below this value. This cleanup is orthogonal to the free-space cleanup driven by SDLOG_ROTATE and SDLOG_MAX_SIZE, and is useful for capping log usage by count independent of available disk size (e.g. in SITL). A value of 0 disables this count-based cleanup.\n",
    "max": 1000,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "Maximum number of log directories to keep",
    "type": "Int32"
   },
@@ -45712,7 +45677,6 @@
    "longDesc": "Maximum size of a single log file in mebibytes (1 MiB = 1024 * 1024 bytes). When reached, the log file is closed and a new one is started. This value is also added to the cleanup threshold (see SDLOG_ROTATE) to reserve headroom for the next log file. A value of 0 disables both file rotation and the cleanup reservation. Must stay below the FAT32 file size limit of 4 GiB.\n",
    "max": 4095,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "Maximum log file size",
    "type": "Int32",
    "units": "MiB"
@@ -45839,7 +45803,6 @@
    "longDesc": "Maximum percentage of disk space that logs may occupy during operation, including while writing a new log file. For example, a value of 90 means at least 10% of disk is always kept free, even while writing. A value of 100 lets logs fill the disk completely. A value of 0 disables space-based cleanup entirely. At log start, oldest logs are deleted as needed to maintain this guarantee, accounting for the next file write of up to SDLOG_MAX_SIZE. Cleanup always happens at log start (not boot) so logs can be downloaded via FTP before deletion.\n",
    "max": 100,
    "min": 0,
-   "rebootRequired": true,
    "shortDesc": "Maximum disk usage percentage",
    "type": "Int32"
   },
@@ -78209,7 +78172,7 @@
      "value": 11
     },
     {
-     "description": "uavionix",
+     "description": "ADS-B/Traffic (uAvionix)",
      "value": 12
     },
     {
@@ -89071,8 +89034,8 @@
   }
  },
  "source": {
-  "commit": "fca3df865af36124a28c9d607e850f111dbaaea9",
+  "commit": "935addf1d6bec6e955b155494a52e7eb4b750eb3",
   "repository": "https://github.com/PX4/PX4-Autopilot",
-  "tag": "v1.18.0-rc1"
+  "tag": "v1.18.0"
  }
 }

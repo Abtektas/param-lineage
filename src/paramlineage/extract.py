@@ -40,7 +40,7 @@ TRACKED = [
     "v1.15.0", "v1.15.1", "v1.15.2", "v1.15.3", "v1.15.4",
     "v1.16.0", "v1.16.1", "v1.16.2",
     "v1.17.0",
-    "v1.18.0-rc1",
+    "v1.18.0",
 ]
 ARCHIVE_PATHS = ["LICENSE", "src", "Tools", "boards/px4/fmu-v5", "boards/px4/io-v2"]
 

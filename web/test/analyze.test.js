@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const A = require('../src/analyze.js');
 
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/v1.17.0_to_v1.18.0-rc1.json')));
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/v1.17.0_to_v1.18.0.json')));
 const fixture = (name) => fs.readFileSync(path.join(__dirname, 'fixtures', name), 'utf8');
 const values = (text) => new Map(A.parseParamsFile(text).rows.map((r) => [r.name, r.value]));
 const byCategory = (report, category) => report.findings.filter((f) => f.category === category).map((f) => f.name).sort();
@@ -13,15 +13,17 @@ const byCategory = (report, category) => report.findings.filter((f) => f.categor
 // v1.17.0_sihsim_quadx_custom.params: saved from v1.17.0 SITL (SIH quad) after setting
 // EKF2_GPS_DELAY=150 EKF2_GPS_POS_X=0.12 EKF2_GPS_POS_Y=-0.05 COM_RC_OVERRIDE=0 MPC_LAND_RC_HELP=1
 // MPC_XY_VEL_MAX=8 RC1_REV=-1 RC3_REV=-1 COM_KILL_DISARM=3.
-// v1.18.0-rc1_inplace_upgrade.params: all parameters of v1.18.0-rc1 SITL started on the v1.17.0
+// v1.18.0_inplace_upgrade.params: all parameters of v1.18.0 SITL started on the v1.17.0
 // parameter storage of that vehicle, so PX4 itself converted them.
 
 test('the corrected file gives the values of an in-place upgrade', () => {
   const report = A.analyze(fixture('v1.17.0_sihsim_quadx_custom.params'), data);
   const corrected = values(A.correctedFile(report, data, { useNewDefaults: true }));
-  const inplace = values(fixture('v1.18.0-rc1_inplace_upgrade.params'));
+  const inplace = values(fixture('v1.18.0_inplace_upgrade.params'));
   const differences = [...inplace].filter(([name, v]) => corrected.has(name) && Math.fround(corrected.get(name)) !== Math.fround(v));
-  assert.deepEqual(differences.map(([n]) => n), ['_HASH_CHECK']);
+  // CAL_BARO0_OFF is the baro offset to GNSS altitude that PX4 works out again at boot
+  // (SENS_BAR_AUTOCAL), so it differs from run to run, not by the upgrade
+  assert.deepEqual(differences.map(([n]) => n), ['CAL_BARO0_OFF', '_HASH_CHECK']);
   for (const name of ['SENS_GPS0_DELAY', 'SENS_GPS1_DELAY', 'SENS_GPS0_OFFX', 'SENS_GPS0_OFFY', 'MAN_OVERRIDE_SPD', 'MPC_AUTO_NUDGING', 'RC1_REV', 'RC3_REV', 'NAV_ACC_RAD']) {
     assert.equal(Math.fround(corrected.get(name)), Math.fround(inplace.get(name)), name);
   }
@@ -54,7 +56,7 @@ test('without the option, the corrected file keeps the old defaults the file has
 
 const line = (name, value, type) => `1\t1\t${name}\t${value}\t${type}`;
 
-test('conversions repeat param_translation.cpp of v1.18.0-rc1', () => {
+test('conversions repeat param_translation.cpp of v1.18.0', () => {
   const text = [
     line('MNT_RANGE_PITCH', '120.000000000000000000', 9),
     line('MOT_POLE_COUNT', '12', 6),
@@ -80,17 +82,30 @@ test('RC*_REV written as integers in the file is fine', () => {
 });
 
 test('replaced parameters are suggested, not written', () => {
-  const text = [line('EKF2_AGP_CTRL', '1', 6), line('EKF2_AGP_NOISE', '2.5', 9), line('SENS_IMU_TEMP', '60', 9),
-    line('DSHOT_BIDIR_EN', '1', 6), line('PWM_MAIN_TIM0', '-3', 6), line('PWM_MAIN_TIM1', '400', 6)].join('\n');
+  const text = [line('DSHOT_BIDIR_EN', '1', 6), line('PWM_MAIN_TIM0', '-3', 6), line('PWM_MAIN_TIM1', '400', 6)].join('\n');
   const report = A.analyze(text, data);
   const removed = Object.fromEntries(report.findings.filter((f) => f.category === 'removed').map((f) => [f.name, f.suggestions]));
-  assert.deepEqual(removed.EKF2_AGP_CTRL, [{ name: 'EKF2_AGP0_CTRL', value: 1 }]);
-  assert.deepEqual(removed.SENS_IMU_TEMP, [{ name: 'HEATER1_TEMP', value: 60 }]);
   assert.deepEqual(removed.DSHOT_BIDIR_EN, [{ name: 'PWM_MAIN_TIM0', value: -6, from: -3 }]);
   const corrected = values(A.correctedFile(report, data));
-  assert.equal(corrected.has('EKF2_AGP0_CTRL'), false);
-  assert.equal(corrected.has('HEATER1_TEMP'), false);
   assert.equal(corrected.get('PWM_MAIN_TIM0'), -3);
+});
+
+test('heater and auxiliary global position values are converted', () => {
+  const text = [line('EKF2_AGP_CTRL', '1', 6), line('EKF2_AGP_NOISE', '2.5', 9), line('SENS_IMU_TEMP', '60', 9),
+    line('SENS_TEMP_ID', '2621474', 6)].join('\n');
+  const report = A.analyze(text, data);
+  const migrated = Object.fromEntries(report.findings.filter((f) => f.category === 'migrated').map((f) => [f.name, f.writes]));
+  assert.deepEqual(migrated.EKF2_AGP_CTRL, [{ name: 'EKF2_AGP0_CTRL', value: 1 }, { name: 'EKF2_AGP0_ID', value: 1 }]);
+  assert.deepEqual(migrated.EKF2_AGP_NOISE, [{ name: 'EKF2_AGP0_NOISE', value: 2.5 }]);
+  assert.deepEqual(migrated.SENS_IMU_TEMP, [{ name: 'HEATER1_TEMP', value: 60 }]);
+  assert.deepEqual(migrated.SENS_TEMP_ID, [{ name: 'HEATER1_SENS_ID', value: 2621474 }]);
+  const corrected = values(A.correctedFile(report, data));
+  assert.equal(corrected.get('EKF2_AGP0_ID'), 1);
+  assert.equal(corrected.get('HEATER1_TEMP'), 60);
+  // 0, the v1.17.0 default, is not stored, so PX4 does not convert it and the page writes nothing
+  const atDefault = A.analyze(line('SENS_TEMP_ID', '0', 6), data);
+  assert.deepEqual(atDefault.findings.map((f) => `${f.name}:${f.category}`), ['SENS_TEMP_ID:removedDefault']);
+  assert.equal(values(A.correctedFile(atDefault, data)).has('HEATER1_SENS_ID'), false);
 });
 
 test('a removed parameter on its old default loses nothing', () => {
@@ -103,7 +118,7 @@ test('ranges are compared as float32', () => {
 });
 
 test('only a range the new release narrowed is reported', () => {
-  // MPC_MANTHR_MIN: 0..1 in v1.17.0, 0..0.5 in v1.18.0-rc1
+  // MPC_MANTHR_MIN: 0..1 in v1.17.0, 0..0.5 in v1.18.0
   assert.deepEqual(A.analyze(line('MPC_MANTHR_MIN', '0.600000023841857910', 9), data).findings.map((f) => f.category), ['outOfRange']);
   assert.deepEqual(A.analyze(line('MPC_MANTHR_MIN', '0.5', 9), data).findings, []);
   // outside the same range in v1.17.0 already (MC_YAW_P 0..5), and a volatile counter

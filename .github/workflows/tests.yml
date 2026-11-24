@@ -46,4 +46,4 @@ jobs:
       - run: node --version
       - run: node --test web/test/*.test.js
       - name: Build the page
-        run: python3 web/tools/build_page.py web/data/v1.17.0_to_v1.18.0-rc1.json dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0-rc1.html
+        run: python3 web/tools/build_page.py web/data/v1.17.0_to_v1.18.0.json dist/param-lineage-upgrade-check-v1.17.0-to-v1.18.0.html

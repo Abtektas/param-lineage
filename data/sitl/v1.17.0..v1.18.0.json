@@ -2,10 +2,10 @@
  "build": {
   "airframe": "10040_sihsim_quadx",
   "compiler": {
-   "v1.17.0": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
-   "v1.18.0-rc1": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+   "v1.17.0": "Apple clang version 21.0.0 (clang-2100.4.1.1)",
+   "v1.18.0": "Apple clang version 21.0.0 (clang-2100.4.1.1)"
   },
-  "platform": "Linux x86_64",
+  "platform": "Darwin arm64",
   "target": "px4_sitl_default"
  },
  "checks": [
@@ -17,6 +17,60 @@
    "run": "converted-1",
    "stored": 2,
    "target": "MAN_OVERRIDE_SPD"
+  },
+  {
+   "expected": 1,
+   "parameter": "EKF2_AGP_CTRL",
+   "read": 1,
+   "result": "pass",
+   "run": "converted-1",
+   "stored": 1,
+   "target": "EKF2_AGP0_CTRL"
+  },
+  {
+   "expected": 1,
+   "parameter": "EKF2_AGP_CTRL",
+   "read": 1,
+   "result": "pass",
+   "run": "converted-1",
+   "stored": 1,
+   "target": "EKF2_AGP0_ID"
+  },
+  {
+   "expected": 0.5,
+   "parameter": "EKF2_AGP_DELAY",
+   "read": 0.5,
+   "result": "pass",
+   "run": "converted-1",
+   "stored": 0.5,
+   "target": "EKF2_AGP0_DELAY"
+  },
+  {
+   "expected": 1.0,
+   "parameter": "EKF2_AGP_GATE",
+   "read": 1.0,
+   "result": "pass",
+   "run": "converted-1",
+   "stored": 1.0,
+   "target": "EKF2_AGP0_GATE"
+  },
+  {
+   "expected": 1,
+   "parameter": "EKF2_AGP_MODE",
+   "read": 1,
+   "result": "pass",
+   "run": "converted-1",
+   "stored": 1,
+   "target": "EKF2_AGP0_MODE"
+  },
+  {
+   "expected": 0.01,
+   "parameter": "EKF2_AGP_NOISE",
+   "read": 0.01,
+   "result": "pass",
+   "run": "converted-1",
+   "stored": 0.01,
+   "target": "EKF2_AGP0_NOISE"
   },
   {
    "expected": 0,
@@ -568,6 +622,15 @@
    "target": "MNT_MIN_PITCH"
   },
   {
+   "expected": 3,
+   "parameter": "COM_FLTT_LOW_ACT",
+   "read": 3,
+   "result": "pass",
+   "run": "removed",
+   "stored": 1,
+   "target": "COM_LOW_BAT_ACT"
+  },
+  {
    "expected": 1.0,
    "parameter": "COM_RC_STICK_OV",
    "read": 1.0,
@@ -575,51 +638,6 @@
    "run": "removed",
    "stored": 5.0,
    "target": "MAN_OVERRIDE_SPD"
-  },
-  {
-   "expected": 0,
-   "parameter": "EKF2_AGP_CTRL",
-   "read": 0,
-   "result": "pass",
-   "run": "removed",
-   "stored": 1,
-   "target": "EKF2_AGP0_CTRL"
-  },
-  {
-   "expected": 0.0,
-   "parameter": "EKF2_AGP_DELAY",
-   "read": 0.0,
-   "result": "pass",
-   "run": "removed",
-   "stored": 1.0,
-   "target": "EKF2_AGP0_DELAY"
-  },
-  {
-   "expected": 3.0,
-   "parameter": "EKF2_AGP_GATE",
-   "read": 3.0,
-   "result": "pass",
-   "run": "removed",
-   "stored": 1.0,
-   "target": "EKF2_AGP0_GATE"
-  },
-  {
-   "expected": 0,
-   "parameter": "EKF2_AGP_MODE",
-   "read": 0,
-   "result": "pass",
-   "run": "removed",
-   "stored": 1,
-   "target": "EKF2_AGP0_MODE"
-  },
-  {
-   "expected": 1.0,
-   "parameter": "EKF2_AGP_NOISE",
-   "read": 1.0,
-   "result": "pass",
-   "run": "removed",
-   "stored": 1.0,
-   "target": "EKF2_AGP0_NOISE"
   },
   {
    "expected": 35.0,
@@ -665,6 +683,60 @@
    "run": "removed",
    "stored": 0,
    "target": "SIM_BAT_DRAIN"
+  },
+  {
+   "expected": 2,
+   "parameter": "EKF2_AGP_CTRL",
+   "read": 2,
+   "result": "pass",
+   "run": "order-target-later",
+   "stored": 1,
+   "target": "EKF2_AGP0_CTRL"
+  },
+  {
+   "expected": 2,
+   "parameter": "EKF2_AGP_CTRL",
+   "read": 2,
+   "result": "pass",
+   "run": "order-target-later",
+   "stored": 1,
+   "target": "EKF2_AGP0_ID"
+  },
+  {
+   "expected": 1.0,
+   "parameter": "EKF2_AGP_DELAY",
+   "read": 1.0,
+   "result": "pass",
+   "run": "order-target-later",
+   "stored": 0.5,
+   "target": "EKF2_AGP0_DELAY"
+  },
+  {
+   "expected": 4.0,
+   "parameter": "EKF2_AGP_GATE",
+   "read": 4.0,
+   "result": "pass",
+   "run": "order-target-later",
+   "stored": 1.0,
+   "target": "EKF2_AGP0_GATE"
+  },
+  {
+   "expected": -1,
+   "parameter": "EKF2_AGP_MODE",
+   "read": -1,
+   "result": "pass",
+   "run": "order-target-later",
+   "stored": 1,
+   "target": "EKF2_AGP0_MODE"
+  },
+  {
+   "expected": 2.0,
+   "parameter": "EKF2_AGP_NOISE",
+   "read": 2.0,
+   "result": "pass",
+   "run": "order-target-later",
+   "stored": 0.01,
+   "target": "EKF2_AGP0_NOISE"
   },
   {
    "expected": 111,
@@ -737,6 +809,60 @@
    "run": "order-target-later",
    "stored": 1,
    "target": "MPC_AUTO_NUDGING"
+  },
+  {
+   "expected": 1,
+   "parameter": "EKF2_AGP_CTRL",
+   "read": 1,
+   "result": "pass",
+   "run": "order-target-earlier",
+   "stored": 1,
+   "target": "EKF2_AGP0_CTRL"
+  },
+  {
+   "expected": 1,
+   "parameter": "EKF2_AGP_CTRL",
+   "read": 1,
+   "result": "pass",
+   "run": "order-target-earlier",
+   "stored": 1,
+   "target": "EKF2_AGP0_ID"
+  },
+  {
+   "expected": 0.5,
+   "parameter": "EKF2_AGP_DELAY",
+   "read": 0.5,
+   "result": "pass",
+   "run": "order-target-earlier",
+   "stored": 0.5,
+   "target": "EKF2_AGP0_DELAY"
+  },
+  {
+   "expected": 1.0,
+   "parameter": "EKF2_AGP_GATE",
+   "read": 1.0,
+   "result": "pass",
+   "run": "order-target-earlier",
+   "stored": 1.0,
+   "target": "EKF2_AGP0_GATE"
+  },
+  {
+   "expected": 1,
+   "parameter": "EKF2_AGP_MODE",
+   "read": 1,
+   "result": "pass",
+   "run": "order-target-earlier",
+   "stored": 1,
+   "target": "EKF2_AGP0_MODE"
+  },
+  {
+   "expected": 0.01,
+   "parameter": "EKF2_AGP_NOISE",
+   "read": 0.01,
+   "result": "pass",
+   "run": "order-target-earlier",
+   "stored": 0.01,
+   "target": "EKF2_AGP0_NOISE"
   },
   {
    "expected": 0,
@@ -824,6 +950,7 @@
  "runs": [
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -839,6 +966,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "FD_ACT_EN": 0,
@@ -936,6 +1064,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -951,6 +1080,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "FD_ACT_EN": 0,
@@ -1048,6 +1178,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "COM_RC_OVERRIDE": null,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
@@ -1061,11 +1192,17 @@
     "DSHOT_MOT_POL7": null,
     "DSHOT_MOT_POL8": null,
     "DSHOT_MOT_POL9": null,
-    "EKF2_AGP0_CTRL": 0,
-    "EKF2_AGP0_DELAY": 0.0,
-    "EKF2_AGP0_GATE": 3.0,
-    "EKF2_AGP0_MODE": 0,
-    "EKF2_AGP0_NOISE": 1.0,
+    "EKF2_AGP0_CTRL": 1,
+    "EKF2_AGP0_DELAY": 0.5,
+    "EKF2_AGP0_GATE": 1.0,
+    "EKF2_AGP0_ID": 1,
+    "EKF2_AGP0_MODE": 1,
+    "EKF2_AGP0_NOISE": 0.01,
+    "EKF2_AGP_CTRL": null,
+    "EKF2_AGP_DELAY": null,
+    "EKF2_AGP_GATE": null,
+    "EKF2_AGP_MODE": null,
+    "EKF2_AGP_NOISE": null,
     "EKF2_GPS_DELAY": null,
     "EKF2_GPS_POS_X": null,
     "EKF2_GPS_POS_Y": null,
@@ -1123,6 +1260,12 @@
    },
    "import_log": [
     "WARN  [parameters] ignoring unrecognised parameter 'COM_RC_OVERRIDE'",
+    "INFO  [parameters] setting EKF2_AGP0_ID to 1",
+    "INFO  [parameters] migrating EKF2_AGP_CTRL -> EKF2_AGP0_CTRL",
+    "INFO  [parameters] migrating EKF2_AGP_DELAY -> EKF2_AGP0_DELAY",
+    "INFO  [parameters] migrating EKF2_AGP_GATE -> EKF2_AGP0_GATE",
+    "INFO  [parameters] migrating EKF2_AGP_MODE -> EKF2_AGP0_MODE",
+    "INFO  [parameters] migrating EKF2_AGP_NOISE -> EKF2_AGP0_NOISE",
     "INFO  [parameters] migrating EKF2_GPS_DELAY -> SENS_GPS0_DELAY, SENS_GPS1_DELAY",
     "WARN  [parameters] ignoring unrecognised parameter 'EKF2_GPS_DELAY'",
     "INFO  [parameters] migrating EKF2_GPS_POS_X -> SENS_GPS0_OFFX",
@@ -1149,7 +1292,7 @@
     "INFO  [parameters] migrating RC7_REV from float to int32",
     "INFO  [parameters] migrating RC8_REV from float to int32",
     "INFO  [parameters] migrating RC9_REV from float to int32",
-    "INFO  [parameters] BSON document size 791 bytes, decoded 791 bytes (INT32:15, FLOAT:26)"
+    "INFO  [parameters] BSON document size 900 bytes, decoded 900 bytes (INT32:17, FLOAT:29)"
    ],
    "name": "converted-1",
    "new_saved": {
@@ -1165,6 +1308,12 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
+    "EKF2_AGP0_CTRL": 1,
+    "EKF2_AGP0_DELAY": 0.5,
+    "EKF2_AGP0_GATE": 1.0,
+    "EKF2_AGP0_ID": 1,
+    "EKF2_AGP0_MODE": 1,
+    "EKF2_AGP0_NOISE": 0.01,
     "EKF2_MAG_DECL": 3.4056053,
     "MNT_MAX_PITCH": 0.5,
     "MNT_MIN_PITCH": -0.5,
@@ -1195,7 +1344,12 @@
     "SYS_AUTOSTART": 10040
    },
    "not_in_build": [
-    "MOT_POLE_COUNT"
+    "MOT_POLE_COUNT",
+    "SENS_IMU_TEMP",
+    "SENS_IMU_TEMP_FF",
+    "SENS_IMU_TEMP_I",
+    "SENS_IMU_TEMP_P",
+    "SENS_TEMP_ID"
    ],
    "old_saved": {
     "CAL_ACC0_ID": 1310988,
@@ -1211,6 +1365,11 @@
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
     "COM_RC_OVERRIDE": 2,
+    "EKF2_AGP_CTRL": 1,
+    "EKF2_AGP_DELAY": 0.5,
+    "EKF2_AGP_GATE": 1.0,
+    "EKF2_AGP_MODE": 1,
+    "EKF2_AGP_NOISE": 0.01,
     "EKF2_GPS_DELAY": 0.5,
     "EKF2_GPS_POS_X": -0.5,
     "EKF2_GPS_POS_Y": -0.5,
@@ -1243,6 +1402,11 @@
    "purpose": "Each converted parameter with a value from its probe case 1.",
    "set": {
     "COM_RC_OVERRIDE": 2,
+    "EKF2_AGP_CTRL": 1,
+    "EKF2_AGP_DELAY": 0.5,
+    "EKF2_AGP_GATE": 1.0,
+    "EKF2_AGP_MODE": 1,
+    "EKF2_AGP_NOISE": 0.01,
     "EKF2_GPS_DELAY": 0.5,
     "EKF2_GPS_POS_X": -0.5,
     "EKF2_GPS_POS_Y": -0.5,
@@ -1271,6 +1435,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "COM_RC_OVERRIDE": null,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
@@ -1287,6 +1452,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -1372,7 +1538,9 @@
     "SENS_GPS1_DELAY": 1,
     "SYS_AUTOSTART": 10040
    },
-   "not_in_build": [],
+   "not_in_build": [
+    "SENS_TEMP_ID"
+   ],
    "old_saved": {
     "CAL_ACC0_ID": 1310988,
     "CAL_ACC1_ID": 1310996,
@@ -1403,6 +1571,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -1418,6 +1587,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -1530,6 +1700,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -1545,6 +1716,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -1657,6 +1829,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -1672,6 +1845,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -1784,6 +1958,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -1799,6 +1974,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -1911,6 +2087,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -1926,6 +2103,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -2038,6 +2216,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -2053,6 +2232,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -2158,6 +2338,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -2173,6 +2354,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -2285,6 +2467,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -2300,6 +2483,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "EKF2_GPS_DELAY": null,
@@ -2420,11 +2604,13 @@
     "ASPD_TAS_GATE": null,
     "COM_ARM_SDCARD": null,
     "COM_DISARM_MAN": null,
+    "COM_FLTT_LOW_ACT": null,
     "COM_FLT_PROFILE": null,
     "COM_HLDL_REG_T": null,
     "COM_IMB_PROP_ACT": null,
     "COM_KILL_DISARM": null,
     "COM_LKDOWN_TKO": null,
+    "COM_LOW_BAT_ACT": 3,
     "COM_MOT_TEST_EN": null,
     "COM_OBC_LOSS_T": null,
     "COM_RC_ARM_HYST": null,
@@ -2445,13 +2631,9 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
-    "EKF2_AGP_CTRL": null,
-    "EKF2_AGP_DELAY": null,
-    "EKF2_AGP_GATE": null,
-    "EKF2_AGP_MODE": null,
-    "EKF2_AGP_NOISE": null,
     "FD_ACT_EN": 0,
     "FD_ACT_MOT_C2T": null,
     "FD_ACT_MOT_THR": null,
@@ -2525,6 +2707,7 @@
     "WARN  [parameters] ignoring unrecognised parameter 'ASPD_TAS_GATE'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_ARM_SDCARD'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_DISARM_MAN'",
+    "WARN  [parameters] ignoring unrecognised parameter 'COM_FLTT_LOW_ACT'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_FLT_PROFILE'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_HLDL_REG_T'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_IMB_PROP_ACT'",
@@ -2535,11 +2718,6 @@
     "WARN  [parameters] ignoring unrecognised parameter 'COM_RC_ARM_HYST'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_RC_STICK_OV'",
     "WARN  [parameters] ignoring unrecognised parameter 'COM_TAKEOFF_ACT'",
-    "WARN  [parameters] ignoring unrecognised parameter 'EKF2_AGP_CTRL'",
-    "WARN  [parameters] ignoring unrecognised parameter 'EKF2_AGP_DELAY'",
-    "WARN  [parameters] ignoring unrecognised parameter 'EKF2_AGP_GATE'",
-    "WARN  [parameters] ignoring unrecognised parameter 'EKF2_AGP_MODE'",
-    "WARN  [parameters] ignoring unrecognised parameter 'EKF2_AGP_NOISE'",
     "WARN  [parameters] ignoring unrecognised parameter 'FD_ACT_MOT_C2T'",
     "WARN  [parameters] ignoring unrecognised parameter 'FD_ACT_MOT_THR'",
     "WARN  [parameters] ignoring unrecognised parameter 'FD_ACT_MOT_TOUT'",
@@ -2557,7 +2735,7 @@
     "WARN  [parameters] ignoring unrecognised parameter 'MPC_USE_HTE'",
     "WARN  [parameters] ignoring unrecognised parameter 'SIM_ARSPD_FAIL'",
     "WARN  [parameters] ignoring unrecognised parameter 'SIM_BAT_ENABLE'",
-    "INFO  [parameters] BSON document size 1130 bytes, decoded 1130 bytes (INT32:33, FLOAT:21)"
+    "INFO  [parameters] BSON document size 1043 bytes, decoded 1043 bytes (INT32:32, FLOAT:18)"
    ],
    "name": "removed",
    "new_saved": {
@@ -2573,7 +2751,7 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_MAG_DECL": 3.4056058,
     "SENS_BOARD_X_OFF": 1e-06,
     "SENS_DPRES_OFF": 0.001,
     "SYS_AUTOSTART": 10040
@@ -2584,11 +2762,6 @@
     "BAT_ADC_CHANNEL",
     "DSHOT_BIDIR_EN",
     "INA226_CONFIG",
-    "SENS_IMU_TEMP",
-    "SENS_IMU_TEMP_FF",
-    "SENS_IMU_TEMP_I",
-    "SENS_IMU_TEMP_P",
-    "SENS_TEMP_ID",
     "UAVCAN_LGT_ANTCL",
     "UAVCAN_LGT_LAND",
     "UAVCAN_LGT_NAV",
@@ -2613,6 +2786,7 @@
     "CAL_MAG1_PRIO": 50,
     "COM_ARM_SDCARD": 0,
     "COM_DISARM_MAN": 0,
+    "COM_FLTT_LOW_ACT": 1,
     "COM_FLT_PROFILE": 100,
     "COM_HLDL_REG_T": 1,
     "COM_IMB_PROP_ACT": -1,
@@ -2623,12 +2797,7 @@
     "COM_RC_ARM_HYST": 100,
     "COM_RC_STICK_OV": 5.0,
     "COM_TAKEOFF_ACT": 1,
-    "EKF2_AGP_CTRL": 1,
-    "EKF2_AGP_DELAY": 1.0,
-    "EKF2_AGP_GATE": 1.0,
-    "EKF2_AGP_MODE": 1,
-    "EKF2_AGP_NOISE": 1.0,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_MAG_DECL": 3.4056058,
     "FD_ACT_MOT_C2T": 0.0,
     "FD_ACT_MOT_THR": 0.0,
     "FD_ACT_MOT_TOUT": 10,
@@ -2658,6 +2827,7 @@
     "ASPD_TAS_GATE": 1,
     "COM_ARM_SDCARD": 0,
     "COM_DISARM_MAN": 0,
+    "COM_FLTT_LOW_ACT": 1,
     "COM_FLT_PROFILE": 100,
     "COM_HLDL_REG_T": 1,
     "COM_IMB_PROP_ACT": -1,
@@ -2668,11 +2838,6 @@
     "COM_RC_ARM_HYST": 100,
     "COM_RC_STICK_OV": 5.0,
     "COM_TAKEOFF_ACT": 1,
-    "EKF2_AGP_CTRL": 1,
-    "EKF2_AGP_DELAY": 1.0,
-    "EKF2_AGP_GATE": 1.0,
-    "EKF2_AGP_MODE": 1,
-    "EKF2_AGP_NOISE": 1.0,
     "FD_ACT_MOT_C2T": 0.0,
     "FD_ACT_MOT_THR": 0.0,
     "FD_ACT_MOT_TOUT": 10,
@@ -2694,6 +2859,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -2706,11 +2872,17 @@
     "DSHOT_MOT_POL7": null,
     "DSHOT_MOT_POL8": null,
     "DSHOT_MOT_POL9": null,
-    "EKF2_AGP0_CTRL": 0,
-    "EKF2_AGP0_DELAY": 0.0,
-    "EKF2_AGP0_GATE": 3.0,
-    "EKF2_AGP0_MODE": 0,
-    "EKF2_AGP0_NOISE": 1.0,
+    "EKF2_AGP0_CTRL": 2,
+    "EKF2_AGP0_DELAY": 1.0,
+    "EKF2_AGP0_GATE": 4.0,
+    "EKF2_AGP0_ID": 2,
+    "EKF2_AGP0_MODE": -1,
+    "EKF2_AGP0_NOISE": 2.0,
+    "EKF2_AGP_CTRL": null,
+    "EKF2_AGP_DELAY": null,
+    "EKF2_AGP_GATE": null,
+    "EKF2_AGP_MODE": null,
+    "EKF2_AGP_NOISE": null,
     "EKF2_GPS_DELAY": null,
     "EKF2_GPS_POS_X": null,
     "EKF2_GPS_POS_Y": null,
@@ -2767,6 +2939,12 @@
     "UAVCAN_LGT_NUM": null
    },
    "import_log": [
+    "INFO  [parameters] setting EKF2_AGP0_ID to 1",
+    "INFO  [parameters] migrating EKF2_AGP_CTRL -> EKF2_AGP0_CTRL",
+    "INFO  [parameters] migrating EKF2_AGP_DELAY -> EKF2_AGP0_DELAY",
+    "INFO  [parameters] migrating EKF2_AGP_GATE -> EKF2_AGP0_GATE",
+    "INFO  [parameters] migrating EKF2_AGP_MODE -> EKF2_AGP0_MODE",
+    "INFO  [parameters] migrating EKF2_AGP_NOISE -> EKF2_AGP0_NOISE",
     "INFO  [parameters] migrating EKF2_GPS_DELAY -> SENS_GPS0_DELAY, SENS_GPS1_DELAY",
     "WARN  [parameters] ignoring unrecognised parameter 'EKF2_GPS_DELAY'",
     "INFO  [parameters] migrating EKF2_GPS_POS_X -> SENS_GPS0_OFFX",
@@ -2775,7 +2953,7 @@
     "INFO  [parameters] migrating MNT_RANGE_PITCH -> MNT_MAX_PITCH, MNT_MIN_PITCH",
     "WARN  [parameters] ignoring unrecognised parameter 'MNT_RANGE_PITCH'",
     "INFO  [parameters] migrating MPC_LAND_RC_HELP -> MPC_AUTO_NUDGING bit 1 (value=1)",
-    "INFO  [parameters] BSON document size 637 bytes, decoded 637 bytes (INT32:17, FLOAT:13)"
+    "INFO  [parameters] BSON document size 878 bytes, decoded 878 bytes (INT32:22, FLOAT:19)"
    ],
    "name": "order-target-later",
    "new_saved": {
@@ -2791,7 +2969,13 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_AGP0_CTRL": 2,
+    "EKF2_AGP0_DELAY": 1.0,
+    "EKF2_AGP0_GATE": 4.0,
+    "EKF2_AGP0_ID": 2,
+    "EKF2_AGP0_MODE": -1,
+    "EKF2_AGP0_NOISE": 2.0,
+    "EKF2_MAG_DECL": 3.4056058,
     "MNT_MAX_PITCH": 46.0,
     "MNT_MIN_PITCH": -44.0,
     "MPC_AUTO_NUDGING": 1,
@@ -2818,11 +3002,16 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
+    "EKF2_AGP_CTRL": 1,
+    "EKF2_AGP_DELAY": 0.5,
+    "EKF2_AGP_GATE": 1.0,
+    "EKF2_AGP_MODE": 1,
+    "EKF2_AGP_NOISE": 0.01,
     "EKF2_GPS_DELAY": 0.5,
     "EKF2_GPS_POS_X": -0.5,
     "EKF2_GPS_POS_Y": -0.5,
     "EKF2_GPS_POS_Z": -0.5,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_MAG_DECL": 3.4056058,
     "MNT_RANGE_PITCH": 1.0,
     "MPC_LAND_RC_HELP": 1,
     "SENS_BOARD_X_OFF": 1e-06,
@@ -2831,6 +3020,11 @@
    },
    "purpose": "Each migrated parameter followed in the storage by a parameter it is converted to.",
    "set": {
+    "EKF2_AGP_CTRL": 1,
+    "EKF2_AGP_DELAY": 0.5,
+    "EKF2_AGP_GATE": 1.0,
+    "EKF2_AGP_MODE": 1,
+    "EKF2_AGP_NOISE": 0.01,
     "EKF2_GPS_DELAY": 0.5,
     "EKF2_GPS_POS_X": -0.5,
     "EKF2_GPS_POS_Y": -0.5,
@@ -2839,6 +3033,50 @@
     "MPC_LAND_RC_HELP": 1
    },
    "storage": [
+    [
+     "EKF2_AGP_CTRL",
+     1
+    ],
+    [
+     "EKF2_AGP0_CTRL",
+     2
+    ],
+    [
+     "EKF2_AGP0_ID",
+     2
+    ],
+    [
+     "EKF2_AGP_DELAY",
+     0.5
+    ],
+    [
+     "EKF2_AGP0_DELAY",
+     1.0
+    ],
+    [
+     "EKF2_AGP_GATE",
+     1.0
+    ],
+    [
+     "EKF2_AGP0_GATE",
+     4.0
+    ],
+    [
+     "EKF2_AGP_MODE",
+     1
+    ],
+    [
+     "EKF2_AGP0_MODE",
+     -1
+    ],
+    [
+     "EKF2_AGP_NOISE",
+     0.01
+    ],
+    [
+     "EKF2_AGP0_NOISE",
+     2.0
+    ],
     [
      "EKF2_GPS_DELAY",
      0.5
@@ -2899,6 +3137,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -2911,11 +3150,17 @@
     "DSHOT_MOT_POL7": null,
     "DSHOT_MOT_POL8": null,
     "DSHOT_MOT_POL9": null,
-    "EKF2_AGP0_CTRL": 0,
-    "EKF2_AGP0_DELAY": 0.0,
-    "EKF2_AGP0_GATE": 3.0,
-    "EKF2_AGP0_MODE": 0,
-    "EKF2_AGP0_NOISE": 1.0,
+    "EKF2_AGP0_CTRL": 1,
+    "EKF2_AGP0_DELAY": 0.5,
+    "EKF2_AGP0_GATE": 1.0,
+    "EKF2_AGP0_ID": 1,
+    "EKF2_AGP0_MODE": 1,
+    "EKF2_AGP0_NOISE": 0.01,
+    "EKF2_AGP_CTRL": null,
+    "EKF2_AGP_DELAY": null,
+    "EKF2_AGP_GATE": null,
+    "EKF2_AGP_MODE": null,
+    "EKF2_AGP_NOISE": null,
     "EKF2_GPS_DELAY": null,
     "EKF2_GPS_POS_X": null,
     "EKF2_GPS_POS_Y": null,
@@ -2972,6 +3217,12 @@
     "UAVCAN_LGT_NUM": null
    },
    "import_log": [
+    "INFO  [parameters] setting EKF2_AGP0_ID to 1",
+    "INFO  [parameters] migrating EKF2_AGP_CTRL -> EKF2_AGP0_CTRL",
+    "INFO  [parameters] migrating EKF2_AGP_DELAY -> EKF2_AGP0_DELAY",
+    "INFO  [parameters] migrating EKF2_AGP_GATE -> EKF2_AGP0_GATE",
+    "INFO  [parameters] migrating EKF2_AGP_MODE -> EKF2_AGP0_MODE",
+    "INFO  [parameters] migrating EKF2_AGP_NOISE -> EKF2_AGP0_NOISE",
     "INFO  [parameters] migrating EKF2_GPS_DELAY -> SENS_GPS0_DELAY, SENS_GPS1_DELAY",
     "WARN  [parameters] ignoring unrecognised parameter 'EKF2_GPS_DELAY'",
     "INFO  [parameters] migrating EKF2_GPS_POS_X -> SENS_GPS0_OFFX",
@@ -2980,7 +3231,7 @@
     "INFO  [parameters] migrating MNT_RANGE_PITCH -> MNT_MAX_PITCH, MNT_MIN_PITCH",
     "WARN  [parameters] ignoring unrecognised parameter 'MNT_RANGE_PITCH'",
     "INFO  [parameters] migrating MPC_LAND_RC_HELP -> MPC_AUTO_NUDGING bit 1 (value=1)",
-    "INFO  [parameters] BSON document size 637 bytes, decoded 637 bytes (INT32:17, FLOAT:13)"
+    "INFO  [parameters] BSON document size 878 bytes, decoded 878 bytes (INT32:22, FLOAT:19)"
    ],
    "name": "order-target-earlier",
    "new_saved": {
@@ -2996,7 +3247,13 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_AGP0_CTRL": 1,
+    "EKF2_AGP0_DELAY": 0.5,
+    "EKF2_AGP0_GATE": 1.0,
+    "EKF2_AGP0_ID": 1,
+    "EKF2_AGP0_MODE": 1,
+    "EKF2_AGP0_NOISE": 0.01,
+    "EKF2_MAG_DECL": 3.4056058,
     "MNT_MAX_PITCH": 0.5,
     "MNT_MIN_PITCH": -0.5,
     "MPC_AUTO_NUDGING": 3,
@@ -3021,11 +3278,16 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
+    "EKF2_AGP_CTRL": 1,
+    "EKF2_AGP_DELAY": 0.5,
+    "EKF2_AGP_GATE": 1.0,
+    "EKF2_AGP_MODE": 1,
+    "EKF2_AGP_NOISE": 0.01,
     "EKF2_GPS_DELAY": 0.5,
     "EKF2_GPS_POS_X": -0.5,
     "EKF2_GPS_POS_Y": -0.5,
     "EKF2_GPS_POS_Z": -0.5,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_MAG_DECL": 3.4056058,
     "MNT_RANGE_PITCH": 1.0,
     "MPC_LAND_RC_HELP": 1,
     "SENS_BOARD_X_OFF": 1e-06,
@@ -3034,6 +3296,11 @@
    },
    "purpose": "The same, with the parameter it is converted to first.",
    "set": {
+    "EKF2_AGP_CTRL": 1,
+    "EKF2_AGP_DELAY": 0.5,
+    "EKF2_AGP_GATE": 1.0,
+    "EKF2_AGP_MODE": 1,
+    "EKF2_AGP_NOISE": 0.01,
     "EKF2_GPS_DELAY": 0.5,
     "EKF2_GPS_POS_X": -0.5,
     "EKF2_GPS_POS_Y": -0.5,
@@ -3042,6 +3309,50 @@
     "MPC_LAND_RC_HELP": 1
    },
    "storage": [
+    [
+     "EKF2_AGP0_CTRL",
+     2
+    ],
+    [
+     "EKF2_AGP0_ID",
+     2
+    ],
+    [
+     "EKF2_AGP_CTRL",
+     1
+    ],
+    [
+     "EKF2_AGP0_DELAY",
+     1.0
+    ],
+    [
+     "EKF2_AGP_DELAY",
+     0.5
+    ],
+    [
+     "EKF2_AGP0_GATE",
+     4.0
+    ],
+    [
+     "EKF2_AGP_GATE",
+     1.0
+    ],
+    [
+     "EKF2_AGP0_MODE",
+     -1
+    ],
+    [
+     "EKF2_AGP_MODE",
+     1
+    ],
+    [
+     "EKF2_AGP0_NOISE",
+     2.0
+    ],
+    [
+     "EKF2_AGP_NOISE",
+     0.01
+    ],
     [
      "SENS_GPS0_DELAY",
      111
@@ -3102,6 +3413,7 @@
   },
   {
    "after": {
+    "COM_LOW_BAT_ACT": 3,
     "DSHOT_MOT_POL1": null,
     "DSHOT_MOT_POL10": null,
     "DSHOT_MOT_POL11": null,
@@ -3117,6 +3429,7 @@
     "EKF2_AGP0_CTRL": 0,
     "EKF2_AGP0_DELAY": 0.0,
     "EKF2_AGP0_GATE": 3.0,
+    "EKF2_AGP0_ID": 0,
     "EKF2_AGP0_MODE": 0,
     "EKF2_AGP0_NOISE": 1.0,
     "FD_ACT_EN": 0,
@@ -3185,7 +3498,7 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_MAG_DECL": 3.4056058,
     "SENS_BOARD_X_OFF": 1e-06,
     "SENS_DPRES_OFF": 0.001,
     "SYS_AUTOSTART": 10040
@@ -3204,7 +3517,7 @@
     "CAL_MAG0_PRIO": 50,
     "CAL_MAG1_ID": 197644,
     "CAL_MAG1_PRIO": 50,
-    "EKF2_MAG_DECL": 3.4056053,
+    "EKF2_MAG_DECL": 3.4056058,
     "SENS_BOARD_X_OFF": 1e-06,
     "SENS_DPRES_OFF": 0.001,
     "SYS_AUTOSTART": 10040
@@ -3213,6 +3526,11 @@
    "set": {},
    "set_by_name": {
     "COM_RC_OVERRIDE": false,
+    "EKF2_AGP_CTRL": false,
+    "EKF2_AGP_DELAY": false,
+    "EKF2_AGP_GATE": false,
+    "EKF2_AGP_MODE": false,
+    "EKF2_AGP_NOISE": false,
     "EKF2_GPS_DELAY": false,
     "EKF2_GPS_POS_X": false,
     "EKF2_GPS_POS_Y": false,
@@ -3223,8 +3541,8 @@
   }
  ],
  "to": {
-  "commit": "fca3df865af36124a28c9d607e850f111dbaaea9",
-  "tag": "v1.18.0-rc1"
+  "commit": "935addf1d6bec6e955b155494a52e7eb4b750eb3",
+  "tag": "v1.18.0"
  },
  "unexpected": {},
  "unsteady": []

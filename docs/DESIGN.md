@@ -1,10 +1,10 @@
 # param-lineage: design
 
-Status: draft 8, 2026-10-25. M0 (skeleton), M1 (snapshots of all tracked
+Status: draft 9, 2026-11-24. M0 (skeleton), M1 (snapshots of all tracked
 releases), M2 (translations), M3 (changes and curation of the last two
 upgrades), M4 (histories and the `history`, `diff` and `check` commands), M5
 (the upgrade check page built from this data) and M6 (the last two upgrades
-run in SITL) are done; M7 (release v0.1) waits for PX4 v1.18.0 final.
+run in SITL) are done, and the data includes PX4 v1.18.0; M7 (release v0.1) is next.
 Name: **param-lineage**, "parameter history for PX4". The name must not
 contain "PX4" (see [Trademarks](#trademarks)).
 
@@ -331,7 +331,7 @@ every tag; on 2026-10-25 also GCC 13.3 on Linux x86_64 without emulation.
   not compared. A change between releases further apart is built from the
   snapshots when asked for.
 - The views show PX4's metadata as its generators write it. For example
-  v1.18.0-rc1 defines `RC*_REV` as `int32` with values, but the generator
+  v1.18.0 defines `RC*_REV` as `int32` with values, but the generator
   writes values only for enum and float parameters, so the change reads
   "values removed".
 
@@ -353,7 +353,8 @@ reported as a change.
      translations as `ignored-unknown-name` (v1.13's `VT_PITCH_MIN`);
    - a `renamed` entry is where users lose values: a successor exists but
      PX4 does not convert it. The changes carry the kind, so tools can warn.
-     The heater and `EKF2_AGP` parameters of v1.18.0-rc1 are such entries.
+     The heater and `EKF2_AGP` parameters were such entries in v1.18.0-rc1;
+     v1.18.0 converts them.
 5. **History:** every commit a curated entry cites lies between its two tags
    (`.github/workflows/curated.yml`, with PX4's commits only).
 6. **SITL:** the results in `data/sitl` follow from their runs and agree with
@@ -393,15 +394,19 @@ change that neither a stored value nor the older release explains, and
 passed. The runs need two PX4 builds, so CI does not repeat them; a file
 records one run.
 
-Results of 2026-10-25 (GCC 13.3, Linux x86_64):
+Results (each file records its compiler and platform):
 
-- v1.17.0 → v1.18.0-rc1: 16 runs, 89 checks, 88 pass and 1 observed. The
-  conversions of `COM_RC_OVERRIDE`, `EKF2_GPS_DELAY`, `EKF2_GPS_POS_X/Y/Z`,
+- v1.17.0 → v1.18.0 (2026-11-24, Apple clang 21, macOS arm64): 16 runs, 103
+  checks, 102 pass and 1 observed. The conversions of `COM_RC_OVERRIDE`,
+  `EKF2_AGP_CTRL` (with `EKF2_AGP0_ID` set to 1), `EKF2_AGP_DELAY`, `_GATE`,
+  `_MODE` and `_NOISE`, `EKF2_GPS_DELAY`, `EKF2_GPS_POS_X/Y/Z`,
   `MNT_RANGE_PITCH` and `MPC_LAND_RC_HELP`, and `RC*_REV` from float to int32,
-  all as the translations say. `MOT_POLE_COUNT` was not run: this build has
-  neither it (v1.17.0) nor `DSHOT_MOT_POL1` to `12` (v1.18.0-rc1). Of the
-  other removed parameters, 38 were stored and none was passed on; 14 are not
-  in this build.
+  all as the translations say. `MOT_POLE_COUNT` and the heater parameters were
+  not run: this build has neither them (v1.17.0) nor `DSHOT_MOT_POL1` to `12`
+  and `HEATER1_*` (v1.18.0). Of the other removed parameters, 34 were stored
+  and none was passed on; 9 are not in this build. The same run on
+  v1.18.0-rc1 (2026-10-25, GCC 13.3, Linux x86_64) had 89 checks, 88 pass and
+  the same observed one; rc1 did not yet convert the `EKF2_AGP` parameters.
 - v1.16.2 → v1.17.0: 7 runs, 9 checks, all pass: `ASPD_FALLBACK_GW` is copied
   to `ASPD_FALLBACK`, and the 58 other removed parameters are dropped, their
   successors unchanged.
@@ -416,7 +421,7 @@ The limits of the translations (section 2), as seen in these runs:
 - **Import order:** a target stored after the converted parameter overwrites
   the conversion; stored before, the conversion overwrites it. `param_get`
   reads the value imported before it: with `MPC_AUTO_NUDGING=1` before
-  `MPC_LAND_RC_HELP=1`, v1.18.0-rc1 gives 3, where the translations, which
+  `MPC_LAND_RC_HELP=1`, v1.18.0 gives 3, where the translations, which
   read the default, give 2. The storage files PX4 saved list parameters in
   name order. An upgrade in place from v1.17.0 cannot have
   `MPC_AUTO_NUDGING` stored, because v1.17.0 does not have it, so this matters
@@ -501,7 +506,7 @@ param-lineage/
 - **Generated data:** it contains PX4's parameter descriptions, defaults and
   enum names. PX4 is BSD-3-Clause ("Copyright (c) 2012 - 2025, PX4
   Development Team"; the license text is the same in every tag from v1.12.0
-  to v1.18.0-rc1). BSD-3 requires keeping that notice with redistributed
+  to v1.18.0). BSD-3 requires keeping that notice with redistributed
   source, so `LICENSE-THIRD-PARTY` carries it and the data files point to it.
 - Checked for every tracked tag, by the extractor: the tag's `LICENSE` is the
   BSD-3-Clause text in `LICENSE-THIRD-PARTY` (only the copyright years differ,

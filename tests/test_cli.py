@@ -40,16 +40,16 @@ class Diff(unittest.TestCase):
         histories = {
             "OLD": h("OLD", [("v1.12.0", "v1.14.4")], [{"in": "v1.15.0", "kind": "renamed", "successors": ["MID"]}]),
             "MID": h("MID", [("v1.15.0", "v1.16.2")], [{"in": "v1.17.0", "kind": "migrated", "successors": ["NEW"]}]),
-            "NEW": h("NEW", [("v1.17.0", "v1.18.0-rc1")]),
+            "NEW": h("NEW", [("v1.17.0", "v1.18.0")]),
         }
-        d = query.diff(histories, "v1.14.4", "v1.18.0-rc1")
+        d = query.diff(histories, "v1.14.4", "v1.18.0")
         self.assertEqual(d["removed"], {"OLD": {"kind": "renamed", "successors": ["NEW"]}})
         self.assertEqual(d["added"], ["NEW"])
         self.assertEqual(query.diff(histories, "v1.14.4", "v1.16.2")["removed"]["OLD"]["successors"], ["MID"])
 
     def test_states_are_found_by_release(self):
         self.assertEqual(query.state_at(self.histories["RC1_REV"], "v1.17.0")["type"], "Float")
-        self.assertEqual(query.state_at(self.histories["RC1_REV"], "v1.18.0-rc1")["type"], "Int32")
+        self.assertEqual(query.state_at(self.histories["RC1_REV"], "v1.18.0")["type"], "Int32")
         self.assertIsNone(query.state_at(self.histories["CANNODE_NODE_ID"], "v1.16.0"))
 
 

@@ -75,11 +75,11 @@ class KnownHistory(unittest.TestCase):
     def test_a_type_change_starts_a_state(self):
         states = load("RC1_REV")["states"]
         self.assertEqual([(s["from"], s["to"], s["type"]) for s in states],
-                         [("v1.12.0", "v1.17.0", "Float"), ("v1.18.0-rc1", "v1.18.0-rc1", "Int32")])
+                         [("v1.12.0", "v1.17.0", "Float"), ("v1.18.0", "v1.18.0", "Int32")])
 
     def test_a_parameter_that_comes_back_has_a_gap(self):
         h = load("CANNODE_NODE_ID")
-        self.assertEqual([(s["from"], s["to"]) for s in h["states"]], [("v1.12.0", "v1.14.4"), ("v1.18.0-rc1", "v1.18.0-rc1")])
+        self.assertEqual([(s["from"], s["to"]) for s in h["states"]], [("v1.12.0", "v1.14.4"), ("v1.18.0", "v1.18.0")])
         self.assertEqual(h["removed"], [{"in": "v1.15.0", "kind": "removed"}])
 
     def test_float_defaults_are_compared_as_float32(self):

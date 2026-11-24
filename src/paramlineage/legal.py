@@ -40,7 +40,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-# The same text as the file LICENSE-THIRD-PARTY (the LICENSE of PX4 v1.18.0-rc1); a test compares them.
+# The same text as the file LICENSE-THIRD-PARTY (the LICENSE of PX4 v1.18.0); a test compares them.
 LICENSE_PX4 = """\
 BSD 3-Clause License
 

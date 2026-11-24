@@ -31,12 +31,12 @@ pages. param-lineage turns it into data that tools can use:
 
 | What | Where | Status |
 |---|---|---|
-| All parameter metadata of a release | `data/snapshots/<tag>.json` ([schema](schema/snapshot.schema.json)) | v1.12.0 to v1.17.0 with their patch releases, and v1.18.0-rc1 |
+| All parameter metadata of a release | `data/snapshots/<tag>.json` ([schema](schema/snapshot.schema.json)) | v1.12.0 to v1.18.0 with their patch releases |
 | Conversions PX4 performs on upgrade | `data/translations/<tag>.json` ([schema](schema/translations.schema.json)) | the same releases |
-| What happened to each removed parameter | `data/curated/<from>..<to>.json` ([schema](schema/curated.schema.json)) | v1.14.0 to v1.14.1, v1.14.4 to v1.15.0, v1.15.4 to v1.16.0, v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
+| What happened to each removed parameter | `data/curated/<from>..<to>.json` ([schema](schema/curated.schema.json)) | v1.14.0 to v1.14.1, v1.14.4 to v1.15.0, v1.15.4 to v1.16.0, v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0 |
 | Changes between consecutive releases | `data/changes/<from>..<to>.json` ([schema](schema/changes.schema.json)) | every pair of consecutive tracked releases |
 | History of every parameter | `data/params.json` ([schema](schema/params.schema.json)) | every parameter of the tracked releases |
-| In-place upgrades run in PX4 SITL | `data/sitl/<from>..<to>.json` ([schema](schema/sitl.schema.json)) | v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0-rc1 |
+| In-place upgrades run in PX4 SITL | `data/sitl/<from>..<to>.json` ([schema](schema/sitl.schema.json)) | v1.16.2 to v1.17.0, and v1.17.0 to v1.18.0 |
 
 The snapshots are made from the release tags by PX4's own generators. Each one
 records the commit it came from and how it was made, and the tests compare
@@ -70,10 +70,10 @@ does not have is reported as not in the build. A curated entry is
 ## The upgrade check page
 
 [web/](web/) holds a single offline HTML page that checks a QGroundControl
-`.params` file saved on PX4 v1.17.0 before it is loaded on v1.18.0-rc1, and
+`.params` file saved on PX4 v1.17.0 before it is loaded on v1.18.0, and
 writes a corrected copy. It is built from the data above: the snapshots of
 both releases, the curated facts and the changes between them. Its tests check
-every conversion it writes against the translations of v1.18.0-rc1.
+every conversion it writes against the translations of v1.18.0.
 
 ## Command line
 
@@ -81,8 +81,8 @@ every conversion it writes against the translations of v1.18.0-rc1.
 pip install .
 param-lineage --version
 param-lineage history MPC_HOLD_DZ
-param-lineage diff v1.16.2 v1.18.0-rc1
-param-lineage check saved.params --from v1.17.0 --to v1.18.0-rc1
+param-lineage diff v1.16.2 v1.18.0
+param-lineage check saved.params --from v1.17.0 --to v1.18.0
 ```
 
 `history` shows how one parameter changed across the tracked releases, and
